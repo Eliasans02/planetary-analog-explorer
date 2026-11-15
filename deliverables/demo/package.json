@@ -1,0 +1,14 @@
+{
+  "name": "astras-demo",
+  "private": true,
+  "scripts": {
+    "render": "remotion render src/index.tsx Astras ASTRAS-demo-30s.mp4 --codec=h264 --crf=18 --concurrency=2"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.441",
+    "@remotion/media": "4.0.441",
+    "remotion": "4.0.441",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  }
+}
