@@ -5,7 +5,7 @@ import type { SurfaceCatalog, SurfaceRecord } from '@shared/types/surface-catalo
 import { loadPlanetCatalog } from '../data/planetCatalog';
 import { loadSurface, loadSurfaceCatalog } from '../data/surfaceCatalog';
 import type { PlanetView } from './PlanetViewport';
-import { SurfaceViewport } from './SurfaceViewport';
+const SurfaceViewport = lazy(() => import('./SurfaceViewport').then(module => ({ default: module.SurfaceViewport })));
 import { planetResolution } from '../terrain/planetResolution';
 import {
   DestinationDock,
@@ -256,7 +256,9 @@ export function PlanetExplorer({
   const openEarthCounterpart = () => {
     const surfaceId = landing?.id ?? selectedSite?.id;
     const targetId = surfaceId === 'mars-jezero-hirise' ? 'mars-jezero-hirise-600m' : 'moon-shackleton-lola-600m';
-    const best = earth.discovery?.candidates.find(candidate => candidate.comparisons[targetId]?.rank === 1);
+    const supported = !earth.region || earth.region.bodies.includes(targetId.startsWith('moon') ? 'moon' : 'mars');
+    if (!supported) earth.selectRegion('ustyurt');
+    const best = supported ? earth.discovery?.candidates.find(candidate => candidate.comparisons[targetId]?.rank === 1) : undefined;
     earth.setSession(previous => ({ ...previous, targetId, candidateId: best?.id ?? '', mode: 'compare', panel: 'none' }));
     changeBody('earth');
   };
@@ -299,9 +301,9 @@ export function PlanetExplorer({
         </>} />
       <main className="px-stage">
         {body === 'earth' ? <StageBoundary>
-          {earth.error ? <div className="px-message" role="alert"><p>{earth.error}</p><button onClick={earth.retry}>Retry Earth survey</button></div>
+          {earth.error ? <div className="px-message" role="alert"><p>{earth.error}</p><button onClick={earth.retry}>Retry Earth survey</button>{earth.regionId !== 'ustyurt' && <button onClick={() => { setMission(null); earth.selectRegion('ustyurt'); }}>Return to Ustyurt survey</button>}</div>
             : earth.discovery ? <Suspense fallback={<div className="px-message" role="status">Opening Earth explorer…</div>}>
-              <EarthStage discovery={earth.discovery} session={earth.session} onSessionChange={earth.setSession}
+              <EarthStage regionError={earth.regionError} onRetryRegions={earth.retry} key={earth.regionId} regions={earth.regions} regionId={earth.regionId} onRegionChange={id => { setMission(null); earth.selectRegion(id); }} discovery={earth.discovery} session={earth.session} onSessionChange={earth.setSession}
                 onExploreTarget={surfaceId => { const entry = browseEntries.find(item => item.surface.id === surfaceId); if (entry) visit(entry.surface); }} />
             </Suspense> : <div className="px-message" role="status">Verifying Earth survey…</div>}
         </StageBoundary> : error ? (
@@ -311,7 +313,7 @@ export function PlanetExplorer({
         ) : drop && landing ? (
           <div className="px-ground">
             {terrain?.id === landing.id ? (
-              <SurfaceViewport
+              <Suspense fallback={<div className="px-message" role="status">Loading terrain…</div>}><SurfaceViewport
                 key={landing.id}
                 surface={landing}
                 catalog={landingCatalog ?? undefined}
@@ -321,7 +323,7 @@ export function PlanetExplorer({
                 allowWalking={allowWalk}
                 imageryPath={isRegionalLanding ? '/data/regional_imagery.json' : undefined}
                 onError={setTerrainError}
-              />
+              /></Suspense>
             ) : (
               <div className="px-message" role="status">
                 {terrainError ?? 'Verifying source elevation assets…'}
@@ -403,7 +405,7 @@ export function PlanetExplorer({
             />
           </>
         )}
-        {mission && <Suspense fallback={<div className="px-message" role="status">Preparing guided mission…</div>}><GuidedMission mission={mission} discovery={earth.discovery} error={earth.error} onRetry={earth.retry}
+        {mission && <Suspense fallback={<div className="px-message" role="status">Preparing guided mission…</div>}><GuidedMission regions={earth.regions} regionId={earth.regionId} onRegionChange={earth.selectRegion} regionError={earth.regionError} mission={mission} discovery={earth.discovery} error={earth.error} onRetry={earth.retry}
           onStep={goMission} onClose={endMission} onEvidence={() => { endMission(); earth.setSession(previous => ({ ...previous, panel: 'details' })); }} /></Suspense>}
       </main>
       {body !== 'earth' && <ExplorerDrawers

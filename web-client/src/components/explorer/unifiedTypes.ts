@@ -1,3 +1,4 @@
+import type { ResearchRegion } from '../../data/globalAnalogs';
 import type { ReactNode } from 'react';
 import type { EarthDiscovery } from '@shared/types/earth-discovery';
 import type { PlanetView } from '../PlanetViewport';
@@ -20,6 +21,11 @@ export interface EarthSession {
   globeView?: PlanetView;
 }
 export interface EarthStageProps {
+  regions?: ResearchRegion[];
+  regionId?: string;
+  regionError?: string;
+  onRetryRegions?: () => void;
+  onRegionChange?: (id: string) => void;
   discovery: EarthDiscovery;
   session: EarthSession;
   onSessionChange: (next: EarthSession) => void;

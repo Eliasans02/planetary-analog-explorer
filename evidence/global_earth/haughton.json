@@ -1,0 +1,56 @@
+{
+  "id": "haughton",
+  "path": "web-client/public/data/earth-regions/haughton.json",
+  "run_id": "earth-discovery-haughton-df757f09a2914446",
+  "eligible": 100,
+  "excluded": 0,
+  "output_sha256": "f877cc386ca374fa9637e11a11ad71e46731ff9a42d98669570be57b86deb23b",
+  "profile": {
+    "profile_version": "global-earth-discovery-1.0.1",
+    "region_id": "haughton",
+    "domain_center_wgs84": [
+      -89.635,
+      75.415
+    ],
+    "domain_crs": "EPSG:32616",
+    "domain_size_m": 6000,
+    "candidate_window_m": 600,
+    "candidate_step_m": 600,
+    "analysis_spacing_m": 60,
+    "analysis_grid": [
+      10,
+      10
+    ],
+    "slope_bins_deg": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      90
+    ],
+    "distance_weights": [
+      0.7,
+      0.3
+    ],
+    "sensitivity_weights": [
+      0.5,
+      0.5
+    ],
+    "shortlist_count": 12,
+    "shortlist_separation_m": 1800,
+    "required_copernicus_tiles": [
+      "N75_00_W090_00"
+    ],
+    "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+  },
+  "profile_sha256": "01feb13cd16f8cc6b3a150f60da076427e34da3a211d92f60c2fae62764b7168",
+  "source_sha256": {
+    "copernicus-dem-n75w090": "6731d23cff09f4cb7d2c72ec1d41c7ae9b6389565434e820692e08c2a4bcefa7",
+    "copernicus-wbm-n75w090": "f5d083029153e0c2a3da34ba91391153e2306b609bfff189e3b51e1d41c120be",
+    "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+    "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+    "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+    "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+  }
+}

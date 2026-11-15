@@ -1,0 +1,39 @@
+.research-control { position: absolute; z-index: 12; top: 72px; left: 16px; display: flex; align-items: end; gap: 7px; max-width: calc(100% - 32px); }
+.research-select { display: grid; gap: 4px; min-width: 0; color: #8ba7ba; font: 9px ui-monospace, monospace; letter-spacing: .08em; }
+.research-select select { border: 1px solid #344653; border-radius: 7px; padding: 8px; background: #101b24; color: #e4edf4; font: 12px system-ui, sans-serif; max-width: 255px; width: 100%; }
+.research-open { display: flex; align-items: center; gap: 6px; padding: 8px; border: 1px solid #344653; border-radius: 7px; background: #101b24; color: #9fd9ef; font-size: 11px; cursor: pointer; }
+.research-dialog { box-sizing: border-box; width: min(580px, calc(100% - 24px)); max-height: 82svh; padding: 30px; border: 1px solid #3b5362; border-radius: 16px; background: #101b24; color: #dce8f0; box-shadow: 0 24px 80px #0008; }
+.research-dialog::backdrop { background: #02070dbb; backdrop-filter: blur(6px); }
+.research-close { float: right; border: 0; background: transparent; color: #c4d9e7; cursor: pointer; }
+.research-kicker { font: 10px ui-monospace, monospace; color: #74bfda; }
+.research-dialog h2 { font: 30px/1.2 Georgia, serif; margin: 16px 0 24px; }
+.research-dialog h3 { font-size: 12px; color: #91d0e4; margin-top: 24px; }
+.research-dialog p { font: 13px/1.65 system-ui, sans-serif; color: #b6c8d5; }
+.research-dialog a { color: #82d4f0; font-size: 12px; }
+.research-dialog .research-coordinate { font-size: 11px; }
+.research-paper { display: grid; gap: 6px; padding: 14px 0; border-top: 1px solid #314451; text-decoration: none; }
+.research-paper span, .research-paper small { color: #a1b5c3; }
+.mission-card .research-select { margin: 16px 0; }
+.mission-card .research-select select { max-width: none; }
+.mission-research-link { color: #9bdef6; font-size: 11px; }
+.mission-checkpoint { margin: 12px 0; }
+.mission-checkpoint legend { font-size: 12px; line-height: 1.5; margin-bottom: 9px; }
+.mission-checkpoint { border: 0; padding: 0; }
+.mission-checkpoint button { display: block; width: 100%; margin: 5px 0; padding: 8px; text-align: left; border: 1px solid #3a5362; border-radius: 6px; background: #152733; color: #d6e8f0; font-size: 11px; }
+.mission-checkpoint button[aria-pressed=true] { border-color: #77d2f2; }
+.mission-feedback { border-left: 2px solid #62bfdc; padding-left: 10px; }
+@media(max-width: 768px) {
+  .research-control { top: 136px; left: 12px; right: 12px; max-width: none; }
+  .research-select { flex: 1; }
+  .research-select select { max-width: 100%; font-size: 11px; }
+  .research-open { font-size: 10px; }
+  .research-dialog { padding: 22px; }
+  .px-stage .es-stage .es-orbit-canvas .esg-toolbar { top: 195px; }
+}
+
+.research-load-error { color: #f7c690; font-size: 11px; max-width: 240px; }
+
+.px-stage .es-stage .es-compare-canvas { padding-top: 138px; }
+@media (max-width: 768px) {
+  .px-stage .es-stage .es-compare-canvas, .px-stage .es-stage .es-survey-canvas { padding-top: 205px; }
+}

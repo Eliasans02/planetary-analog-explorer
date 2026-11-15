@@ -1,0 +1,56 @@
+{
+  "id": "rio-tinto",
+  "path": "web-client/public/data/earth-regions/rio-tinto.json",
+  "run_id": "earth-discovery-rio-tinto-5186167ac5f3d087",
+  "eligible": 73,
+  "excluded": 27,
+  "output_sha256": "102fc4b97525a64468e54ce9bb8f6b91a435a5ff2d76869081dc6b37bda1e810",
+  "profile": {
+    "profile_version": "global-earth-discovery-1.0.1",
+    "region_id": "rio-tinto",
+    "domain_center_wgs84": [
+      -6.5597,
+      37.725275
+    ],
+    "domain_crs": "EPSG:32629",
+    "domain_size_m": 6000,
+    "candidate_window_m": 600,
+    "candidate_step_m": 600,
+    "analysis_spacing_m": 60,
+    "analysis_grid": [
+      10,
+      10
+    ],
+    "slope_bins_deg": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      90
+    ],
+    "distance_weights": [
+      0.7,
+      0.3
+    ],
+    "sensitivity_weights": [
+      0.5,
+      0.5
+    ],
+    "shortlist_count": 12,
+    "shortlist_separation_m": 1800,
+    "required_copernicus_tiles": [
+      "N37_00_W007_00"
+    ],
+    "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+  },
+  "profile_sha256": "9e71fc25634415574a38602933be70624ef8fed8444df8a20e7c2195b26b8128",
+  "source_sha256": {
+    "copernicus-dem-n37w007": "8c3c018571e36e42381c6250ea4a2258c817b887c73456a00f5f4d6f0c51cbf8",
+    "copernicus-wbm-n37w007": "ea9c780a7eabb870915f1a67918aeb79cf2dccb5e733636177452b082fb23215",
+    "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+    "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+    "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+    "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+  }
+}

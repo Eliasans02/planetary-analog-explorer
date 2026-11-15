@@ -1,3 +1,4 @@
+import type { ResearchRegion } from '../../data/globalAnalogs';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   AlertCircle,
@@ -18,6 +19,8 @@ import type { EarthImageryStatus } from './earthGlobeTiles';
 import './earth-survey-globe.css';
 
 export interface EarthSurveyGlobeProps {
+  regions?: ResearchRegion[];
+  onRegionChange?: (id: string) => void;
   discovery: EarthDiscovery;
   selectedCandidateId: string;
   onShowMap: () => void;
@@ -30,6 +33,7 @@ const ZOOM_STEP_FACTOR = 0.82;
 
 export function EarthSurveyGlobe({
   discovery,
+  regions, onRegionChange,
   selectedCandidateId,
   onShowMap,
   immersive = false,
@@ -52,8 +56,8 @@ export function EarthSurveyGlobe({
     [discovery.candidates, selectedCandidateId],
   );
   const actionsRef = useRef<GlobeActions | null>(null);
-  const callbacks = useRef({ initialView, onViewChange, onShowMap });
-  callbacks.current = { initialView, onViewChange, onShowMap };
+  const callbacks = useRef({ initialView, onViewChange, onShowMap, onRegionChange, regions });
+  callbacks.current = { initialView, onViewChange, onShowMap, onRegionChange, regions };
 
   const latestCandidateIdRef = useRef(selectedCandidateId);
   latestCandidateIdRef.current = selectedCandidateId;
@@ -67,6 +71,7 @@ export function EarthSurveyGlobe({
     if (!container) return;
 
     return mountEarthGlobe(container, discovery, {
+      getRegions: () => callbacks.current.regions ?? [], onRegionChange: id => callbacks.current.onRegionChange?.(id),
       getCandidateId: () => latestCandidateIdRef.current,
       initialView: callbacks.current.initialView,
       onViewChange: view => callbacks.current.onViewChange?.(view),
@@ -76,6 +81,8 @@ export function EarthSurveyGlobe({
       setActions: actions => { actionsRef.current = actions; },
     });
   }, [discovery, retryNonce]);
+
+  useEffect(() => { actionsRef.current?.updateRegions(regions ?? []); }, [regions]);
 
   return (
     <section className={`esg-card ${immersive ? 'esg-immersive' : ''}`} aria-label="3D Earth geographic context globe">

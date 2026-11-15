@@ -4228,5 +4228,69 @@
       "Legacy calibrated nine-feature dataset remains unavailable; its browser test is skipped.",
       "GitHub publication is requested; website deployment has not been performed."
     ]
+  },
+  "worldwide_research_expeditions": {
+    "date": "2026-11-15",
+    "purpose": "Expand Challenge 5 Earth analog exploration to published sites worldwide with real local topographic measurements and guided research checkpoints.",
+    "implementation": "Codex integration with bounded parallel research, pipeline development and independent review; no additional Hydrogen export in this increment.",
+    "research_catalog": {
+      "path": "web-client/public/data/global_analogs.json",
+      "sha256": "df2a370350e225710b19e6250196273f91a5de98b7bd45da0933b5a4ddf0663a",
+      "papers": 7,
+      "regions": [
+        "atacama",
+        "rio-tinto",
+        "haughton",
+        "hawaii",
+        "lanzarote",
+        "pilbara",
+        "dry-valleys"
+      ]
+    },
+    "elevation_provider": "Copernicus DEM GLO-30 Public on AWS, complete downloaded DSM and water mask objects; source hashes and receipts retained.",
+    "source_registry": "https://registry.opendata.aws/copernicus-dem/",
+    "regional_measurements": {
+      "regions": 7,
+      "area_per_region_km2": 36,
+      "generated_windows": 700,
+      "eligible_windows": 661,
+      "excluded_windows": 39,
+      "window_m": 600,
+      "grid_spacing_m": 60,
+      "grid_cells": 100,
+      "provenance": "evidence/global_earth/run_summary.json"
+    },
+    "features": [
+      "Worldwide region picker and clickable globe markers",
+      "Paper-linked research briefs with coordinate scope",
+      "Guided missions with source-grounded questions and feedback",
+      "Regional terrain comparison against existing NASA LOLA and HiRISE targets",
+      "Six-page regional PDF reports with research appendix",
+      "Visible data-load recovery and mobile control separation"
+    ],
+    "verification": {
+      "frontend_tests": 216,
+      "frontend_test_files": 27,
+      "python_targeted_tests": 18,
+      "browser_full_passed": 26,
+      "browser_full_failed_before_fixes": 5,
+      "browser_full_skipped": 1,
+      "final_affected_browser_passed": 6,
+      "distinct_browser_scenarios_passed_across_runs": 31,
+      "typecheck": "passed",
+      "production_build": "passed",
+      "safari": "Worldwide picker and Rio Tinto globe visually checked",
+      "pdf": "Real browser download; six A4 pages; research appendix visually checked",
+      "credential_pattern_scan": "36 changed files, no matches"
+    },
+    "limitations": [
+      "Seven representative published regions plus the original Ustyurt survey; this is not an exhaustive search of Earth.",
+      "Ranks are computed within each bounded region, not across the whole planet.",
+      "Published biological, chemical, spectral and magnetic findings are cited context; those raw measurement datasets are not imported.",
+      "Terrain grids are independently derived Copernicus DSM windows, and need not coincide with exact publication samples.",
+      "Only the existing Shackleton LOLA and Jezero HiRISE analysis supports receive quantitative terrain comparison.",
+      "Legacy nine-feature calibration dataset remains unavailable; its test is skipped.",
+      "GitHub publication is authorized; no production website deployment is performed."
+    ]
   }
 }

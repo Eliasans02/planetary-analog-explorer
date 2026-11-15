@@ -1,3 +1,4 @@
+import type { ResearchRegion } from '../../data/globalAnalogs';
 import type { jsPDF } from 'jspdf';
 import type { DiscoveryCandidate, DiscoverySource, DiscoveryTarget, EarthDiscovery } from '@shared/types/earth-discovery';
 
@@ -16,6 +17,8 @@ function ascii(value: unknown): string {
     .replace(/×/g, 'x')
     .replace(/°/g, ' deg')
     .replace(/²/g, '2')
+    .replace(/[′’]/g, "'")
+    .replace(/[″“”]/g, '"')
     .replace(/©/g, '(c)')
     .replace(/·/g, ' | ')
     .normalize('NFKD')
@@ -59,6 +62,8 @@ function pageTitle(doc: Pdf, eyebrow: string, title: string, detail?: string): n
   doc.text(ascii(eyebrow).toUpperCase(), 15, 10);
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(17);
+  const titleWidth = doc.getTextWidth(ascii(title));
+  if (titleWidth > 180) doc.setFontSize(Math.max(11, 17 * 180 / titleWidth));
   doc.text(ascii(title), 15, 20);
   if (detail) {
     doc.setFont('helvetica', 'normal');
@@ -253,7 +258,7 @@ function validate(discovery: EarthDiscovery, candidate: DiscoveryCandidate, targ
   }
 }
 
-export async function buildCandidatePdf(discovery: EarthDiscovery, candidate: DiscoveryCandidate, target: DiscoveryTarget): Promise<Blob> {
+export async function buildCandidatePdf(discovery: EarthDiscovery, candidate: DiscoveryCandidate, target: DiscoveryTarget, region?: ResearchRegion): Promise<Blob> {
   validate(discovery, candidate, target);
   const { jsPDF } = await import('jspdf');
   const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: false, putOnlyUsedFonts: true });
@@ -339,10 +344,29 @@ export async function buildCandidatePdf(discovery: EarthDiscovery, candidate: Di
   const selectedIds = new Set(target.source_ids);
   const sources = discovery.sources.filter(source => source.role.startsWith('Earth') || selectedIds.has(source.id));
   for (const source of sources) {
+    if (y + 41 > 257) { doc.addPage(); y = pageTitle(doc, 'Data provenance continued', 'Source catalogue'); }
     y = sourceEntry(doc, source, y, selectedIds.has(source.id));
   }
   textBlock(doc, `Selected target source IDs: ${target.source_ids.join(', ')}. Source hashes and byte counts identify the exact objects or byte ranges described by each hash scope. Linked data providers do not endorse this exploratory comparison.`, 15, Math.min(y + 2, 258), 180, { size: 6.6, line: 3, color: MUTED });
 
+  if (region) {
+    doc.addPage();
+    y = pageTitle(doc, 'Published research | Regional context', region.name, `${region.country} | ${region.theme}`);
+    y = heading(doc, region.mission_title, y);
+    y = textBlock(doc, region.finding, 15, y, 180, { size: 9, line: 4.4 }) + 8;
+    y = heading(doc, 'Scope of the analogy', y);
+    y = textBlock(doc, region.limitation, 15, y, 180, { size: 8.5, line: 4 }) + 6;
+    y = textBlock(doc, 'The findings above are reported by the cited researchers. This application independently computes elevation comparisons from a 6 km regional DSM survey. It does not reproduce their biological, chemical, magnetic or spectral measurements. The selected candidate may be kilometres from the paper reference location.', 15, y, 180, { size: 8.3, line: 4 }) + 8;
+    y = heading(doc, 'Reference coordinate', y);
+    y = textBlock(doc, `${coordinates(region.latitude, region.longitude)}. ${region.coordinate_note}`, 15, y, 180, { size: 8, line: 3.8 }) + 3;
+    y = textBlock(doc, safeHttps(region.coordinate_source_url), 15, y, 180, { size: 6.5, line: 3, color: CYAN }) + 8;
+    y = heading(doc, 'Primary research', y);
+    for (const paper of region.papers) {
+      if (y > 230) { doc.addPage(); y = pageTitle(doc, 'Research continued', 'Primary references'); }
+      y = textBlock(doc, `${paper.authors} (${paper.year}). ${paper.title}`, 15, y, 180, { size: 8, line: 3.8, bold: true }) + 2;
+      y = textBlock(doc, `DOI: ${paper.doi}\n${safeHttps(paper.url)}`, 15, y, 180, { size: 6.8, line: 3.3, color: CYAN }) + 5;
+    }
+  }
   const pages = doc.getNumberOfPages();
   for (let page = 1; page <= pages; page += 1) {
     doc.setPage(page);

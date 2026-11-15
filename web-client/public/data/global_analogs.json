@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "regions": [
+    {
+      "id": "atacama",
+      "name": "Yungay Salar",
+      "country": "Chile",
+      "latitude": -24.08679,
+      "longitude": -69.91321,
+      "coordinate_note": "Exact Yungay Salar halite-nodule sampling coordinates reported by Schulze-Makuch et al. (2021).",
+      "coordinate_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8151210/",
+      "bodies": ["mars"],
+      "theme": "Hyperarid lithic microbiology",
+      "mission_title": "Search for protected life in salt and rock",
+      "finding": "The publication found lithic microbial hotspots along an Atacama moisture gradient. Quartz hypoliths supported an active fraction, while activity in Yungay halite appeared limited and potentially transient.",
+      "limitation": "The halite yielded too little intracellular DNA for metagenomic analysis. The explorer's local layer is a 6 km DEM footprint; it does not contain the paper's mineralogy, DNA, biomass, or activity measurements.",
+      "papers": [
+        {
+          "title": "Microbial Hotspots in Lithic Microhabitats Inferred from DNA Fractionation and Metagenomics in the Atacama Desert",
+          "authors": "Dirk Schulze-Makuch et al.",
+          "year": 2021,
+          "doi": "10.3390/microorganisms9051038",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8151210/"
+        }
+      ],
+      "agency_url": "https://astrobiology.nasa.gov/research-locations/",
+      "discovery_path": "/data/earth-regions/atacama.json",
+      "question": "What constrained the Yungay halite analysis most directly?",
+      "choices": [
+        {
+          "label": "Insufficient intracellular DNA for metagenomics",
+          "correct": true,
+          "feedback": "Correct. The authors could not recover enough intracellular DNA from the halite for metagenomic analysis."
+        },
+        {
+          "label": "No halite was present at Yungay",
+          "correct": false,
+          "feedback": "The sampled nodules were predominantly halite."
+        },
+        {
+          "label": "The site was too wet for lithic life",
+          "correct": false,
+          "feedback": "Yungay lies in the hyperarid core; water scarcity was a central constraint."
+        }
+      ]
+    },
+    {
+      "id": "rio-tinto",
+      "name": "Peña de Hierro, Río Tinto",
+      "country": "Spain",
+      "latitude": 37.725275,
+      "longitude": -6.5597,
+      "coordinate_note": "Exact lander and Trident drill deployment coordinates converted from 37°43′30.99″N, 6°33′34.92″W in Sánchez-García et al. (2020).",
+      "coordinate_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7499885/",
+      "bodies": ["mars"],
+      "theme": "Subsurface biomarker drilling",
+      "mission_title": "Test a one-metre robotic life-detection drill",
+      "finding": "A lander-mounted Trident prototype drilled and transferred samples autonomously and aseptically to 1 m depth. Molecular biomarkers occurred throughout the profile, but their distribution varied with local mineralogy and geochemistry.",
+      "limitation": "The strong small-scale heterogeneity makes drill replicates important; one borehole cannot represent the site. The explorer's 6 km DEM footprint includes no lipid, genomic, mineralogical, or drill-sample data.",
+      "papers": [
+        {
+          "title": "Simulating Mars Drilling Mission for Searching for Life: Ground-Truthing Lipids and Other Complex Microbial Biomarkers in the Iron-Sulfur Rich Río Tinto Analog",
+          "authors": "Laura Sánchez-García, Miguel A. Fernández-Martínez, Mercedes Moreno-Paz, Daniel Carrizo, Miriam García-Villadangos, Juan M. Manchado, Carol R. Stoker, Brian Glass, and Victor Parro",
+          "year": 2020,
+          "doi": "10.1089/ast.2019.2101",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7499885/"
+        }
+      ],
+      "agency_url": "https://astrobiology.nasa.gov/research-locations/",
+      "discovery_path": "/data/earth-regions/rio-tinto.json",
+      "question": "Why did the authors recommend replicate drilling for a Mars mission?",
+      "choices": [
+        {
+          "label": "Biomarkers and abiotic conditions varied over short distances",
+          "correct": true,
+          "feedback": "Correct. Local lithological and geochemical heterogeneity changed biomarker distributions."
+        },
+        {
+          "label": "The automated drill could not reach below the surface",
+          "correct": false,
+          "feedback": "The automated prototype sampled down to 1 m."
+        },
+        {
+          "label": "Every depth contained identical biomarkers",
+          "correct": false,
+          "feedback": "The study reported compositional differences with depth and local setting."
+        }
+      ]
+    },
+    {
+      "id": "haughton",
+      "name": "Rhinoceros Creek, Haughton",
+      "country": "Canada",
+      "latitude": 75.415,
+      "longitude": -89.635,
+      "coordinate_note": "Exact Rhinoceros Creek impact-melt outcrop coordinates reported in the study's field-observation table.",
+      "coordinate_source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JE006218",
+      "bodies": ["moon", "mars"],
+      "theme": "Impact-melt heterogeneity",
+      "mission_title": "Read subsurface history from impact melt",
+      "finding": "Imaging spectroscopy of six outcrops showed different impact-melt compositions across three areas, including an inverse relationship between silica-rich and gypsum-rich material that records excavation from different target depths.",
+      "limitation": "The study concerns a sedimentary, volatile-bearing impact target and six selected outcrops, so it does not establish universal impact-melt mixing. The explorer's 6 km DEM footprint contains terrain only, not the spectroscopy or samples.",
+      "papers": [
+        {
+          "title": "Compositional Heterogeneity of Impact Melt Rocks at the Haughton Impact Structure, Canada: Implications for Planetary Processes and Remote Sensing",
+          "authors": "Rebecca N. Greenberger, Bethany L. Ehlmann, Gordon R. Osinski, Livio L. Tornabene, and Robert O. Green",
+          "year": 2020,
+          "doi": "10.1029/2019JE006218",
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JE006218"
+        }
+      ],
+      "agency_url": "https://science.nasa.gov/solar-system/planetary-analogs/10-things-to-know-about-planetary-analogs/",
+      "discovery_path": "/data/earth-regions/haughton.json",
+      "question": "What did the Haughton spectroscopy show about impact melt?",
+      "choices": [
+        {
+          "label": "Composition differed among separated outcrop areas",
+          "correct": true,
+          "feedback": "Correct. The measured heterogeneity records material excavated from different depths."
+        },
+        {
+          "label": "Every outcrop had one uniform composition",
+          "correct": false,
+          "feedback": "The paper directly documented substantial spatial heterogeneity."
+        },
+        {
+          "label": "Gypsum was absent from the target rocks",
+          "correct": false,
+          "feedback": "Gypsum-rich material was central to the reported compositional pattern."
+        }
+      ]
+    },
+    {
+      "id": "hawaii",
+      "name": "Mauna Ulu",
+      "country": "United States",
+      "latitude": 19.367,
+      "longitude": -155.201,
+      "coordinate_note": "Approximate Mauna Ulu low-shield regional anchor for map display, based on the paper's target-region map; it is not a reported sample coordinate.",
+      "coordinate_source_url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/79048085/ast.2018.1847.pdf",
+      "bodies": ["mars"],
+      "theme": "Basalt geology and field operations",
+      "mission_title": "Explore altered basalt under Mars-like operations",
+      "finding": "The BASALT study identified Mauna Ulu as an early-Mars geology and astrobiology analog because its basalt composition, textures, and alteration help frame habitats and science-driven field operations.",
+      "limitation": "Modern Hawaiʻi's warm, wet climate is not an analog for present Mars, and this point is a regional shield anchor rather than a sample. The explorer's 6 km DEM footprint does not include BASALT geochemistry or operational results.",
+      "papers": [
+        {
+          "title": "BASALT A: Basaltic Terrains in Idaho and Hawaii as Planetary Analogues for Mars Geology and Astrobiology",
+          "authors": "Scott S. Hughes, Christopher W. Haberle, Shannon E. Kobs Nawotniak, Alexander Sehlke, W. Brent Garry, Richard C. Elphic, Samuel J. Payler, Adam H. Stevens, Charles S. Cockell, Allyson L. Brady, Jennifer L. Heldmann, and Darlene S. S. Lim",
+          "year": 2019,
+          "doi": "10.1089/ast.2018.1847",
+          "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/79048085/ast.2018.1847.pdf"
+        }
+      ],
+      "agency_url": "https://www.nasa.gov/missions/analog-field-testing/what-is-basalt/",
+      "discovery_path": "/data/earth-regions/hawaii.json",
+      "question": "Which part of Mauna Ulu makes it useful in the BASALT study?",
+      "choices": [
+        {
+          "label": "Its basalt geology, alteration, and field-operations setting",
+          "correct": true,
+          "feedback": "Correct. The analog connects basalt science with realistic mission operations."
+        },
+        {
+          "label": "Its present climate exactly reproduces Mars",
+          "correct": false,
+          "feedback": "The warm, wet Hawaiian climate is an important difference from Mars."
+        },
+        {
+          "label": "It contains returned Martian samples",
+          "correct": false,
+          "feedback": "The work studied terrestrial basaltic terrain as an analog."
+        }
+      ]
+    },
+    {
+      "id": "lanzarote",
+      "name": "La Corona Lava-Tube System",
+      "country": "Spain",
+      "latitude": 29.184656,
+      "longitude": -13.483496,
+      "coordinate_note": "Approximate La Corona volcanic-system anchor from the published geological map; it is not an exact magnetometer station or transect coordinate.",
+      "coordinate_source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JB024056",
+      "bodies": ["moon", "mars"],
+      "theme": "Magnetic detection of lava tubes",
+      "mission_title": "Map a hidden lava tube with a fluxgate magnetometer",
+      "finding": "Fluxgate transects produced an anomaly aligned with the known Corona Lava Tube. Magnetic models reconstructed a tube geometry that broadly agreed with independent interior LiDAR, supporting magnetic surveys for lunar and Martian cavities.",
+      "limitation": "The proposed secondary cavities remain model interpretations, and short transects limited some large or deep structures. A surface DEM alone cannot detect the void; the explorer's 6 km layer contains no magnetometer or LiDAR-interior data.",
+      "papers": [
+        {
+          "title": "Magnetic Signature of the Corona Lava Tube (Lanzarote, Canary Islands), a Lunar and Martian Planetary Analog",
+          "authors": "J. Martin de Blas, Y. M. Martos, J. R. Espley, D. A. Sheppard, S. P. Scheidt, J. A. Richardson, and J. E. P. Connerney",
+          "year": 2026,
+          "doi": "10.1029/2025JE009616",
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025JE009616"
+        }
+      ],
+      "agency_url": "https://www.esa.int/ESA_Multimedia/Images/2026/04/Lanzarote_Spain",
+      "discovery_path": "/data/earth-regions/lanzarote.json",
+      "question": "What independent observation supported the magnetic tube model?",
+      "choices": [
+        {
+          "label": "An interior LiDAR survey of the known tube",
+          "correct": true,
+          "feedback": "Correct. The magnetic geometry broadly agreed with the independently mapped LiDAR geometry."
+        },
+        {
+          "label": "A surface DEM that directly imaged the void",
+          "correct": false,
+          "feedback": "A surface DEM does not directly reveal the underground cavity."
+        },
+        {
+          "label": "A confirmed network of every secondary cavity",
+          "correct": false,
+          "feedback": "The secondary cavities are interpretations and remain tentative."
+        }
+      ]
+    },
+    {
+      "id": "pilbara",
+      "name": "Strelley Pool Formation",
+      "country": "Australia",
+      "latitude": -21.11094,
+      "longitude": 119.13709,
+      "coordinate_note": "Approximate Strelley Pool Formation regional anchor for map display, not a sample coordinate in Clarke and Stoker (2013); their field study near Nullagine should not be treated as this exact point.",
+      "coordinate_source_url": "https://www.sciencedirect.com/science/article/pii/S0019103513000663",
+      "bodies": ["mars"],
+      "theme": "Ancient stromatolite search strategy",
+      "mission_title": "Recognize rare biosignatures in ancient terrain",
+      "finding": "The study used the 3.4 Ga Strelley Pool Formation to develop a Mars search strategy: outcrop-scale stromatolite morphology is useful, but a biogenic interpretation requires several independent morphological, chemical, and microscopic lines of evidence.",
+      "limitation": "Stromatolites are rare within a large, discontinuous formation, and the catalog point is only a regional anchor. The explorer's 6 km DEM footprint contains neither mapped stromatolite occurrences nor biosignature measurements.",
+      "papers": [
+        {
+          "title": "Searching for Stromatolites: The 3.4 Ga Strelley Pool Formation (Pilbara Region, Western Australia) as a Mars Analogue",
+          "authors": "Jonathan D. A. Clarke and Carol R. Stoker",
+          "year": 2013,
+          "doi": "10.1016/j.icarus.2013.02.006",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0019103513000663"
+        }
+      ],
+      "agency_url": "https://astrobiology.nasa.gov/research-locations/",
+      "discovery_path": "/data/earth-regions/pilbara.json",
+      "question": "What is the strongest way to support a stromatolite interpretation?",
+      "choices": [
+        {
+          "label": "Combine morphology with independent chemical and microscopic evidence",
+          "correct": true,
+          "feedback": "Correct. Multiple independent biosignatures are stronger than shape alone."
+        },
+        {
+          "label": "Treat every layered rock as biological",
+          "correct": false,
+          "feedback": "Layered morphology can have non-biological alternatives and needs corroboration."
+        },
+        {
+          "label": "Search only one convenient outcrop",
+          "correct": false,
+          "feedback": "The rarity and uneven distribution of stromatolites require broad, careful traverses."
+        }
+      ]
+    },
+    {
+      "id": "dry-valleys",
+      "name": "University Valley",
+      "country": "Antarctica",
+      "latitude": -77.861133,
+      "longitude": 160.712267,
+      "coordinate_note": "Approximate University Valley regional anchor within the separately published field area; George et al. (2021) sampled two water tracks in Taylor Valley, not at this catalog point.",
+      "coordinate_source_url": "https://planetary.chem.tufts.edu/Kounaves%20etal%20ES%26T%202010v44p2360.pdf",
+      "bodies": ["mars"],
+      "theme": "Transient water and polar-desert microbiology",
+      "mission_title": "Study microbial responses to brief wetting",
+      "finding": "At two Taylor Valley water-track systems, microbial composition differed on and off tracks and between locations. Of the tested moisture, pH, salinity, and spatial variables, salinity was the strongest predictor of community composition.",
+      "limitation": "The microbial result comes from two Taylor Valley locations and is context for the broader Dry Valleys, not University Valley sample data. The explorer's 6 km DEM footprint contains no soil chemistry or microbial sequencing.",
+      "papers": [
+        {
+          "title": "Antarctic Water Tracks: Microbial Community Responses to Variation in Soil Moisture, pH, and Salinity",
+          "authors": "Scott F. George, Noah Fierer, Joseph S. Levy, and Byron Adams",
+          "year": 2021,
+          "doi": "10.3389/fmicb.2021.616730",
+          "url": "https://repository.library.noaa.gov/view/noaa/69562/noaa_69562_DS1.pdf"
+        }
+      ],
+      "agency_url": "https://astrobiology.nasa.gov/research-locations/",
+      "discovery_path": "/data/earth-regions/dry-valleys.json",
+      "question": "Which tested factor best predicted water-track microbial composition?",
+      "choices": [
+        {
+          "label": "Soil salinity",
+          "correct": true,
+          "feedback": "Correct. Salinity was the strongest predictor among the tested environmental variables."
+        },
+        {
+          "label": "Elevation alone",
+          "correct": false,
+          "feedback": "Elevation was not reported as the strongest tested community predictor."
+        },
+        {
+          "label": "Surface color",
+          "correct": false,
+          "feedback": "Surface color was not the variable identified by the study."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0.0",
+  "regions": [
+    {
+      "id": "atacama",
+      "path": "web-client/public/data/earth-regions/atacama.json",
+      "run_id": "earth-discovery-atacama-1ff5d572329d8503",
+      "eligible": 100,
+      "excluded": 0,
+      "output_sha256": "476e500d8b40a246d6d78e65c22e758ae8f4704a2d9872cc9cfcdc422f6e6563",
+      "profile": {
+        "profile_version": "global-earth-discovery-1.0.1",
+        "region_id": "atacama",
+        "domain_center_wgs84": [
+          -69.91321,
+          -24.08679
+        ],
+        "domain_crs": "EPSG:32719",
+        "domain_size_m": 6000,
+        "candidate_window_m": 600,
+        "candidate_step_m": 600,
+        "analysis_spacing_m": 60,
+        "analysis_grid": [
+          10,
+          10
+        ],
+        "slope_bins_deg": [
+          0,
+          5,
+          10,
+          20,
+          30,
+          90
+        ],
+        "distance_weights": [
+          0.7,
+          0.3
+        ],
+        "sensitivity_weights": [
+          0.5,
+          0.5
+        ],
+        "shortlist_count": 12,
+        "shortlist_separation_m": 1800,
+        "required_copernicus_tiles": [
+          "S25_00_W070_00"
+        ],
+        "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+      },
+      "profile_sha256": "1fb1e54a3a14347f298515a29e5ca33d9c74a587fb62d8c1d18c76e5e4177f13",
+      "source_sha256": {
+        "copernicus-dem-s25w070": "ac7b8fce2e8598c5d522fd0f6ff0b4a1ae6f6c5aecda55671fc6e2bd82ec7710",
+        "copernicus-wbm-s25w070": "7bd6e9e8ec36de7a95acbf95fa818cc99eabfa65f1383f9a1b0ff02dfb9f9eca",
+        "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+        "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+      }
+    },
+    {
+      "id": "rio-tinto",
+      "path": "web-client/public/data/earth-regions/rio-tinto.json",
+      "run_id": "earth-discovery-rio-tinto-5186167ac5f3d087",
+      "eligible": 73,
+      "excluded": 27,
+      "output_sha256": "102fc4b97525a64468e54ce9bb8f6b91a435a5ff2d76869081dc6b37bda1e810",
+      "profile": {
+        "profile_version": "global-earth-discovery-1.0.1",
+        "region_id": "rio-tinto",
+        "domain_center_wgs84": [
+          -6.5597,
+          37.725275
+        ],
+        "domain_crs": "EPSG:32629",
+        "domain_size_m": 6000,
+        "candidate_window_m": 600,
+        "candidate_step_m": 600,
+        "analysis_spacing_m": 60,
+        "analysis_grid": [
+          10,
+          10
+        ],
+        "slope_bins_deg": [
+          0,
+          5,
+          10,
+          20,
+          30,
+          90
+        ],
+        "distance_weights": [
+          0.7,
+          0.3
+        ],
+        "sensitivity_weights": [
+          0.5,
+          0.5
+        ],
+        "shortlist_count": 12,
+        "shortlist_separation_m": 1800,
+        "required_copernicus_tiles": [
+          "N37_00_W007_00"
+        ],
+        "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+      },
+      "profile_sha256": "9e71fc25634415574a38602933be70624ef8fed8444df8a20e7c2195b26b8128",
+      "source_sha256": {
+        "copernicus-dem-n37w007": "8c3c018571e36e42381c6250ea4a2258c817b887c73456a00f5f4d6f0c51cbf8",
+        "copernicus-wbm-n37w007": "ea9c780a7eabb870915f1a67918aeb79cf2dccb5e733636177452b082fb23215",
+        "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+        "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+      }
+    },
+    {
+      "id": "haughton",
+      "path": "web-client/public/data/earth-regions/haughton.json",
+      "run_id": "earth-discovery-haughton-df757f09a2914446",
+      "eligible": 100,
+      "excluded": 0,
+      "output_sha256": "f877cc386ca374fa9637e11a11ad71e46731ff9a42d98669570be57b86deb23b",
+      "profile": {
+        "profile_version": "global-earth-discovery-1.0.1",
+        "region_id": "haughton",
+        "domain_center_wgs84": [
+          -89.635,
+          75.415
+        ],
+        "domain_crs": "EPSG:32616",
+        "domain_size_m": 6000,
+        "candidate_window_m": 600,
+        "candidate_step_m": 600,
+        "analysis_spacing_m": 60,
+        "analysis_grid": [
+          10,
+          10
+        ],
+        "slope_bins_deg": [
+          0,
+          5,
+          10,
+          20,
+          30,
+          90
+        ],
+        "distance_weights": [
+          0.7,
+          0.3
+        ],
+        "sensitivity_weights": [
+          0.5,
+          0.5
+        ],
+        "shortlist_count": 12,
+        "shortlist_separation_m": 1800,
+        "required_copernicus_tiles": [
+          "N75_00_W090_00"
+        ],
+        "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+      },
+      "profile_sha256": "01feb13cd16f8cc6b3a150f60da076427e34da3a211d92f60c2fae62764b7168",
+      "source_sha256": {
+        "copernicus-dem-n75w090": "6731d23cff09f4cb7d2c72ec1d41c7ae9b6389565434e820692e08c2a4bcefa7",
+        "copernicus-wbm-n75w090": "f5d083029153e0c2a3da34ba91391153e2306b609bfff189e3b51e1d41c120be",
+        "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+        "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+      }
+    },
+    {
+      "id": "hawaii",
+      "path": "web-client/public/data/earth-regions/hawaii.json",
+      "run_id": "earth-discovery-hawaii-3f9e2be92dc27a1d",
+      "eligible": 100,
+      "excluded": 0,
+      "output_sha256": "58cf504a76501b8b3834500a9df25c191883c0543f4b70994dbe799aba0fad2c",
+      "profile": {
+        "profile_version": "global-earth-discovery-1.0.1",
+        "region_id": "hawaii",
+        "domain_center_wgs84": [
+          -155.201,
+          19.367
+        ],
+        "domain_crs": "EPSG:32605",
+        "domain_size_m": 6000,
+        "candidate_window_m": 600,
+        "candidate_step_m": 600,
+        "analysis_spacing_m": 60,
+        "analysis_grid": [
+          10,
+          10
+        ],
+        "slope_bins_deg": [
+          0,
+          5,
+          10,
+          20,
+          30,
+          90
+        ],
+        "distance_weights": [
+          0.7,
+          0.3
+        ],
+        "sensitivity_weights": [
+          0.5,
+          0.5
+        ],
+        "shortlist_count": 12,
+        "shortlist_separation_m": 1800,
+        "required_copernicus_tiles": [
+          "N19_00_W156_00"
+        ],
+        "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+      },
+      "profile_sha256": "516e98af0152056fa85c82c0ca879a97c4916cbcd529226e9ebdf2ed0562c150",
+      "source_sha256": {
+        "copernicus-dem-n19w156": "a1881be4ef3710ebf3d0e59a7a22e77ca79e2a6a3f51cdbadb74209e0698e00d",
+        "copernicus-wbm-n19w156": "5e9a482ef01f6babe484aeb7c3b34f59c038a29267f1978913b4debdb82776d0",
+        "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+        "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+      }
+    },
+    {
+      "id": "lanzarote",
+      "path": "web-client/public/data/earth-regions/lanzarote.json",
+      "run_id": "earth-discovery-lanzarote-bf9ec4c21937d7ef",
+      "eligible": 88,
+      "excluded": 12,
+      "output_sha256": "b4fb885db0190628fda2b60a7cebab70643e171c900b790ad3192215f6a95a56",
+      "profile": {
+        "profile_version": "global-earth-discovery-1.0.1",
+        "region_id": "lanzarote",
+        "domain_center_wgs84": [
+          -13.483496,
+          29.184656
+        ],
+        "domain_crs": "EPSG:32628",
+        "domain_size_m": 6000,
+        "candidate_window_m": 600,
+        "candidate_step_m": 600,
+        "analysis_spacing_m": 60,
+        "analysis_grid": [
+          10,
+          10
+        ],
+        "slope_bins_deg": [
+          0,
+          5,
+          10,
+          20,
+          30,
+          90
+        ],
+        "distance_weights": [
+          0.7,
+          0.3
+        ],
+        "sensitivity_weights": [
+          0.5,
+          0.5
+        ],
+        "shortlist_count": 12,
+        "shortlist_separation_m": 1800,
+        "required_copernicus_tiles": [
+          "N29_00_W014_00"
+        ],
+        "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+      },
+      "profile_sha256": "62429fb743a1b343b5e4bc47f1fe85d2a66a060c48a6ccef4afd96b6ba235b88",
+      "source_sha256": {
+        "copernicus-dem-n29w014": "7ecc9e725f5d4e9eb81b33a926b40912d19b8f83e97fb91ba4bbea7555c5919a",
+        "copernicus-wbm-n29w014": "f70da52cb7b6dfab70da7c16df02bce7969931ac241a8a408973db118c12ea31",
+        "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+        "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+      }
+    },
+    {
+      "id": "pilbara",
+      "path": "web-client/public/data/earth-regions/pilbara.json",
+      "run_id": "earth-discovery-pilbara-00235cfa4b5a436e",
+      "eligible": 100,
+      "excluded": 0,
+      "output_sha256": "37f09df398e2872a90ad163a9dba768148a68cec01fee28a1b3f4577907c3a07",
+      "profile": {
+        "profile_version": "global-earth-discovery-1.0.1",
+        "region_id": "pilbara",
+        "domain_center_wgs84": [
+          119.13709,
+          -21.11094
+        ],
+        "domain_crs": "EPSG:32750",
+        "domain_size_m": 6000,
+        "candidate_window_m": 600,
+        "candidate_step_m": 600,
+        "analysis_spacing_m": 60,
+        "analysis_grid": [
+          10,
+          10
+        ],
+        "slope_bins_deg": [
+          0,
+          5,
+          10,
+          20,
+          30,
+          90
+        ],
+        "distance_weights": [
+          0.7,
+          0.3
+        ],
+        "sensitivity_weights": [
+          0.5,
+          0.5
+        ],
+        "shortlist_count": 12,
+        "shortlist_separation_m": 1800,
+        "required_copernicus_tiles": [
+          "S22_00_E119_00"
+        ],
+        "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+      },
+      "profile_sha256": "07e674731878fce8cae83f8b45f3784e90d55a3528d4799b293f792cfc189e64",
+      "source_sha256": {
+        "copernicus-dem-s22e119": "a54f11698edee6d13d8b49ec311a9f142593eb32f944a66378f70ae48f5f8c60",
+        "copernicus-wbm-s22e119": "82d33b6df5fe601f049798b77396e77cef64b530c338e40188d7d5b057abef64",
+        "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+        "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+      }
+    },
+    {
+      "id": "dry-valleys",
+      "path": "web-client/public/data/earth-regions/dry-valleys.json",
+      "run_id": "earth-discovery-dry-valleys-00be974143823646",
+      "eligible": 100,
+      "excluded": 0,
+      "output_sha256": "a9679573ddb2f7a7194a0171bbe29e14d45ed4e7776f1f8ee9f88e42aa3f00e2",
+      "profile": {
+        "profile_version": "global-earth-discovery-1.0.1",
+        "region_id": "dry-valleys",
+        "domain_center_wgs84": [
+          160.712267,
+          -77.861133
+        ],
+        "domain_crs": "EPSG:32757",
+        "domain_size_m": 6000,
+        "candidate_window_m": 600,
+        "candidate_step_m": 600,
+        "analysis_spacing_m": 60,
+        "analysis_grid": [
+          10,
+          10
+        ],
+        "slope_bins_deg": [
+          0,
+          5,
+          10,
+          20,
+          30,
+          90
+        ],
+        "distance_weights": [
+          0.7,
+          0.3
+        ],
+        "sensitivity_weights": [
+          0.5,
+          0.5
+        ],
+        "shortlist_count": 12,
+        "shortlist_separation_m": 1800,
+        "required_copernicus_tiles": [
+          "S78_00_E160_00"
+        ],
+        "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+      },
+      "profile_sha256": "8ca68c493abda5cb3fd791c23690f5141929fdeba4db2724d4312cd99fc267af",
+      "source_sha256": {
+        "copernicus-dem-s78e160": "0e89e31d9e9f898703953a3c1a4019b243806c1aea96a4699ee056e3283ca44e",
+        "copernicus-wbm-s78e160": "dfa3d29d8963c2e8b6e9cdd182a394f05edec74f1c44aa2d787ea85109299ead",
+        "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+        "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+      }
+    }
+  ]
+}

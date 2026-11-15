@@ -1,3 +1,5 @@
+import type { ResearchRegion } from '../../data/globalAnalogs';
+import { researchGlobeMarkers } from './researchGlobeMarkers';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import type { EarthDiscovery } from '@shared/types/earth-discovery';
@@ -13,6 +15,7 @@ export interface GlobeActions {
   zoomBy: (factor: number) => void;
   updateCandidate: (candidateId: string) => void;
   retryImagery: () => void;
+  updateRegions: (regions: ResearchRegion[]) => void;
 }
 const MIN_ZOOM_DISTANCE = 1.15;
 const DEFAULT_GLOBAL_DISTANCE = 3.3;
@@ -21,6 +24,8 @@ const ARROW_STEP_RAD = 0.14;
 const ZOOM_STEP_FACTOR = 0.82;
 export function mountEarthGlobe(container: HTMLDivElement, discovery: EarthDiscovery, options: {
   getCandidateId: () => string;
+  getRegions?: () => ResearchRegion[];
+  onRegionChange?: (id: string) => void;
   initialView?: PlanetView;
   onViewChange: (view: PlanetView) => void;
   onShowMap: () => void;
@@ -42,6 +47,7 @@ export function mountEarthGlobe(container: HTMLDivElement, discovery: EarthDisco
     let loadedBitmap: ImageBitmap | null = null;
     let loadedTexture: THREE.Texture | null = null;
     let tiles: ReturnType<typeof createEarthGlobeTiles> | undefined;
+    let researchPins: ReturnType<typeof researchGlobeMarkers> | undefined;
     const geometries: THREE.BufferGeometry[] = [];
     const materials: THREE.Material[] = [];
     let removeListeners = () => {};
@@ -128,6 +134,8 @@ export function mountEarthGlobe(container: HTMLDivElement, discovery: EarthDisco
         const keyLight = new THREE.DirectionalLight(0xffffff, 0.52);
         scene.add(ambientLight, keyLight);
 
+        researchPins = researchGlobeMarkers(scene, options.getRegions?.() ?? []);
+        canvas.dataset.researchPins = String(options.getRegions?.().length ?? 0);
         const overlays = attachGlobeOverlays(scene, discovery, geometries, materials);
         const applyCandidateGeometry = (candId: string) => {
           const cand =
@@ -136,6 +144,7 @@ export function mountEarthGlobe(container: HTMLDivElement, discovery: EarthDisco
             null;
           overlays.updateSelected(cand);
           overlays.updateMarkerScale(camera, container.clientHeight);
+          researchPins?.update(camera, container.clientHeight);
           invalidate();
         };
         applyCandidateGeometry(options.getCandidateId());
@@ -159,6 +168,7 @@ export function mountEarthGlobe(container: HTMLDivElement, discovery: EarthDisco
           }
           keyLight.position.copy(camera.position).normalize().multiplyScalar(4);
           overlays.updateMarkerScale(camera, container.clientHeight);
+          researchPins?.update(camera, container.clientHeight);
           if (viewReady) tiles?.update();
           invalidate();
         };
@@ -221,6 +231,13 @@ export function mountEarthGlobe(container: HTMLDivElement, discovery: EarthDisco
           zoomBy,
           updateCandidate: applyCandidateGeometry,
           retryImagery: () => tiles?.retry(),
+          updateRegions: regions => {
+            researchPins?.dispose();
+            researchPins = researchGlobeMarkers(scene, regions);
+            researchPins.update(camera, container.clientHeight);
+            canvas.dataset.researchPins = String(regions.length);
+            invalidate();
+          },
         });
 
         const onKeyDown = (e: KeyboardEvent) => {
@@ -269,6 +286,12 @@ export function mountEarthGlobe(container: HTMLDivElement, discovery: EarthDisco
           const ray = new THREE.Raycaster();
           ray.setFromCamera(pointer, camera);
           const hit = ray.intersectObject(earthMesh)[0];
+          const region = researchPins?.pick(ray, hit?.distance ?? Infinity);
+          if (region) {
+            if (discovery.candidates[0]?.id.startsWith(`${region.id}-`)) options.onShowMap();
+            else options.onRegionChange?.(region.id);
+            return;
+          }
           const candidate = discovery.candidates.find(item => item.id === options.getCandidateId());
           const location = new THREE.Vector3(...latLonToPoint(candidate?.latitude ?? searchCenter.lat, candidate?.longitude ?? searchCenter.lon));
           const hitRadius = Math.min(0.06, 40 * camera.position.distanceTo(location) * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) / Math.max(1, container.clientHeight));
@@ -341,6 +364,7 @@ export function mountEarthGlobe(container: HTMLDivElement, discovery: EarthDisco
       resizeObserver?.disconnect();
       removeListeners();
       controls?.dispose();
+      researchPins?.dispose();
       tiles?.dispose();
       geometries.forEach((g) => g.dispose());
       materials.forEach((m) => m.dispose());

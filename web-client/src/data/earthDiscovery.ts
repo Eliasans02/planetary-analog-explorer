@@ -113,8 +113,9 @@ export function validateEarthDiscovery(value: unknown): EarthDiscovery {
   return data;
 }
 
-export async function loadEarthDiscovery(signal?: AbortSignal): Promise<EarthDiscovery> {
-  const response = await fetch('/data/earth_discovery.json', { signal, redirect: 'error', cache: 'no-store' });
+export async function loadEarthDiscovery(signal?: AbortSignal, path = '/data/earth_discovery.json'): Promise<EarthDiscovery> {
+  ensure(path === '/data/earth_discovery.json' || /^\/data\/earth-regions\/[a-z][a-z0-9-]{1,50}\.json$/.test(path), 'unknown survey path.');
+  const response = await fetch(path, { signal, redirect: 'error', cache: 'no-store' });
   if (!response.ok || !response.body) throw new Error('Earth search results could not be loaded. Please retry.');
   const reader = response.body.getReader();
   const chunks: Uint8Array[] = [];

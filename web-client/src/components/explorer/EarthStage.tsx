@@ -1,3 +1,4 @@
+import { ResearchRegionControl } from './ResearchRegionControl';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { SegmentedControl, SegmentedControlIndicator, SegmentedControlItem } from '@ui-sdk/react/segmented-control';
 import { Drawer, DrawerBackdrop, DrawerClose, DrawerContent, DrawerDescription, DrawerHandle, DrawerTitle } from '@ui-sdk/react/drawer';
@@ -46,6 +47,7 @@ export function EarthStage({
   session,
   onSessionChange,
   onExploreTarget,
+  regions = [], regionId = 'ustyurt', onRegionChange, regionError, onRetryRegions,
 }: EarthStageProps) {
   const [provenanceOpen, setProvenanceOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(() =>
@@ -71,8 +73,12 @@ export function EarthStage({
   }, []);
 
   const activeTarget: DiscoveryTarget | null = useMemo(
-    () => discovery.targets.find((t) => t.id === session.targetId) ?? discovery.targets[0] ?? null,
-    [discovery.targets, session.targetId],
+    () => {
+      const region = regions.find(item => item.id === regionId);
+      const targets = discovery.targets.filter(item => !region || region.bodies.includes(item.body));
+      return targets.find(t => t.id === session.targetId) ?? targets[0] ?? null;
+    },
+    [discovery.targets, session.targetId, regions, regionId],
   );
 
   const activeCandidate: DiscoveryCandidate | null = useMemo(() => {
@@ -130,11 +136,7 @@ export function EarthStage({
     patchSession({ globeView: view });
   }, [patchSession]);
 
-  const initialGlobeView = useMemo(
-    () => latestSessionRef.current.globeView,
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [session.mode === 'orbit'],
-  );
+
 
   if (!activeTarget || !activeCandidate) {
     return (
@@ -167,16 +169,17 @@ export function EarthStage({
 
   return (
     <div className="es-stage">
+      {onRegionChange && <ResearchRegionControl regions={regions} regionId={regionId} onChange={onRegionChange} error={regionError} onRetry={onRetryRegions} />}
       {session.mode === 'orbit' && (
         <div className="es-orbit-canvas">
           <EarthViewBoundary label="Earth globe" onReturnSurvey={() => patchSession({ mode: 'survey' })}>
           <Suspense fallback={<div className="es-compare-fallback" role="status">Opening Earth globe…</div>}>
-          <EarthSurveyGlobe
+          <EarthSurveyGlobe regions={regions} onRegionChange={onRegionChange}
             discovery={discovery}
             selectedCandidateId={activeCandidate.id}
             onShowMap={() => patchSession({ mode: 'survey' })}
             immersive={true}
-            initialView={initialGlobeView}
+            initialView={session.globeView}
             onViewChange={handleGlobeViewChange}
           />
           </Suspense></EarthViewBoundary>
@@ -229,7 +232,7 @@ export function EarthStage({
                 {session.mode === 'orbit' && (
                   <>
                     <span aria-hidden="true">·</span>
-                    <span>1 survey cluster</span>
+                    <span>{regions.length + 1} regions available</span>
                   </>
                 )}
               </div>
@@ -257,7 +260,7 @@ export function EarthStage({
               value={activeTarget.id}
               onChange={(e) => handleTargetChange(e.target.value)}
             >
-              {discovery.targets.map((t) => (
+              {discovery.targets.filter(t => { const region = regions.find(item => item.id === regionId); return !region || region.bodies.includes(t.body); }).map((t) => (
                 <option key={t.id} value={t.id}>
                   {t.body === 'moon' ? 'Moon' : 'Mars'} · {t.id === 'moon-shackleton-lola-600m' ? 'Shackleton rim' : t.id === 'mars-jezero-hirise-600m' ? 'Jezero crater' : t.name}
                 </option>
@@ -444,6 +447,7 @@ export function EarthStage({
           </div>
           <div className="es-drawer-detail-body">
             <CandidateDetail
+                researchRegion={regions.find(region => region.id === regionId)}
               discovery={discovery}
               target={activeTarget}
               candidate={activeCandidate}

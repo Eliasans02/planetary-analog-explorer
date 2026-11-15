@@ -1,0 +1,177 @@
+{
+  "retrieved_at": "2026-11-15T08:30:48.138597+00:00",
+  "earth_receipts": [
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_S25_00_W070_00_DEM/Copernicus_DSM_COG_10_S25_00_W070_00_DEM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/atacama/Copernicus_DSM_COG_10_S25_00_W070_00_DEM.tif",
+      "bytes": 37362492,
+      "sha256": "ac7b8fce2e8598c5d522fd0f6ff0b4a1ae6f6c5aecda55671fc6e2bd82ec7710",
+      "retrieved_at": "2026-11-15T08:26:43.120506+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_S25_00_W070_00_DEM/AUXFILES/Copernicus_DSM_COG_10_S25_00_W070_00_WBM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/atacama/Copernicus_DSM_COG_10_S25_00_W070_00_WBM.tif",
+      "bytes": 26934,
+      "sha256": "7bd6e9e8ec36de7a95acbf95fa818cc99eabfa65f1383f9a1b0ff02dfb9f9eca",
+      "retrieved_at": "2026-11-15T08:26:28.991838+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_S78_00_E160_00_DEM/Copernicus_DSM_COG_10_S78_00_E160_00_DEM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/dry-valleys/Copernicus_DSM_COG_10_S78_00_E160_00_DEM.tif",
+      "bytes": 12988517,
+      "sha256": "0e89e31d9e9f898703953a3c1a4019b243806c1aea96a4699ee056e3283ca44e",
+      "retrieved_at": "2026-11-15T08:27:07.319902+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_S78_00_E160_00_DEM/AUXFILES/Copernicus_DSM_COG_10_S78_00_E160_00_WBM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/dry-valleys/Copernicus_DSM_COG_10_S78_00_E160_00_WBM.tif",
+      "bytes": 13740,
+      "sha256": "dfa3d29d8963c2e8b6e9cdd182a394f05edec74f1c44aa2d787ea85109299ead",
+      "retrieved_at": "2026-11-15T08:27:07.870489+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N75_00_W090_00_DEM/Copernicus_DSM_COG_10_N75_00_W090_00_DEM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/haughton/Copernicus_DSM_COG_10_N75_00_W090_00_DEM.tif",
+      "bytes": 11558351,
+      "sha256": "6731d23cff09f4cb7d2c72ec1d41c7ae9b6389565434e820692e08c2a4bcefa7",
+      "retrieved_at": "2026-11-15T08:26:41.823376+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N75_00_W090_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N75_00_W090_00_WBM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/haughton/Copernicus_DSM_COG_10_N75_00_W090_00_WBM.tif",
+      "bytes": 34413,
+      "sha256": "f5d083029153e0c2a3da34ba91391153e2306b609bfff189e3b51e1d41c120be",
+      "retrieved_at": "2026-11-15T08:26:42.585389+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N19_00_W156_00_DEM/Copernicus_DSM_COG_10_N19_00_W156_00_DEM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/hawaii/Copernicus_DSM_COG_10_N19_00_W156_00_DEM.tif",
+      "bytes": 31714695,
+      "sha256": "a1881be4ef3710ebf3d0e59a7a22e77ca79e2a6a3f51cdbadb74209e0698e00d",
+      "retrieved_at": "2026-11-15T08:27:13.195636+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N19_00_W156_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N19_00_W156_00_WBM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/hawaii/Copernicus_DSM_COG_10_N19_00_W156_00_WBM.tif",
+      "bytes": 69699,
+      "sha256": "5e9a482ef01f6babe484aeb7c3b34f59c038a29267f1978913b4debdb82776d0",
+      "retrieved_at": "2026-11-15T08:26:43.841013+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N29_00_W014_00_DEM/Copernicus_DSM_COG_10_N29_00_W014_00_DEM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/lanzarote/Copernicus_DSM_COG_10_N29_00_W014_00_DEM.tif",
+      "bytes": 2514331,
+      "sha256": "7ecc9e725f5d4e9eb81b33a926b40912d19b8f83e97fb91ba4bbea7555c5919a",
+      "retrieved_at": "2026-11-15T08:26:46.094055+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N29_00_W014_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N29_00_W014_00_WBM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/lanzarote/Copernicus_DSM_COG_10_N29_00_W014_00_WBM.tif",
+      "bytes": 80759,
+      "sha256": "f70da52cb7b6dfab70da7c16df02bce7969931ac241a8a408973db118c12ea31",
+      "retrieved_at": "2026-11-15T08:26:47.098536+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_S22_00_E119_00_DEM/Copernicus_DSM_COG_10_S22_00_E119_00_DEM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/pilbara/Copernicus_DSM_COG_10_S22_00_E119_00_DEM.tif",
+      "bytes": 43856763,
+      "sha256": "a54f11698edee6d13d8b49ec311a9f142593eb32f944a66378f70ae48f5f8c60",
+      "retrieved_at": "2026-11-15T08:27:30.921837+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_S22_00_E119_00_DEM/AUXFILES/Copernicus_DSM_COG_10_S22_00_E119_00_WBM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/pilbara/Copernicus_DSM_COG_10_S22_00_E119_00_WBM.tif",
+      "bytes": 26686,
+      "sha256": "82d33b6df5fe601f049798b77396e77cef64b530c338e40188d7d5b057abef64",
+      "retrieved_at": "2026-11-15T08:27:00.193697+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N37_00_W007_00_DEM/Copernicus_DSM_COG_10_N37_00_W007_00_DEM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/rio-tinto/Copernicus_DSM_COG_10_N37_00_W007_00_DEM.tif",
+      "bytes": 45484529,
+      "sha256": "8c3c018571e36e42381c6250ea4a2258c817b887c73456a00f5f4d6f0c51cbf8",
+      "retrieved_at": "2026-11-15T08:26:59.100169+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N37_00_W007_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N37_00_W007_00_WBM.tif",
+      "local_path": "data-pipeline/cache/raw/global-earth/rio-tinto/Copernicus_DSM_COG_10_N37_00_W007_00_WBM.tif",
+      "bytes": 117004,
+      "sha256": "ea9c780a7eabb870915f1a67918aeb79cf2dccb5e733636177452b082fb23215",
+      "retrieved_at": "2026-11-15T08:26:29.734790+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    }
+  ],
+  "target_sources": [
+    {
+      "id": "moon-lola-heights",
+      "title": "LOLA Site04 ROI 3 height crop",
+      "provider": "NASA GSFC",
+      "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_surf.tif",
+      "role": "Moon target heights",
+      "sha256": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+      "bytes": 66564,
+      "license": "NASA public scientific data; retain source attribution.",
+      "hash_scope": "SHA256 identifies the complete local asset."
+    },
+    {
+      "id": "moon-lola-valid-mask",
+      "title": "LOLA Site04 ROI 3 valid mask",
+      "provider": "NASA GSFC",
+      "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_surf.tif",
+      "role": "Moon target validity",
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+      "bytes": 16641,
+      "license": "NASA public scientific data; retain source attribution.",
+      "hash_scope": "SHA256 identifies the complete local asset."
+    },
+    {
+      "id": "mars-hirise-label-range",
+      "title": "HiRISE DTM PDS label range",
+      "provider": "NASA/JPL/UArizona",
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/DTEEC_045994_1985_046060_1985_U01.IMG",
+      "role": "Mars target metadata",
+      "sha256": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+      "bytes": 26692,
+      "license": "Public domain per HiRISE image usage policy; credit NASA/JPL/University of Arizona.",
+      "hash_scope": "SHA256 identifies this exact contiguous source byte interval assembled from validated HTTP 206 range responses, not the complete IMG."
+    },
+    {
+      "id": "mars-hirise-analysis-range",
+      "title": "HiRISE DTM 620-row analysis range",
+      "provider": "NASA/JPL/UArizona",
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/DTEEC_045994_1985_046060_1985_U01.IMG",
+      "role": "Mars target heights",
+      "sha256": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646",
+      "bytes": 16549040,
+      "license": "Public domain per HiRISE image usage policy; credit NASA/JPL/University of Arizona.",
+      "hash_scope": "SHA256 identifies this exact contiguous source byte interval assembled from validated HTTP 206 range responses, not the complete IMG."
+    }
+  ]
+}

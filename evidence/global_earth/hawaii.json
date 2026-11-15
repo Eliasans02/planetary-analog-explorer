@@ -1,0 +1,56 @@
+{
+  "id": "hawaii",
+  "path": "web-client/public/data/earth-regions/hawaii.json",
+  "run_id": "earth-discovery-hawaii-3f9e2be92dc27a1d",
+  "eligible": 100,
+  "excluded": 0,
+  "output_sha256": "58cf504a76501b8b3834500a9df25c191883c0543f4b70994dbe799aba0fad2c",
+  "profile": {
+    "profile_version": "global-earth-discovery-1.0.1",
+    "region_id": "hawaii",
+    "domain_center_wgs84": [
+      -155.201,
+      19.367
+    ],
+    "domain_crs": "EPSG:32605",
+    "domain_size_m": 6000,
+    "candidate_window_m": 600,
+    "candidate_step_m": 600,
+    "analysis_spacing_m": 60,
+    "analysis_grid": [
+      10,
+      10
+    ],
+    "slope_bins_deg": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      90
+    ],
+    "distance_weights": [
+      0.7,
+      0.3
+    ],
+    "sensitivity_weights": [
+      0.5,
+      0.5
+    ],
+    "shortlist_count": 12,
+    "shortlist_separation_m": 1800,
+    "required_copernicus_tiles": [
+      "N19_00_W156_00"
+    ],
+    "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage"
+  },
+  "profile_sha256": "516e98af0152056fa85c82c0ca879a97c4916cbcd529226e9ebdf2ed0562c150",
+  "source_sha256": {
+    "copernicus-dem-n19w156": "a1881be4ef3710ebf3d0e59a7a22e77ca79e2a6a3f51cdbadb74209e0698e00d",
+    "copernicus-wbm-n19w156": "5e9a482ef01f6babe484aeb7c3b34f59c038a29267f1978913b4debdb82776d0",
+    "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+    "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+    "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+    "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+  }
+}

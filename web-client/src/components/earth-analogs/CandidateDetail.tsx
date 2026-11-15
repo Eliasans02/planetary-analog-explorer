@@ -1,3 +1,4 @@
+import type { ResearchRegion } from '../../data/globalAnalogs';
 import { useMemo, useState } from 'react';
 import { ArrowUpRight, Compass, Download, Info } from 'lucide-react';
 import { buildCandidateReport } from './candidateReport';
@@ -18,6 +19,7 @@ import {
 } from './types';
 
 export interface CandidateDetailProps {
+  researchRegion?: ResearchRegion;
   discovery: EarthDiscovery;
   target: DiscoveryTarget;
   candidate: DiscoveryCandidate;
@@ -27,6 +29,7 @@ export interface CandidateDetailProps {
 
 export function CandidateDetail({
   discovery,
+  researchRegion,
   target,
   candidate,
   onExploreTarget,
@@ -39,7 +42,7 @@ export function CandidateDetail({
     setPdfBusy(true); setPdfError('');
     try {
       const { buildCandidatePdf } = await import('./candidatePdf');
-      const blob = await buildCandidatePdf(discovery, candidate, target);
+      const blob = await buildCandidatePdf(discovery, candidate, target, researchRegion);
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url; link.download = `${candidate.id}_${target.id}_report.pdf`;

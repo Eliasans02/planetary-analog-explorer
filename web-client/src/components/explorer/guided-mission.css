@@ -31,3 +31,5 @@
   .mission-fact { margin: 12px 0; }
   .mission-card small { font-size: 9px; }
 }
+.mission-card { max-height: calc(100svh - 200px); overflow-y: auto; }
+.px-app[data-mission] .research-control { display: none; }
