@@ -1,0 +1,233 @@
+{
+  "recorded_at": "2026-11-14T12:40:42.148509+00:00",
+  "execution_location": "local_repository",
+  "commands": [
+    {
+      "command": "npm run test",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/display_relief/test.txt",
+      "scope": "165 tests/18 files before final presentation-only markup/CSS edits"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/display_relief/typecheck.txt",
+      "scope": "Final source including presentation edits"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/display_relief/build.txt",
+      "scope": "Final browser-observed production bundle"
+    },
+    {
+      "command": "npm run verify:surfaces",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/display_relief/verify-surfaces.txt",
+      "scope": "Published native terrain asset integrity"
+    },
+    {
+      "command": "npm run verify:planets",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/display_relief/verify-planets.txt",
+      "scope": "Published planet image/DEM integrity and actual dimensions"
+    },
+    {
+      "command": "previews/a04/.venv/Scripts/python.exe -m pytest data-pipeline/tests/test_planet_assets.py data-pipeline/tests/test_surface_imagery.py",
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "evidence/display_relief/python-tests.txt"
+    },
+    {
+      "command": "previews/a04/.venv/Scripts/python.exe data-pipeline/analyze_surfaces.py --check",
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "evidence/display_relief/analysis-check.txt"
+    }
+  ],
+  "frontend_tests_passed": 165,
+  "frontend_files_passed": 18,
+  "full_frontend_suite_scope": "Before final presentation-only markup/CSS edits; not rerun after those edits.",
+  "final_typecheck_and_build_include_presentation_edits": true,
+  "final_targeted_tests": {
+    "tests_passed": 5,
+    "files_passed": 2,
+    "log": "evidence/display_relief/light-targeted.txt",
+    "command": "npx vitest run src/terrain/surfaceAppearance.test.ts src/terrain/surfaceUv.test.ts",
+    "scope": "Focused surface appearance/UV tests after presentation-only edits",
+    "exit_code": 0
+  },
+  "python_tests_passed": 8,
+  "analysis_surfaces_verified_unchanged": 7,
+  "native_terrain_and_local_hirise_hashes_unchanged": [
+    {
+      "path": "web-client/public/assets/surface-imagery/mars-eberswalde-hirise/local-ortho/color.png",
+      "bytes": 10746,
+      "sha256": "bfe5979f04a7b739ac52d22d44651a16aff9f61d2f2b5411ba8c17f343331d8a"
+    },
+    {
+      "path": "web-client/public/assets/surface-imagery/mars-eberswalde-hirise/local-ortho/provenance.json",
+      "bytes": 76696,
+      "sha256": "2c5b3de462c47c41078dc191dbc1e57415cf204bb5b0221af35c592eec46a424"
+    },
+    {
+      "path": "web-client/public/assets/surface-imagery/mars-gale-hirise/local-ortho/color.png",
+      "bytes": 13871,
+      "sha256": "cae014a3c53633a1f5a1032d516314adec70b2b4f49b68d3772b41aa95c0ca57"
+    },
+    {
+      "path": "web-client/public/assets/surface-imagery/mars-gale-hirise/local-ortho/provenance.json",
+      "bytes": 33607,
+      "sha256": "b6857f6d9dfca35f0619fcfbda4b23129cbe674341807961de31c00093f43f27"
+    },
+    {
+      "path": "web-client/public/assets/surface-imagery/mars-jezero-hirise/local-ortho/color.png",
+      "bytes": 10839,
+      "sha256": "ce33f65b2408351ba44dfd73d89b4ca616cea813c515135a429b1aa66843e879"
+    },
+    {
+      "path": "web-client/public/assets/surface-imagery/mars-jezero-hirise/local-ortho/provenance.json",
+      "bytes": 58735,
+      "sha256": "d40fcca2af15b306f8ef9309242a517c257616cfe2233472cb509f91cd70c68f"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site01-center/heights.f32",
+      "bytes": 66564,
+      "sha256": "1d2fd29198633cba817a99060ad21790d5731a02663b983362a496d5370500b6"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site01-center/provenance.json",
+      "bytes": 20095,
+      "sha256": "eab5868b598366786757ce28cf39d06432611f8d205af684519a597b1579e1c7"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site01-center/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site04-roi3/heights.f32",
+      "bytes": 66564,
+      "sha256": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site04-roi3/provenance.json",
+      "bytes": 23503,
+      "sha256": "fb54ab5a222fc5e4bc17c8d6377b84a628401ace41ed57ab3243b5195c2ce756"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site04-roi3/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site06-center/heights.f32",
+      "bytes": 66564,
+      "sha256": "e22addc8e8103a14724435d7ecaebdeb167bb8f3afc2eb2f57a39a4b0ed62975"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site06-center/provenance.json",
+      "bytes": 28603,
+      "sha256": "32d95fa8073a2359feb23e346b854598f932d1bb7affd51d867db904c46c961b"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site06-center/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-eberswalde-hirise/heights.f32",
+      "bytes": 66564,
+      "sha256": "38ca289729ebf67f2557943b8abd5e47ca41a5b6004908a8f58d49be9e2360ba"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-eberswalde-hirise/provenance.json",
+      "bytes": 11897,
+      "sha256": "c6f1f5da865eb208aa0661ddd5b0c17b78ad1448fdd4cab3457a40a9c373eb80"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-eberswalde-hirise/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-gale-hirise/heights.f32",
+      "bytes": 66564,
+      "sha256": "02078ad83841923b9b7c0793cdbf8ddfb10f1b2f3fffcddc92bae8d42d10584b"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-gale-hirise/provenance.json",
+      "bytes": 12031,
+      "sha256": "dd259e2ac856be92d091cb390d8ed4f6d3264300aca1ca0493100cd98dfc970d"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-gale-hirise/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-jezero-hirise/heights.f32",
+      "bytes": 66564,
+      "sha256": "0bac451f8f7d9f1e4d301f024c8b0edc8c4a7a5587136c20ad05db579d2afefd"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-jezero-hirise/provenance.json",
+      "bytes": 11596,
+      "sha256": "061d2e0af52afc0d3f3d502c55089454c5af6875e2dc4694eecc699b61dd8768"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-jezero-hirise/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/usgs-hawaii-summit/heights.f32",
+      "bytes": 66564,
+      "sha256": "3d3af24aec04a00e5b92662a323f8e321069dd78e237e6e2f7f9c2301ed7ba22"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/usgs-hawaii-summit/provenance.json",
+      "bytes": 17593,
+      "sha256": "25bbcb7ad0f0f3827f490273e973b3718c07f4121cd55eb9eb9939037e4008ee"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/usgs-hawaii-summit/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    }
+  ],
+  "built_js": {
+    "path": "web-client/dist/assets/index-BWJd2ss1.js",
+    "bytes": 1355460,
+    "sha256": "995ce048b5a15a15a312335c1c9af8663cd649e5e6eefb2491765be7d8194349"
+  },
+  "built_css": {
+    "path": "web-client/dist/assets/index-DxUfEtlc.css",
+    "bytes": 54260,
+    "sha256": "5605c8aff96dacf5eda1305344d4140cada593e264599ab8176e090f029df856"
+  },
+  "command_exit_codes_reported_by_root": true,
+  "warnings": [
+    "Vite main chunk exceeds 500 kB; final build passed.",
+    "Python: 16 Rasterio transform-multiplication PendingDeprecationWarnings; 8 tests passed.",
+    "Browser: 3 warnings from external LROC QuickMap reference URLs; no local application warning/error."
+  ],
+  "scientific_source_samples_invented": false,
+  "display_source_replaced": true,
+  "scientific_analysis_changed": false,
+  "global_mars_dem_added": false,
+  "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET_NOT_RERUN",
+  "performance_benchmark": "NOT_PERFORMED",
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "phase5_committed": false,
+  "scheduler_created": false,
+  "daemon_running": false
+}

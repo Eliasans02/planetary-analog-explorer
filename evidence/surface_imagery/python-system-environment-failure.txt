@@ -1,0 +1,73 @@
+test_surface_analysis (unittest.loader._FailedTest.test_surface_analysis) ... ERROR
+test_surface_expansion (unittest.loader._FailedTest.test_surface_expansion) ... ERROR
+test_surface_export (unittest.loader._FailedTest.test_surface_export) ... ERROR
+test_surface_imagery (unittest.loader._FailedTest.test_surface_imagery) ... ERROR
+
+======================================================================
+ERROR: test_surface_analysis (unittest.loader._FailedTest.test_surface_analysis)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_surface_analysis
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\tests\test_surface_analysis.py", line 13, in <module>
+    spec.loader.exec_module(analysis)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\analyze_surfaces.py", line 13, in <module>
+    import jsonschema
+ModuleNotFoundError: No module named 'jsonschema'
+
+
+======================================================================
+ERROR: test_surface_expansion (unittest.loader._FailedTest.test_surface_expansion)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_surface_expansion
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\tests\test_surface_expansion.py", line 12, in <module>
+    import expand_surface_sites as expansion
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\expand_surface_sites.py", line 15, in <module>
+    import jsonschema
+ModuleNotFoundError: No module named 'jsonschema'
+
+
+======================================================================
+ERROR: test_surface_export (unittest.loader._FailedTest.test_surface_export)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_surface_export
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\tests\test_surface_export.py", line 11, in <module>
+    from rasterio.io import MemoryFile
+ModuleNotFoundError: No module named 'rasterio'
+
+
+======================================================================
+ERROR: test_surface_imagery (unittest.loader._FailedTest.test_surface_imagery)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_surface_imagery
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\tests\test_surface_imagery.py", line 9, in <module>
+    import rasterio
+ModuleNotFoundError: No module named 'rasterio'
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (errors=4)

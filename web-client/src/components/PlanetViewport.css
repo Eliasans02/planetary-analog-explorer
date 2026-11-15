@@ -1,0 +1,34 @@
+.planet-viewport {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 8px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  padding: 44px 12px 44px;
+  background: #040b13;
+}
+.globe-canvas-host { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
+.globe-map-status { padding: 6px 10px; color: #d7e8e8; border-radius: 6px; font-size: 12px; }
+.globe-display-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 8px 10px;
+  border: 1px solid #a8bac433;
+  border-radius: 8px;
+  background: #040b13e8;
+  color: #e2e9eb;
+  font-size: 12px;
+}
+.globe-display-controls label { display: flex; align-items: center; gap: 6px; }
+.globe-display-controls select { color: inherit; background: #15212a; border: 1px solid #879ba655; border-radius: 4px; padding: 4px; }
+.globe-display-controls input { width: 92px; accent-color: #dae7e8; }
+.globe-display-controls small { flex-basis: 100%; color: #afbec4; font-size: 11px; }
+@media (max-width: 500px) {
+  .globe-display-controls { gap: 5px 10px; padding: 6px 8px; }
+  .globe-display-controls input { width: 74px; }
+}

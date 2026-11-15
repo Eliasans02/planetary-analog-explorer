@@ -1,0 +1,763 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-11-14T12:40:42.148509+00:00",
+  "mode": "parallel_local_development",
+  "user_instruction": "Continue Gemini work using multiple GPT-6.1 Sol instances, medium reasoning",
+  "orchestrator": "Astra",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "shared_contract": "Comparison1.0.0 unchanged; native surface1.1.0 and planet1.0.0",
+  "phase5_committed": false,
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "agents": [
+    {
+      "id": "/root/sol_pipeline",
+      "role": "Python pipeline",
+      "writes": [
+        "data-pipeline source and tests (exclude cache/raw)",
+        "evidence/local_a05_checks"
+      ],
+      "status": "completed_bounded_implementation_and_checks"
+    },
+    {
+      "id": "/root/sol_app",
+      "role": "Application state and validation",
+      "writes": [
+        "web-client/src/App.tsx",
+        "web-client/src/components/TelemetryHUD.tsx",
+        "web-client/src/components/AnalogPassport.tsx",
+        "web-client/src/data",
+        "web-client configs",
+        "evidence/local_b04_checks/app"
+      ],
+      "status": "completed_bounded_implementation_and_checks"
+    },
+    {
+      "id": "/root/sol_viewer",
+      "role": "3D viewer and terrain",
+      "writes": [
+        "web-client/src/components/Viewport3D.tsx",
+        "web-client/src/components/Viewport3D.lifecycle.test.ts",
+        "web-client/src/terrain",
+        "evidence/local_b04_checks/viewer"
+      ],
+      "status": "completed_bounded_implementation_and_checks"
+    },
+    {
+      "id": "/root/sol_science_review",
+      "role": "Independent native DEM and science audit",
+      "writes": [
+        "docs/research/NATIVE_DEM_AUDIT.*",
+        "evidence/native_dem_audit"
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "/root/sol_review",
+      "role": "Independent code and security review",
+      "writes": [
+        "evidence/local_b04_checks/independent-review.md"
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "/root/real_data_pipeline",
+      "role": "Actual NASA/USGS native raster export",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/real_surface_ui/REAL_SURFACE_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/real_surface_viewer",
+      "role": "Source terrain Three.js renderer",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/real_surface_ui/REAL_SURFACE_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/real_surface_app",
+      "role": "Surface catalog loader, locator and UI",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/real_surface_ui/REAL_SURFACE_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/real_surface_review",
+      "role": "Independent data fidelity, code and security review",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/real_surface_ui/REAL_SURFACE_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/planet_assets",
+      "role": "Source research, acquisition and verified exports",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_scope",
+      "human_pass": false
+    },
+    {
+      "id": "/root/planet_app",
+      "role": "Application, contracts/loaders and integration checks",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_scope",
+      "human_pass": false
+    },
+    {
+      "id": "/root/planet_viewer",
+      "role": "Globe and first-person renderer/input lifecycle",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_scope",
+      "human_pass": false
+    },
+    {
+      "id": "/root/planet_review",
+      "role": "Independent source/code/security review",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_scope",
+      "human_pass": false
+    },
+    {
+      "id": "/root/navigation_globe",
+      "role": "Globe texture lifecycle and saved view",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/navigation_improvements/NAVIGATION_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/navigation_ground",
+      "role": "Explicit ground controls and position publishing",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/navigation_improvements/NAVIGATION_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/navigation_review",
+      "role": "Independent science identity, code/security review and continuation documentation",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/navigation_improvements/NAVIGATION_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/surface_assets",
+      "role": "NASA asset acquisition, source-color pipeline and independent analysis review",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/surface_imagery/SURFACE_COLOR_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/terrain_analysis",
+      "role": "Scientific analysis, imagery contract/loader and independent asset/render reviews",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/surface_imagery/SURFACE_COLOR_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/surface_experience",
+      "role": "Surface pins, analysis panel, color rendering and documentation",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/surface_imagery/SURFACE_COLOR_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/mars_color_audit",
+      "role": "NASA source audit/acquisition, unchanged science checks and image asset pipeline",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/display_relief/DISPLAY_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/orbital_relief_render",
+      "role": "Neutral globe lighting, source-resolution display, layout and independent renderer review",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/display_relief/DISPLAY_CHECKPOINT.json"
+    },
+    {
+      "id": "/root/surface_relief_render",
+      "role": "Neutral native DEM imagery lighting, camera/resource lifecycle and compact surface controls",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "status": "completed_bounded_task",
+      "evidence": "evidence/display_relief/DISPLAY_CHECKPOINT.json"
+    }
+  ],
+  "gemini_status": "daily_quota_exceeded; B04 and A04 re-reviews did not execute",
+  "baselines": [
+    {
+      "path": "incoming/dev_a_source_bundle_a04.json",
+      "sha256": "6ad8fdb3558f70a629f66a892c79a70442e03caa2a8f882a67808840d53e0985",
+      "files": 17
+    },
+    {
+      "path": "incoming/dev_b_source_bundle_b03.json",
+      "sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+      "files": 36
+    }
+  ],
+  "integration_paths": [
+    "data-pipeline",
+    "web-client"
+  ],
+  "source_archive_in_progress": false,
+  "next_gate": "Human acceptance pending; broader scientific coverage, calibration and reconstruction remain.",
+  "continuation_scope": "active_turn_only_no_unattended_scheduler",
+  "source_archive": {
+    "path": "archives/gemini-handoff-2026-11-14.zip",
+    "bytes": 670330,
+    "sha256": "17b158d12d7cb663040b7adda4bb495f2cd4af1f8e1b5dfbbaf9039a5d508f7a"
+  },
+  "current_checkpoint": {
+    "id": "MARS_SOURCE_RELIEF_VERIFIED_2026-11-14",
+    "recorded_at": "2026-11-14T12:40:42.148509+00:00",
+    "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+    "phase5_committed": false,
+    "human_pass": {
+      "Dev_A": false,
+      "Dev_B": false
+    },
+    "execution_mode": "parallel_local_sol_6_1_medium_with_astra_root",
+    "url": "http://127.0.0.1:4173/",
+    "contracts": {
+      "planet_catalog": "1.0.0",
+      "surface_catalog": "1.1.0",
+      "comparison": "1.0.0 unchanged",
+      "surface_analysis": "1.0.0",
+      "surface_imagery": "1.0.0"
+    },
+    "catalogs": [
+      {
+        "path": "web-client/public/data/planet_catalog.json",
+        "bytes": 4303,
+        "sha256": "e0e1d3d2d27be2ec26e500a812201e1cabb094240be1e56dbd3a9ab04a782949"
+      },
+      {
+        "path": "web-client/public/data/surface_catalog.json",
+        "bytes": 35281,
+        "sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539"
+      },
+      {
+        "path": "web-client/public/data/surface_analysis.json",
+        "bytes": 24037,
+        "sha256": "71264c8ef2f15e1d364b38ca6957048d96a04ddeffe0ad11556c9c57d1519db0"
+      },
+      {
+        "path": "web-client/public/data/surface_imagery.json",
+        "bytes": 21832,
+        "sha256": "df1e1b07bfd58b1462099aea5c04fea38be20d7f0f0c0e3023dac76ea6dbf25c"
+      }
+    ],
+    "built_js": {
+      "path": "web-client/dist/assets/index-BWJd2ss1.js",
+      "bytes": 1355460,
+      "sha256": "995ce048b5a15a15a312335c1c9af8663cd649e5e6eefb2491765be7d8194349"
+    },
+    "built_css": {
+      "path": "web-client/dist/assets/index-DxUfEtlc.css",
+      "bytes": 54260,
+      "sha256": "5605c8aff96dacf5eda1305344d4140cada593e264599ab8176e090f029df856"
+    },
+    "implemented": [
+      "Replaced Mars global display imagery with NASA Viking/USGS/JPL-Caltech published source; exact Native 1440x720 JPEG and downsampled 1K only.",
+      "Regenerated approximate Mars orbital drapes from that source; retained local HiRISE images and all native DEM/analysis values.",
+      "Added neutral color-plus-shape and original-image globe modes, independent display-light control and per-body available source resolution.",
+      "Added neutral DEM-slope lighting and original-image surface modes, camera-preserving image/lighting changes and compact controls.",
+      "Reserved separate toolbar, fitted-canvas and status rows so globe controls cannot occlude the planet."
+    ],
+    "remaining": [
+      "Acquire broader and finer source-backed terrain/local imagery coverage.",
+      "Acquire and register a real global Mars DEM before claiming global topographic relief.",
+      "Calibrate comparable spatial support, body-frame/ENU registration and scientific analog similarity.",
+      "Reconstruct and register source-backed Gaussian splats.",
+      "Benchmark foreground FPS/RAM and native pointer lock in a supporting browser.",
+      "Receive human Dev_A and Dev_B acceptance."
+    ],
+    "checks": {
+      "frontend_tests_passed": 165,
+      "frontend_files_passed": 18,
+      "full_suite_before_final_presentation_edits": true,
+      "final_targeted_tests": {
+        "tests_passed": 5,
+        "files_passed": 2,
+        "log": "evidence/display_relief/light-targeted.txt",
+        "command": "npx vitest run src/terrain/surfaceAppearance.test.ts src/terrain/surfaceUv.test.ts",
+        "scope": "Focused surface appearance/UV tests after presentation-only edits",
+        "exit_code": 0
+      },
+      "python_tests_passed": 8,
+      "typecheck": "PASS",
+      "build": "PASS",
+      "verify_planets": "PASS",
+      "verify_surfaces": "PASS",
+      "analysis_unchanged_surfaces": 7,
+      "browser": "FUNCTIONAL_SOURCE_COLOR_RELIEF_CONTROLS_AND_NAVIGATION_OBSERVATIONS",
+      "performance_benchmark": "NOT_PERFORMED",
+      "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET_NOT_RERUN"
+    },
+    "evidence": [
+      "evidence/display_relief/check-status.json",
+      "evidence/display_relief/browser-observation.json",
+      "evidence/display_relief/source-attribution.json",
+      "evidence/display_relief/SOURCE_MANIFEST.json",
+      "docs/research/MARS_DISPLAY_REVIEW.md"
+    ],
+    "screenshots": [
+      {
+        "path": "evidence/display_relief/relief-mars.jpg",
+        "bytes": 136030,
+        "sha256": "3d8126ffa5d81d47ab5dbfb4f3f09c9454557be23f7c956524960bb6f014d886"
+      },
+      {
+        "path": "evidence/display_relief/relief-ground.jpg",
+        "bytes": 134885,
+        "sha256": "3ff2461875a5914bd18ce8acb84575e2abf42d6604603d22f95a89ea55a55394"
+      },
+      {
+        "path": "evidence/display_relief/relief-moon.jpg",
+        "bytes": 131052,
+        "sha256": "21905e2cd4dda5d9bcfc6095896cea8b389b1a85975932d5e957f372fc56746d"
+      }
+    ],
+    "scheduler_created": false,
+    "daemon_running": false
+  },
+  "continuation_prompt": "prompts/ASTRA_SOL_LOOP.md",
+  "checkpoint_history": [
+    {
+      "id": "SOL_LOCAL_HANDOFF_VERIFIED_2026-11-14",
+      "recorded_at": "2026-11-14T09:59:02.544132+00:00",
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "source_archive": {
+        "path": "archives/gemini-handoff-2026-11-14.zip",
+        "bytes": 670330,
+        "sha256": "17b158d12d7cb663040b7adda4bb495f2cd4af1f8e1b5dfbbaf9039a5d508f7a"
+      },
+      "source_archive_scope": "Latest received Gemini A04 (17 files), B03 (36 files), available visible conversations/reports, and orchestration context; not a complete Google account history export.",
+      "source_manifest": "evidence/local_b04_checks/SOL_SOURCE_MANIFEST.json",
+      "pipeline_tests_passed": 47,
+      "frontend_tests_passed": 61,
+      "frontend_typecheck": "PASS",
+      "frontend_config_tests": "PASS",
+      "frontend_build": "PASS",
+      "asset_verification": "FAIL_MISSING_PREPARED_DATASET",
+      "independent_review": "Both concrete score and splat numeric findings fixed and independently re-reviewed; bounded source scope only",
+      "independent_review_path": "evidence/local_b04_checks/independent-review.md",
+      "science_audit": "docs/research/NATIVE_DEM_AUDIT.md",
+      "publication_gates": [
+        "Explicit versioned lunar frame decision",
+        "Supplemental product absolute height definition",
+        "Exact source-to-ENU geometry or separately explicit projected display contract",
+        "Display validity versus laser coverage policy",
+        "Real buffer/camera/gap-safe collision checks and ground-view inspection"
+      ],
+      "real_ground_verified": false,
+      "performance_verified": false,
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "preview_evidence": "evidence/local_b04_checks/preview/observation.json",
+      "continuation_prompt": "prompts/ASTRA_SOL_LOOP.md",
+      "no_unattended_scheduler": true
+    },
+    {
+      "id": "REAL_NATIVE_SURFACES_INTEGRATED_2026-11-14",
+      "recorded_at": "2026-11-14T10:26:48.480437+00:00",
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "url": "http://127.0.0.1:4173/",
+      "catalog": {
+        "path": "web-client/public/data/surface_catalog.json",
+        "bytes": 12305,
+        "sha256": "5fc055e0cdf37dc78ddc8db278b2e4653eee9841a457a17e68ee251be1c70399"
+      },
+      "contracts": {
+        "comparison": "1.0.0 unchanged",
+        "surface_catalog": "1.0.0 separate unranked native relief"
+      },
+      "surfaces": [
+        {
+          "id": "lola-site04-roi3",
+          "name": "Shackleton rim · LOLA Site04 ROI 3",
+          "body": "moon",
+          "coordinates": {
+            "latitude_deg": -89.77989162018713,
+            "longitude_deg": -156.26739892005892,
+            "frame": "MOON_ME_DE421",
+            "provenance": "MOON_ME reference frame of ephemeris DE421 per README; planetocentric latitude and east longitude via native projection inversion only; no IAU/WGS84 transform"
+          },
+          "stats": {
+            "min_source_height_m": 1609.3466796875,
+            "max_source_height_m": 1739.121826171875,
+            "relief_m": 129.775146484375,
+            "valid_samples": 16641,
+            "total_samples": 16641,
+            "direct_return_samples": 1726
+          }
+        },
+        {
+          "id": "usgs-hawaii-summit",
+          "name": "Hawaii 3DEP summit window",
+          "body": "earth",
+          "coordinates": {
+            "latitude_deg": 19.82069444425608,
+            "longitude_deg": -155.46819444474266,
+            "frame": "NAD83",
+            "provenance": "EPSG:4269 NAD83; no datum transformation"
+          },
+          "stats": {
+            "min_source_height_m": 3679.77197265625,
+            "max_source_height_m": 4204.6845703125,
+            "relief_m": 524.91259765625,
+            "valid_samples": 16641,
+            "total_samples": 16641,
+            "direct_return_samples": null
+          }
+        }
+      ],
+      "checks": {
+        "export_tests_passed": 5,
+        "source_pixel_comparisons_passed": 33282,
+        "frontend_full_suite_passed": 77,
+        "final_padding_guard_targeted_tests_passed": 14,
+        "note": "Full suite preceded final zero-padding validation guard; targeted tests, typecheck and build passed after that guard. Counts overlap and must not be added.",
+        "typecheck": "PASS",
+        "build": "PASS",
+        "verify_surfaces": "PASS",
+        "scored_dataset_verify_assets": "NOT_SATISFIED_MISSING_SCORED_DATASET",
+        "browser_native_relief": "PASS_WITHOUT_PERFORMANCE_CLAIM"
+      },
+      "evidence": [
+        "evidence/real_surface_export/validation.json",
+        "evidence/real_surface_export/focused-tests.txt",
+        "evidence/real_surface_review.md",
+        "evidence/real_surface_ui/check-status.json",
+        "evidence/real_surface_ui/padding-guard-status.json",
+        "evidence/real_surface_ui/browser-observation.json",
+        "evidence/real_surface_ui/SOURCE_MANIFEST.json"
+      ],
+      "remaining": [
+        "Mars source integration",
+        "Comparable analysis support and calibrated similarity profiles",
+        "Absolute vertical datum and exact ENU/body-frame registration",
+        "Registered source-backed Gaussian splat reconstruction",
+        "Performance benchmarking and human acceptance"
+      ],
+      "next_action": "Add further source-backed layers and comparable ROI metrics while preserving verified native surface browsing; do not republish native relief as exact ENU or ranked analogs.",
+      "scheduler_created": false
+    },
+    {
+      "id": "PLANET_EXPLORER_NATIVE_WALK_2026-11-14",
+      "recorded_at": "2026-11-14T11:04:25.876740+00:00",
+      "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "url": "http://127.0.0.1:4173/",
+      "contracts": {
+        "planet_catalog": "1.0.0",
+        "surface_catalog": "1.1.0",
+        "comparison": "1.0.0 unchanged"
+      },
+      "catalogs": [
+        {
+          "path": "web-client/public/data/planet_catalog.json",
+          "bytes": 4417,
+          "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+        },
+        {
+          "path": "web-client/public/data/surface_catalog.json",
+          "bytes": 17163,
+          "sha256": "0a94f8074e25e7863fa9412d2a781096660e2ad3cab7a1e58a4c2641ce8cee9f"
+        }
+      ],
+      "built_js": {
+        "bytes": 1321670,
+        "path": "web-client/dist/assets/index-ZfJGDHkp.js",
+        "sha256": "c427994e3bf96f01c90025bdc7f18dca2c2b1e0a707b0f787a534a6b536b451c"
+      },
+      "implemented": [
+        "Source-backed Moon/Mars360degree orbit",
+        "Independent side-by-side comparison",
+        "Local1K/2K/4K source-derived textures",
+        "Prepared-site astronaut drop and unsupported-coverage notice",
+        "Moon/Mars native DEM first-person navigation with valid-triangle collision",
+        "Pointer-lock fallback: drag look, focused WASD, Escape/blur cleanup",
+        "Source provenance, limits and preserved Earth surface archive"
+      ],
+      "checks": {
+        "frontend_tests_passed": 100,
+        "frontend_files_passed": 11,
+        "source_pipeline_tests_passed": 7,
+        "moon_registration_samples_verified": 1036800,
+        "mars_source_samples_verified": 16641,
+        "typecheck": "PASS",
+        "build": "PASS",
+        "verify_planets": "PASS",
+        "verify_surfaces": "PASS",
+        "browser": "VERIFIED_WITH_POINTER_LOCK_FALLBACK",
+        "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET",
+        "performance_benchmark": "NOT_PERFORMED"
+      },
+      "evidence": [
+        "evidence/planet_explorer/check-status.json",
+        "evidence/planet_explorer/browser-observation.json",
+        "evidence/planet_explorer/independent-review.md",
+        "evidence/planet_explorer/SOURCE_MANIFEST.json",
+        "evidence/planet_assets/validation.json"
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/planet_explorer/planet-split.jpg",
+          "bytes": 53259,
+          "sha256": "fca313cf332ad656856791cb8685f0e391f6d5f757615ad3649ff1af8c59daba"
+        },
+        {
+          "path": "evidence/planet_explorer/planet-walk.jpg",
+          "bytes": 86090,
+          "sha256": "4717e747603d151e6fa98aef95f7d3571d7d4c3492586c150365c1870cdd3b47"
+        }
+      ],
+      "remaining": [
+        "Expand real local terrain coverage and add registered source imagery.",
+        "Preserve camera orientation across texture-quality changes.",
+        "Reconstruct and register real source-backed Gaussian splats.",
+        "Complete calibrated similarity and exact ENU/body-frame registration.",
+        "Benchmark foreground FPS/RAM and verify native pointer-lock success in a supporting browser.",
+        "Receive human Dev_A and Dev_B acceptance."
+      ],
+      "scheduler_created": false
+    },
+    {
+      "id": "NAVIGATION_CONTINUITY_VERIFIED_2026-11-14",
+      "recorded_at": "2026-11-14T11:39:05.154811+00:00",
+      "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "url": "http://127.0.0.1:4173/",
+      "contracts": {
+        "planet_catalog": "1.0.0",
+        "surface_catalog": "1.1.0",
+        "comparison": "1.0.0 unchanged"
+      },
+      "catalogs": [
+        {
+          "path": "web-client/public/data/planet_catalog.json",
+          "bytes": 4417,
+          "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+        },
+        {
+          "path": "web-client/public/data/surface_catalog.json",
+          "bytes": 17163,
+          "sha256": "0a94f8074e25e7863fa9412d2a781096660e2ad3cab7a1e58a4c2641ce8cee9f"
+        }
+      ],
+      "built_js": {
+        "path": "web-client/dist/assets/index-BIWJTfWF.js",
+        "bytes": 1325481,
+        "sha256": "fa3fd5e41c4709f6ff7492a92a06d8b4d9a44933c868573b797e55b271d801ab"
+      },
+      "implemented": [
+        "Race-safe texture-only quality replacement retaining displayed map, camera and DEM; actual loading/showing status and retry.",
+        "Per-body orbital view memory and relative zoom across split panels and ground return; stale Locate requests cleared.",
+        "Explicit Start/Pause/Resume, keyboard arrow look, guarded input cleanup and final native position publishing.",
+        "Responsive ground toolbar/help and display-only grid-spacing formatting."
+      ],
+      "checks": {
+        "frontend_tests_passed": 105,
+        "frontend_files_passed": 12,
+        "full_suite_scope": "All navigation source changes passed 105 tests in 12 files. Display-only grid-spacing formatting was added afterwards; final typecheck and build passed after that edit.",
+        "typecheck": "PASS",
+        "build": "PASS",
+        "verify_planets": "PASS",
+        "verify_surfaces": "PASS",
+        "browser": "FUNCTIONAL_OBSERVATIONS_WITH_POINTER_LOCK_FALLBACK",
+        "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET",
+        "performance_benchmark": "NOT_PERFORMED"
+      },
+      "evidence": [
+        "evidence/navigation_improvements/check-status.json",
+        "evidence/navigation_improvements/browser-observation.json",
+        "evidence/navigation_improvements/independent-review.md",
+        "evidence/navigation_improvements/SOURCE_MANIFEST.json"
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/navigation_improvements/navigation-orbit.jpg",
+          "bytes": 55898,
+          "sha256": "645eb9c490147d32bae0bda167e68bc0ffd6cbb698ab8459180e8c81bb61f351"
+        },
+        {
+          "path": "evidence/navigation_improvements/navigation-ground.jpg",
+          "bytes": 86545,
+          "sha256": "6656756d6d975d0c55d7a2cb09a248ff28f328c0091f7e771f8ca1d713d4d648"
+        }
+      ],
+      "remaining": [
+        "Expand real native terrain coverage and add registered source imagery.",
+        "Reconstruct and register real source-backed Gaussian splats.",
+        "Complete calibrated similarity and exact ENU/body-frame registration.",
+        "Benchmark foreground FPS/RAM and input timing; verify native pointer lock in a supporting browser.",
+        "Receive human Dev_A and Dev_B acceptance."
+      ],
+      "no_unattended_scheduler": true
+    },
+    {
+      "id": "SURFACE_SITES_ANALYSIS_COLOR_VERIFIED_2026-11-14",
+      "recorded_at": "2026-11-14T12:12:15.870616+00:00",
+      "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "url": "http://127.0.0.1:4173/",
+      "contracts": {
+        "planet_catalog": "1.0.0",
+        "surface_catalog": "1.1.0",
+        "comparison": "1.0.0 unchanged",
+        "surface_analysis": "1.0.0",
+        "surface_imagery": "1.0.0"
+      },
+      "catalogs": [
+        {
+          "path": "web-client/public/data/planet_catalog.json",
+          "bytes": 4417,
+          "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+        },
+        {
+          "path": "web-client/public/data/surface_catalog.json",
+          "bytes": 35281,
+          "sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539"
+        },
+        {
+          "path": "web-client/public/data/surface_analysis.json",
+          "bytes": 24037,
+          "sha256": "71264c8ef2f15e1d364b38ca6957048d96a04ddeffe0ad11556c9c57d1519db0"
+        },
+        {
+          "path": "web-client/public/data/surface_imagery.json",
+          "bytes": 21325,
+          "sha256": "d6b26ada6264b71abbb519fef48a6702144d787379bf98b1530325d0dac907d6"
+        }
+      ],
+      "surface_counts": {
+        "moon": 3,
+        "mars": 3,
+        "earth": 1
+      },
+      "imagery_records": 6,
+      "imagery_layers": 9,
+      "built_js": {
+        "path": "web-client/dist/assets/index-7jGhMrdp.js",
+        "bytes": 1348544,
+        "sha256": "004ba44510811f0faf5b5bbd9281bdfff33d8c84f87304e1e6d8fa2a7340e4ef"
+      },
+      "implemented": [
+        "Added four source-backed native terrain windows: LOLA Site01/Site06 and HiRISE Gale/Eberswalde; six planetary pins plus retained Earth surface.",
+        "Offline Horn slopes, relief, 3x3 range roughness, Riley TRI and slope distribution with source binding and validity coverage.",
+        "Six orbital mosaic drapes and three HiRISE local images; published RGB/grayscale preserved and color modes labeled.",
+        "Hash-bound optional imagery loader, PDS-label mapping checks, pixel-center UVs, bounded resource cleanup and camera-preserving mode swaps."
+      ],
+      "checks": {
+        "frontend_tests_passed": 155,
+        "frontend_files_passed": 15,
+        "python_tests_passed": 26,
+        "typecheck": "PASS",
+        "build": "PASS",
+        "verify_planets": "PASS",
+        "verify_surfaces": "PASS",
+        "analysis_recomputation": "PASS",
+        "browser": "FUNCTIONAL_COLOR_AND_NAVIGATION_OBSERVATIONS_WITH_POINTER_LOCK_FALLBACK",
+        "performance_benchmark": "NOT_PERFORMED",
+        "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET"
+      },
+      "evidence": [
+        "evidence/surface_imagery/check-status.json",
+        "evidence/surface_imagery/browser-observation.json",
+        "evidence/surface_imagery/verification.json",
+        "evidence/surface_imagery/review-pipeline.md",
+        "evidence/surface_imagery/review-render.md",
+        "evidence/surface_imagery/SOURCE_MANIFEST.json",
+        "evidence/surface_expansion/review-assets.md",
+        "evidence/surface_expansion/review-analysis.md"
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/surface_imagery/imagery-moon.jpg",
+          "bytes": 134045,
+          "sha256": "d73804dac8142b79f1919f4bb5052b854dd391291e469940aa9ee1f83cc4267e"
+        },
+        {
+          "path": "evidence/surface_imagery/imagery-mars.jpg",
+          "bytes": 135641,
+          "sha256": "a626ab566c9f169004200090eb6d4b87366099f64d2db7a00fd955da46fe3b87"
+        },
+        {
+          "path": "evidence/surface_imagery/imagery-local.jpg",
+          "bytes": 135642,
+          "sha256": "56102ce68ec520ace86b7ff2be5b7b963770f81d6ee2adcff98a4c33c2f84eb2"
+        },
+        {
+          "path": "evidence/surface_expansion/expansion-pins.jpg",
+          "bytes": 139078,
+          "sha256": "7922f9f8969be5ee63e39cf0d14a56db8eda8efd69a245cfdf07c5d6d12a9e0a"
+        }
+      ],
+      "remaining": [
+        "Acquire finer real local lunar imagery and broader source-backed terrain windows.",
+        "Reconstruct and register real source-backed Gaussian splats.",
+        "Calibrate comparable spatial-support analysis and similarity; complete exact body-frame/ENU registration.",
+        "Benchmark foreground FPS/RAM and native pointer lock in a supporting browser.",
+        "Receive human Dev_A and Dev_B acceptance."
+      ],
+      "scheduler_created": false,
+      "daemon_running": false
+    }
+  ],
+  "execution_mode": "parallel_local_sol_6_1_medium",
+  "local_preview": {
+    "url": "http://127.0.0.1:4173/",
+    "source_directory": "web-client",
+    "status": "RUNNING_NASA_MARS_SOURCE_RELIEF_BUILD",
+    "evidence": "evidence/display_relief/browser-observation.json",
+    "real_native_relief_verified": true,
+    "global_mars_dem_verified": false,
+    "exact_enu_or_splat_verified": false
+  },
+  "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+  "state_update_kind": "ENGINEERING_CHECKPOINT_NOT_HUMAN_ACCEPTANCE",
+  "scheduler_created": false,
+  "daemon_running": false
+}

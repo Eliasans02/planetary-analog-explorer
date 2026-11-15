@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\analyze_surfaces.py", line 13, in <module>
+    import jsonschema
+ModuleNotFoundError: No module named 'jsonschema'

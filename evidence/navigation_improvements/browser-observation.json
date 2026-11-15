@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-11-14T11:39:05.154811+00:00",
+  "observer": "Astra root through CUA internal browser",
+  "url": "http://127.0.0.1:4173/",
+  "final_script_observed": "/assets/index-BIWJTfWF.js",
+  "final_console_warn_error_entries": [],
+  "intermediate_bundle": "index-DwWbGyZ_.js",
+  "intermediate_bundle_scope": "All navigation changes, before display-only spacing formatting.",
+  "observed_interactions": [
+    "Rotated Moon retained pose and diameter from 2K through showing 2K/loading 4K to showing 4K.",
+    "Split view fitted both globes; independently rotated Mars retained view when returning to a single panel.",
+    "Locate Jezero, rotate away, explore and return retained the off-site Mars view instead of replaying Locate.",
+    "Start and W changed native Z from zero to -1.7 m. Pause plus W left coordinates unchanged. Resume plus D changed X to 1.2 m. Escape paused. These are observed navigation positions, not scientific measurements or speed benchmarks."
+  ],
+  "final_bundle_observations": [
+    "Jezero grid-spacing label shows 1.01 x 1.01 m; precise catalog values unchanged.",
+    "Enter activated Start and Resume. Up arrows visibly shifted the horizon; Down restored it.",
+    "Tab or Escape changed status to Paused, released canvas focus and showed Resume exploration.",
+    "Final ground screenshot shows Paused and X 0.0 m / Z -0.1 m.",
+    "Final split view displays both Moon and Mars verified 4K map status."
+  ],
+  "limitations": [
+    "Internal browser rejected native pointer lock; explicit keyboard/drag fallback exercised. Native pointer-lock success remains unverified.",
+    "Some final timed key holds produced no HUD delta; another produced -0.1 m. No speed, FPS or RAF throttling diagnosis is claimed. Read-only source audit found no concrete stalled-RAF path.",
+    "Full-page split screenshot failed; orbital evidence is a viewport capture. Ground evidence is a full-page capture.",
+    "No new source-derived terrain, scored results or Gaussian reconstruction was created in this navigation loop."
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/navigation_improvements/navigation-orbit.jpg",
+      "bytes": 55898,
+      "sha256": "645eb9c490147d32bae0bda167e68bc0ffd6cbb698ab8459180e8c81bb61f351"
+    },
+    {
+      "path": "evidence/navigation_improvements/navigation-ground.jpg",
+      "bytes": 86545,
+      "sha256": "6656756d6d975d0c55d7a2cb09a248ff28f328c0091f7e771f8ca1d713d4d648"
+    }
+  ],
+  "browser_control_method": "Documented CUA UI actions and read-only DOM; no application state injection."
+}

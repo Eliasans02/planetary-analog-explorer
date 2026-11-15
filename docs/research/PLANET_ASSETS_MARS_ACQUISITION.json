@@ -1,0 +1,76 @@
+{
+  "source": {
+    "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/DTEEC_045994_1985_046060_1985_U01.IMG",
+    "discovery_url": "https://www.uahirise.org/dtm/dtm.php?ID=ESP_045994_1985",
+    "local_path": "data-pipeline/cache/raw/planet-explorer/hirise-native-center-129-rows.bin",
+    "bytes": 3443268,
+    "sha256": "6cb88e69f4c43e67d7a90a0a5c8e3880ae1956b70b8223845662d6ace69f90b4",
+    "retrieved_at": "2026-11-14T10:38:38.631162+00:00",
+    "http_headers": {
+      "Server": "nginx/1.18.0",
+      "Date": "Sat, 14 Nov 2026 10:38:31 GMT",
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "3443268",
+      "Connection": "close",
+      "Last-Modified": "Thu, 27 Jul 2017 23:18:39 GMT",
+      "ETag": "\"597a74cf-16b2c5ac\"",
+      "Content-Range": "bytes 188712440-192155707/380814764",
+      "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+    },
+    "complete_product": false,
+    "range_start_inclusive": 188712440,
+    "range_end_inclusive": 192155707,
+    "complete_product_bytes": 380814764,
+    "identity_scope": "Exact 129 complete source rows; SHA256 is partial bytes only; full IMG checksum not obtained."
+  },
+  "ranges": [
+    {
+      "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/DTEEC_045994_1985_046060_1985_U01.IMG",
+      "discovery_url": "https://www.uahirise.org/dtm/dtm.php?ID=ESP_045994_1985",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/hirise-label-range.bin",
+      "bytes": 26692,
+      "sha256": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+      "retrieved_at": "2026-11-14T10:38:30.002722+00:00",
+      "http_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Sat, 14 Nov 2026 10:38:29 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "26692",
+        "Connection": "close",
+        "Last-Modified": "Thu, 27 Jul 2017 23:18:39 GMT",
+        "ETag": "\"597a74cf-16b2c5ac\"",
+        "Content-Range": "bytes 0-26691/380814764",
+        "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+      },
+      "complete_product": false,
+      "range_start_inclusive": 0,
+      "range_end_inclusive": 26691,
+      "complete_product_bytes": 380814764,
+      "identity_scope": "This hash identifies only the retrieved exact byte range, never the complete IMG."
+    },
+    {
+      "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/DTEEC_045994_1985_046060_1985_U01.IMG",
+      "discovery_url": "https://www.uahirise.org/dtm/dtm.php?ID=ESP_045994_1985",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/hirise-native-center-129-rows.bin",
+      "bytes": 3443268,
+      "sha256": "6cb88e69f4c43e67d7a90a0a5c8e3880ae1956b70b8223845662d6ace69f90b4",
+      "retrieved_at": "2026-11-14T10:38:38.631162+00:00",
+      "http_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Sat, 14 Nov 2026 10:38:31 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "3443268",
+        "Connection": "close",
+        "Last-Modified": "Thu, 27 Jul 2017 23:18:39 GMT",
+        "ETag": "\"597a74cf-16b2c5ac\"",
+        "Content-Range": "bytes 188712440-192155707/380814764",
+        "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+      },
+      "complete_product": false,
+      "range_start_inclusive": 188712440,
+      "range_end_inclusive": 192155707,
+      "complete_product_bytes": 380814764,
+      "identity_scope": "This hash identifies only the retrieved exact byte range, never the complete IMG."
+    }
+  ]
+}

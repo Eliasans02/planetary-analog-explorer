@@ -1,0 +1,29 @@
+.venv/
+.venv-*/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+node_modules/
+dist/
+test-results/
+playwright-report/
+data-pipeline/raw/
+data-pipeline/cache/
+.env
+.env.*
+!.env.example
+*.log
+
+# Local imports, environments and duplicate handoff bundles.
+/incoming/
+/previews/
+/archives/*.zip
+
+# Generated test fixtures and reports; keep source/provenance evidence.
+/evidence/local_*_checks/
+/evidence/**/reviewer_pytest_tmp/
+/evidence/**/*.zip
+coverage/
+*.py[cod]
+.DS_Store
+Thumbs.db

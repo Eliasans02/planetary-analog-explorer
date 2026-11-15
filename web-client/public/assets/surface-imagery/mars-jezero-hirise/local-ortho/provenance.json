@@ -1,0 +1,978 @@
+{
+  "raw_source_receipt": {
+    "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+    "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+    "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+    "complete_product_bytes": 34413875,
+    "bytes": 34413875,
+    "sha256": "4606bfa40070cee5bf869682ff5f1de14a4be797fc18523b3cc7effae4f1d418",
+    "complete_product": true,
+    "identity_scope": "Complete source JP2 assembled from verified exact HTTP ranges.",
+    "retrieved_at": "2026-11-14T11:57:11.354976+00:00",
+    "http_headers": {
+      "Server": "nginx/1.18.0",
+      "Date": "Sat, 14 Nov 2026 11:57:10 GMT",
+      "Content-Type": "image/jp2",
+      "Content-Length": "65536",
+      "Connection": "close",
+      "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+      "ETag": "\"597a74b0-20d1d33\"",
+      "Content-Range": "bytes 0-65535/34413875",
+      "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+    },
+    "range_receipts": [
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-0-1048575.bin",
+        "range_start_inclusive": 0,
+        "range_end_inclusive": 1048575,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "e0be66852f90f92502ccf8f0e99b503a54d85d9a166f9b6592025c4298268233",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:46.414038+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:23 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 0-1048575/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-1048576-2097151.bin",
+        "range_start_inclusive": 1048576,
+        "range_end_inclusive": 2097151,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "b247bdf3942b042916022b61c83458e1b43b5083dda00a2215cb10a2c0ceed63",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:31.098843+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:24 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 1048576-2097151/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-2097152-3145727.bin",
+        "range_start_inclusive": 2097152,
+        "range_end_inclusive": 3145727,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "e537ee51cf7a615df037766c68241e06bdeb3c0350c421d461fc076b49072919",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:58:00.618707+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:22 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 2097152-3145727/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-3145728-4194303.bin",
+        "range_start_inclusive": 3145728,
+        "range_end_inclusive": 4194303,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "dd2b241f6ff85cb7b57b6e8db8fdbbb20cc10608c1fab4cc2ceb41ca33c0e7bb",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:20.080230+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:14 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 3145728-4194303/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-4194304-5242879.bin",
+        "range_start_inclusive": 4194304,
+        "range_end_inclusive": 5242879,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "500a12a1d9ca3ce4f032acff691f4ddedd3bca8110650f87073e96ac57fe12e1",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:26.406847+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:21 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 4194304-5242879/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-5242880-6291455.bin",
+        "range_start_inclusive": 5242880,
+        "range_end_inclusive": 6291455,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "9399504e9901d19e4fe0faa6e1ff65e97c0d115f108d73af712d8c2dfacccd48",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:24.796461+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:13 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 5242880-6291455/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-6291456-7340031.bin",
+        "range_start_inclusive": 6291456,
+        "range_end_inclusive": 7340031,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "9b651d1fd73b5c5e08b1f33f9538ab54ec69830326419010bd84550ac8954685",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:32.118293+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:25 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 6291456-7340031/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-7340032-8388607.bin",
+        "range_start_inclusive": 7340032,
+        "range_end_inclusive": 8388607,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "87656fe8d72052e3e4c5cdf4800f97ca30ee4de0c8b3427aa271f7608647789e",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:58:03.306748+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:32 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 7340032-8388607/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-8388608-9437183.bin",
+        "bytes": 1048576,
+        "sha256": "fb531bedcc23e11268f01e5ebac4fa8c17f3488b3baa58947d7c478aa8a8ca91",
+        "range_start_inclusive": 8388608,
+        "range_end_inclusive": 9437183,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:15.352514+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:13 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 8388608-9437183/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-9437184-10485759.bin",
+        "range_start_inclusive": 9437184,
+        "range_end_inclusive": 10485759,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "b401807c4f9a24bd5040b32cbbd8a8a8a648a1dfdb4b8f79aeb2726b7994f2ac",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:39.381268+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:34 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 9437184-10485759/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-10485760-11534335.bin",
+        "range_start_inclusive": 10485760,
+        "range_end_inclusive": 11534335,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "84166238d23945cc2ff49625ddd8be1136da809d7c3028b04d7207462a3b025c",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:40.425866+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:35 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 10485760-11534335/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-11534336-12582911.bin",
+        "range_start_inclusive": 11534336,
+        "range_end_inclusive": 12582911,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "b4df8f0929aee72a66fd44b4d6c4db9b246bddb7ad710b8ffbf13c233eab9716",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:47.694593+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:40 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 11534336-12582911/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-12582912-13631487.bin",
+        "range_start_inclusive": 12582912,
+        "range_end_inclusive": 13631487,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "9a00dbbbb479b1f7154a07e779e4cec3c3d250173f0eed109c27364aeca62bee",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:46.413037+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:42 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 12582912-13631487/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-13631488-14680063.bin",
+        "range_start_inclusive": 13631488,
+        "range_end_inclusive": 14680063,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "f35e1140182d205a99bf6186920e71b6bca0359e27c6cedc8c45fecc3fdb57cc",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:57.766992+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:49 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 13631488-14680063/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-14680064-15728639.bin",
+        "range_start_inclusive": 14680064,
+        "range_end_inclusive": 15728639,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "1d9418694c2bf7eee79986c9a95f41f20b56c9b7855efa77d6f661439e79c872",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:57:58.350045+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:50 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 14680064-15728639/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-15728640-16777215.bin",
+        "range_start_inclusive": 15728640,
+        "range_end_inclusive": 16777215,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "482371dc51e373dbb5a6f67ea9f6f03bc0a8819419a8d13a11be83cd25971cc7",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:58:15.554136+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:51 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 15728640-16777215/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-16777216-17825791.bin",
+        "bytes": 1048576,
+        "sha256": "a2a91bdf867060138f5f22638c3bdf3fef56c34540627d09105292ac83c5b948",
+        "range_start_inclusive": 16777216,
+        "range_end_inclusive": 17825791,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:17.384707+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:14 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 16777216-17825791/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-17825792-18874367.bin",
+        "range_start_inclusive": 17825792,
+        "range_end_inclusive": 18874367,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "40a6b823c3a06a0fb15dc7151fe30c33b775da8cd208f670528ad211bb4569e5",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:58:07.449015+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:58 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 17825792-18874367/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-18874368-19922943.bin",
+        "range_start_inclusive": 18874368,
+        "range_end_inclusive": 19922943,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "05435faf1cbd7f9269b13fa7a99ce98c4261952b020fe97f6ad5f2c4936278cd",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:58:09.738083+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:57:59 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 18874368-19922943/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-19922944-20971519.bin",
+        "range_start_inclusive": 19922944,
+        "range_end_inclusive": 20971519,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "f8187570831b78121598bc68861dca645965125e48ee1df2e4dbd0501114810f",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:58:07.364914+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:58:03 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 19922944-20971519/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-20971520-22020095.bin",
+        "range_start_inclusive": 20971520,
+        "range_end_inclusive": 22020095,
+        "complete_product_bytes": 34413875,
+        "bytes": 1048576,
+        "sha256": "bd1ce8f55ecf489e078a6463a83e9b1b53e9c51d2a15fd9f046ce32aa7c45f27",
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:58:19.675894+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:58:06 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 20971520-22020095/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-22020096-23068671.bin",
+        "bytes": 1048576,
+        "sha256": "f13110030d27197eee5677bcc3f7669656c04c01b80cfcf731cc691990dda82f",
+        "range_start_inclusive": 22020096,
+        "range_end_inclusive": 23068671,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:18.381444+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:15 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 22020096-23068671/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-23068672-24117247.bin",
+        "bytes": 1048576,
+        "sha256": "d927a889f0316db206424bbd7df2df670096f31fdab1bad3bbb3540e95be2b9f",
+        "range_start_inclusive": 23068672,
+        "range_end_inclusive": 24117247,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:21.126101+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:17 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 23068672-24117247/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-24117248-25165823.bin",
+        "bytes": 1048576,
+        "sha256": "0175bf7cacfea16756aa727fedc2daacf9b16cb0333739069e171c407935da44",
+        "range_start_inclusive": 24117248,
+        "range_end_inclusive": 25165823,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:20.428116+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:16 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 24117248-25165823/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-25165824-26214399.bin",
+        "bytes": 1048576,
+        "sha256": "c4fd97b500cf02670b3178784e755932bc2a52a2e2d240c824275cbff924c3f2",
+        "range_start_inclusive": 25165824,
+        "range_end_inclusive": 26214399,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:14.084640+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:12 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 25165824-26214399/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-26214400-27262975.bin",
+        "bytes": 1048576,
+        "sha256": "7ebdde27ecb28a62253ced3bbda41913a4f5fc3036b95fec9a5e314c2814c641",
+        "range_start_inclusive": 26214400,
+        "range_end_inclusive": 27262975,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:21.865250+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:18 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 26214400-27262975/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-27262976-28311551.bin",
+        "bytes": 1048576,
+        "sha256": "488fdcbec2282360f039269f86deb903700cf355928a6b92f25121fcee038116",
+        "range_start_inclusive": 27262976,
+        "range_end_inclusive": 28311551,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:23.039386+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:19 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 27262976-28311551/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-28311552-29360127.bin",
+        "bytes": 1048576,
+        "sha256": "cd35ead1ff2a398a5d13957676da5ea10d8dd4fdf891e64b5a4ea356db089b75",
+        "range_start_inclusive": 28311552,
+        "range_end_inclusive": 29360127,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:23.463070+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:20 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 28311552-29360127/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-29360128-30408703.bin",
+        "bytes": 1048576,
+        "sha256": "5d8f2e47320c08e4a5142fc48ec6132c8efc49ed0f75f73ad3a73869333c0d3f",
+        "range_start_inclusive": 29360128,
+        "range_end_inclusive": 30408703,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:23.259057+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:21 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 29360128-30408703/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-30408704-31457279.bin",
+        "bytes": 1048576,
+        "sha256": "ea2c06bf00a0543f849b89fda15c4c39d1d1e8a467f5acabf9ce001c5ecf7401",
+        "range_start_inclusive": 30408704,
+        "range_end_inclusive": 31457279,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:29.206161+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:22 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 30408704-31457279/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-31457280-32505855.bin",
+        "bytes": 1048576,
+        "sha256": "1617dc2d4bb965cade185b2a85bb133ff9a6247437b786958696580a458e14a2",
+        "range_start_inclusive": 31457280,
+        "range_end_inclusive": 32505855,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:25.373894+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:23 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 31457280-32505855/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-32505856-33554431.bin",
+        "bytes": 1048576,
+        "sha256": "5f457fe31a20ddc08c7587115ae0e17afdb77052e0827b6dc00c323c1e9126b9",
+        "range_start_inclusive": 32505856,
+        "range_end_inclusive": 33554431,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:27.789434+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:24 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "1048576",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 32505856-33554431/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      },
+      {
+        "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.JP2-33554432-34413874.bin",
+        "bytes": 859443,
+        "sha256": "15164bf237e94fb985c2137d70b560b044da72cd1351f2b5fbe4e16e1c86a822",
+        "range_start_inclusive": 33554432,
+        "range_end_inclusive": 34413874,
+        "complete_product_bytes": 34413875,
+        "complete_product": false,
+        "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+        "retrieved_at": "2026-11-14T11:59:27.566722+00:00",
+        "http_headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Sat, 14 Nov 2026 11:59:25 GMT",
+          "Content-Type": "image/jp2",
+          "Content-Length": "859443",
+          "Connection": "close",
+          "Last-Modified": "Thu, 27 Jul 2017 23:18:08 GMT",
+          "ETag": "\"597a74b0-20d1d33\"",
+          "Content-Range": "bytes 33554432-34413874/34413875",
+          "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+        }
+      }
+    ]
+  },
+  "label_receipt": {
+    "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.LBL",
+    "local_path": "data-pipeline/cache/raw/surface-imagery/ESP_045994_1985_RED_C_01_ORTHO.LBL",
+    "bytes": 5432,
+    "sha256": "6c6e202e8716765d8179e77f2c51f0381cb254ed8a10fa350e6023808d718736",
+    "complete_product": true,
+    "retrieved_at": "2026-11-14T12:00:56.461896+00:00",
+    "http_headers": {
+      "Server": "nginx/1.18.0",
+      "Date": "Sat, 14 Nov 2026 12:00:56 GMT",
+      "Content-Type": "text/plain",
+      "Content-Length": "5432",
+      "Connection": "close",
+      "Last-Modified": "Thu, 27 Jul 2017 23:18:07 GMT",
+      "ETag": "\"597a74af-1538\"",
+      "Accept-Ranges": "bytes",
+      "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+    },
+    "identity_scope": "Complete companion PDS label bytes."
+  },
+  "source_label_text": "PDS_VERSION_ID            = PDS3\n/* Identification Information */\nDATA_SET_ID               = \"MRO-M-HIRISE-5-DTM-V1.0\"\nDATA_SET_NAME             = \"MRO MARS HIGH RESOLUTION IMAGING SCIENCE\n                            EXPERIMENT DTM V1.0\"\nPRODUCER_INSTITUTION_NAME = \"UNIVERSITY OF ARIZONA\"\nPRODUCER_ID               = \"UA\"\nPRODUCER_FULL_NAME        = \"ALFRED MCEWEN, USGS-ASTROGEOLOGY\"\nPRODUCT_ID                = \"ESP_045994_1985_RED_C_01_ORTHO\"\nPRODUCT_VERSION_ID        = \"1\"\nINSTRUMENT_HOST_NAME      = \"MARS RECONNAISSANCE ORBITER\"\nINSTRUMENT_HOST_ID        = \"MRO\"\nINSTRUMENT_NAME           = \"HIGH RESOLUTION IMAGING SCIENCE EXPERIMENT\"\nINSTRUMENT_ID             = \"HIRISE\"\nTARGET_NAME               = \"MARS\"\nSOURCE_PRODUCT_ID         = (ESP_045994_1985,\n                             DTEEC_045994_1985_046060_1985_U01)\nRATIONALE_DESC            = \"Candidate landing site for 2020 mission in Jezero\n                            Crater\"\nSOFTWARE_NAME             = \"SOCET Set 5.6.0\"\n\nOBJECT = IMAGE_MAP_PROJECTION\n    ^DATA_SET_MAP_PROJECTION     = \"DSMAP.CAT\"\n    MAP_PROJECTION_TYPE          = \"EQUIRECTANGULAR\"\n    PROJECTION_LATITUDE_TYPE     = PLANETOCENTRIC\n    /* NOTE: The EQUIRECTANGULAR projection is based on the formula  */\n    /* for a sphere. To eliminate confusion in the                   */\n    /* IMAGE_MAP_PROJECTION object we have set all three radii,      */\n    /* A_AXIS_RADIUS, B_AXIS_RADIUS, and C_AXIS_RADIUS to the same   */\n    /* number. The value recorded in the three radii is the local    */\n    /* radius at the center latitude on the Mars ellipsoid. That is, */\n    /* equatorial radius of 3396.190000 km and polar radius of       */\n    /* 3376.200000 kilometers. Using the local radius of the         */\n    /* ellipsoid implies that the MAP_SCALE and MAP_RESOLUTION are   */\n    /* true at the center latitude.                                  */\n    A_AXIS_RADIUS                = 3394.8398133163 <KM>\n    B_AXIS_RADIUS                = 3394.8398133163 <KM>\n    C_AXIS_RADIUS                = 3394.8398133163 <KM>\n    COORDINATE_SYSTEM_NAME       = PLANETOCENTRIC\n    POSITIVE_LONGITUDE_DIRECTION = EAST\n    KEYWORD_LATITUDE_TYPE        = PLANETOCENTRIC\n    /* NOTE:  CENTER_LATITUDE and CENTER_LONGITUDE describe the location  */\n    /* of the center of projection, which is not necessarily equal to the */\n    /* location of the center point of the image.                         */\n    CENTER_LATITUDE              = 15.0 <DEG>\n    CENTER_LONGITUDE             = 77.44 <DEG>\n    LINE_FIRST_PIXEL             = 1\n    LINE_LAST_PIXEL              = 14266\n    SAMPLE_FIRST_PIXEL           = 1\n    SAMPLE_LAST_PIXEL            = 6673\n    MAP_PROJECTION_ROTATION      = 0.0 <DEG>\n    MAP_RESOLUTION               = 58684.0491709 <PIX/DEG>\n    MAP_SCALE                    = 1.0096633268711 <METERS/PIXEL>\n    MAXIMUM_LATITUDE             = 18.548391096554 <DEG>\n    MINIMUM_LATITUDE             = 18.305293550569 <DEG>\n    LINE_PROJECTION_OFFSET       = 1088495.5 <PIXEL>\n    SAMPLE_PROJECTION_OFFSET     = 3210.5000000001 <PIXEL>\n    EASTERNMOST_LONGITUDE        = 77.50109494 <DEG>\n    WESTERNMOST_LONGITUDE        = 77.3833804 <DEG>\nEND_OBJECT = IMAGE_MAP_PROJECTION\nOBJECT = VIEWING_PARAMETERS\n    NORTH_AZIMUTH = 270.0 <DEG>\nEND_OBJECT = VIEWING_PARAMETERS\n\n/* The JPEG2000 image data file associated with this label. */\nOBJECT = COMPRESSED_FILE\n    FILE_NAME                  = \"ESP_045994_1985_RED_C_01_ORTHO.JP2\"\n    RECORD_TYPE                = UNDEFINED\n    ENCODING_TYPE              = \"JP2\"\n    ENCODING_TYPE_VERSION_NAME = \"ISO/IEC15444-1:2004\"\n    INTERCHANGE_FORMAT         = BINARY\n    /* The name of the original source file. */\n    UNCOMPRESSED_FILE_NAME     = \"ESP_045994_1985_RED_C_01_ORTHO.IMG\"\n    /* The amount of original image data. */\n    REQUIRED_STORAGE_BYTES     = 95197018 <BYTES>\n    ^DESCRIPTION               = \"JP2INFO.TXT\"\nEND_OBJECT = COMPRESSED_FILE\n\n/* The source image data definition. */\nOBJECT = UNCOMPRESSED_FILE\n    FILE_NAME    = \"ESP_045994_1985_RED_C_01_ORTHO.IMG\"\n    RECORD_TYPE  = FIXED_LENGTH\n    RECORD_BYTES = 6673 <BYTES>\n    FILE_RECORDS = 14266\n    ^IMAGE       = \"ESP_045994_1985_RED_C_01_ORTHO.IMG\"\n    OBJECT = IMAGE\n        LINES                      = 14266\n        LINE_SAMPLES               = 6673\n        BANDS                      = 1\n\t\t/* NOTE: The conversion from DN to I/F (intensity/flux) is: */\n\t\t/* I/F = (DN * SCALING_FACTOR) + OFFSET                     */\n\t\t/* I/F is defined as the ratio of the observed radiance and */\n\t\t/* the radiance of a 100% lambertian reflector with the sun */\n\t\t/* and camera orthogonal to the observing surface.          */\n        OFFSET                     = 0.0519947235533183\n        SCALING_FACTOR             = 0.0002267694487077\n        SAMPLE_BITS                = 8\n        SAMPLE_BIT_MASK            = 2#11111111#\n        SAMPLE_TYPE                = MSB_UNSIGNED_INTEGER\n        BAND_STORAGE_TYPE          = BAND_SEQUENTIAL\n        CORE_NULL                  = 0\n        CORE_LOW_REPR_SATURATION   = 1\n        CORE_LOW_INSTR_SATURATION  = 1\n        CORE_HIGH_REPR_SATURATION  = 255\n        CORE_HIGH_INSTR_SATURATION = 255\n        CENTER_FILTER_WAVELENGTH   = 700 <NM>\n        FILTER_NAME                = \"RED\"\n    END_OBJECT = IMAGE\nEND_OBJECT = UNCOMPRESSED_FILE\nEND\n",
+  "source_metadata": {
+    "embedded_crs_wkt": "PROJCS[\"Equirectangular MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"unnamed\",SPHEROID[\"unnamed\",3394839.8133163,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"latitude_of_origin\",15],PARAMETER[\"central_meridian\",77.44],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "sampling_crs_wkt": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"unknown\",ELLIPSOID[\"unknown\",3394839.8133163,0,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]],PRIMEM[\"Reference meridian\",0,ANGLEUNIT[\"degree\",0.0174532925199433,ID[\"EPSG\",9122]]]],CONVERSION[\"unknown\",METHOD[\"Equidistant Cylindrical (Spherical)\",ID[\"EPSG\",1029]],PARAMETER[\"Latitude of 1st standard parallel\",15,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Longitude of natural origin\",77.44,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+    "transform": [
+      1.0096633268711,
+      0.0,
+      -3240.5144475928964,
+      0.0,
+      -1.0096633268711,
+      1099012.9781508944
+    ],
+    "width": 6673,
+    "height": 14266,
+    "bands": 1,
+    "dtype": "uint8",
+    "color_interpretations": [
+      "gray"
+    ],
+    "sampled_source_window_col_row_width_height": [
+      3271,
+      7068,
+      129,
+      129
+    ],
+    "mapping_verification": {
+      "label_derived_affine": [
+        1.0096633268711,
+        0,
+        -3240.5144475928964,
+        0,
+        -1.0096633268711,
+        1099012.9781508944
+      ],
+      "affine_max_error_m": 0.0,
+      "projected_corner_geographic_bounds": [
+        77.38337952223867,
+        77.50110142537042,
+        18.305289344837274,
+        18.548387771097094
+      ],
+      "published_geographic_bounds": [
+        77.3833804,
+        77.50109494,
+        18.305293550569,
+        18.548391096554
+      ],
+      "bounds_tolerance_deg": 5.292457806013672e-05
+    }
+  },
+  "source_credit": "NASA/JPL-Caltech/UArizona",
+  "license": "Public domain per https://www.uahirise.org/media/usage.php; retain NASA/JPL-Caltech/UArizona credit.",
+  "registration": "Map each DEM native pixel center through declared source/PDS-label ortho CRSs, inverse embedded ortho affine and nearest source pixel; no fitted alignment.",
+  "nearest_tie_rule": "Source-pixel edge coordinates within 1e-7 pixel of an integer snap to that integer; exact equal-distance ties choose larger row/column. This only resolves floating-point edge ambiguity.",
+  "crs_interpretation": "Authoritative PDS equirectangular CENTER_LATITUDE sets standard parallel (true-scale latitude), with northing origin zero. Embedded GeoJP2 latitude_of_origin is not used; embedded raster affine is retained. See HiRISE howto caveat on mapping-keyword interpretation.",
+  "sampling": "Nearest published pixel at each DEM native pixel center; no new colors, stretch, palette, enhancement, or elevation-dependent tint.",
+  "output_pixel_registration": "PNG row0/col0 corresponds to DEM sample row0/col0; UV at ((col+0.5)/width,(row+0.5)/height), imageOrientation none and texture flipY false.",
+  "source_pixel_comparisons": [
+    {
+      "grid_row_col": [
+        0,
+        0
+      ],
+      "source_row_col": [
+        7068,
+        3271
+      ],
+      "source_rgb": [
+        77,
+        77,
+        77
+      ]
+    },
+    {
+      "grid_row_col": [
+        0,
+        128
+      ],
+      "source_row_col": [
+        7068,
+        3399
+      ],
+      "source_rgb": [
+        71,
+        71,
+        71
+      ]
+    },
+    {
+      "grid_row_col": [
+        64,
+        64
+      ],
+      "source_row_col": [
+        7132,
+        3335
+      ],
+      "source_rgb": [
+        73,
+        73,
+        73
+      ]
+    },
+    {
+      "grid_row_col": [
+        128,
+        0
+      ],
+      "source_row_col": [
+        7196,
+        3271
+      ],
+      "source_rgb": [
+        64,
+        64,
+        64
+      ]
+    },
+    {
+      "grid_row_col": [
+        128,
+        128
+      ],
+      "source_row_col": [
+        7196,
+        3399
+      ],
+      "source_rgb": [
+        66,
+        66,
+        66
+      ]
+    }
+  ],
+  "limitations": [
+    "Published HiRISE ortho pixels retain original image illumination, shadows and display processing; no new contrast stretch or colorization.",
+    "Projected ortho and DEM are mapped through their declared CRSs; no independent tie-point or photometric calibration is claimed.",
+    "Published RED-channel image is grayscale; RGB channels repeat its gray value without invented color.",
+    "Nearest source-pixel sampling; texture and DEM spatial resolution remain distinct."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "verified_at": "2026-11-14T10:48:38.390678+00:00",
+  "test_command": "previews/a04/.venv/Scripts/python.exe -m pytest data-pipeline/tests/test_surface_export.py data-pipeline/tests/test_planet_assets.py -q",
+  "tests_passed": 7,
+  "tests_failed": 0,
+  "schema_validation": "passed",
+  "all_output_hashes_and_byte_counts": "passed",
+  "raw_mars_png_crc_verify_and_full_decode": "passed; all eight complete retrieved PNGs",
+  "moon_pds_orientation_comparison_samples": 1036800,
+  "moon_pds_orientation_comparison": "all samples match source DN after Float32 conversion and720-column roll",
+  "mars_valid_source_buffer_comparison_samples": 16641,
+  "assets": [
+    {
+      "path": "/assets/planets/moon/color-1024.jpg",
+      "sha256": "035cb414b7c2595b84ed196c019b4e8cef37883fe20a02f3240da427a424fbc4",
+      "bytes": 155485,
+      "width": 1024,
+      "height": 512,
+      "label": "1K"
+    },
+    {
+      "path": "/assets/planets/moon/color-2048.jpg",
+      "sha256": "12cc434945fa30fe52658611d2a4bf88cd5c3983e1a040ca56faaa0d396afe24",
+      "bytes": 598048,
+      "width": 2048,
+      "height": 1024,
+      "label": "2K"
+    },
+    {
+      "path": "/assets/planets/moon/color-4096.jpg",
+      "sha256": "b01b0842d9ec1b24140b925cba0de485e9887741c34add25dd5c41f47c47ee91",
+      "bytes": 2484879,
+      "width": 4096,
+      "height": 2048,
+      "label": "4K"
+    },
+    {
+      "path": "/assets/planets/mars/color-1024.jpg",
+      "sha256": "1655a482b0c97f8fd9f05b45d606accf0247ccbf021d435c7e22b545ee111bf6",
+      "bytes": 230213,
+      "width": 1024,
+      "height": 512,
+      "label": "1K"
+    },
+    {
+      "path": "/assets/planets/mars/color-2048.jpg",
+      "sha256": "3851b23009166c15779293d02f415785df69989070fdcb128d4de90e5d22a135",
+      "bytes": 883751,
+      "width": 2048,
+      "height": 1024,
+      "label": "2K"
+    },
+    {
+      "path": "/assets/planets/mars/color-4096.jpg",
+      "sha256": "2f9ed79e506a6ae6d3e86dd59c8d1ed541a65602e7016ea9e4294ffd91627e02",
+      "bytes": 3226210,
+      "width": 4096,
+      "height": 2048,
+      "label": "4K"
+    },
+    {
+      "path": "/assets/planets/moon/provenance.json",
+      "sha256": "2ccef947a76a3b6f5e0a76e489d7e5fa85dd6cbb4247aa3e916a606450c78b7f",
+      "bytes": 16980
+    },
+    {
+      "path": "/assets/planets/mars/provenance.json",
+      "sha256": "f70dbc16b3aa7f37b4d0da8708ace8ee605dbd3635743b78ef85838f4e39b6a9",
+      "bytes": 9079
+    },
+    {
+      "path": "/assets/planets/moon/global-heights-m.f32",
+      "sha256": "2724eb919e9dff40b2bd0ebb7fe0ee88959aee91375478ef84e6f122250b5302",
+      "bytes": 4147200
+    },
+    {
+      "path": "/assets/surfaces/mars-jezero-hirise/heights.f32",
+      "sha256": "0bac451f8f7d9f1e4d301f024c8b0edc8c4a7a5587136c20ad05db579d2afefd",
+      "bytes": 66564
+    },
+    {
+      "path": "/assets/surfaces/mars-jezero-hirise/valid-mask.u8",
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+      "bytes": 16641
+    },
+    {
+      "path": "/assets/surfaces/mars-jezero-hirise/provenance.json",
+      "sha256": "061d2e0af52afc0d3f3d502c55089454c5af6875e2dc4694eecc699b61dd8768",
+      "bytes": 11596
+    }
+  ],
+  "new_public_asset_bytes_excluding_source_image_manifests": 11846646,
+  "planet_catalog_bytes": 4417,
+  "surface_catalog_bytes": 17163,
+  "scientific_scores_computed": false,
+  "source_datum_transformations": false,
+  "global_mars_displacement_supplied": false,
+  "mars_source_acquisition": "exact HTTP206 label and129 full native rows only; no full IMG checksum claim"
+}

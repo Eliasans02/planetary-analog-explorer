@@ -1,0 +1,377 @@
+{
+  "version": "1.0.0",
+  "reviewed_on": "2026-11-14",
+  "challenge_url": "https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/?tab=resources",
+  "membership_evidence": "Complete Resources-tab text supplied by the user in this conversation. Direct challenge-page retrieval failed; provider verification is recorded separately.",
+  "direct_challenge_tab_verified": false,
+  "tracking_query_policy": "Preserve provided_url; remove only the supplied utm_source tracking parameter in canonical_url.",
+  "scientific_payloads_acquired_by_this_update": false,
+  "resources": [
+    {
+      "id": "challenge_nasa_earthdata_search",
+      "agency": "NASA",
+      "name": "NASA Earthdata Search",
+      "provided_url": "https://search.earthdata.nasa.gov/?utm_source=%27chatgpt.com%27",
+      "canonical_url": "https://search.earthdata.nasa.gov/",
+      "kind": "discovery_portal",
+      "priority": "first_vertical_slice",
+      "pipeline_use": "Discover and record exact Earth DEM/albedo/land-surface products, collection version, granule, footprint, time, QA, datum and download URL. SRTMGL1 V003 N19W156 is an existing candidate; only its CMR metadata is local.",
+      "frontend_use": "Offline source attribution and real derived terrain; no live portal calls during demo.",
+      "existing_registry_ids": [
+        "srtm",
+        "modis_mcd43a3_061"
+      ],
+      "limitation": "A portal link or CMR metadata is not a downloaded scientific raster or evidence of feature use. Authenticated downloads remain offline preparation.",
+      "primary_verification": {
+        "status": "primary_portal_shell_fetched",
+        "url": "https://search.earthdata.nasa.gov/",
+        "resolved_url": "https://search.earthdata.nasa.gov/",
+        "http_status": 200,
+        "retrieved_at_utc": "2026-11-14T08:29:32.390740Z",
+        "tls_verification": "enabled_default_trust_store",
+        "retrieved_representation": "HTML page, not a scientific payload",
+        "page_bytes": 14874,
+        "page_sha256": "7de8b4d463ef95c1a6e36acee1b5adfd279f078a508fa3a55c0f5989eaf84bf9",
+        "observed_links": [],
+        "scope_limit": "JavaScript application shell reached; interactive search, layers and scientific payloads were not independently loaded.",
+        "product_relationship": {
+          "status": "portal_to_exact_product_relationship_verified_payload_pending",
+          "listed_resource_id": "challenge_nasa_earthdata_search",
+          "registry_id": "srtm",
+          "collection_id": "C2763266360-LPCLOUD",
+          "collection_short_name": "SRTMGL1",
+          "collection_version": "003",
+          "granule_id": "G2821072105-LPCLOUD",
+          "granule_name": "N19W156.SRTMGL1.hgt",
+          "portal_collection_url": "https://search.earthdata.nasa.gov/search/granules?p=C2763266360-LPCLOUD",
+          "metadata_query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?short_name=SRTMGL1&version=003&readable_granule_name=N19W156*&options%5Breadable_granule_name%5D%5Bpattern%5D=true&page_size=10",
+          "granule_metadata_url": "https://cmr.earthdata.nasa.gov/search/concepts/G2821072105-LPCLOUD.umm_json",
+          "download_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/SRTMGL1.003/N19W156.SRTMGL1.hgt/N19W156.SRTMGL1.hgt.zip",
+          "evidence": "The NASA CMR granule response provides the collection concept ID, an inherited Earthdata Search collection URL, and the exact HTTPS GET DATA ZIP URL. The cached UMM metadata independently contains that ZIP URL. This verifies a catalog relationship; no interactive portal click-through is claimed.",
+          "local_metadata_path": "data-pipeline/cache/raw/fast-path/N19W156.cmr.json",
+          "local_metadata_sha256": "e4be956132e2cedcb4dfe24c71db90fdaa98f1f3bf7025fb585712cc12fc9ed1",
+          "local_metadata_bytes": 2672,
+          "scientific_payload_downloaded": false,
+          "feature_or_ui_use_verified": false,
+          "download_blocker": "Protected LP DAAC payload requires documented Earthdata access. No authentication bypass, credential changes, or protected ZIP requests performed by this research update."
+        }
+      }
+    },
+    {
+      "id": "challenge_nasa_worldview",
+      "agency": "NASA",
+      "name": "NASA Worldview",
+      "provided_url": "https://worldview.earthdata.nasa.gov/index.html?utm_source=%27chatgpt.com%27",
+      "canonical_url": "https://worldview.earthdata.nasa.gov/index.html",
+      "kind": "visual_exploration",
+      "priority": "research_context",
+      "pipeline_use": "Inspect real candidate regions and layer/date/coverage context, then obtain original numerical products through their archives.",
+      "frontend_use": "Only provenance-labelled locally prepared context imagery if redistribution terms permit.",
+      "existing_registry_ids": [],
+      "limitation": "Do not extract physical elevations, temperatures or scores from display colours or screenshots.",
+      "primary_verification": {
+        "status": "primary_portal_shell_fetched",
+        "url": "https://worldview.earthdata.nasa.gov/index.html",
+        "resolved_url": "https://worldview.earthdata.nasa.gov/index.html",
+        "http_status": 200,
+        "retrieved_at_utc": "2026-11-14T08:29:32.240129Z",
+        "tls_verification": "enabled_default_trust_store",
+        "retrieved_representation": "HTML page, not a scientific payload",
+        "page_bytes": 4315,
+        "page_sha256": "cb2d20917791e84f680004926944677e08289fa228d60fc734d427c0718596ff",
+        "observed_links": [],
+        "scope_limit": "JavaScript application shell reached; interactive search, layers and scientific payloads were not independently loaded."
+      }
+    },
+    {
+      "id": "challenge_nasa_pds",
+      "agency": "NASA",
+      "name": "NASA Planetary Data System (PDS)",
+      "provided_url": "https://pds.nasa.gov/?utm_source=%27chatgpt.com%27",
+      "canonical_url": "https://pds.nasa.gov/",
+      "kind": "science_archive",
+      "priority": "first_vertical_slice",
+      "pipeline_use": "Resolve Moon/Mars products to exact archive identifiers and labels; preserve scale, offset, nodata, radius/areoid distinction and coordinate conventions.",
+      "frontend_use": "Local terrain and metadata linked to actual downloaded PDS product identifiers.",
+      "existing_registry_ids": [
+        "lro_lola_gdr",
+        "lro_diviner",
+        "mgs_mola_megdr",
+        "mro_hirise_jezero_candidate_dtm"
+      ],
+      "limitation": "Being a mission-associated dataset is not proof that a particular supplemental download is the identical PDS product. Record the actual relationship.",
+      "primary_verification": {
+        "status": "primary_page_fetched",
+        "url": "https://pds.nasa.gov/",
+        "resolved_url": "https://pds.nasa.gov/",
+        "http_status": 200,
+        "retrieved_at_utc": "2026-11-14T08:29:32.102850Z",
+        "tls_verification": "enabled_default_trust_store",
+        "retrieved_representation": "HTML page, not a scientific payload",
+        "page_bytes": 61709,
+        "page_sha256": "4884b4bb15904c6e7efcfa95cf2aea994b8850106898ccb5ef06606a5365bf68",
+        "observed_links": [
+          {
+            "href": "http://pds-geosciences.wustl.edu/",
+            "label": "Geosciences (GEO)"
+          }
+        ],
+        "links_scope": "Selected observed links relevant to PAE, not a complete link inventory."
+      }
+    },
+    {
+      "id": "challenge_nasa_lro",
+      "agency": "NASA",
+      "name": "NASA Lunar Reconnaissance Orbiter (LRO)",
+      "provided_url": "https://pds-geosciences.wustl.edu/missions/lro/?utm_source=%27chatgpt.com%27",
+      "canonical_url": "https://pds-geosciences.wustl.edu/missions/lro/",
+      "kind": "mission_archive",
+      "priority": "first_vertical_slice",
+      "pipeline_use": "Prioritize labelled LOLA topography and relevant LRO product metadata. Treat locally downloaded PGDA Site04 products as supplemental LOLA products until the archive relationship is documented.",
+      "frontend_use": "Metric terrain from the accepted DEM and its actual reference frame; no relabelling MOON_ME/DE421 as another frame.",
+      "existing_registry_ids": [
+        "lro_lola_gdr",
+        "lro_lola_south_pole_5m",
+        "lro_diviner"
+      ],
+      "limitation": "A crater name or LRO mission label is not a verified landing coordinate or NASA-approved base site.",
+      "primary_verification": {
+        "status": "primary_page_fetched",
+        "url": "https://pds-geosciences.wustl.edu/missions/lro/",
+        "resolved_url": "https://pds-geosciences.wustl.edu/missions/lro/",
+        "http_status": 200,
+        "retrieved_at_utc": "2026-11-14T08:29:32.612835Z",
+        "tls_verification": "enabled_default_trust_store",
+        "retrieved_representation": "HTML page, not a scientific payload",
+        "page_bytes": 51571,
+        "page_sha256": "56abffacf69d6090862324c06270f3cb38ca9aedd6d9ba9850cbeabc1d3648b5",
+        "observed_links": [
+          {
+            "href": "https://pds-geosciences.wustl.edu/missions/lro/diviner.htm",
+            "label": "Diviner Archive"
+          },
+          {
+            "href": "https://pds-geosciences.wustl.edu/missions/lro/lola.htm",
+            "label": "LOLA Archive"
+          }
+        ],
+        "links_scope": "Selected observed links relevant to PAE, not a complete link inventory.",
+        "product_relationship": {
+          "status": "instrument_archive_chain_verified_selected_pgda_product_is_supplemental",
+          "listed_resource_id": "challenge_nasa_lro",
+          "registry_ids": [
+            "lro_lola_gdr",
+            "lro_lola_south_pole_5m"
+          ],
+          "observed_edges": [
+            {
+              "from": "https://pds-geosciences.wustl.edu/missions/lro/",
+              "to": "https://pds-geosciences.wustl.edu/missions/lro/lola.htm",
+              "evidence": "Direct LOLA Archive link in fetched mission page."
+            },
+            {
+              "from": "https://pds-geosciences.wustl.edu/missions/lro/lola.htm",
+              "to": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/",
+              "evidence": "Direct gridded-record archive link in fetched instrument page."
+            },
+            {
+              "from": "https://pds-geosciences.wustl.edu/missions/lro/lola.htm",
+              "to": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/catalog/gdr_ds.cat",
+              "evidence": "Direct GDR dataset-description link in fetched instrument page."
+            },
+            {
+              "from": "https://pds-geosciences.wustl.edu/missions/lro/lola.htm",
+              "to": "https://science.nasa.gov/mission/lro/lola/",
+              "evidence": "Direct NASA instrument-team link in fetched archive page."
+            },
+            {
+              "from": "https://science.nasa.gov/mission/lro/lola/",
+              "to": "https://science.nasa.gov/mission/lro/data-products/",
+              "evidence": "Direct data-products link in fetched NASA instrument page."
+            }
+          ],
+          "selected_supplemental_product_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_surf.tif",
+          "supplemental_readme_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/README",
+          "local_acquisition_evidence": "docs/research/acquisition_status.json",
+          "selected_scientific_payload_downloaded": true,
+          "selected_pgda_product_directly_linked_from_fetched_pds_pages": false,
+          "selected_pgda_product_identical_to_a_pds_granule_verified": false,
+          "scope_limit": "The observed chain establishes the LRO/LOLA instrument archive. It does not establish that the acquired PGDA Site04 supplemental TIFF is an identical archived PDS granule or an individually named challenge resource.",
+          "feature_or_ui_use_verified": false
+        }
+      }
+    },
+    {
+      "id": "challenge_nasa_diviner",
+      "agency": "NASA",
+      "name": "NASA LRO Diviner Lunar Data",
+      "provided_url": "https://pds-geosciences.wustl.edu/missions/lro/diviner.htm?utm_source=%27chatgpt.com%27",
+      "canonical_url": "https://pds-geosciences.wustl.edu/missions/lro/diviner.htm",
+      "kind": "instrument_archive",
+      "priority": "thermal_context_after_topography",
+      "pipeline_use": "Read documented surface-temperature quantity, time sampling, extrema definition, resolution and QA before choosing a lunar polar product.",
+      "frontend_use": "Display sourced thermal context and missingness separately from the topography-only similarity profile.",
+      "existing_registry_ids": [
+        "lro_diviner"
+      ],
+      "limitation": "POWER two-metre air temperature is not a directly comparable Earth surface-temperature observable. No cross-body thermal score without a matched definition.",
+      "primary_verification": {
+        "status": "primary_page_fetched",
+        "url": "https://pds-geosciences.wustl.edu/missions/lro/diviner.htm",
+        "resolved_url": "https://pds-geosciences.wustl.edu/missions/lro/diviner.htm",
+        "http_status": 200,
+        "retrieved_at_utc": "2026-11-14T08:29:32.412123Z",
+        "tls_verification": "enabled_default_trust_store",
+        "retrieved_representation": "HTML page, not a scientific payload",
+        "page_bytes": 39498,
+        "page_sha256": "89f3c4412e549df606f682da98c62fea94f1dd17a4543e5a0f661c354d883cb6",
+        "observed_links": [
+          {
+            "href": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l2/",
+            "label": "GDR_L2"
+          },
+          {
+            "href": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/",
+            "label": "GDR_L3"
+          },
+          {
+            "href": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_pcp/",
+            "label": "PCP - Polar Cumulative Products"
+          },
+          {
+            "href": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_prp/",
+            "label": "PRP - Polar Resource Products"
+          }
+        ],
+        "links_scope": "Selected observed links relevant to PAE, not a complete link inventory."
+      }
+    },
+    {
+      "id": "challenge_csa_rcm",
+      "agency": "CSA",
+      "name": "RADARSAT Constellation Mission (RCM) - Data",
+      "provided_url": "https://donnees-data.asc-csa.gc.ca/en/dataset/rcm",
+      "canonical_url": "https://donnees-data.asc-csa.gc.ca/en/dataset/rcm",
+      "kind": "sar_archive",
+      "priority": "optional_after_vertical_slice",
+      "pipeline_use": "Evaluate actual publicly accessible SAR scenes over a chosen candidate; preserve product calibration, polarization, geometry, date and processing history.",
+      "frontend_use": "Optional offline context layer, with quantity and uncertainty disclosed.",
+      "existing_registry_ids": [],
+      "limitation": "Public access covers only some RCM products, needs EODMS registration and product-specific terms. SAR intensity must not be silently relabelled DEM slope, mineralogy or terrain roughness.",
+      "primary_verification": {
+        "status": "official_access_documentation_verified_catalog_fetch_timed_out",
+        "url": "https://www.asc-csa.gc.ca/eng/satellites/radarsat/access-to-data/about.asp"
+      }
+    },
+    {
+      "id": "challenge_csa_radarsat1",
+      "agency": "CSA",
+      "name": "RADARSAT 1 - Data",
+      "provided_url": "https://donnees-data.asc-csa.gc.ca/en/dataset/radarsat1",
+      "canonical_url": "https://donnees-data.asc-csa.gc.ca/en/dataset/radarsat1",
+      "kind": "sar_archive",
+      "priority": "optional_after_vertical_slice",
+      "pipeline_use": "Prefer this openly licensed archive when an appropriate historical scene supports a documented research question; choose a real scene rather than assuming coverage.",
+      "frontend_use": "Optional local SAR context with actual acquisition date and source credit.",
+      "existing_registry_ids": [],
+      "limitation": "Archive availability alone does not establish a suitable scene or a calibrated geophysical feature. Preserve Open Government Licence - Canada notices.",
+      "primary_verification": {
+        "status": "official_indexed_catalog_and_access_documentation_verified",
+        "url": "https://www.csa-asc.gc.ca/eng/satellites/radarsat1/data-access.asp"
+      }
+    },
+    {
+      "id": "challenge_csa_sar_tutorial",
+      "agency": "CSA",
+      "name": "Synthetic Aperture Radar (SAR) Python Tutorial",
+      "provided_url": "https://github.com/asc-csa/Synthetic_Aperture_Radar_Tutorial",
+      "canonical_url": "https://github.com/asc-csa/Synthetic_Aperture_Radar_Tutorial",
+      "kind": "code_tutorial",
+      "priority": "research_reference",
+      "pipeline_use": "Use the Python/QGIS raster handling workflow as a learning reference. Inspect exact code and its license before copying; no tutorial code has been copied or executed by this update.",
+      "frontend_use": "None directly; this is processing guidance, not a browser renderer or science dataset.",
+      "existing_registry_ids": [],
+      "limitation": "Its British Columbia fire example is not a validated planetary analog; plotting SAR is not an analog-scoring algorithm.",
+      "primary_verification": {
+        "status": "repository_readme_verified_license_page_opened",
+        "url": "https://github.com/asc-csa/Synthetic_Aperture_Radar_Tutorial",
+        "license_url": "https://github.com/asc-csa/Synthetic_Aperture_Radar_Tutorial/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "challenge_esa_copernicus",
+      "agency": "ESA",
+      "name": "Copernicus Data Space Ecosystem",
+      "provided_url": "https://dataspace.copernicus.eu/?utm_source=%27chatgpt.com%27",
+      "canonical_url": "https://dataspace.copernicus.eu/",
+      "kind": "discovery_and_processing_portal",
+      "priority": "candidate_context_after_topography",
+      "pipeline_use": "Investigate Sentinel imagery for candidate context and QA through documented catalogue/download interfaces; record exact product, bands, scaling, masks and date.",
+      "frontend_use": "Optional prepared local imagery or derived context; no runtime cloud service or credentials.",
+      "existing_registry_ids": [],
+      "limitation": "Portal access does not mean all services or quotas are unlimited; do not infer basalt or mineral fractions from an unvalidated colour composite.",
+      "primary_verification": {
+        "status": "portal_and_api_overview_verified",
+        "url": "https://dataspace.copernicus.eu/analyse/apis"
+      }
+    },
+    {
+      "id": "challenge_esa_open_science",
+      "agency": "ESA",
+      "name": "ESA Open Science Catalog",
+      "provided_url": "https://opensciencedata.esa.int/?utm_source=%27chatgpt.com%27",
+      "canonical_url": "https://opensciencedata.esa.int/",
+      "kind": "research_catalogue",
+      "priority": "research_reference",
+      "pipeline_use": "Find candidate geoscience datasets and documented workflows; vet individual products before adding an adapter.",
+      "frontend_use": "Only actual selected products appear as used sources.",
+      "existing_registry_ids": [],
+      "limitation": "Catalogue is not itself a homogeneous raster product or blanket license. No product selected.",
+      "primary_verification": {
+        "status": "page_reached_no_readable_catalogue_content",
+        "url": "https://opensciencedata.esa.int/"
+      }
+    },
+    {
+      "id": "challenge_jaxa_gportal",
+      "agency": "JAXA",
+      "name": "JAXA G-Portal",
+      "provided_url": "https://gportal.jaxa.jp/gpr/index/index?utm_source=%27chatgpt.com%27",
+      "canonical_url": "https://gportal.jaxa.jp/gpr/index/index",
+      "kind": "earth_observation_portal",
+      "priority": "environment_context_after_topography",
+      "pipeline_use": "Explore documented physical-quantity and spacecraft searches for environmental context; select a product/version/QA/time window before use.",
+      "frontend_use": "Only real preprocessed environmental summaries with source metadata and comparable support.",
+      "existing_registry_ids": [],
+      "limitation": "A portal category is not an available measurement at a candidate polygon. Do not infer aridity from humidity or a single precipitation value.",
+      "primary_verification": {
+        "status": "portal_and_product_navigation_verified",
+        "resolved_url": "https://www.gportal.jaxa.jp/?lang=en",
+        "url": "https://www.gportal.jaxa.jp/information/product?lang=en"
+      }
+    }
+  ],
+  "supplemental_sources": [
+    "NASA POWER",
+    "ISRIC SoilGrids",
+    "PGC ArcticDEM/REMA",
+    "NASA PGDA LOLA Site04"
+  ],
+  "supplemental_policy": "These existing project sources are not individually named in the supplied resource list. Record their actual relationship to listed portals or missions; do not claim direct listing. Keep scientifically useful supplemental sources and their own attribution.",
+  "acceptance": {
+    "traceability_chain": [
+      "listed_resource_id",
+      "actual_product_identifier_and_url",
+      "raw_local_sha256",
+      "processing_and_quality_evidence",
+      "derived_artifact_sha256",
+      "feature_or_ui_use"
+    ],
+    "at_least_one_listed_nasa_source_used": "NOT_YET_DEMONSTRATED_END_TO_END",
+    "organizer_guidance_url": "https://github.com/nasa/spaceapps/discussions/1849",
+    "guidance_context": "2026-11-06 GO Team response in another challenge discussion states a general minimum of one listed NASA data source for Global Awards. Recorded as organizer guidance, not an eligibility certification.",
+    "known_sites_role": "Documented baseline and validation; discovery must also evaluate candidates outside that baseline within an explicit searched domain.",
+    "human_pass_dev_a": false,
+    "human_pass_dev_b": false
+  }
+}

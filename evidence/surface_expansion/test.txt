@@ -1,0 +1,25 @@
+
+> planetary-analog-explorer-web@0.1.0 pretest
+> npm run shared:check
+
+
+> planetary-analog-explorer-web@0.1.0 shared:check
+> node scripts/shared-preflight.mjs
+
+Shared contract: C:\Users\HP\NasaAstras\planetary-analog-explorer\shared
+
+> planetary-analog-explorer-web@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 C:/Users/HP/NasaAstras/planetary-analog-explorer/web-client
+
+
+ Test Files  13 passed (13)
+      Tests  119 passed (119)
+   Start at  16:52:15
+   Duration  6.60s (import 70%, tests 18%, transform 7%, worker 5%)
+
+    Isolate  13 workers spawned · ~782ms startup each (spawn + environment, per file)
+             at least ~2.61s faster with isolate: false — reuses workers across files instead of one per file
+

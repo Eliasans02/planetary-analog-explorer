@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-11-14T12:12:15.870616+00:00",
+  "build": "index-Cuab9JlK.js",
+  "observer": "Astra through documented internal-browser CUA",
+  "url": "http://127.0.0.1:4173/",
+  "observations": [
+    "Three Moon and three Mars sites visible; selected globe pin and named Locate controls work.",
+    "Explored Connecting ridge, Nobile rim, Gale and Eberswalde native windows with matching analysis.",
+    "Earth surface archive displays its source-derived analysis.",
+    "All viewed windows report 16641 valid heights and 16129 eligible 3x3 neighborhoods.",
+    "Console warn/error entries empty."
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/surface_expansion/expansion-pins.jpg",
+      "bytes": 139078,
+      "sha256": "7922f9f8969be5ee63e39cf0d14a56db8eda8efd69a245cfdf07c5d6d12a9e0a"
+    }
+  ],
+  "limitations": [
+    "Pre-color build; screenshot proves site pins, not photographic color.",
+    "Native pointer lock unavailable in this internal browser; keyboard/drag fallback used."
+  ]
+}

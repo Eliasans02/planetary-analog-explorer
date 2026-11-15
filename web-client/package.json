@@ -1,0 +1,52 @@
+{
+  "name": "planetary-analog-explorer-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000 --host 127.0.0.1",
+    "dev:sandbox": "vite --port 3000 --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "clean": "node scripts/clean.mjs",
+    "lint": "npm run typecheck",
+    "shared:check": "node scripts/shared-preflight.mjs",
+    "predev": "npm run shared:check",
+    "predev:sandbox": "npm run shared:check",
+    "prebuild": "npm run shared:check",
+    "pretypecheck": "npm run shared:check",
+    "pretest": "npm run shared:check",
+    "pree2e": "npm run shared:check",
+    "test:config": "node --test scripts/shared-root.test.mjs",
+    "verify:surfaces": "node scripts/verify-surface-assets.mjs",
+    "verify:planets": "node scripts/verify-planet-assets.mjs"
+  },
+  "dependencies": {
+    "@mkkellogg/gaussian-splats-3d": "0.4.7",
+    "@ui-sdk/core": "0.1.0-beta.1",
+    "@ui-sdk/react": "0.1.0-beta.1",
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "lucide-react": "0.546.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@tailwindcss/vite": "4.3.5",
+    "@types/node": "22.14.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.170.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "tailwindcss": "4.3.5",
+    "typescript": "5.9.3",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  }
+}

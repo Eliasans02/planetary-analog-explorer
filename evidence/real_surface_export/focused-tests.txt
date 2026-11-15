@@ -1,0 +1,10 @@
+test_all_published_samples_equal_direct_source_crop (__main__.NativeSurfaceTests.test_all_published_samples_equal_direct_source_crop) ... ok
+test_archive_rejects_unexpected_regular_path (__main__.NativeSurfaceTests.test_archive_rejects_unexpected_regular_path) ... ok
+test_crop_masks_raw_nodata_before_scale_and_retains_centers (__main__.NativeSurfaceTests.test_crop_masks_raw_nodata_before_scale_and_retains_centers) ... ok
+test_highest_selection_ignores_nodata_and_ties_row_major (__main__.NativeSurfaceTests.test_highest_selection_ignores_nodata_and_ties_row_major) ... ok
+test_receipt_identity_mismatch_is_explicit_error (__main__.NativeSurfaceTests.test_receipt_identity_mismatch_is_explicit_error) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.448s
+
+OK

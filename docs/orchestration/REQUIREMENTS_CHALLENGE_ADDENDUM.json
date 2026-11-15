@@ -1,0 +1,365 @@
+{
+  "document": "PAE_CHALLENGE_ALIGNMENT_ADDENDUM",
+  "version": "1.1.0",
+  "created_on": "2026-11-14",
+  "type": "proposed_project_acceptance_traceability",
+  "implementation_pass": false,
+  "changes_original_requirements": false,
+  "changes_repo_state": false,
+  "official_source": {
+    "main_url": "https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/",
+    "resources_url": "https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/?tab=resources",
+    "main_description_evidence": "Verified indexed main-page description provided by Astra in the task context; no new resource-tab claim.",
+    "supported_intent": "Use open Earth, Moon and Mars data to identify and characterize new terrestrial analog candidates and present results through a map, visualization or other tool.",
+    "resources_membership_evidence_type": "user_provided_page_content",
+    "resources_membership_supplied": true,
+    "resources_list_count": 11,
+    "resources_tab_independently_retrieved": false,
+    "individual_target_urls_independently_verified_in_this_review": false,
+    "resource_names_supplied": {
+      "NASA": [
+        "Earthdata Search",
+        "Worldview",
+        "Planetary Data System",
+        "LRO mission archive",
+        "Diviner"
+      ],
+      "CSA": [
+        "RCM",
+        "RADARSAT-1",
+        "SAR tutorial"
+      ],
+      "ESA": [
+        "Copernicus Data Space",
+        "Open Science Catalog"
+      ],
+      "JAXA": [
+        "G-Portal"
+      ]
+    },
+    "primary_target_verification_separate": true
+  },
+  "interpretation": {
+    "known_sites_only_sufficient": false,
+    "known_sites_role": "Documented benchmark and sanity-check baseline.",
+    "new_definition": "New candidate relative to a frozen, sourced project baseline within a declared search domain; not a world-first or NASA approval claim.",
+    "project_minimum": "At least one qualified non-baseline candidate from reproducible systematic search; original top-3 acceptance remains separate.",
+    "not_claimed_as_nasa_mandates": [
+      "Cosine/Euclidean formula",
+      "Gaussian Splatting or Three.js",
+      "60 FPS",
+      "Exactly three candidates",
+      "Apache-2.0 as the only permitted license",
+      "The project-specific at-least-one discovery threshold"
+    ]
+  },
+  "existing_gaps": [
+    {
+      "requirement_ids": [
+        "REQ-011",
+        "REQ-012"
+      ],
+      "gap": "Curated candidates can satisfy the current wording without baseline-relative discovery."
+    },
+    {
+      "requirement_ids": [
+        "REQ-004",
+        "REQ-005",
+        "REQ-013"
+      ],
+      "gap": "Correct scoring does not establish systematic candidate enumeration or novelty."
+    },
+    {
+      "requirement_ids": [
+        "REQ-016",
+        "REQ-017",
+        "REQ-019",
+        "REQ-021",
+        "REQ-032"
+      ],
+      "gap": "Current views need not expose search domain, known/new distinction, uncertainty or coverage evidence."
+    }
+  ],
+  "contract_policy": {
+    "shared_version_unchanged": "1.0.0",
+    "new_fields_in_existing_strict_dataset": false,
+    "proposed_sidecar": "A separately agreed discovery manifest/GeoJSON linked by existing location_id and profile_id.",
+    "proposal_is_implemented": false
+  },
+  "requirements": [
+    {
+      "id": "CHAL-001",
+      "title": "Trace user-supplied Resources membership separately from verified target/product use",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Researcher + Astra",
+      "loop": "LOOP_0",
+      "related_requirement_ids": [
+        "REQ-028",
+        "REQ-032"
+      ],
+      "acceptance_checks": [
+        "Record the official main/resources URLs and distinguish indexed main-page content from user_provided_page_content membership for all 11 listed resources.",
+        "Verify target URLs, archive/product relationships, selected versions and terms separately; do not relabel all existing source-registry products as explicitly listed.",
+        "Label project policy/formula/performance/licensing decisions separately from confirmed challenge instructions.",
+        "Record the contextual scope of GO Team guidance and do not claim team eligibility without the complete evidence chain."
+      ],
+      "evidence_required": [
+        "User-provided Resources content and stable resource registry IDs",
+        "Primary-target/product relationship verification records",
+        "GO Team guidance with scope and no eligibility claim"
+      ],
+      "status": "PARTIAL"
+    },
+    {
+      "id": "CHAL-002",
+      "title": "Freeze a sourced known-analog baseline before candidate selection",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Researcher + Dev_A",
+      "loop": "LOOP_1",
+      "related_requirement_ids": [
+        "REQ-002",
+        "REQ-008",
+        "REQ-012"
+      ],
+      "acceptance_checks": [
+        "Version/hash the known-analog list with sources and documented geometry uncertainty.",
+        "Declare search domain and spatial overlap/separation rules before viewing results.",
+        "Uncertain known-site geometry yields unresolved novelty rather than a positive novelty claim."
+      ],
+      "evidence_required": [
+        "Baseline manifest and geometry/source refs",
+        "Recorded exclusion/grouping policy",
+        "Baseline cutoff/version/hash"
+      ],
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "CHAL-003",
+      "title": "Systematic candidate generation from real geospatial coverage",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Dev_A",
+      "loop": "LOOP_1",
+      "related_requirement_ids": [
+        "REQ-006",
+        "REQ-008",
+        "REQ-009",
+        "REQ-012"
+      ],
+      "acceptance_checks": [
+        "Derive reproducible grid/windows from real georeferenced source coverage; label AOIs as analysis units.",
+        "Keep stable candidate IDs and account for generated/invalid/excluded/eligible candidates.",
+        "Document candidate generation parameters and real processed area without overlap double counting.",
+        "Candidate selection is not limited to a whitelist of already named analog sites or chosen retrospectively for attractive scores."
+      ],
+      "evidence_required": [
+        "Search-domain GeoJSON and source metadata",
+        "Enumeration parameters/code/revision",
+        "Complete accounting and union-area calculation"
+      ],
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "CHAL-004",
+      "title": "Matched-scale frozen-profile screening without selection leakage",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Dev_A + Code_Reviewer",
+      "loop": "LOOP_1",
+      "related_requirement_ids": [
+        "REQ-003",
+        "REQ-004",
+        "REQ-005",
+        "REQ-009",
+        "REQ-013"
+      ],
+      "acceptance_checks": [
+        "Apply one profile with compatible quantities, methods, spatial support and effective resolution to the declared ranking cohort.",
+        "Calibration is fixed independently of the shortlisted winners; no hidden per-candidate feature masks or clipped values.",
+        "Known/new labels do not alter the numerical score.",
+        "Missing or incompatible candidates retain explicit exclusion reasons."
+      ],
+      "evidence_required": [
+        "Profile/calibration hashes and data lineage",
+        "Actual candidate feature table",
+        "Invariant and exclusion tests"
+      ],
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "CHAL-005",
+      "title": "Qualified non-baseline candidate and defensible novelty claim",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Dev_A + Researcher",
+      "loop": "LOOP_1",
+      "related_requirement_ids": [
+        "REQ-011",
+        "REQ-012"
+      ],
+      "acceptance_checks": [
+        "At least one qualified candidate comes from systematic search outside the frozen baseline under the declared overlap policy.",
+        "Adjacent windows are grouped/filtered by a predetermined spatial rule; they are not advertised as distinct sites to fill top-3.",
+        "Each selected candidate has novelty status and supporting evidence; limited-baseline novelty is explicit.",
+        "Fewer than three eligible independent results remain fewer than three; original top-3 criterion is not marked complete."
+      ],
+      "evidence_required": [
+        "Shortlist GeoJSON and stable IDs",
+        "Baseline overlap/grouping audit",
+        "Novelty-check source/query log and limitations"
+      ],
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "CHAL-006",
+      "title": "Scientific characterization and uncertainty disclosure",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Dev_A + Researcher",
+      "loop": "LOOP_1",
+      "related_requirement_ids": [
+        "REQ-002",
+        "REQ-003",
+        "REQ-009",
+        "REQ-019"
+      ],
+      "acceptance_checks": [
+        "Each shortlisted ROI reports matched attributes, source/method/resolution/valid fraction and unmeasured/non-comparable dimensions.",
+        "Use available QA/uncertainty information; missing uncertainty is not_quantified, never fabricated error bars.",
+        "Report reproducible rank sensitivity to documented justified profile/scale alternatives without calling it a probability or confidence interval.",
+        "Topography-only results are described as morphological candidates, not complete environmental analogs or suitable base sites."
+      ],
+      "evidence_required": [
+        "Characterization and quality report",
+        "Sensitivity inputs/results and limitations",
+        "Independent extraction cross-check or clearly labeled reproducibility check"
+      ],
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "CHAL-007",
+      "title": "Map discovery evidence and distinguish baseline from findings",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Dev_B",
+      "loop": "LOOP_1",
+      "related_requirement_ids": [
+        "REQ-014",
+        "REQ-016",
+        "REQ-017",
+        "REQ-019",
+        "REQ-021"
+      ],
+      "acceptance_checks": [
+        "Display real search-domain/candidate AOI geometry and distinct known-baseline/new-candidate/unresolved labels.",
+        "Expose target/profile/baseline identity, coverage/exclusions, source URLs and characterization limitations.",
+        "A map label/score links to the same exported location ID; no fabricated terrain or unsupported geographic extent.",
+        "Offline static artifacts support the map; ground/splat mode is available only when real assets exist."
+      ],
+      "evidence_required": [
+        "Real-data map/browser evidence",
+        "Source/export ID matching checks",
+        "Network log and local asset manifest"
+      ],
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "CHAL-008",
+      "title": "Reproducible discovery demonstration and scoped acceptance",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Astra + Requirements_Manager + Dev_A + Dev_B",
+      "loop": "LOOP_3",
+      "related_requirement_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032"
+      ],
+      "acceptance_checks": [
+        "Regenerate the same candidate enumeration and shortlist from frozen source/baseline/profile revisions.",
+        "Show evidence for both identification and characterization; distinguish benchmark performance from discovery.",
+        "Claims about area, novelty, uncertainty and performance reflect measured evidence and declared scope.",
+        "Retain all original human PASS/review gates; this addendum and prepared artifacts do not close any requirement."
+      ],
+      "evidence_required": [
+        "Revision-bound reproduction logs and maps",
+        "Final CHAL plus original requirement report",
+        "Both explicit human PASS signals for the integrated accepted revision"
+      ],
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "CHAL-009",
+      "title": "Trace at least one listed NASA resource through actual product use to the UI",
+      "priority": "P0_CHALLENGE_ALIGNMENT",
+      "owner": "Researcher + Dev_A + Dev_B + Requirements_Manager",
+      "loop": "LOOP_1",
+      "related_requirement_ids": [
+        "REQ-002",
+        "REQ-014",
+        "REQ-025",
+        "REQ-028",
+        "REQ-031",
+        "REQ-032"
+      ],
+      "acceptance_checks": [
+        "At least one NASA challenge_resource_id from the documented Resources membership resolves through a verified relationship to the actual selected product/version/access URL.",
+        "The exact raw file has a local path, retrieval evidence and matching SHA-256; supporting documentation is not substituted for scientific data usage.",
+        "A declared method derives a feature/artifact, linked to exported location/asset IDs and the fixed profile where applicable.",
+        "Actual UI consumption of that derived result is demonstrated; merely citing, downloading or displaying a logo does not satisfy use.",
+        "Related external and partner products retain explicit relationship type and actual license; no product is called explicitly listed without evidence.",
+        "The evidence chain supports project traceability, not an automatic statement of Global Awards eligibility."
+      ],
+      "evidence_required": [
+        "challenge_resource_id and membership evidence",
+        "Primary target and resource-to-product relationship record",
+        "Selected product/raw checksum manifest",
+        "Reproduction method and derived artifact/feature lineage",
+        "Actual UI use evidence tied to exported IDs"
+      ],
+      "status": "NOT_VERIFIED"
+    }
+  ],
+  "loop_mapping": {
+    "LOOP_0": "Prepare discovery/baseline contract and source traceability only; no phase advancement implied.",
+    "LOOP_1": "Run a bounded real-data discovery slice alongside current integration.",
+    "LOOP_2": "Explore confirmed candidate scenes with split-screen/splat as actual assets permit.",
+    "LOOP_3": "Reproduce discovery offline and audit source, novelty and presentation claims."
+  },
+  "current_evidence": {
+    "candidate_search_performed": false,
+    "nonbaseline_candidate_validated": false,
+    "discovery_map_verified": false,
+    "note": "This artifact specifies an acceptance gap; downloaded source files or existing prompts are not discovery evidence.",
+    "resources_membership_supplied": true,
+    "resource_to_ui_chain_verified": false
+  },
+  "gate": "No implementation PASS and no PHASE_5. Existing paired human Dev_A/Dev_B acceptance remains mandatory.",
+  "go_team_guidance": {
+    "url": "https://github.com/nasa/spaceapps/discussions/1849",
+    "author": "Nick-GO-Team",
+    "answer_date": "2026-11-06",
+    "verified_in_this_review": true,
+    "context": "Different challenge discussion; generally worded GO Team answer.",
+    "guidance": "For Global Awards, use at least one NASA data source included in the challenge Resources; additional NASA/partner Resources are encouraged but optional.",
+    "application": "Require evidence of a listed NASA resource actually used in this project, with verified resource-to-product relation.",
+    "eligibility_claimed": false
+  },
+  "resource_traceability_policy": {
+    "chain": [
+      "challenge_resource_id",
+      "verified_resource_product_relationship",
+      "selected_product_id_version_access_url",
+      "local_raw_path_and_sha256",
+      "derived_feature_or_artifact_and_method",
+      "exported_location_or_asset_id",
+      "actual_ui_use"
+    ],
+    "relationship_types": [
+      "listed_archive_child",
+      "related_external_product",
+      "external_supplement",
+      "supporting_documentation"
+    ],
+    "existing_registry_relabelled_as_official": false,
+    "membership_does_not_prove_product_use": true,
+    "download_alone_does_not_close_acceptance": true,
+    "eligibility_claimed": false
+  }
+}

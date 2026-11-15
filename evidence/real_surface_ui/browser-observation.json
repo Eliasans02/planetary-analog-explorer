@@ -1,0 +1,34 @@
+{
+  "recorded_at": "2026-11-14T10:26:48.480437+00:00",
+  "url": "http://127.0.0.1:4173/",
+  "build_script": "/assets/index-fXqRcX5o.js",
+  "browser": "internal browser",
+  "observed": [
+    "Default landing renders actual NASA LOLA terrain",
+    "Moon/Earth switch loads distinct source-backed terrain and native coordinate marker",
+    "Drag changes camera orientation",
+    "Grid toggle changes rendered source mesh; Reset restores camera",
+    "Source disclosure shows original URLs/hash and native projection/datum limits",
+    "Direct lunar return support is visible separately from valid model coverage",
+    "Final rebuilt loader zero-padding guard version loaded",
+    "No errors or warnings in inspected browser console logs"
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/real_surface_ui/real-moon.jpg",
+      "bytes": 99963,
+      "sha256": "c67f94a8c5cba7e55a267737b3f54a694b18da54297ca8ceefd4ce8e3be5c9b0"
+    },
+    {
+      "path": "evidence/real_surface_ui/real-earth.jpg",
+      "bytes": 97734,
+      "sha256": "c4ba700973994e475ae036ac63d38378bc378ccd48c17e73f09f77bf073f8c9d"
+    }
+  ],
+  "real_native_relief_verified": true,
+  "scoring_verified": false,
+  "splat_verified": false,
+  "exact_enu_verified": false,
+  "performance_benchmark": null,
+  "human_pass": false
+}

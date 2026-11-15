@@ -1,0 +1,70 @@
+@layer ui-sdk;
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #07090e;
+    color: #e2e8f0;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+}
+
+@layer ui-sdk {
+  [data-slot][hidden]:not([hidden="until-found"]) {
+    display: none;
+  }
+
+  [data-slot="collapsible-trigger"]:focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: -2px;
+  }
+
+  [data-slot="collapsible-trigger"] [data-pae-chevron] {
+    transition: transform 150ms ease;
+  }
+
+  [data-slot="collapsible-trigger"][data-open] [data-pae-chevron] {
+    transform: rotate(180deg);
+  }
+
+  [data-slot="collapsible-trigger"][data-closed] [data-pae-chevron] {
+    transform: rotate(0deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-slot="collapsible-trigger"] [data-pae-chevron] {
+      transition: none;
+    }
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.mission-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.mission-scroll::-webkit-scrollbar-track {
+  background: #0b1018;
+}
+
+.mission-scroll::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+.mission-scroll::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

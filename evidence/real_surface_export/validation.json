@@ -1,0 +1,168 @@
+{
+  "schema_validation": "passed",
+  "semantic_and_output_hash_byte_mask_checks": "passed",
+  "surface_asset_bytes": 207506,
+  "catalog_bytes": 12305,
+  "raster_sample_count": 33282,
+  "scientific_scores_computed": false,
+  "source_datum_transformations": false,
+  "generated_at": "2026-11-14T10:12:35.376758+00:00",
+  "direct_source_sample_comparisons": [
+    {
+      "id": "lola-site04-roi3",
+      "crop_row_col": [
+        0,
+        0
+      ],
+      "raw_height_m": 1689.6744384765625,
+      "display_height_m": 80.3277587890625,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "lola-site04-roi3",
+      "crop_row_col": [
+        0,
+        128
+      ],
+      "raw_height_m": 1635.0108642578125,
+      "display_height_m": 25.6641845703125,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "lola-site04-roi3",
+      "crop_row_col": [
+        60,
+        64
+      ],
+      "raw_height_m": 1739.121826171875,
+      "display_height_m": 129.775146484375,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "lola-site04-roi3",
+      "crop_row_col": [
+        64,
+        64
+      ],
+      "raw_height_m": 1737.9921875,
+      "display_height_m": 128.6455078125,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "lola-site04-roi3",
+      "crop_row_col": [
+        82,
+        128
+      ],
+      "raw_height_m": 1609.3466796875,
+      "display_height_m": 0.0,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "lola-site04-roi3",
+      "crop_row_col": [
+        128,
+        0
+      ],
+      "raw_height_m": 1707.0198974609375,
+      "display_height_m": 97.6732177734375,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "lola-site04-roi3",
+      "crop_row_col": [
+        128,
+        128
+      ],
+      "raw_height_m": 1610.56396484375,
+      "display_height_m": 1.21728515625,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "usgs-hawaii-summit",
+      "crop_row_col": [
+        0,
+        0
+      ],
+      "raw_height_m": 3884.81298828125,
+      "display_height_m": 205.041015625,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "usgs-hawaii-summit",
+      "crop_row_col": [
+        0,
+        128
+      ],
+      "raw_height_m": 3776.99609375,
+      "display_height_m": 97.22412109375,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "usgs-hawaii-summit",
+      "crop_row_col": [
+        64,
+        64
+      ],
+      "raw_height_m": 4204.6845703125,
+      "display_height_m": 524.91259765625,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "usgs-hawaii-summit",
+      "crop_row_col": [
+        128,
+        0
+      ],
+      "raw_height_m": 3761.96533203125,
+      "display_height_m": 82.193359375,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "id": "usgs-hawaii-summit",
+      "crop_row_col": [
+        128,
+        128
+      ],
+      "raw_height_m": 3679.77197265625,
+      "display_height_m": 0.0,
+      "valid": true,
+      "exact_float32_match": true
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "lola-site04-roi3",
+      "stats": {
+        "min_source_height_m": 1609.3466796875,
+        "max_source_height_m": 1739.121826171875,
+        "relief_m": 129.775146484375,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": 1726
+      }
+    },
+    {
+      "id": "usgs-hawaii-summit",
+      "stats": {
+        "min_source_height_m": 3679.77197265625,
+        "max_source_height_m": 4204.6845703125,
+        "relief_m": 524.91259765625,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      }
+    }
+  ]
+}

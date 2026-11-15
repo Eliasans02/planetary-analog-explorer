@@ -1,0 +1,144 @@
+{
+  "record": {
+    "id": "mars-jezero-hirise",
+    "name": "Jezero crater \u00b7 HiRISE native DTM",
+    "body": "mars",
+    "description": "Actual native HiRISE stereo DTM: project-selected 129 by 129 sample window.",
+    "coordinates": {
+      "latitude_deg": 18.426855598372786,
+      "longitude_deg": 77.44221401151552,
+      "frame": "MARS_HIRISE_PLANETOCENTRIC",
+      "provenance": "PDS EQUIRECTANGULAR MARS / planetocentric east longitude; local-radius sphere 3394839.8133163m from source label; no IAU realization claim."
+    },
+    "source_ids": [
+      "nasa-hirise-jezero-dtm"
+    ],
+    "grid": {
+      "width": 129,
+      "height": 129,
+      "spacing_m": [
+        1.0096633268711,
+        1.0096633268711
+      ],
+      "display_frame": "native_projected_relief",
+      "horizontal_method": "Native equirectangular raster spacing from PDS label; source MAP_SCALE 1.0096633268711 m/pixel, true at projection center latitude 15 degrees. Display X/Z follow raster columns/rows.",
+      "heights": {
+        "path": "/assets/surfaces/mars-jezero-hirise/heights.f32",
+        "sha256": "0bac451f8f7d9f1e4d301f024c8b0edc8c4a7a5587136c20ad05db579d2afefd",
+        "bytes": 66564
+      },
+      "valid_mask": {
+        "path": "/assets/surfaces/mars-jezero-hirise/valid-mask.u8",
+        "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "bytes": 16641
+      },
+      "vertical_zero_m": -2577.19970703125,
+      "vertical_datum": "Meters above martian equipotential surface (Mars 2000 Datum), Smith et al. (2001), explicitly declared in source PDS label.",
+      "vertical_datum_status": "source_declared",
+      "native_crs_wkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3394839.8133163,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",15],PARAMETER[\"central_meridian\",77.44],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "native_origin": [
+        62.094294602471564,
+        1091876.6777565696
+      ],
+      "native_spacing": [
+        1.0096633268711,
+        -1.0096633268711
+      ],
+      "native_units": "m"
+    },
+    "stats": {
+      "min_source_height_m": -2577.19970703125,
+      "max_source_height_m": -2573.0234375,
+      "relief_m": 4.17626953125,
+      "valid_samples": 16641,
+      "total_samples": 16641,
+      "direct_return_samples": null
+    },
+    "roi": {
+      "label": "PROJECT_SELECTED native center window",
+      "kind": "project_selected_window",
+      "outline_grid": [
+        [
+          0,
+          0
+        ],
+        [
+          128,
+          0
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          0,
+          128
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "source_record": null
+    },
+    "limitations": [
+      "Project-selected native center window of the published HiRISE DTM, not a landing-site safety assessment.",
+      "Stereo-derived DTM samples are not individual laser returns; gaps remain masked.",
+      "Projected raster relief axes follow columns/rows; not exact ENU or a body-fixed reconstruction.",
+      "Source planetocentric mapping realization retained; no transformation to an IAU Mars reference realization.",
+      "Only exact source byte ranges were retrieved; the complete IMG checksum is unavailable."
+    ],
+    "provenance": {
+      "path": "/assets/surfaces/mars-jezero-hirise/provenance.json",
+      "sha256": "061d2e0af52afc0d3f3d502c55089454c5af6875e2dc4694eecc699b61dd8768",
+      "bytes": 11596
+    }
+  },
+  "comparisons": [
+    {
+      "crop_row_col": [
+        0,
+        0
+      ],
+      "source_height_m": -2573.32177734375,
+      "height_offset_m": 3.8779296875,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        0,
+        128
+      ],
+      "source_height_m": -2574.514892578125,
+      "height_offset_m": 2.684814453125,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        64,
+        64
+      ],
+      "source_height_m": -2574.573974609375,
+      "height_offset_m": 2.625732421875,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        128,
+        0
+      ],
+      "source_height_m": -2573.435791015625,
+      "height_offset_m": 3.763916015625,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        128,
+        128
+      ],
+      "source_height_m": -2576.68310546875,
+      "height_offset_m": 0.5166015625,
+      "exact_float32_match": true
+    }
+  ]
+}

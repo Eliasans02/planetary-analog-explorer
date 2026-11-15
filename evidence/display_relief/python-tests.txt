@@ -1,0 +1,8 @@
+........                                                                 [100%]
+============================== warnings summary ===============================
+tests/test_surface_imagery.py: 16 warnings
+  C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\texture_surfaces.py:135: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    corners=[ds.transform*(c,r) for c,r in [(0,0),(ds.width,0),(0,ds.height),(ds.width,ds.height)]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+8 passed, 16 warnings in 11.64s

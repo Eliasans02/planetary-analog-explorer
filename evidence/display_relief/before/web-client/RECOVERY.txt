@@ -1,0 +1,1 @@
+Before snapshot recovered from pre-existing web-client/dist, because public export had already completed when retention request arrived. Exact raw ASU receipts and PNGs also retained under data-pipeline/cache/raw/planet-explorer and reproduce prior pipeline output. Dist build timestamp may predate latest public local imagery.

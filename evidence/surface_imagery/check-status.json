@@ -1,0 +1,72 @@
+{
+  "recorded_at": "2026-11-14T12:12:15.870616+00:00",
+  "execution_location": "local_repository",
+  "commands": [
+    {
+      "command": "npm run test",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_imagery/test.txt"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_imagery/typecheck.txt"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_imagery/build.txt"
+    },
+    {
+      "command": "npm run verify:surfaces",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_imagery/verify-surfaces.txt"
+    },
+    {
+      "command": "npm run verify:planets",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_imagery/verify-planets.txt"
+    },
+    {
+      "command": "previews/a04/.venv/Scripts/python.exe -m unittest discover -s data-pipeline/tests -p 'test_surface*.py' -v",
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "evidence/surface_imagery/python-tests.txt"
+    },
+    {
+      "command": "previews/a04/.venv/Scripts/python.exe data-pipeline/analyze_surfaces.py --check",
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "evidence/surface_imagery/analysis-check.txt"
+    }
+  ],
+  "frontend_tests_passed": 155,
+  "frontend_files_passed": 15,
+  "python_tests_passed": 26,
+  "built_js": {
+    "path": "web-client/dist/assets/index-7jGhMrdp.js",
+    "bytes": 1348544,
+    "sha256": "004ba44510811f0faf5b5bbd9281bdfff33d8c84f87304e1e6d8fa2a7340e4ef"
+  },
+  "all_implementation_changes_included": true,
+  "scientific_source_samples_invented": false,
+  "scientific_derivatives_computed": true,
+  "analysis_unchanged_by_imagery": true,
+  "source_rgb_pixels_compared": 149769,
+  "warnings": [
+    "Vite main chunk exceeds 500 kB; build passed."
+  ],
+  "environment_note": "Initial system Python and contract-only venv runs lacked dependencies. Preserved failure logs; the existing previews/a04 scientific venv passed all checks. No dependency installation required.",
+  "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET_NOT_RERUN",
+  "performance_benchmark": "NOT_PERFORMED",
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "phase5_committed": false
+}

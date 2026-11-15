@@ -1,0 +1,215 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "catalog_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "records": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "properties": {
+          "surface_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "inputs": {
+            "type": "object",
+            "properties": {
+              "heights_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "valid_mask_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 257
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 257
+              },
+              "native_origin": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "native_spacing": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "native_crs_wkt": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "heights_sha256",
+              "valid_mask_sha256",
+              "width",
+              "height",
+              "native_origin",
+              "native_spacing",
+              "native_crs_wkt"
+            ],
+            "additionalProperties": false
+          },
+          "layers": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "enum": [
+                    "orbital-color",
+                    "local-ortho"
+                  ]
+                },
+                "label": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "color_mode": {
+                  "enum": [
+                    "published_false_color",
+                    "published_grayscale",
+                    "global_display_mosaic"
+                  ]
+                },
+                "registration": {
+                  "enum": [
+                    "approximate_global_mosaic",
+                    "projected_ortho"
+                  ]
+                },
+                "source_url": {
+                  "type": "string",
+                  "pattern": "^https://"
+                },
+                "image": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "pattern": "^/assets/[a-zA-Z0-9_./-]+$"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "bytes": {
+                      "type": "integer",
+                      "minimum": 33,
+                      "maximum": 4194304
+                    },
+                    "width": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 257
+                    },
+                    "height": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 257
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "sha256",
+                    "bytes",
+                    "width",
+                    "height"
+                  ],
+                  "additionalProperties": false
+                },
+                "provenance": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "pattern": "^/assets/[a-zA-Z0-9_./-]+$"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "bytes": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 1048576
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "sha256",
+                    "bytes"
+                  ],
+                  "additionalProperties": false
+                },
+                "limitations": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 64,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "label",
+                "color_mode",
+                "registration",
+                "source_url",
+                "image",
+                "provenance",
+                "limitations"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "surface_id",
+          "inputs",
+          "layers"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "catalog_sha256",
+    "records"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planetary-analog-explorer.local/schemas/surface_imagery.schema.json",
+  "title": "Source imagery bound to native DEM samples"
+}

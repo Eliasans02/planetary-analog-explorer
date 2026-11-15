@@ -1,0 +1,11 @@
+Planetary Analog Explorer
+Original project code and specifications: Apache License 2.0.
+
+AI assistance is recorded in AI_AND_DATA_ATTRIBUTION_LOG.json.
+NASA/partner source references and usage status are in docs/source_registry.json.
+No NASA endorsement is claimed.
+
+Planned third-party dependencies retain their own licenses. In particular,
+@mkkellogg/gaussian-splats-3d is MIT, not Apache-2.0. Preserve its upstream
+copyright and MIT license when installed/distributed, as with all dependencies.
+External dataset terms are not changed by the project's code license.

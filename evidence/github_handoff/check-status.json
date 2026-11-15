@@ -1,0 +1,57 @@
+{
+  "recorded_at": "2026-11-15T04:43:21.246836+00:00",
+  "purpose": "Validate a clean Git index export before GitHub publication.",
+  "tested_index_tree": "7660bcc2652907b73e15d249415505f73681cc5c",
+  "node_version": "24.22.1",
+  "npm_version": "11.19.1",
+  "npm_ci_exit_code": 0,
+  "raw_cache_or_existing_dependencies_copied": false,
+  "shared_root_resolved_inside_export": true,
+  "checks": [
+    {
+      "check": "typecheck",
+      "exit_code": 0,
+      "log": "check-typecheck.txt"
+    },
+    {
+      "check": "verify:planets",
+      "exit_code": 0,
+      "log": "check-verify-planets.txt"
+    },
+    {
+      "check": "verify:surfaces",
+      "exit_code": 0,
+      "log": "check-verify-surfaces.txt"
+    },
+    {
+      "check": "build",
+      "exit_code": 0,
+      "log": "check-build.txt"
+    },
+    {
+      "check": "test",
+      "exit_code": 0,
+      "log": "check-test.txt"
+    },
+    {
+      "check": "test:config",
+      "exit_code": 0,
+      "log": "check-test-config.txt"
+    }
+  ],
+  "frontend_tests": {
+    "passed": 165,
+    "files": 18
+  },
+  "configuration_tests_passed": 1,
+  "package_lock_sha256": "ab74fda1af93ab2d9cdba1dcd274c3bfc4856fac3e8fe7a476b44cf00a8bf26e",
+  "source_changes_after_export": "Publication documentation, attribution and validation evidence only; application and public data unchanged.",
+  "limits": [
+    "No fresh browser test in this publication pass.",
+    "No Python source-pixel tests in this clean export.",
+    "Known production JavaScript chunk exceeds 500 kB.",
+    "npm audit reports one moderate AJV advisory; no dependency change in this publication pass."
+  ],
+  "audit_evidence": "npm-audit.json",
+  "publication_status_at_validation": "Prepared locally; remote publication verified separately."
+}

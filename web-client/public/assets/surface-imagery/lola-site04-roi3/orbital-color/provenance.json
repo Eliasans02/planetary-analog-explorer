@@ -1,0 +1,269 @@
+{
+  "source_asset": {
+    "path": "/assets/planets/moon/color-4096.jpg",
+    "sha256": "b01b0842d9ec1b24140b925cba0de485e9887741c34add25dd5c41f47c47ee91",
+    "bytes": 2484879,
+    "width": 4096,
+    "height": 2048,
+    "label": "4K"
+  },
+  "source_product_sha256": "918649a7f8ed2f1329b2cd95bb0d25483befdcb60ae1a66db681a637cc21344f",
+  "source_url": "https://svs.gsfc.nasa.gov/4720/",
+  "source_credit": "NASA Scientific Visualization Studio / Ernie Wright; LRO LROC and LOLA teams",
+  "parent_provenance_asset": {
+    "path": "/assets/planets/moon/provenance.json",
+    "sha256": "628f86d85cca98d1a85941a7edf55009199547da26621dd05c22becc451f1f4a",
+    "bytes": 16998
+  },
+  "parent_provenance": {
+    "raw_source_receipts": [
+      {
+        "canonical_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_4k.tif",
+        "final_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_4k.tif",
+        "local_path": "data-pipeline/cache/raw/planet-explorer/lroc_color_poles_4k.tif",
+        "bytes": 13095388,
+        "sha256": "918649a7f8ed2f1329b2cd95bb0d25483befdcb60ae1a66db681a637cc21344f",
+        "retrieved_at": "2026-11-14T10:35:23.493956+00:00",
+        "http_headers": {
+          "date": "Sat, 14 Nov 2026 10:34:51 GMT",
+          "server": "Apache",
+          "strict-transport-security": "max-age=31536000; includeSubdomains;",
+          "last-modified": "Wed, 05 Jun 2019 20:21:15 GMT",
+          "etag": "\"c7d1dc-58a9956d78b08\"",
+          "accept-ranges": "bytes",
+          "content-length": "13095388",
+          "access-control-allow-origin": "https://tempo.multiverse.music",
+          "content-security-policy": "upgrade-insecure-requests; default-src 'self'; script-src 'self' blob: data: 'unsafe-eval' 'unsafe-inline' 'wasm-unsafe-eval' https://dap.digitalgov.gov https://cdn.jsdelivr.net https://api.observablehq.com https://cdn.parsely.com/keys/svs.gsfc.nasa.gov/p.js https://www.googletagmanager.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api nasa.gov; img-src 'self' https://nasa.gov blob: data: https://nasa.gov https://p1.parsely.com; media-src 'self' https://nasa.gov https://www.youtube.com; connect-src 'self' blob: https://cdn.jsdelivr.net https://static.observableusercontent.com https://www.airnowapi.org https://p1.parsely.com https://www.google-analytics.com https://api.weather.gov ; child-src 'self' https://web.wwtassets.org https://eyes.nasa.gov https://nasa.gov https://www.youtube.com https://player.vimeo.com https://calendar.google.com https://worldview.earthdata.nasa.gov https://water.noaa.gov https://projects.cosmicds.cfa.harvard.edu; style-src 'self' 'unsafe-inline'; frame-ancestors 'self' https://science.nasa.gov https://earth.gov https://staging.earth.gov; object-src 'self'; worker-src 'self' blob:;",
+          "content-type": "image/tiff",
+          "content-language": "en",
+          "connection": "close"
+        },
+        "complete_product": true,
+        "download_bound_bytes": 20000000
+      }
+    ],
+    "source_sha256": "918649a7f8ed2f1329b2cd95bb0d25483befdcb60ae1a66db681a637cc21344f",
+    "software_versions": {
+      "Pillow": "13.0.0",
+      "numpy": "2.5.4"
+    },
+    "source_identity_semantics": "SHA256 of complete raw TIFF",
+    "source_image_manifest": {
+      "path": "/assets/planets/moon/source-image-manifest.json",
+      "sha256": "9e06a88e33aa497a1919035a8a10e8a99806af2acb29d234bac982fca7b26118",
+      "bytes": 112
+    },
+    "integrity_status": "Locally computed SHA256 identifies retrieved TIFF bytes; no publisher-provided independent checksum was available.",
+    "source_page_receipt": {
+      "canonical_url": "https://svs.gsfc.nasa.gov/4720/",
+      "final_url": "https://svs.gsfc.nasa.gov/4720/",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/nasa_svs_4720.html",
+      "bytes": 54933,
+      "sha256": "ffca5a551e96000a4028c9ce40089c0c14b0a1ded311c8e48072398dccb42c69",
+      "retrieved_at": "2026-11-14T10:47:39.868482+00:00",
+      "http_headers": {
+        "date": "Sat, 14 Nov 2026 10:47:39 GMT",
+        "server": "Apache",
+        "strict-transport-security": "max-age=31536000; includeSubdomains;",
+        "content-length": "54933",
+        "server-timing": "Django_View;dur=3.502368927001953,Django_Total;dur=50.51755905151367,",
+        "x-frame-options": "DENY",
+        "etag": "\"ff679fd3b76dc25e07c9c8203ec38b7f\"",
+        "vary": "Cookie",
+        "access-control-allow-origin": "https://tempo.multiverse.music",
+        "content-security-policy": "upgrade-insecure-requests; default-src 'self'; script-src 'self' blob: data: 'unsafe-eval' 'unsafe-inline' 'wasm-unsafe-eval' https://dap.digitalgov.gov https://cdn.jsdelivr.net https://api.observablehq.com https://cdn.parsely.com/keys/svs.gsfc.nasa.gov/p.js https://www.googletagmanager.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api nasa.gov; img-src 'self' https://nasa.gov blob: data: https://nasa.gov https://p1.parsely.com; media-src 'self' https://nasa.gov https://www.youtube.com; connect-src 'self' blob: https://cdn.jsdelivr.net https://static.observableusercontent.com https://www.airnowapi.org https://p1.parsely.com https://www.google-analytics.com https://api.weather.gov ; child-src 'self' https://web.wwtassets.org https://eyes.nasa.gov https://nasa.gov https://www.youtube.com https://player.vimeo.com https://calendar.google.com https://worldview.earthdata.nasa.gov https://water.noaa.gov https://projects.cosmicds.cfa.harvard.edu; style-src 'self' 'unsafe-inline'; frame-ancestors 'self' https://science.nasa.gov https://earth.gov https://staging.earth.gov; object-src 'self'; worker-src 'self' blob:;",
+        "content-type": "text/html; charset=utf-8",
+        "content-language": "en",
+        "connection": "close"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 2000000
+    },
+    "projection": "simple cylindrical; longitude -180 to +180 east; row 0 north 90, last row south -90; pixel centers",
+    "processing": "Pillow LANCZOS downsampling of source RGB pixels; JPEG quality 92, no upsampling. Mars Native JPEG preserves complete source bytes; no application hue/saturation/gamma alteration.",
+    "source_dimensions": [
+      4096,
+      2048
+    ],
+    "credit": "NASA Scientific Visualization Studio / Ernie Wright; LRO LROC and LOLA teams",
+    "limitations": [
+      "NASA visualization color map optimized for aesthetics, not science; exposure/white balance adjusted and high-latitude gaps inpainted.",
+      "LROC color covers 70 N to 70 S; polar regions use lower resolution monochromatic LOLA albedo fill.",
+      "JPEG derivatives are display imagery, not scientific feature or similarity evidence."
+    ],
+    "displacement": {
+      "raw_source_receipt": {
+        "canonical_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+        "final_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+        "local_path": "data-pipeline/cache/raw/planet-explorer/ldem_4.tif",
+        "bytes": 4153352,
+        "sha256": "330afa2556a86fd05ac6ba2f912f246600fdade35de2a0d90593d50d07b01b65",
+        "retrieved_at": "2026-11-14T10:35:07.339740+00:00",
+        "http_headers": {
+          "date": "Sat, 14 Nov 2026 10:34:51 GMT",
+          "server": "Apache",
+          "strict-transport-security": "max-age=31536000; includeSubdomains;",
+          "last-modified": "Wed, 05 Jun 2019 20:21:01 GMT",
+          "etag": "\"3f6008-58a99560ea464\"",
+          "accept-ranges": "bytes",
+          "content-length": "4153352",
+          "access-control-allow-origin": "https://tempo.multiverse.music",
+          "content-security-policy": "upgrade-insecure-requests; default-src 'self'; script-src 'self' blob: data: 'unsafe-eval' 'unsafe-inline' 'wasm-unsafe-eval' https://dap.digitalgov.gov https://cdn.jsdelivr.net https://api.observablehq.com https://cdn.parsely.com/keys/svs.gsfc.nasa.gov/p.js https://www.googletagmanager.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api nasa.gov; img-src 'self' https://nasa.gov blob: data: https://nasa.gov https://p1.parsely.com; media-src 'self' https://nasa.gov https://www.youtube.com; connect-src 'self' blob: https://cdn.jsdelivr.net https://static.observableusercontent.com https://www.airnowapi.org https://p1.parsely.com https://www.google-analytics.com https://api.weather.gov ; child-src 'self' https://web.wwtassets.org https://eyes.nasa.gov https://nasa.gov https://www.youtube.com https://player.vimeo.com https://calendar.google.com https://worldview.earthdata.nasa.gov https://water.noaa.gov https://projects.cosmicds.cfa.harvard.edu; style-src 'self' 'unsafe-inline'; frame-ancestors 'self' https://science.nasa.gov https://earth.gov https://staging.earth.gov; object-src 'self'; worker-src 'self' blob:;",
+          "content-type": "image/tiff",
+          "content-language": "en",
+          "connection": "close"
+        },
+        "complete_product": true,
+        "download_bound_bytes": 8000000
+      },
+      "reference": "LOLA radial elevation relative to 1737.4 km sphere; source Float32 km multiplied by 1000. Pixel-center lon=-179.875+0.25*c, lat=89.875-0.25*r.",
+      "minimum_m": -8878.5,
+      "maximum_m": 10504.0009765625,
+      "source_documentation": "https://svs.gsfc.nasa.gov/4720/ displacement section",
+      "georeference_status": "Source TIFF has no embedded CRS/geotransform. Pixel-center coordinates are derived from documented global simple-cylindrical centered-zero rendering convention, north at top, longitude edges -180,+180 and latitude edges +90,-90; not read as embedded geospatial metadata.",
+      "pds_orientation_verification": {
+        "label_receipt": {
+          "canonical_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.lbl",
+          "final_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.lbl",
+          "local_path": "data-pipeline/cache/raw/planet-explorer/lola_ldem_4.lbl",
+          "bytes": 5107,
+          "sha256": "b5a197b4d417e3b5e0e84f8fe15f9a1d2203b8eb5d7213236c0ffbc86e940cc6",
+          "retrieved_at": "2026-11-14T10:46:26.304120+00:00",
+          "http_headers": {
+            "Content-Type": "text/plain",
+            "Last-Modified": "Wed, 06 Sep 2017 15:44:17 GMT",
+            "Accept-Ranges": "bytes",
+            "ETag": "\"38c4cdff2627d31:0\"",
+            "Server": "Microsoft-IIS/10.0",
+            "X-Frame-Options": "SAMEORIGIN",
+            "X-Xss-Protection": "1; mode=block",
+            "Strict-Transport-Security": "max-age=30000000; includeSubDomains",
+            "Date": "Sat, 14 Nov 2026 10:46:25 GMT",
+            "Connection": "close",
+            "Content-Length": "5107"
+          },
+          "complete_product": true,
+          "download_bound_bytes": 20000
+        },
+        "image_receipt": {
+          "canonical_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.img",
+          "final_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.img",
+          "local_path": "data-pipeline/cache/raw/planet-explorer/lola_ldem_4.img",
+          "bytes": 2073600,
+          "sha256": "c04632eba6449af49e3108ed7c25b3b1c450600abd3690df4fc815853a1af476",
+          "retrieved_at": "2026-11-14T10:46:31.526003+00:00",
+          "http_headers": {
+            "Content-Type": "application/octet-stream",
+            "Last-Modified": "Wed, 06 Sep 2017 15:43:35 GMT",
+            "Accept-Ranges": "bytes",
+            "ETag": "\"b6596fe62627d31:0\"",
+            "Server": "Microsoft-IIS/10.0",
+            "X-Frame-Options": "SAMEORIGIN",
+            "X-Xss-Protection": "1; mode=block",
+            "Strict-Transport-Security": "max-age=30000000; includeSubDomains",
+            "Date": "Sat, 14 Nov 2026 10:46:26 GMT",
+            "Connection": "close",
+            "Content-Length": "2073600"
+          },
+          "complete_product": true,
+          "download_bound_bytes": 3000000
+        },
+        "label_text": "PDS_VERSION_ID            = \"PDS3\"\n\n/*** GENERAL DATA DESCRIPTION PARAMETERS ***/\nPRODUCT_VERSION_ID        = \"V3.0\"\nDATA_SET_ID               = \"LRO-L-LOLA-4-GDR-V1.0\"\nPRODUCT_ID                = \"LDEM_4\"\nINSTRUMENT_HOST_NAME      = \"LUNAR RECONNAISSANCE ORBITER\"\nINSTRUMENT_NAME           = \"LUNAR ORBITER LASER ALTIMETER\"\nINSTRUMENT_ID             = \"LOLA\"\nMISSION_PHASE_NAME        = {\"COMMISSIONING\",\"NOMINAL MISSION\",\"SCIENCE\n                            MISSION\",\"EXTENDED SCIENCE MISSION\",\n                            \"SECOND EXTENDED SCIENCE MISSION\",\"THIRD\n                            EXTENDED SCIENCE MISSION\"} \nTARGET_NAME               = MOON\nSTART_TIME                = 2009-07-13T17:33:17\nSTOP_TIME                 = 2016-11-29T05:48:19\nPRODUCT_CREATION_TIME     = 2017-09-15\nPRODUCER_ID               = LRO_LOLA_TEAM\nPRODUCER_FULL_NAME        = \"DAVID E. SMITH\"\nPRODUCER_INSTITUTION_NAME = \"GODDARD SPACE FLIGHT CENTER\"\nDESCRIPTION               = \"This data product is a shape map (radius)\n   of the Moon at a resolution of 7580.84 m/pix by 7580.84 m/pix,\n   based on altimetry data acquired through mission phase LRO_ES_52\n   by the LOLA instrument. All LOLA data used for the generation of \n   this GDR products are geolocated using precision orbits based on a \n   revised lunar gravity field GRGM 900C[LEMOINEETAL2014].  The previous\n   version of this product was generated with data through LRO_ES_21.\n   An additional 505,763,339 data points have been added.\n\n   The gridfiles were produced in 45 degree latitude bands, and there \n   may be edge artifacts at this boundary.  Unlike previous versions of\n   these products, the Generic Mapping Tools (GMT) program 'grdblend' was \n   not used.  At higher resolutions, the GMT5.4.2 program 'surface' was\n   used to compensate for incomplete coverage. Tension was set to 0.5\n   and Anisotropy to 0.5 to minimize latitude distortion. The map is in\n   the form of a binary table with one row for each\n   0.25 degrees of latitude, pixel registered.  Map values\n   are relative to a radius of 1737.4 km.\n\n   This label describes an IMG file in the form of a binary resampling\n   to pixel registration.\n\"\n\nOBJECT                    = UNCOMPRESSED_FILE\nFILE_NAME                 = \"LDEM_4.IMG\"\nRECORD_TYPE               = FIXED_LENGTH\nFILE_RECORDS              = 720\nRECORD_BYTES              = 2880\n^IMAGE                    = \"LDEM_4.IMG\"\n\n\n  OBJECT                  = IMAGE\n    NAME                  = HEIGHT\n    DESCRIPTION           = \"Each sample represents height relative to a\n      reference radius (OFFSET) and is generated using geolocated LOLA data\n      produced by the LOLA team.\"\n    LINES                 = 720\n    LINE_SAMPLES          = 1440\n    MAXIMUM               = 21008\n    MINIMUM               = -17758\n    SAMPLE_TYPE           = LSB_INTEGER\n    SAMPLE_BITS           = 16\n    UNIT                  = METER\n    SCALING_FACTOR        = 0.5\n    OFFSET                = 1737400.\n\n/* NOTE:                                                                   */\n/* Conversion from Digital Number to HEIGHT, i.e. elevation in meters, is: */\n/* HEIGHT = (DN * SCALING_FACTOR).                                         */\n/* The conversion from Digital Number to PLANETARY_RADIUS in meters is:    */\n/* PLANETARY_RADIUS = (DN * SCALING_FACTOR) + OFFSET                       */\n/* where OFFSET is the radius of a reference sphere.                       */\n/* The planetopotential TOPOGRAPHY is PLANETARY_RADIUS - GEOID_RADIUS,     */\n/* where GEOID_RADIUS is derived from a gravitational equipotential model. */\n/* By convention, the average GEOID_RADIUS at the equator is OFFSET.       */\n\n  END_OBJECT              = IMAGE\nEND_OBJECT                = UNCOMPRESSED_FILE\nOBJECT                    = IMAGE_MAP_PROJECTION\n ^DATA_SET_MAP_PROJECTION     = \"DSMAP.CAT\"\n MAP_PROJECTION_TYPE          = \"SIMPLE CYLINDRICAL\"\n MAP_RESOLUTION               = 4 <pix/deg>\n A_AXIS_RADIUS                = 1737.4 <km>\n B_AXIS_RADIUS                = 1737.4 <km>\n C_AXIS_RADIUS                = 1737.4 <km>\n FIRST_STANDARD_PARALLEL      = 'N/A'\n SECOND_STANDARD_PARALLEL     = 'N/A'\n POSITIVE_LONGITUDE_DIRECTION = \"EAST\"\n CENTER_LATITUDE              = 0 <deg>\n CENTER_LONGITUDE             = 180 <deg>\n REFERENCE_LATITUDE           = 'N/A'\n REFERENCE_LONGITUDE          = 'N/A'\n LINE_FIRST_PIXEL             = 1\n LINE_LAST_PIXEL              = 720\n SAMPLE_FIRST_PIXEL           = 1\n SAMPLE_LAST_PIXEL            = 1440\n MAP_PROJECTION_ROTATION      = 0.0\n MAP_SCALE                    = 7580.84 <m/pix>\n MAXIMUM_LATITUDE             = 90 <deg>\n MINIMUM_LATITUDE             = -90 <deg>\n WESTERNMOST_LONGITUDE        = 0 <deg>\n EASTERNMOST_LONGITUDE        = 360 <deg>\n LINE_PROJECTION_OFFSET       = 359.5 <pix>\n SAMPLE_PROJECTION_OFFSET     = 719.5 <pix>\n COORDINATE_SYSTEM_TYPE       = \"BODY-FIXED ROTATING\"\n COORDINATE_SYSTEM_NAME       = \"MEAN EARTH/POLAR AXIS OF DE421\"\nEND_OBJECT                    = IMAGE_MAP_PROJECTION\n\nEND\n",
+        "method": "Every SVS Float32 km sample multiplied by 2000 and rounded reproduces the original PDS signed integer sample after rolling columns by exactly 720 (180 degrees); all 1,036,800 samples match, no row flip. PDS label states pixel registration, 4 ppd, bounds north90 south-90 east0..360 and ME/PA DE421 frame.",
+        "matching_samples": 1036800,
+        "maximum_float_conversion_error_source_DN": 0.0018463134765625
+      }
+    }
+  },
+  "planet_catalog_sha256": "e0e1d3d2d27be2ec26e500a812201e1cabb094240be1e56dbd3a9ab04a782949",
+  "registration": "Inverse native DEM projection to its geodetic longitude/latitude, then sample same coordinates in zero-centered north-up equirectangular displayed orbital image. No datum transformation.",
+  "source_projection": "Display equirectangular: longitude -180 left, +180 right; latitude +90 top, -90 bottom.",
+  "sampling": "Nearest published pixel at each DEM native pixel center; no new colors, stretch, palette, enhancement, or elevation-dependent tint.",
+  "output_pixel_registration": "PNG row0/col0 corresponds to DEM sample row0/col0; UV at ((col+0.5)/width,(row+0.5)/height), imageOrientation none and texture flipY false.",
+  "source_pixel_comparisons": [
+    {
+      "grid_row_col": [
+        0,
+        0
+      ],
+      "source_row_col": [
+        2045,
+        312
+      ],
+      "source_rgb": [
+        184,
+        181,
+        174
+      ]
+    },
+    {
+      "grid_row_col": [
+        0,
+        128
+      ],
+      "source_row_col": [
+        2045,
+        252
+      ],
+      "source_rgb": [
+        190,
+        187,
+        180
+      ]
+    },
+    {
+      "grid_row_col": [
+        64,
+        64
+      ],
+      "source_row_col": [
+        2045,
+        270
+      ],
+      "source_rgb": [
+        185,
+        182,
+        175
+      ]
+    },
+    {
+      "grid_row_col": [
+        128,
+        0
+      ],
+      "source_row_col": [
+        2045,
+        285
+      ],
+      "source_rgb": [
+        183,
+        180,
+        173
+      ]
+    },
+    {
+      "grid_row_col": [
+        128,
+        128
+      ],
+      "source_row_col": [
+        2045,
+        229
+      ],
+      "source_rgb": [
+        196,
+        193,
+        186
+      ]
+    }
+  ],
+  "limitations": [
+    "NASA visualization color map optimized for aesthetics, not science; exposure/white balance adjusted and high-latitude gaps inpainted.",
+    "LROC color covers 70 N to 70 S; polar regions use lower resolution monochromatic LOLA albedo fill.",
+    "JPEG derivatives are display imagery, not scientific feature or similarity evidence.",
+    "Coarse display mosaic sampled by source longitude/latitude; approximate registration only, no independent tie-point alignment to local DEM.",
+    "Mosaic display frame and native DEM realization have not been transformed or independently registered; this is an illustrative image drape.",
+    "129-pixel output samples the existing orbital image; output size does not add source detail or ground resolution.",
+    "This south-polar location uses the published monochrome LOLA albedo fill, not a local color photograph; no color has been invented."
+  ]
+}

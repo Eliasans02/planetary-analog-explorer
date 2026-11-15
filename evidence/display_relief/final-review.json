@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "verified_file_hashes": 190,
+  "matching_ledgers": 5,
+  "prior_checkpoint_retained": true,
+  "human_acceptance_pending": true
+}

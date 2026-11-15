@@ -1,0 +1,382 @@
+{
+  "versions": {
+    "rasterio": "1.5.2",
+    "shapely": "2.2.0",
+    "pyproj": "3.8.0"
+  },
+  "rois": [
+    {
+      "record": 1,
+      "points": 121,
+      "closed": true,
+      "valid": false,
+      "simple": false,
+      "validity": "Ring Self-intersection[-2807.5 -6662.5]",
+      "native_bounds_m": [
+        -2842.5,
+        -6802.5,
+        -2782.5,
+        -6522.5
+      ],
+      "source_frame_representative_point": {
+        "native_xy_m": [
+          -2806.25,
+          -6660.0
+        ],
+        "longitude_east_deg": -157.1514440742734,
+        "latitude_planetocentric_deg": -89.76166662729341,
+        "frame": "MOON_ME_DE421 (README realization; projection inversion only)",
+        "roundtrip_error_m": 3.213303892827089e-09,
+        "purpose": "Diagnostic representative point only; invalid rings do not establish approved polygon membership; not a selected camera or NASA recommended landing coordinate"
+      },
+      "roi_vs_raster_inverse_projection_max_abs_difference_deg": 0.0,
+      "source_frame_lonlat_bounds_deg": [
+        -157.5795725640263,
+        -89.76588749751879,
+        -156.64821258000367,
+        -89.75718744894317
+      ]
+    },
+    {
+      "record": 2,
+      "points": 87,
+      "closed": true,
+      "valid": false,
+      "simple": false,
+      "validity": "Ring Self-intersection[-2742.5 -6387.5]",
+      "native_bounds_m": [
+        -2792.5,
+        -6432.5,
+        -2712.5,
+        -6262.5
+      ],
+      "source_frame_representative_point": {
+        "native_xy_m": [
+          -2771.25,
+          -6345.0
+        ],
+        "longitude_east_deg": -156.40616004088335,
+        "latitude_planetocentric_deg": -89.77166838243593,
+        "frame": "MOON_ME_DE421 (README realization; projection inversion only)",
+        "roundtrip_error_m": 4.028456864543044e-09,
+        "purpose": "Diagnostic representative point only; invalid rings do not establish approved polygon membership; not a selected camera or NASA recommended landing coordinate"
+      },
+      "roi_vs_raster_inverse_projection_max_abs_difference_deg": 0.0,
+      "source_frame_lonlat_bounds_deg": [
+        -156.80140948635182,
+        -89.7748704445979,
+        -156.32659345410923,
+        -89.7690700594881
+      ]
+    },
+    {
+      "record": 3,
+      "points": 59,
+      "closed": true,
+      "valid": true,
+      "simple": true,
+      "validity": "Valid Geometry",
+      "native_bounds_m": [
+        -2702.5,
+        -6167.5,
+        -2642.5,
+        -6052.5
+      ],
+      "source_frame_representative_point": {
+        "native_xy_m": [
+          -2686.25,
+          -6110.0
+        ],
+        "longitude_east_deg": -156.26739892005892,
+        "latitude_planetocentric_deg": -89.77989162018713,
+        "frame": "MOON_ME_DE421 (README realization; projection inversion only)",
+        "roundtrip_error_m": 1.2555808498796095e-08,
+        "purpose": "Diagnostic representative point only; invalid rings do not establish approved polygon membership; not a selected camera or NASA recommended landing coordinate"
+      },
+      "roi_vs_raster_inverse_projection_max_abs_difference_deg": 0.0,
+      "source_frame_lonlat_bounds_deg": [
+        -156.51588470949514,
+        -89.78214141594515,
+        -156.10533736426237,
+        -89.7781570965494
+      ]
+    },
+    {
+      "record": 4,
+      "points": 58,
+      "closed": true,
+      "valid": true,
+      "simple": true,
+      "validity": "Valid Geometry",
+      "native_bounds_m": [
+        -2687.5,
+        -6027.5,
+        -2627.5,
+        -5902.5
+      ],
+      "source_frame_representative_point": {
+        "native_xy_m": [
+          -2651.25,
+          -5965.0
+        ],
+        "longitude_east_deg": -156.0363970150877,
+        "latitude_planetocentric_deg": -89.78473180810079,
+        "frame": "MOON_ME_DE421 (README realization; projection inversion only)",
+        "roundtrip_error_m": 1.1221880539267552e-08,
+        "purpose": "Diagnostic representative point only; invalid rings do not establish approved polygon membership; not a selected camera or NASA recommended landing coordinate"
+      },
+      "roi_vs_raster_inverse_projection_max_abs_difference_deg": 0.0,
+      "source_frame_lonlat_bounds_deg": [
+        -156.22645859492746,
+        -89.78639348309996,
+        -155.55604521958347,
+        -89.7827636756409
+      ]
+    }
+  ],
+  "rasters": [
+    {
+      "file": "data-pipeline\\cache\\raw\\fast-path\\Site04_final_adj_5mpp_surf.tif",
+      "units": [
+        null
+      ],
+      "scale": [
+        1.0
+      ],
+      "offset": [
+        0.0
+      ],
+      "roi_windows": [
+        {
+          "record": 1,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1231,
+            1504,
+            13,
+            57
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 279,
+          "inside_gdal_valid_and_finite": 279,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 2,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1241,
+            1452,
+            17,
+            35
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 154,
+          "inside_gdal_valid_and_finite": 154,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 3,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1259,
+            1410,
+            13,
+            24
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 126,
+          "inside_gdal_valid_and_finite": 126,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 4,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1262,
+            1380,
+            13,
+            26
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 127,
+          "inside_gdal_valid_and_finite": 127,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        }
+      ],
+      "roi_crs_equal": false
+    },
+    {
+      "file": "data-pipeline\\cache\\raw\\fast-path\\Site04_final_adj_5mpp_ldec.tif",
+      "units": [
+        null
+      ],
+      "scale": [
+        1.0
+      ],
+      "offset": [
+        0.0
+      ],
+      "roi_windows": [
+        {
+          "record": 1,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1231,
+            1504,
+            13,
+            57
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 279,
+          "inside_gdal_valid_and_finite": 279,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0,
+          "inside_zero_returns": 252
+        },
+        {
+          "record": 2,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1241,
+            1452,
+            17,
+            35
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 154,
+          "inside_gdal_valid_and_finite": 154,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0,
+          "inside_zero_returns": 130
+        },
+        {
+          "record": 3,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1259,
+            1410,
+            13,
+            24
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 126,
+          "inside_gdal_valid_and_finite": 126,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0,
+          "inside_zero_returns": 106
+        },
+        {
+          "record": 4,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1262,
+            1380,
+            13,
+            26
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 127,
+          "inside_gdal_valid_and_finite": 127,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0,
+          "inside_zero_returns": 109
+        }
+      ],
+      "roi_crs_equal": false
+    },
+    {
+      "file": "data-pipeline\\cache\\raw\\fast-path\\Site04_final_adj_5mpp_toterr.tif",
+      "units": [
+        null
+      ],
+      "scale": [
+        1.0
+      ],
+      "offset": [
+        0.0
+      ],
+      "roi_windows": [
+        {
+          "record": 1,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1231,
+            1504,
+            13,
+            57
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 279,
+          "inside_gdal_valid_and_finite": 279,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 2,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1241,
+            1452,
+            17,
+            35
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 154,
+          "inside_gdal_valid_and_finite": 154,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 3,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1259,
+            1410,
+            13,
+            24
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 126,
+          "inside_gdal_valid_and_finite": 126,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 4,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1262,
+            1380,
+            13,
+            26
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 127,
+          "inside_gdal_valid_and_finite": 127,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        }
+      ],
+      "roi_crs_equal": false
+    },
+    {
+      "file": "data-pipeline\\cache\\raw\\fast-path\\USGS_1_n20w156_20250611.tif",
+      "units": [
+        null
+      ],
+      "scale": [
+        1.0
+      ],
+      "offset": [
+        0.0
+      ],
+      "roi_windows": null,
+      "roi_crs_equal": null
+    }
+  ]
+}

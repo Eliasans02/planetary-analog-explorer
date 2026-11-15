@@ -1,0 +1,33 @@
+{
+  "reviewed_at": "2026-11-14T12:13:33.190599+00:00",
+  "status": "PASS",
+  "checkpoint": "SURFACE_SITES_ANALYSIS_COLOR_VERIFIED_2026-11-14",
+  "source_manifest_sha256": "af096ec0c07deb4bd7c11ef627160edcf9cab494e07f38c80ee04c034d40316b",
+  "checks": {
+    "manifest_files_verified": 185,
+    "current_checkpoint_equal_in_all_five_ledgers": true,
+    "historical_checkpoints_equal_to_three_preserved_artifacts_in_all_five_ledgers": true,
+    "history_verification_boundary": "Compared current historical entries to preserved immutable checkpoint artifacts; no pre-update byte snapshot of every ledger was available.",
+    "checkpoint_evidence_contracts_and_declared_asset_identities_verified": true,
+    "imagery_and_analysis_bind_current_catalog": true,
+    "logs_counts_exit_status_and_phase_gates_consistent": true,
+    "relative_checkpoint_links_verified": [
+      {
+        "document": "README.md",
+        "target": "evidence/surface_imagery/SURFACE_COLOR_CHECKPOINT.json"
+      },
+      {
+        "document": "prompts/ASTRA_SOL_LOOP.md",
+        "target": "../evidence/surface_imagery/SURFACE_COLOR_CHECKPOINT.json"
+      },
+      {
+        "document": "docs/planet_explorer_contract.md",
+        "target": "../evidence/surface_imagery/SURFACE_COLOR_CHECKPOINT.json"
+      }
+    ]
+  },
+  "material_findings": [],
+  "full_test_suites_rerun": false,
+  "implementation_or_public_assets_modified": false,
+  "scope": "Independent read-only final artifact/ledger consistency review; this attestation is intentionally outside the frozen 185-file manifest."
+}

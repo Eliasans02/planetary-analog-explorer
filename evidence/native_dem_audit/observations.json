@@ -1,0 +1,670 @@
+{
+  "audit_utc": "2026-11-14T09:48:36.895966+00:00",
+  "versions": {
+    "rasterio": "1.5.2",
+    "shapely": "2.2.0",
+    "pyproj": "3.8.0"
+  },
+  "method": "ordinary imports; read-only raw files; allowlisted regular tar members read into memory; only ROI bounding windows read; no terrain metrics or features",
+  "rasters": [
+    {
+      "file": "data-pipeline\\cache\\raw\\fast-path\\Site04_final_adj_5mpp_surf.tif",
+      "bytes": 40980806,
+      "sha256": "38ff70dbdf2f066c2cfa94a646c3a59d653ce7f6b4528b15fc1b43ee397ce758",
+      "size": [
+        3200,
+        3200
+      ],
+      "dtype": [
+        "float32"
+      ],
+      "crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+      "transform": [
+        5.0,
+        0.0,
+        -9000.0,
+        0.0,
+        -5.0,
+        1000.0
+      ],
+      "bounds": [
+        -9000.0,
+        -15000.0,
+        7000.0,
+        1000.0
+      ],
+      "nodata": "nan",
+      "scales": [
+        1.0
+      ],
+      "offsets": [
+        0.0
+      ],
+      "band_units": [
+        null
+      ],
+      "tags": {
+        "NC_GLOBAL#Conventions": "COARDS, CF-1.5",
+        "NC_GLOBAL#GMT_version": "5.4.5 [64-bit]",
+        "NC_GLOBAL#history": "xyz2grd -bi3 -I5 -R-9.00000000000e+03/7.00000000000e+03/-1.50000000000e+04/1.00000000000e+03 -Gtest.grd -r",
+        "NC_GLOBAL#node_offset": "1",
+        "x#actual_range": "{-9000,7000}",
+        "x#long_name": "x",
+        "y#actual_range": "{-15000,1000}",
+        "y#long_name": "y",
+        "z#actual_range": "{-2847.877197265625,1805.072631835938}",
+        "z#long_name": "z",
+        "z#_FillValue": "nan",
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {
+        "actual_range": "{-2847.877197265625,1805.072631835938}",
+        "long_name": "z",
+        "NETCDF_VARNAME": "z",
+        "_FillValue": "nan"
+      },
+      "mask_flags": [
+        [
+          "nodata"
+        ]
+      ],
+      "registered_exactly_to_surf": true,
+      "roi_crs_equivalent_ignoring_axis_order": false,
+      "roi_windows": [
+        {
+          "record": 1,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1231,
+            1504,
+            13,
+            57
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 279,
+          "inside_gdal_valid_and_finite": 279,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 2,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1241,
+            1452,
+            17,
+            35
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 154,
+          "inside_gdal_valid_and_finite": 154,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 3,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1259,
+            1410,
+            13,
+            24
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 126,
+          "inside_gdal_valid_and_finite": 126,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 4,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1262,
+            1380,
+            13,
+            26
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 127,
+          "inside_gdal_valid_and_finite": 127,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        }
+      ]
+    },
+    {
+      "file": "data-pipeline\\cache\\raw\\fast-path\\Site04_final_adj_5mpp_ldec.tif",
+      "bytes": 40980740,
+      "sha256": "fcc8c2219ae2368d5b2a1f6aec05fcf96cf725f3035ac8d80efc312a4ff29227",
+      "size": [
+        3200,
+        3200
+      ],
+      "dtype": [
+        "float32"
+      ],
+      "crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+      "transform": [
+        5.0,
+        0.0,
+        -9000.0,
+        0.0,
+        -5.0,
+        1000.0
+      ],
+      "bounds": [
+        -9000.0,
+        -15000.0,
+        7000.0,
+        1000.0
+      ],
+      "nodata": "nan",
+      "scales": [
+        1.0
+      ],
+      "offsets": [
+        0.0
+      ],
+      "band_units": [
+        null
+      ],
+      "tags": {
+        "NC_GLOBAL#Conventions": "COARDS, CF-1.5",
+        "NC_GLOBAL#GMT_version": "5.4.5 [64-bit]",
+        "NC_GLOBAL#history": "xyz2grd -bi3 -I5 -R-9.00000000000e+03/7.00000000000e+03/-1.50000000000e+04/1.00000000000e+03 -Gtest.grd -r",
+        "NC_GLOBAL#node_offset": "1",
+        "x#actual_range": "{-9000,7000}",
+        "x#long_name": "x",
+        "y#actual_range": "{-15000,1000}",
+        "y#long_name": "y",
+        "z#actual_range": "{0,5}",
+        "z#long_name": "z",
+        "z#_FillValue": "nan",
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {
+        "actual_range": "{0,5}",
+        "long_name": "z",
+        "NETCDF_VARNAME": "z",
+        "_FillValue": "nan"
+      },
+      "mask_flags": [
+        [
+          "nodata"
+        ]
+      ],
+      "registered_exactly_to_surf": true,
+      "roi_crs_equivalent_ignoring_axis_order": false,
+      "roi_windows": [
+        {
+          "record": 1,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1231,
+            1504,
+            13,
+            57
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 279,
+          "inside_gdal_valid_and_finite": 279,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0,
+          "inside_zero_returns": 252
+        },
+        {
+          "record": 2,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1241,
+            1452,
+            17,
+            35
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 154,
+          "inside_gdal_valid_and_finite": 154,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0,
+          "inside_zero_returns": 130
+        },
+        {
+          "record": 3,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1259,
+            1410,
+            13,
+            24
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 126,
+          "inside_gdal_valid_and_finite": 126,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0,
+          "inside_zero_returns": 106
+        },
+        {
+          "record": 4,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1262,
+            1380,
+            13,
+            26
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 127,
+          "inside_gdal_valid_and_finite": 127,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0,
+          "inside_zero_returns": 109
+        }
+      ]
+    },
+    {
+      "file": "data-pipeline\\cache\\raw\\fast-path\\Site04_final_adj_5mpp_toterr.tif",
+      "bytes": 40980808,
+      "sha256": "416c4baa3b64def0182bb3379a1a9228482efd8ce32a39309ea8de5d0330fbe6",
+      "size": [
+        3200,
+        3200
+      ],
+      "dtype": [
+        "float32"
+      ],
+      "crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+      "transform": [
+        5.0,
+        0.0,
+        -9000.0,
+        0.0,
+        -5.0,
+        1000.0
+      ],
+      "bounds": [
+        -9000.0,
+        -15000.0,
+        7000.0,
+        1000.0
+      ],
+      "nodata": "nan",
+      "scales": [
+        1.0
+      ],
+      "offsets": [
+        0.0
+      ],
+      "band_units": [
+        null
+      ],
+      "tags": {
+        "NC_GLOBAL#Conventions": "COARDS, CF-1.5",
+        "NC_GLOBAL#GMT_version": "5.4.5 [64-bit]",
+        "NC_GLOBAL#history": "xyz2grd -bi3 -I5 -R-9.00000000000e+03/7.00000000000e+03/-1.50000000000e+04/1.00000000000e+03 -Gtest.grd -r",
+        "NC_GLOBAL#node_offset": "1",
+        "x#actual_range": "{-9000,7000}",
+        "x#long_name": "x",
+        "y#actual_range": "{-15000,1000}",
+        "y#long_name": "y",
+        "z#actual_range": "{0.06385684758424759,7.635095596313477}",
+        "z#long_name": "z",
+        "z#_FillValue": "nan",
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {
+        "actual_range": "{0.06385684758424759,7.635095596313477}",
+        "long_name": "z",
+        "NETCDF_VARNAME": "z",
+        "_FillValue": "nan"
+      },
+      "mask_flags": [
+        [
+          "nodata"
+        ]
+      ],
+      "registered_exactly_to_surf": true,
+      "roi_crs_equivalent_ignoring_axis_order": false,
+      "roi_windows": [
+        {
+          "record": 1,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1231,
+            1504,
+            13,
+            57
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 279,
+          "inside_gdal_valid_and_finite": 279,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 2,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1241,
+            1452,
+            17,
+            35
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 154,
+          "inside_gdal_valid_and_finite": 154,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 3,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1259,
+            1410,
+            13,
+            24
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 126,
+          "inside_gdal_valid_and_finite": 126,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        },
+        {
+          "record": 4,
+          "within_raster_outer_bounds": true,
+          "window_col_row_width_height": [
+            1262,
+            1380,
+            13,
+            26
+          ],
+          "boundary_rule": "Shapely covers(pixel center), boundary included; no context padding",
+          "center_points_inside": 127,
+          "inside_gdal_valid_and_finite": 127,
+          "inside_gdal_invalid": 0,
+          "inside_nonfinite": 0
+        }
+      ]
+    },
+    {
+      "file": "data-pipeline\\cache\\raw\\fast-path\\USGS_1_n20w156_20250611.tif",
+      "bytes": 41513373,
+      "sha256": "75b69b4df0ac16cc7e1cccaa30c59ecb3a6834944d62aba245b0a36aa8d3b270",
+      "size": [
+        3612,
+        3612
+      ],
+      "dtype": [
+        "float32"
+      ],
+      "crs_wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+      "transform": [
+        0.000277777777786999,
+        0.0,
+        -156.0016666669826,
+        0.0,
+        -0.000277777777786999,
+        20.00166666648431
+      ],
+      "bounds": [
+        -156.0016666669826,
+        18.99833333311767,
+        -154.99833333361596,
+        20.00166666648431
+      ],
+      "nodata": -999999.0,
+      "scales": [
+        1.0
+      ],
+      "offsets": [
+        0.0
+      ],
+      "band_units": [
+        null
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {
+        "LAYER_TYPE": "athematic",
+        "STATISTICS_MAXIMUM": "4204.6845703125",
+        "STATISTICS_MEAN": "1114.5373022907",
+        "STATISTICS_MINIMUM": "-2.6657922267914",
+        "STATISTICS_STDDEV": "970.78791620406",
+        "STATISTICS_VALID_PERCENT": "90.33"
+      },
+      "mask_flags": [
+        [
+          "nodata"
+        ]
+      ]
+    }
+  ],
+  "rois": [
+    {
+      "record": 1,
+      "points": 121,
+      "closed": true,
+      "valid": false,
+      "simple": false,
+      "validity": "Ring Self-intersection[-2807.5 -6662.5]",
+      "native_bounds_m": [
+        -2842.5,
+        -6802.5,
+        -2782.5,
+        -6522.5
+      ],
+      "source_frame_representative_point": {
+        "native_xy_m": [
+          -2806.25,
+          -6660.0
+        ],
+        "longitude_east_deg": -157.1514440742734,
+        "latitude_planetocentric_deg": -89.76166662729341,
+        "frame": "MOON_ME_DE421 (README realization; projection inversion only)",
+        "roundtrip_error_m": 3.213303892827089e-09,
+        "purpose": "Diagnostic representative point only; invalid rings do not establish approved polygon membership; not a selected camera or NASA recommended landing coordinate"
+      },
+      "roi_vs_raster_inverse_projection_max_abs_difference_deg": 0.0,
+      "source_frame_lonlat_bounds_deg": [
+        -157.5795725640263,
+        -89.76588749751879,
+        -156.64821258000367,
+        -89.75718744894317
+      ]
+    },
+    {
+      "record": 2,
+      "points": 87,
+      "closed": true,
+      "valid": false,
+      "simple": false,
+      "validity": "Ring Self-intersection[-2742.5 -6387.5]",
+      "native_bounds_m": [
+        -2792.5,
+        -6432.5,
+        -2712.5,
+        -6262.5
+      ],
+      "source_frame_representative_point": {
+        "native_xy_m": [
+          -2771.25,
+          -6345.0
+        ],
+        "longitude_east_deg": -156.40616004088335,
+        "latitude_planetocentric_deg": -89.77166838243593,
+        "frame": "MOON_ME_DE421 (README realization; projection inversion only)",
+        "roundtrip_error_m": 4.028456864543044e-09,
+        "purpose": "Diagnostic representative point only; invalid rings do not establish approved polygon membership; not a selected camera or NASA recommended landing coordinate"
+      },
+      "roi_vs_raster_inverse_projection_max_abs_difference_deg": 0.0,
+      "source_frame_lonlat_bounds_deg": [
+        -156.80140948635182,
+        -89.7748704445979,
+        -156.32659345410923,
+        -89.7690700594881
+      ]
+    },
+    {
+      "record": 3,
+      "points": 59,
+      "closed": true,
+      "valid": true,
+      "simple": true,
+      "validity": "Valid Geometry",
+      "native_bounds_m": [
+        -2702.5,
+        -6167.5,
+        -2642.5,
+        -6052.5
+      ],
+      "source_frame_representative_point": {
+        "native_xy_m": [
+          -2686.25,
+          -6110.0
+        ],
+        "longitude_east_deg": -156.26739892005892,
+        "latitude_planetocentric_deg": -89.77989162018713,
+        "frame": "MOON_ME_DE421 (README realization; projection inversion only)",
+        "roundtrip_error_m": 1.2555808498796095e-08,
+        "purpose": "Diagnostic representative point only; invalid rings do not establish approved polygon membership; not a selected camera or NASA recommended landing coordinate"
+      },
+      "roi_vs_raster_inverse_projection_max_abs_difference_deg": 0.0,
+      "source_frame_lonlat_bounds_deg": [
+        -156.51588470949514,
+        -89.78214141594515,
+        -156.10533736426237,
+        -89.7781570965494
+      ]
+    },
+    {
+      "record": 4,
+      "points": 58,
+      "closed": true,
+      "valid": true,
+      "simple": true,
+      "validity": "Valid Geometry",
+      "native_bounds_m": [
+        -2687.5,
+        -6027.5,
+        -2627.5,
+        -5902.5
+      ],
+      "source_frame_representative_point": {
+        "native_xy_m": [
+          -2651.25,
+          -5965.0
+        ],
+        "longitude_east_deg": -156.0363970150877,
+        "latitude_planetocentric_deg": -89.78473180810079,
+        "frame": "MOON_ME_DE421 (README realization; projection inversion only)",
+        "roundtrip_error_m": 1.1221880539267552e-08,
+        "purpose": "Diagnostic representative point only; invalid rings do not establish approved polygon membership; not a selected camera or NASA recommended landing coordinate"
+      },
+      "roi_vs_raster_inverse_projection_max_abs_difference_deg": 0.0,
+      "source_frame_lonlat_bounds_deg": [
+        -156.22645859492746,
+        -89.78639348309996,
+        -155.55604521958347,
+        -89.7827636756409
+      ]
+    }
+  ],
+  "companion_hashes": {
+    "Site04_ROIs.tgz": "8e8b788f9fdf6400f23fd36dad02138102bd1a905b4b71a5739a9a4fd8a0e07a",
+    "LOLA_README.txt": "e985a2337c9de1cd665b0ddad8b7f1fac88d65c96d1e47d1b975a91c8e53e7bd"
+  },
+  "archive_members": [
+    {
+      "name": "Site04_ROIs.dbf",
+      "regular": true,
+      "symlink": false,
+      "linkname": "",
+      "size": 294
+    },
+    {
+      "name": "Site04_ROIs.gmt",
+      "regular": false,
+      "symlink": true,
+      "linkname": "Site04_final_adj_5mpp_01_regionProps_avgillGT070.gmt",
+      "size": 0
+    },
+    {
+      "name": "Site04_ROIs.prj",
+      "regular": true,
+      "symlink": false,
+      "linkname": "",
+      "size": 352
+    },
+    {
+      "name": "Site04_ROIs.shp",
+      "regular": true,
+      "symlink": false,
+      "linkname": "",
+      "size": 5524
+    },
+    {
+      "name": "Site04_ROIs.shx",
+      "regular": true,
+      "symlink": false,
+      "linkname": "",
+      "size": 132
+    }
+  ],
+  "archive_policy": "No extraction and no link following; four exact regular-file names only, unique, each <1 MiB.",
+  "roi_prj": "PROJCS[\"unknown\",GEOGCS[\"GCS_unknown\",DATUM[\"D_unknown\",SPHEROID[\"unknown\",1737400.0,0.0]],PRIMEM[\"Reference meridian\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Stereographic_South_Pole\"],PARAMETER[\"False_Easting\",0.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",0.0],PARAMETER[\"Standard_Parallel_1\",-90.0],UNIT[\"Meter\",1.0]]",
+  "shx_matches_shp_record_offsets_and_lengths": true,
+  "regular_member_sha256": {
+    "Site04_ROIs.dbf": "0f91ee4452772c1387aadbcf8d468f45681ba5f2641f9be96297383db92d6cfb",
+    "Site04_ROIs.prj": "d9d9a069d1353411f290d100d6e1cce79878e6efdf9f9bb43450df675f49db15",
+    "Site04_ROIs.shp": "4b7096de99d796a869790f0626c33f3cba0c4722101e2a2242f018271e97402e",
+    "Site04_ROIs.shx": "65298517a878d32b4492b5a49b20631e11b79fd2dd3a456358e41ff2a98d24e0"
+  },
+  "dbf": {
+    "fields": [
+      [
+        "X",
+        "N",
+        24,
+        15
+      ],
+      [
+        "Y",
+        "N",
+        24,
+        15
+      ]
+    ],
+    "records": [
+      {
+        "X": "-2812.500000000000000",
+        "Y": "-6647.500000000000000"
+      },
+      {
+        "X": "-2757.500000000000000",
+        "Y": "-6342.500000000000000"
+      },
+      {
+        "X": "-2677.500000000000000",
+        "Y": "-6107.500000000000000"
+      },
+      {
+        "X": "-2657.500000000000000",
+        "Y": "-5957.500000000000000"
+      }
+    ],
+    "semantics": "Source attributes preserved; X/Y are not asserted to be centroids or camera coordinates."
+  },
+  "prohibitions_observed": [
+    "No full raster-array reads",
+    "No terrain slope/roughness/features/scores/calibration",
+    "No source/cache/shared-contract mutation",
+    "No publish assets",
+    "No synthetic terrain",
+    "No security-policy changes",
+    "No Human PASS"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "recorded_at": "2026-11-14T11:04:25.876740+00:00",
+  "observer": "Astra root using internal browser UI",
+  "url": "http://127.0.0.1:4173/",
+  "observed_final_script": "/assets/index-ZfJGDHkp.js",
+  "screenshots": [
+    {
+      "path": "evidence/planet_explorer/planet-split.jpg",
+      "bytes": 53259,
+      "sha256": "fca313cf332ad656856791cb8685f0e391f6d5f757615ad3649ff1af8c59daba"
+    },
+    {
+      "path": "evidence/planet_explorer/planet-walk.jpg",
+      "bytes": 86090,
+      "sha256": "4717e747603d151e6fa98aef95f7d3571d7d4c3492586c150365c1870cdd3b47"
+    }
+  ],
+  "observations": [
+    "Moon source globe rendered, drag changed near-side to far-side view, wheel zoom changed apparent diameter.",
+    "Independent side-by-side Moon/Mars rendered at the actual approximately855px-wide browser viewport; rotating Mars left Moon orientation unchanged.",
+    "Both source globes rendered at1K,2K,4K; quality changes currently reset camera view.",
+    "Unsupported astronaut drop displayed unavailable native terrain and explicit named destination choices.",
+    "Original small prepared marker missed a real drag; enlarged marker retest successfully opened the named Shackleton native window.",
+    "Mars selection and Explore verified site opened Jezero native DEM with129x129 samples and source-declared spacing.",
+    "Internal browser rejected pointer lock with WrongDocumentError in older build; final build activates disclosed drag-look/focused-WASD fallback.",
+    "On final build, Jezero native navigation HUD changed from X0.0/Z0.0 to X0.0/Z-0.1m after W input. This establishes translation, not a speed or performance benchmark.",
+    "After Escape, activeElement was BODY, pointerLockElement null; additional W input left HUD unchanged.",
+    "Drag look visibly changed camera pitch/yaw in preceding fallback build; this input logic is unchanged in final build.",
+    "Walking self-shadow stripes observed in preceding build were absent in final build.",
+    "Surface archive Moon and Earth navigation remained available with source stats; source-credit disclosures retained actual primary-source links.",
+    "Final production script was read from DOM and matched the final bundle filename. Console retained only the two old pre-fix pointer-lock errors at10:51:50UTC; no newer error/warning was observed."
+  ],
+  "limitations": [
+    "Native pointer-lock success path cannot be runtime verified in this internal browser; fallback was exercised.",
+    "No60FPS or RAM benchmark was performed.",
+    "Walk coverage is restricted to prepared native source windows; no globally registered first-person terrain or Gaussian reconstruction.",
+    "Human Dev_A and Dev_B acceptance not received.",
+    "Full-page split screenshot capture failed twice; normal viewport screenshot succeeded. Ground screenshot is full-page."
+  ],
+  "human_pass": false,
+  "performance_claim": false
+}

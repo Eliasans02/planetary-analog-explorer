@@ -1,0 +1,268 @@
+{
+  "task_id": "RESOURCE-01",
+  "role": "Dev_B",
+  "contract_version": "1.0.0",
+  "input_bundle_sha256": "a4722fd2851c4b1f8d97904ccae552c229d95a3ff12e8e336f5eb913e4807672",
+  "execution_mode": "single_agent_workspace",
+  "links": [
+    {
+      "challenge_resource_id": "challenge_nasa_earthdata_search",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://search.earthdata.nasa.gov/",
+        "https://cmr.earthdata.nasa.gov/search/concepts/G2821072105-LPCLOUD.umm_json"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "TelemetryHUD renders offline Source Provenance cards with provider, product_id, local_path, retrieved_at UTC, sha256 digest, license, linked quantities/assets, and explicitly distinguishes local verified inputs from external catalog/portal reference links."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "No runtime Dev_A locations_dataset.json or derived local raster exists in public/data/ in this Dev_B workspace; no live Earthdata portal calls or credentials are used in the browser."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_nasa_worldview",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://worldview.earthdata.nasa.gov/index.html"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "Visual exploration portal only; UI preserves no remote imagery dependencies and no extraction of physical values from display imagery."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "No provenance-labelled local context imagery supplied by Dev_A; Worldview is not a numerical raster source."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_nasa_pds",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://pds.nasa.gov/",
+        "http://pds-geosciences.wustl.edu/"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "TelemetryHUD displays exact PDS product_id, mission, reference frame, vertical datum, and external product_url/access_url links when Dev_A dataset sources are present."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "No Dev_A locations_dataset.json or derived Moon/Mars heightfield assets exist locally yet."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_nasa_lro",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://pds-geosciences.wustl.edu/missions/lro/",
+        "https://pds-geosciences.wustl.edu/missions/lro/lola.htm"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "Viewport3D renders metric Ground ENU terrain from local heightmap + valid_mask binaries and preserves exact coordinate frame labels without relabelling."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "No local LRO/LOLA or supplemental PGDA Site04 derived float32 heightmap/mask exists in public/data/ or public/assets/ yet."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_nasa_diviner",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://pds-geosciences.wustl.edu/missions/lro/diviner.htm"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "TelemetryHUD displays feature quantity, method, spatial_resolution_m, support_window_m, observation period dates, and missingness separately for each thermal field."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "No Diviner thermal records in local dataset; cross-body thermal scoring without matched observable definitions remains omitted/missing."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_csa_rcm",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://donnees-data.asc-csa.gc.ca/en/dataset/rcm",
+        "https://www.asc-csa.gc.ca/eng/satellites/radarsat/access-to-data/about.asp"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "UI displays source license, quantity, method, and observation dates verbatim from dataset records without relabelling SAR intensity as terrain roughness or mineralogy."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "Not selected or acquired in Dev_B workspace; optional post-vertical-slice resource."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_csa_radarsat1",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://donnees-data.asc-csa.gc.ca/en/dataset/radarsat1",
+        "https://www.csa-asc.gc.ca/eng/satellites/radarsat1/data-access.asp"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "UI preserves provider, Open Government Licence notice, acquisition timestamp, and external product reference URL when linked in dataset sources."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "Not selected or acquired in Dev_B workspace."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_csa_sar_tutorial",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://github.com/asc-csa/Synthetic_Aperture_Radar_Tutorial"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "Processing tutorial reference only; no tutorial code or runtime browser dependency included in web-client."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "Tutorial repository is a research reference, not a scientific dataset or browser renderer."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_esa_copernicus",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://dataspace.copernicus.eu/",
+        "https://dataspace.copernicus.eu/analyse/apis"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "UI supports displaying Sentinel source attribution and observation periods offline if prepared by Dev_A; zero runtime portal API calls or credentials."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "No Copernicus Sentinel derived data present locally in Dev_B workspace."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_esa_open_science",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://opensciencedata.esa.int/"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "Research catalog reference only; TelemetryHUD Source Provenance lists only dataset-referenced used products."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "Catalog portal is not a direct raster product; no specific dataset selected."
+      ]
+    },
+    {
+      "challenge_resource_id": "challenge_jaxa_gportal",
+      "dataset_source_id": null,
+      "relationship": "research_only",
+      "relationship_evidence_urls": [
+        "https://www.gportal.jaxa.jp/?lang=en",
+        "https://www.gportal.jaxa.jp/information/product?lang=en"
+      ],
+      "product_id": null,
+      "product_url": null,
+      "raw_sha256": null,
+      "derived_sha256": null,
+      "usage": [
+        "UI renders documented physical quantities, spatial/temporal support, and missingness if preprocessed summaries are provided by Dev_A."
+      ],
+      "status": "research_only",
+      "limitations": [
+        "No JAXA G-Portal products acquired or linked in local runtime data."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "command": "npm run typecheck",
+      "status": "executed",
+      "exit_code": 0,
+      "evidence": "tsc --noEmit exited 0 with zero TypeScript errors."
+    },
+    {
+      "command": "npm run test",
+      "status": "executed",
+      "exit_code": 0,
+      "evidence": "vitest run passed 2 test files, 15/15 unit tests (heightfield.test.ts: 8, loadDataset.test.ts: 7)."
+    },
+    {
+      "command": "npm run build",
+      "status": "executed",
+      "exit_code": 0,
+      "evidence": "vite build succeeded cleanly in 1.31s producing dist/ artifacts."
+    },
+    {
+      "command": "npm run e2e",
+      "status": "executed",
+      "exit_code": 0,
+      "evidence": "playwright test ran 4 tests: 3 empty-state/UX/invalid-schema tests passed; 1 real-assets integration test skipped cleanly because public/data/locations_dataset.json is absent."
+    },
+    {
+      "command": "npm run verify:assets",
+      "status": "not_run",
+      "exit_code": null,
+      "evidence": "Requires Dev_A public/data/locations_dataset.json and derived binary assets under public/assets/, which do not exist yet."
+    },
+    {
+      "command": "Real Dev_A Assets Integration (tests/viewport.spec.ts)",
+      "status": "not_run",
+      "exit_code": null,
+      "evidence": "Skipped by test.skip(!hasGroundReadyDataset()) because no ground-ready dataset exists locally."
+    }
+  ],
+  "unverified": [
+    "Real Dev_A locations_dataset.json and derived heightmap/valid_mask/splat assets are absent; runtime_verified source cards and Ground DEM/splat integration remain unverified.",
+    "60-second GPU performance budget and hardware WebGL frame timing remain unmeasured (Software GL / on-demand Orbit idle only).",
+    "Human Dev_A and Dev_B acceptance gates remain open (no full PASS claimed)."
+  ]
+}

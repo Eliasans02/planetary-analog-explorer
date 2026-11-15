@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planetary-analog-explorer.local/schemas/planet_catalog.schema.json",
+  "title": "Offline source-derived planetary visualization catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "planets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "planets": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "textures",
+          "projection",
+          "longitude_center_deg",
+          "source_url",
+          "source_credit",
+          "source_sha256",
+          "provenance",
+          "limitations",
+          "displacement"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "moon",
+              "mars"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "textures": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "path",
+                "sha256",
+                "bytes",
+                "width",
+                "height",
+                "label"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "pattern": "^/assets/planets/[a-zA-Z0-9_./-]+$"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 33554432
+                },
+                "width": {
+                  "enum": [
+                    1024,
+                    2048,
+                    4096,
+                    1440
+                  ]
+                },
+                "height": {
+                  "enum": [
+                    512,
+                    1024,
+                    2048,
+                    720
+                  ]
+                },
+                "label": {
+                  "enum": [
+                    "1K",
+                    "2K",
+                    "4K",
+                    "Native"
+                  ]
+                }
+              }
+            }
+          },
+          "projection": {
+            "const": "equirectangular"
+          },
+          "longitude_center_deg": {
+            "const": 0
+          },
+          "source_url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_credit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "provenance": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "sha256",
+              "bytes"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "pattern": "^/assets/planets/[a-zA-Z0-9_./-]+$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 33554432
+              }
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "displacement": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "asset",
+                  "width",
+                  "height",
+                  "radius_m",
+                  "height_unit",
+                  "source_url",
+                  "reference"
+                ],
+                "properties": {
+                  "asset": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "path",
+                      "sha256",
+                      "bytes"
+                    ],
+                    "properties": {
+                      "path": {
+                        "type": "string",
+                        "pattern": "^/assets/planets/[a-zA-Z0-9_./-]+$"
+                      },
+                      "sha256": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "bytes": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 33554432
+                      }
+                    }
+                  },
+                  "width": {
+                    "type": "integer",
+                    "minimum": 2,
+                    "maximum": 2048
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 2,
+                    "maximum": 1024
+                  },
+                  "radius_m": {
+                    "type": "number",
+                    "minimum": 1000000,
+                    "maximum": 4000000
+                  },
+                  "height_unit": {
+                    "const": "m"
+                  },
+                  "source_url": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "reference": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "id": {
+                  "const": "mars"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "textures": {
+                  "maxItems": 2,
+                  "items": {
+                    "properties": {
+                      "width": {
+                        "enum": [
+                          1024,
+                          1440
+                        ]
+                      },
+                      "height": {
+                        "enum": [
+                          512,
+                          720
+                        ]
+                      },
+                      "label": {
+                        "enum": [
+                          "1K",
+                          "Native"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

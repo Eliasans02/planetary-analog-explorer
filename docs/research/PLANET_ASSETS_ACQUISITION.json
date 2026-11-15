@@ -1,0 +1,297 @@
+{
+  "records": [
+    {
+      "canonical_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_4k.tif",
+      "final_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_4k.tif",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/lroc_color_poles_4k.tif",
+      "bytes": 13095388,
+      "sha256": "918649a7f8ed2f1329b2cd95bb0d25483befdcb60ae1a66db681a637cc21344f",
+      "retrieved_at": "2026-11-14T10:35:23.493956+00:00",
+      "http_headers": {
+        "date": "Sat, 14 Nov 2026 10:34:51 GMT",
+        "server": "Apache",
+        "strict-transport-security": "max-age=31536000; includeSubdomains;",
+        "last-modified": "Wed, 05 Jun 2019 20:21:15 GMT",
+        "etag": "\"c7d1dc-58a9956d78b08\"",
+        "accept-ranges": "bytes",
+        "content-length": "13095388",
+        "access-control-allow-origin": "https://tempo.multiverse.music",
+        "content-security-policy": "upgrade-insecure-requests; default-src 'self'; script-src 'self' blob: data: 'unsafe-eval' 'unsafe-inline' 'wasm-unsafe-eval' https://dap.digitalgov.gov https://cdn.jsdelivr.net https://api.observablehq.com https://cdn.parsely.com/keys/svs.gsfc.nasa.gov/p.js https://www.googletagmanager.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api nasa.gov; img-src 'self' https://nasa.gov blob: data: https://nasa.gov https://p1.parsely.com; media-src 'self' https://nasa.gov https://www.youtube.com; connect-src 'self' blob: https://cdn.jsdelivr.net https://static.observableusercontent.com https://www.airnowapi.org https://p1.parsely.com https://www.google-analytics.com https://api.weather.gov ; child-src 'self' https://web.wwtassets.org https://eyes.nasa.gov https://nasa.gov https://www.youtube.com https://player.vimeo.com https://calendar.google.com https://worldview.earthdata.nasa.gov https://water.noaa.gov https://projects.cosmicds.cfa.harvard.edu; style-src 'self' 'unsafe-inline'; frame-ancestors 'self' https://science.nasa.gov https://earth.gov https://staging.earth.gov; object-src 'self'; worker-src 'self' blob:;",
+        "content-type": "image/tiff",
+        "content-language": "en",
+        "connection": "close"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 20000000
+    },
+    {
+      "canonical_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+      "final_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/ldem_4.tif",
+      "bytes": 4153352,
+      "sha256": "330afa2556a86fd05ac6ba2f912f246600fdade35de2a0d90593d50d07b01b65",
+      "retrieved_at": "2026-11-14T10:35:07.339740+00:00",
+      "http_headers": {
+        "date": "Sat, 14 Nov 2026 10:34:51 GMT",
+        "server": "Apache",
+        "strict-transport-security": "max-age=31536000; includeSubdomains;",
+        "last-modified": "Wed, 05 Jun 2019 20:21:01 GMT",
+        "etag": "\"3f6008-58a99560ea464\"",
+        "accept-ranges": "bytes",
+        "content-length": "4153352",
+        "access-control-allow-origin": "https://tempo.multiverse.music",
+        "content-security-policy": "upgrade-insecure-requests; default-src 'self'; script-src 'self' blob: data: 'unsafe-eval' 'unsafe-inline' 'wasm-unsafe-eval' https://dap.digitalgov.gov https://cdn.jsdelivr.net https://api.observablehq.com https://cdn.parsely.com/keys/svs.gsfc.nasa.gov/p.js https://www.googletagmanager.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api nasa.gov; img-src 'self' https://nasa.gov blob: data: https://nasa.gov https://p1.parsely.com; media-src 'self' https://nasa.gov https://www.youtube.com; connect-src 'self' blob: https://cdn.jsdelivr.net https://static.observableusercontent.com https://www.airnowapi.org https://p1.parsely.com https://www.google-analytics.com https://api.weather.gov ; child-src 'self' https://web.wwtassets.org https://eyes.nasa.gov https://nasa.gov https://www.youtube.com https://player.vimeo.com https://calendar.google.com https://worldview.earthdata.nasa.gov https://water.noaa.gov https://projects.cosmicds.cfa.harvard.edu; style-src 'self' 'unsafe-inline'; frame-ancestors 'self' https://science.nasa.gov https://earth.gov https://staging.earth.gov; object-src 'self'; worker-src 'self' blob:;",
+        "content-type": "image/tiff",
+        "content-language": "en",
+        "connection": "close"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 8000000
+    },
+    {
+      "canonical_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.lbl",
+      "final_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.lbl",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/lola_ldem_4.lbl",
+      "bytes": 5107,
+      "sha256": "b5a197b4d417e3b5e0e84f8fe15f9a1d2203b8eb5d7213236c0ffbc86e940cc6",
+      "retrieved_at": "2026-11-14T10:46:26.304120+00:00",
+      "http_headers": {
+        "Content-Type": "text/plain",
+        "Last-Modified": "Wed, 06 Sep 2017 15:44:17 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"38c4cdff2627d31:0\"",
+        "Server": "Microsoft-IIS/10.0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Xss-Protection": "1; mode=block",
+        "Strict-Transport-Security": "max-age=30000000; includeSubDomains",
+        "Date": "Sat, 14 Nov 2026 10:46:25 GMT",
+        "Connection": "close",
+        "Content-Length": "5107"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 20000
+    },
+    {
+      "canonical_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.img",
+      "final_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.img",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/lola_ldem_4.img",
+      "bytes": 2073600,
+      "sha256": "c04632eba6449af49e3108ed7c25b3b1c450600abd3690df4fc815853a1af476",
+      "retrieved_at": "2026-11-14T10:46:31.526003+00:00",
+      "http_headers": {
+        "Content-Type": "application/octet-stream",
+        "Last-Modified": "Wed, 06 Sep 2017 15:43:35 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"b6596fe62627d31:0\"",
+        "Server": "Microsoft-IIS/10.0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Xss-Protection": "1; mode=block",
+        "Strict-Transport-Security": "max-age=30000000; includeSubDomains",
+        "Date": "Sat, 14 Nov 2026 10:46:26 GMT",
+        "Connection": "close",
+        "Content-Length": "2073600"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 3000000
+    },
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45n225.png",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45n225.png",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/mars45n225.png",
+      "bytes": 31386468,
+      "sha256": "c543dc9ac550891ac88ed9b56c0020885cc5589b5fb69e5452cf56237f1a1266",
+      "retrieved_at": "2026-11-14T10:41:06.527419+00:00",
+      "http_headers": {
+        "Content-Type": "image/png",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"1238370713\"",
+        "Last-Modified": "Fri, 15 Sep 2006 20:28:29 GMT",
+        "Content-Length": "31386468",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:39:11 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 45000000
+    },
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45n315.png",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45n315.png",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/mars45n315.png",
+      "bytes": 32844803,
+      "sha256": "50885a8faaea544bed8f3886e60499f7288d898d7786dee3ae80bf02940598b8",
+      "retrieved_at": "2026-11-14T10:41:23.408229+00:00",
+      "http_headers": {
+        "Content-Type": "image/png",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"3672545728\"",
+        "Last-Modified": "Fri, 15 Sep 2006 20:28:27 GMT",
+        "Content-Length": "32844803",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:39:11 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 45000000
+    },
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45n045.png",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45n045.png",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/mars45n045.png",
+      "bytes": 33736115,
+      "sha256": "a835bde75cda21436bfc79e40f6a70961761a005b083f2f8535d6695f4539254",
+      "retrieved_at": "2026-11-14T10:41:22.230457+00:00",
+      "http_headers": {
+        "Content-Type": "image/png",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"3204548898\"",
+        "Last-Modified": "Fri, 15 Sep 2006 20:28:32 GMT",
+        "Content-Length": "33736115",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:39:11 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 45000000
+    },
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45n135.png",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45n135.png",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/mars45n135.png",
+      "bytes": 30453073,
+      "sha256": "8711a0893721c4b669f5530c5f69b3a55c2548bef63659515936d3c4602c4aeb",
+      "retrieved_at": "2026-11-14T10:41:09.098362+00:00",
+      "http_headers": {
+        "Content-Type": "image/png",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"1919249322\"",
+        "Last-Modified": "Fri, 15 Sep 2006 20:28:31 GMT",
+        "Content-Length": "30453073",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:39:11 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 45000000
+    },
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45s225.png",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45s225.png",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/mars45s225.png",
+      "bytes": 36428462,
+      "sha256": "70da041d3edfe6eb8c3fa4ed3f03257b158c0da9eb47cf979a690b0f3fafc88d",
+      "retrieved_at": "2026-11-14T10:47:32.478927+00:00",
+      "http_headers": {
+        "Content-Type": "image/png",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"2550740536\"",
+        "Last-Modified": "Fri, 15 Sep 2006 20:28:34 GMT",
+        "Content-Length": "36428462",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:45:16 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 45000000
+    },
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45s315.png",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45s315.png",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/mars45s315.png",
+      "bytes": 37373839,
+      "sha256": "a33c3fd202b90908d7a6dffde15c4c2a258250ebacb4fe1f17921c92847bf81d",
+      "retrieved_at": "2026-11-14T10:43:59.180182+00:00",
+      "http_headers": {
+        "Content-Type": "image/png",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"1871034694\"",
+        "Last-Modified": "Fri, 15 Sep 2006 20:28:33 GMT",
+        "Content-Length": "37373839",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:41:09 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 45000000
+    },
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45s045.png",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45s045.png",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/mars45s045.png",
+      "bytes": 36450823,
+      "sha256": "5a79b576aa640817a3e26e46d21628f7c704f5f789b8988fb237d6c6fc631d4a",
+      "retrieved_at": "2026-11-14T10:43:53.003354+00:00",
+      "http_headers": {
+        "Content-Type": "image/png",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"3412574180\"",
+        "Last-Modified": "Fri, 15 Sep 2006 20:28:36 GMT",
+        "Content-Length": "36450823",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:41:23 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 45000000
+    },
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45s135.png",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/large/mars45s135.png",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/mars45s135.png",
+      "bytes": 37665725,
+      "sha256": "bd2ffb15d412585140e437117c8c840dd582ee99633fbbd8dc024a9860167e0c",
+      "retrieved_at": "2026-11-14T10:44:46.864607+00:00",
+      "http_headers": {
+        "Content-Type": "image/png",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"237394144\"",
+        "Last-Modified": "Fri, 15 Sep 2006 20:28:35 GMT",
+        "Content-Length": "37665725",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:41:24 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 45000000
+    }
+  ],
+  "page_receipts": [
+    {
+      "canonical_url": "https://www.mars.asu.edu/data/mdim_color/",
+      "final_url": "https://www.mars.asu.edu/data/mdim_color/",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/asu_mdim_color.html",
+      "bytes": 4095,
+      "sha256": "c2aaa82cae9895ff2789d0a1128e434d82401dbc344471425db78f7f4df87fc9",
+      "retrieved_at": "2026-11-14T10:47:38.703971+00:00",
+      "http_headers": {
+        "Vary": "Accept-Encoding",
+        "Content-Type": "text/html",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"3371966599\"",
+        "Last-Modified": "Tue, 27 Jul 2010 00:51:06 GMT",
+        "Content-Length": "4095",
+        "Connection": "close",
+        "Date": "Sat, 14 Nov 2026 10:47:38 GMT"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 1000000
+    },
+    {
+      "canonical_url": "https://svs.gsfc.nasa.gov/4720/",
+      "final_url": "https://svs.gsfc.nasa.gov/4720/",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/nasa_svs_4720.html",
+      "bytes": 54933,
+      "sha256": "ffca5a551e96000a4028c9ce40089c0c14b0a1ded311c8e48072398dccb42c69",
+      "retrieved_at": "2026-11-14T10:47:39.868482+00:00",
+      "http_headers": {
+        "date": "Sat, 14 Nov 2026 10:47:39 GMT",
+        "server": "Apache",
+        "strict-transport-security": "max-age=31536000; includeSubdomains;",
+        "content-length": "54933",
+        "server-timing": "Django_View;dur=3.502368927001953,Django_Total;dur=50.51755905151367,",
+        "x-frame-options": "DENY",
+        "etag": "\"ff679fd3b76dc25e07c9c8203ec38b7f\"",
+        "vary": "Cookie",
+        "access-control-allow-origin": "https://tempo.multiverse.music",
+        "content-security-policy": "upgrade-insecure-requests; default-src 'self'; script-src 'self' blob: data: 'unsafe-eval' 'unsafe-inline' 'wasm-unsafe-eval' https://dap.digitalgov.gov https://cdn.jsdelivr.net https://api.observablehq.com https://cdn.parsely.com/keys/svs.gsfc.nasa.gov/p.js https://www.googletagmanager.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api nasa.gov; img-src 'self' https://nasa.gov blob: data: https://nasa.gov https://p1.parsely.com; media-src 'self' https://nasa.gov https://www.youtube.com; connect-src 'self' blob: https://cdn.jsdelivr.net https://static.observableusercontent.com https://www.airnowapi.org https://p1.parsely.com https://www.google-analytics.com https://api.weather.gov ; child-src 'self' https://web.wwtassets.org https://eyes.nasa.gov https://nasa.gov https://www.youtube.com https://player.vimeo.com https://calendar.google.com https://worldview.earthdata.nasa.gov https://water.noaa.gov https://projects.cosmicds.cfa.harvard.edu; style-src 'self' 'unsafe-inline'; frame-ancestors 'self' https://science.nasa.gov https://earth.gov https://staging.earth.gov; object-src 'self'; worker-src 'self' blob:;",
+        "content-type": "text/html; charset=utf-8",
+        "content-language": "en",
+        "connection": "close"
+      },
+      "complete_product": true,
+      "download_bound_bytes": 2000000
+    }
+  ]
+}

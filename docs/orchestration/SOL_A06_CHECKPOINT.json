@@ -1,0 +1,55 @@
+{
+  "id": "SOL_A06_EXACT_ENU_PUBLICATION_GUARD",
+  "recorded_at_utc": "2026-11-14T10:22:08.502729+00:00",
+  "scope": "Bounded pipeline safeguard; separate active native surface chat remains owner of frontend, surface exporter and shared state",
+  "contract": "Comparison contract 1.0.0 unchanged",
+  "attribution": {
+    "implementation": "GPT-6.1 Sol medium / sol_pipeline_guard",
+    "independent_review": "GPT-6.1 Sol medium / sol_guard_review",
+    "integration": "Astra current chat",
+    "gemini_immutable_baselines_preserved": true
+  },
+  "workers_launched_this_chat": 2,
+  "patch_sha256": {
+    "data-pipeline/fetch_and_score.py": "d24f21e774cbe83c0b609cd7cfca9391b1ab901d2db7e11ae595c4f7968e1eea",
+    "data-pipeline/src/pae_pipeline/terrain.py": "1ca5997066eae782dfb1d7c8c1560d5bbad7082e305af6b872f6cc016f2e0b89",
+    "data-pipeline/tests/test_offline.py": "b32424da6d92dfe88029db4d4ac8f692f874cf627073d3088b832e6ec8008e86",
+    "data-pipeline/tests/test_validation.py": "657b4b3fcb552b22d66b122d0ff778002cf6108714002e4ce0fd95081793b29a",
+    "data-pipeline/tests/test_terrain_contract_guard.py": "cdf3c795d4fc843667a353b0b1cc188da842c96372f4eb87bd8076c80753b65f",
+    "data-pipeline/README.md": "5fbeb9e8f0c4dd80430133dbc35a01d53ed6ab1dba370b581187d55b0b18254b"
+  },
+  "immutable_sha256": {
+    "incoming/dev_a_source_bundle_a04.json": "6ad8fdb3558f70a629f66a892c79a70442e03caa2a8f882a67808840d53e0985",
+    "incoming/dev_b_source_bundle_b03.json": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+    "archives/gemini-handoff-2026-11-14.zip": "17b158d12d7cb663040b7adda4bb495f2cd4af1f8e1b5dfbbaf9039a5d508f7a"
+  },
+  "checks": {
+    "author_targeted": 19,
+    "author_shared_workspace_full": 65,
+    "independent_relevant_suite": 60,
+    "warnings": "47 GIS diagnostic deprecation warnings",
+    "independent_probe": "PASS: direct entry and CLI side-effect traps plus actual CLI output preservation",
+    "asset_verifier": "Expected exit 1: missing locations_dataset.json",
+    "frontend_checks": "Not rerun: another active chat owns changing frontend/build"
+  },
+  "behavior": "Production prepare/offline and direct extract_terrain fail before source reads/staging; fatal blocker is separate from excludable site errors. Private AEQD test diagnostic cannot claim contract ENU.",
+  "review": "evidence/local_a06_checks/independent-review.md",
+  "preview": {
+    "url": "http://127.0.0.1:4173/",
+    "observation": "Built historical comparison workspace inspected in internal browser: non-DEM schematic, missing comparison dataset, disabled Ground, disclosure and Moon/Mars toggles work",
+    "screenshot": "evidence/local_a06_checks/preview.png",
+    "screenshot_sha256": "d01f79f88df1f9d71d6310ebaa84c7751ac9f43b4e3a2b82de9dd867a32fe006",
+    "limits": "Observation predates separate active native-surface frontend build; not certification of that work"
+  },
+  "phase5_committed": false,
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "real_ground_verified_by_this_chat": false,
+  "performance_verified": false,
+  "next_unfinished_action": "Coordinate native surface work from the separate active Build Planetary Analog Explorer chat. For comparison terrain production, adjudicate source-frame realization and absolute height zero, then implement and independently verify exact ENU across producer/validator/consumer before replacing the guard. Retain masks, interpolation and human acceptance gates.",
+  "global_state_not_overwritten": "REPO_STATE.json and SOL_TEAM_STATE.json belong to concurrently active integration work; this standalone checkpoint avoids competing writes.",
+  "no_deployment": true,
+  "no_scheduler": true
+}

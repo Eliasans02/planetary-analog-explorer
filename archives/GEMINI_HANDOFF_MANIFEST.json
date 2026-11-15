@@ -1,0 +1,236 @@
+{
+  "created_at": "2026-11-14T09:43:30.235375+00:00",
+  "scope": "Immutable Gemini source receipts, captured report exports/visible conversations, and project context used for local Sol handoff. This is not a full Google service account export. Current local Sol edits are outside this archive. Raw geospatial payloads remain in data-pipeline/cache/raw and are referenced by acquisition receipts.",
+  "latest_gemini_sources": {
+    "python": "incoming/dev_a_source_bundle_a04.json",
+    "frontend": "incoming/dev_b_source_bundle_b03.json"
+  },
+  "authorship": "Gemini implementation receipts are identified separately from Astra-authored prompts, research notes and orchestration context.",
+  "files": [
+    {
+      "path": "docs/orchestration/AGENT_BOARD.json",
+      "bytes": 111582,
+      "sha256": "a732893d912a77732b25a0b0a09566f2d7d6de8a8ff861a3902fe2ee3af1564d"
+    },
+    {
+      "path": "docs/orchestration/ASTRA_LOOP_STATE.json",
+      "bytes": 48630,
+      "sha256": "2952a358bdbcb37f93e36708608cd6cf196517a9e9f7480d9f5e102c5de5e7c2"
+    },
+    {
+      "path": "docs/orchestration/CHALLENGE_ALIGNMENT_REVIEW.md",
+      "bytes": 20859,
+      "sha256": "062b46f43fd5ca90588484db7e31f768b291570c47c7ef470337f2840a760688"
+    },
+    {
+      "path": "docs/orchestration/LOCAL_REVIEW_R1.md",
+      "bytes": 13975,
+      "sha256": "acf85249cfc7d7fa20bb7e46415ee54f819ffd2030515fa6706236cbb9d9a20b"
+    },
+    {
+      "path": "docs/orchestration/LOOPS.md",
+      "bytes": 7004,
+      "sha256": "d36855cec8cf5e0dcd99d88ccf922ffecdfba6f7c844b629bc619b81cffb9e6a"
+    },
+    {
+      "path": "docs/orchestration/REQUIREMENTS.json",
+      "bytes": 43402,
+      "sha256": "0bd20ee946d7e52af58d89ddc158e35346d63991718579d974e5b3312acfcce2"
+    },
+    {
+      "path": "docs/orchestration/REQUIREMENTS_CHALLENGE_ADDENDUM.json",
+      "bytes": 15902,
+      "sha256": "70ac6215f02387e316da3a7d7a5681dfc8230ee72d3de7934d9dec65d9a63278"
+    },
+    {
+      "path": "docs/orchestration/REVIEW_ADJUDICATION.md",
+      "bytes": 16816,
+      "sha256": "7e387167b5b877163c39bb6347119a079f4f5dd23c4fcdd60b31825e46c4828e"
+    },
+    {
+      "path": "docs/orchestration/REVIEW_PROTOCOL.md",
+      "bytes": 10182,
+      "sha256": "f383cd7db113c876f5925c99c7c21f6fcd90031cdfdd78c0c3823e01242117c4"
+    },
+    {
+      "path": "docs/orchestration/SOL_TEAM_STATE.json",
+      "bytes": 2273,
+      "sha256": "ac6f4b1c256d58cfc2df772768fc49e393de5d86b31b471a82a65a18e01e5b22"
+    },
+    {
+      "path": "docs/orchestration/UNIQUENESS_STRATEGY.md",
+      "bytes": 15596,
+      "sha256": "19898f3317bacf93b3966c729b7352b4fe7db6d4ec343d112c6203b946d7e7a5"
+    },
+    {
+      "path": "docs/research/CHALLENGE_RESOURCES.json",
+      "bytes": 22313,
+      "sha256": "2af7a6439773d8efac7ab819bb73b3900fff8f4b15af48e0fe54109212f88805"
+    },
+    {
+      "path": "docs/research/CHALLENGE_RESOURCES_RESEARCH.json",
+      "bytes": 23673,
+      "sha256": "ecdcd986d05a8c1edcdb60cfaeafd5af89b6f839a38bd696393e7c05ad3c7943"
+    },
+    {
+      "path": "docs/research/LOCAL_DEM_EARTH_ACQUISITION.json",
+      "bytes": 2154,
+      "sha256": "a0538be7b56d8e654474e412b1d89d0a7fc193300f37c7ae9dead37adca3e84b"
+    },
+    {
+      "path": "docs/research/LOCAL_DEM_READINESS.json",
+      "bytes": 19121,
+      "sha256": "d7ea4bc40d28a37b4c118c245097bc942be3c33b957b8c6e0efcfdfbae5e24a5"
+    },
+    {
+      "path": "docs/research/LOCAL_DEM_READINESS.md",
+      "bytes": 12428,
+      "sha256": "052154f893e262a1e78804a17080900f01fbff576a1a6a77de0bf30306573bcc"
+    },
+    {
+      "path": "docs/research/LOCAL_DEM_ROI_ACQUISITION.json",
+      "bytes": 481,
+      "sha256": "b61c2e1e2ba788ba910f9dee18e08c11775c7011a4e0b66c0c4e4cc07996565b"
+    },
+    {
+      "path": "docs/research/RESEARCH_FAST_PATH.md",
+      "bytes": 9156,
+      "sha256": "0514b98ddf45cb6cd2cd011760031a33ddba35915ee41c7d79c05413a7cd7042"
+    },
+    {
+      "path": "docs/research/RESOURCE_INTEGRATION.md",
+      "bytes": 5609,
+      "sha256": "d0f5075ba130dc4cfeec195837143b93b2500c14b895251eb1be657c26257ea8"
+    },
+    {
+      "path": "docs/research/UI_SDK_INTEGRATION.md",
+      "bytes": 8256,
+      "sha256": "fe2e5407b0a4a86edc2d283d744140ce5dae67566eeafd2111c4057204ea22ad"
+    },
+    {
+      "path": "docs/research/acquisition_status.json",
+      "bytes": 28875,
+      "sha256": "612414d39ef75949aa366357201c9b1a5726a4afabddad40c760d405e29992cc"
+    },
+    {
+      "path": "docs/research/local_dem_evidence/USGS_1_n20w156_20250611.xml",
+      "bytes": 11955,
+      "sha256": "a34bd05be714041d2c4862de23f2cea7639cd1dc825ccd506417998ff58e4ac0"
+    },
+    {
+      "path": "incoming/SOURCE_RECEIPTS_STATIC_REVIEW_R1.md",
+      "bytes": 9372,
+      "sha256": "fbbb64f92d40666e012d6c17f1c814b2c61dde3fa7f6c2a7744f6a4d1b5c2447"
+    },
+    {
+      "path": "incoming/b03_review_visible_snapshots.json",
+      "bytes": 28584,
+      "sha256": "3e316e8692d1f0637490fe492b65e852b78bc825b881f84768124aa1093f2f3a"
+    },
+    {
+      "path": "incoming/dev_a_source_bundle_a04.json",
+      "bytes": 298535,
+      "sha256": "6ad8fdb3558f70a629f66a892c79a70442e03caa2a8f882a67808840d53e0985"
+    },
+    {
+      "path": "incoming/dev_a_source_bundle_r1.json",
+      "bytes": 224050,
+      "sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a"
+    },
+    {
+      "path": "incoming/dev_b_source_bundle_b03.json",
+      "bytes": 336551,
+      "sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506"
+    },
+    {
+      "path": "incoming/gemini_handoff_visible_archive.json",
+      "bytes": 214268,
+      "sha256": "de2efba091fa1e100f428bdd3ac7dfe5be4f39e7f39fa85233e1bd97a1fc51dc"
+    },
+    {
+      "path": "prompts/ASTRA_CONTINUOUS_LOOP.md",
+      "bytes": 63756,
+      "sha256": "e356990dd2c09ec5e3f0e51b09f706e5b0b6810ef484c3cbb45deacb108bdf06"
+    },
+    {
+      "path": "prompts/LOOP_0_DEV_A.md",
+      "bytes": 40708,
+      "sha256": "d255824f8409b254d5faf17ef0f949313fb9e1eee231e2fabdec8c33b3808f6e"
+    },
+    {
+      "path": "prompts/LOOP_0_DEV_A.template.txt",
+      "bytes": 14884,
+      "sha256": "8772afcb4a67bb4ceb0f52a4842375977f96168def477ad2acfdc94a8ad6ace3"
+    },
+    {
+      "path": "prompts/LOOP_0_DEV_B.md",
+      "bytes": 53652,
+      "sha256": "e8b261c9701505c233f1f902ad0b383bb6aaebab20487eaf4e058cd4318fde92"
+    },
+    {
+      "path": "prompts/LOOP_0_DEV_B.template.txt",
+      "bytes": 27828,
+      "sha256": "bdc559eb77a57c1edf8f64a62caaceda34c9ba198fcbe50b092997d189257719"
+    },
+    {
+      "path": "prompts/roles/CHALLENGE_RESOURCES_ADDENDUM.md",
+      "bytes": 70778,
+      "sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6"
+    },
+    {
+      "path": "prompts/roles/CODE_REVIEWER.md",
+      "bytes": 49335,
+      "sha256": "7d0364aaeb117f0e9a4175fd4b51b3a38dde70660c9b3515de5e7e3f595a041e"
+    },
+    {
+      "path": "prompts/roles/DEV_A_SOURCE_EXPORT.md",
+      "bytes": 2726,
+      "sha256": "373c9402fd38016d547b44b9b53cc2a0eb4acc6eabed81f04c4b10b1e25c1004"
+    },
+    {
+      "path": "prompts/roles/DEV_B_B04_HOTFIX.md",
+      "bytes": 392256,
+      "sha256": "5acac89e3726e477354b41ea452d0915e6c935b7c2ae2b3807dd6d0d0c1ef6fb"
+    },
+    {
+      "path": "prompts/roles/DEV_B_UI_SDK.md",
+      "bytes": 28327,
+      "sha256": "911c4df41bdfabaa04c696555910298bd086455ddd8c1ce5e7964961e09c3a49"
+    },
+    {
+      "path": "prompts/roles/DEV_B_UX_REVIEW_ACTIONS.md",
+      "bytes": 23343,
+      "sha256": "57476984e6a087efc5e960593f6df4c164915a80cdd680ec1cfec93eed99b918"
+    },
+    {
+      "path": "prompts/roles/REQUIREMENTS_MANAGER.md",
+      "bytes": 92364,
+      "sha256": "3901517aec5eb7d38e596b7a18998dd7c67e50b3a61f72b16612186024c65187"
+    },
+    {
+      "path": "prompts/roles/RESEARCHER.md",
+      "bytes": 34484,
+      "sha256": "ecbe7467dcef5ca46aab28895aa9be417b98db8193d8b5923633160ee8ea201c"
+    },
+    {
+      "path": "prompts/roles/SECURITY_EVALUATOR.md",
+      "bytes": 50786,
+      "sha256": "53fbc81d768e90bb3ab7b689e072322d830f527a9008f7efdc48877e0fb4ade1"
+    },
+    {
+      "path": "shared/schemas/analog_location.schema.json",
+      "bytes": 14476,
+      "sha256": "4cbb315d992f19b8b91c52789fa3f4b99d16d18cc04c8aee1c0b66eb4b3d7b61"
+    },
+    {
+      "path": "shared/schemas/scoring_profile.schema.json",
+      "bytes": 2580,
+      "sha256": "79e8edcdb9eeea45920276ef8acd2b8f6c943031f32c02a8e06ba48b2b9cd93e"
+    }
+  ],
+  "archive": {
+    "path": "archives\\gemini-handoff-2026-11-14.zip",
+    "bytes": 670330,
+    "sha256": "17b158d12d7cb663040b7adda4bb495f2cd4af1f8e1b5dfbbaf9039a5d508f7a"
+  }
+}

@@ -1,0 +1,33 @@
+test_atomic_export_rejects_nonfinite_without_touching_existing_output (test_surface_analysis.SurfaceAnalysisTests.test_atomic_export_rejects_nonfinite_without_touching_existing_output) ... ok
+test_catalog_rejects_schema_duplicate_and_unknown_source (test_surface_analysis.SurfaceAnalysisTests.test_catalog_rejects_schema_duplicate_and_unknown_source) ... ok
+test_current_catalog_recomputes_and_schema_validates (test_surface_analysis.SurfaceAnalysisTests.test_current_catalog_recomputes_and_schema_validates) ... ok
+test_hash_dimensions_mask_and_nonfinite_rejections (test_surface_analysis.SurfaceAnalysisTests.test_hash_dimensions_mask_and_nonfinite_rejections) ... ok
+test_histogram_exact_boundaries_and_percentage_denominator (test_surface_analysis.SurfaceAnalysisTests.test_histogram_exact_boundaries_and_percentage_denominator) ... ok
+test_no_eligible_centers_has_null_local_metrics (test_surface_analysis.SurfaceAnalysisTests.test_no_eligible_centers_has_null_local_metrics) ... ok
+test_nodata_excludes_exact_nine_neighborhoods_without_filling (test_surface_analysis.SurfaceAnalysisTests.test_nodata_excludes_exact_nine_neighborhoods_without_filling) ... ok
+test_offset_invariance (test_surface_analysis.SurfaceAnalysisTests.test_offset_invariance) ... ok
+test_outer_edges_excluded_and_relief_includes_valid_edges (test_surface_analysis.SurfaceAnalysisTests.test_outer_edges_excluded_and_relief_includes_valid_edges) ... ok
+test_p95_uses_linear_interpolation (test_surface_analysis.SurfaceAnalysisTests.test_p95_uses_linear_interpolation) ... ok
+test_planar_anisotropic_gradient_and_riley_tri (test_surface_analysis.SurfaceAnalysisTests.test_planar_anisotropic_gradient_and_riley_tri) ... ok
+test_readonly_check_detects_changed_metric_missing_id_and_catalog_hash (test_surface_analysis.SurfaceAnalysisTests.test_readonly_check_detects_changed_metric_missing_id_and_catalog_hash) ... ok
+test_reject_invalid_scientific_inputs (test_surface_analysis.SurfaceAnalysisTests.test_reject_invalid_scientific_inputs) ... ok
+test_every_added_pixel_matches_verified_source_and_native_geometry (test_surface_expansion.SurfaceExpansionTests.test_every_added_pixel_matches_verified_source_and_native_geometry) ... ok
+test_original_three_records_unchanged (test_surface_expansion.SurfaceExpansionTests.test_original_three_records_unchanged) ... ok
+test_range_response_rejects_whole_file_wrong_offset_total_and_truncation (test_surface_expansion.SurfaceExpansionTests.test_range_response_rejects_whole_file_wrong_offset_total_and_truncation) ... ok
+test_all_published_samples_equal_direct_source_crop (test_surface_export.NativeSurfaceTests.test_all_published_samples_equal_direct_source_crop) ... ok
+test_archive_rejects_unexpected_regular_path (test_surface_export.NativeSurfaceTests.test_archive_rejects_unexpected_regular_path) ... ok
+test_crop_masks_raw_nodata_before_scale_and_retains_centers (test_surface_export.NativeSurfaceTests.test_crop_masks_raw_nodata_before_scale_and_retains_centers) ... ok
+test_highest_selection_ignores_nodata_and_ties_row_major (test_surface_export.NativeSurfaceTests.test_highest_selection_ignores_nodata_and_ties_row_major) ... ok
+test_receipt_identity_mismatch_is_explicit_error (test_surface_export.NativeSurfaceTests.test_receipt_identity_mismatch_is_explicit_error) ... ok
+test_every_orbital_pixel_equals_same_verified_globe_image (test_surface_imagery.SurfaceImageryTests.test_every_orbital_pixel_equals_same_verified_globe_image) ... ok
+test_every_ortho_pixel_matches_original_jp2_without_color_stretch (test_surface_imagery.SurfaceImageryTests.test_every_ortho_pixel_matches_original_jp2_without_color_stretch) ... C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\texture_surfaces.py:135: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+  corners=[ds.transform*(c,r) for c,r in [(0,0),(ds.width,0),(0,ds.height),(ds.width,ds.height)]]
+ok
+test_global_nearest_seam_poles_and_no_interpolated_color (test_surface_imagery.SurfaceImageryTests.test_global_nearest_seam_poles_and_no_interpolated_color) ... ok
+test_manifest_binds_frozen_catalog_geometry_and_source_buffers (test_surface_imagery.SurfaceImageryTests.test_manifest_binds_frozen_catalog_geometry_and_source_buffers) ... ok
+test_pds_mapping_rejects_wrong_standard_parallel_and_affine (test_surface_imagery.SurfaceImageryTests.test_pds_mapping_rejects_wrong_standard_parallel_and_affine) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 5.148s
+
+OK

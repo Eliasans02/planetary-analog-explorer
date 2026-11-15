@@ -1,0 +1,57 @@
+{
+  "recorded_at": "2026-11-14T11:39:05.154811+00:00",
+  "execution_location": "local_repository",
+  "commands": [
+    {
+      "command": "npm.cmd run test",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/navigation_improvements/test.txt"
+    },
+    {
+      "command": "npm.cmd run typecheck",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/navigation_improvements/typecheck.txt"
+    },
+    {
+      "command": "npm.cmd run verify:planets",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/navigation_improvements/verify-planets.txt"
+    },
+    {
+      "command": "npm.cmd run verify:surfaces",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/navigation_improvements/verify-surfaces.txt"
+    },
+    {
+      "command": "npm.cmd run build",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/navigation_improvements/build.txt"
+    }
+  ],
+  "frontend_tests_passed": 105,
+  "frontend_test_files_passed": 12,
+  "full_suite_scope": "All navigation source changes passed 105 tests in 12 files. Display-only grid-spacing formatting was added afterwards; final typecheck and build passed after that edit.",
+  "built_js": {
+    "path": "web-client/dist/assets/index-BIWJTfWF.js",
+    "bytes": 1325481,
+    "sha256": "fa3fd5e41c4709f6ff7492a92a06d8b4d9a44933c868573b797e55b271d801ab"
+  },
+  "warnings": [
+    "Vite main chunk exceeds 500 kB; build passed."
+  ],
+  "scientific_data_changed": false,
+  "source_pipeline_tests_rerun": false,
+  "source_identity_evidence": "evidence/navigation_improvements/independent-review.md",
+  "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET_NOT_RERUN",
+  "performance_benchmark": "NOT_PERFORMED",
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "phase5_committed": false
+}

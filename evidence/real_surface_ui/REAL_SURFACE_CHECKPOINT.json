@@ -1,0 +1,90 @@
+{
+  "id": "REAL_NATIVE_SURFACES_INTEGRATED_2026-11-14",
+  "recorded_at": "2026-11-14T10:26:48.480437+00:00",
+  "phase5_committed": false,
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "execution_mode": "parallel_local_sol_6_1_medium",
+  "url": "http://127.0.0.1:4173/",
+  "catalog": {
+    "path": "web-client/public/data/surface_catalog.json",
+    "bytes": 12305,
+    "sha256": "5fc055e0cdf37dc78ddc8db278b2e4653eee9841a457a17e68ee251be1c70399"
+  },
+  "contracts": {
+    "comparison": "1.0.0 unchanged",
+    "surface_catalog": "1.0.0 separate unranked native relief"
+  },
+  "surfaces": [
+    {
+      "id": "lola-site04-roi3",
+      "name": "Shackleton rim · LOLA Site04 ROI 3",
+      "body": "moon",
+      "coordinates": {
+        "latitude_deg": -89.77989162018713,
+        "longitude_deg": -156.26739892005892,
+        "frame": "MOON_ME_DE421",
+        "provenance": "MOON_ME reference frame of ephemeris DE421 per README; planetocentric latitude and east longitude via native projection inversion only; no IAU/WGS84 transform"
+      },
+      "stats": {
+        "min_source_height_m": 1609.3466796875,
+        "max_source_height_m": 1739.121826171875,
+        "relief_m": 129.775146484375,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": 1726
+      }
+    },
+    {
+      "id": "usgs-hawaii-summit",
+      "name": "Hawaii 3DEP summit window",
+      "body": "earth",
+      "coordinates": {
+        "latitude_deg": 19.82069444425608,
+        "longitude_deg": -155.46819444474266,
+        "frame": "NAD83",
+        "provenance": "EPSG:4269 NAD83; no datum transformation"
+      },
+      "stats": {
+        "min_source_height_m": 3679.77197265625,
+        "max_source_height_m": 4204.6845703125,
+        "relief_m": 524.91259765625,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      }
+    }
+  ],
+  "checks": {
+    "export_tests_passed": 5,
+    "source_pixel_comparisons_passed": 33282,
+    "frontend_full_suite_passed": 77,
+    "final_padding_guard_targeted_tests_passed": 14,
+    "note": "Full suite preceded final zero-padding validation guard; targeted tests, typecheck and build passed after that guard. Counts overlap and must not be added.",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "verify_surfaces": "PASS",
+    "scored_dataset_verify_assets": "NOT_SATISFIED_MISSING_SCORED_DATASET",
+    "browser_native_relief": "PASS_WITHOUT_PERFORMANCE_CLAIM"
+  },
+  "evidence": [
+    "evidence/real_surface_export/validation.json",
+    "evidence/real_surface_export/focused-tests.txt",
+    "evidence/real_surface_review.md",
+    "evidence/real_surface_ui/check-status.json",
+    "evidence/real_surface_ui/padding-guard-status.json",
+    "evidence/real_surface_ui/browser-observation.json",
+    "evidence/real_surface_ui/SOURCE_MANIFEST.json"
+  ],
+  "remaining": [
+    "Mars source integration",
+    "Comparable analysis support and calibrated similarity profiles",
+    "Absolute vertical datum and exact ENU/body-frame registration",
+    "Registered source-backed Gaussian splat reconstruction",
+    "Performance benchmarking and human acceptance"
+  ],
+  "next_action": "Add further source-backed layers and comparable ROI metrics while preserving verified native surface browsing; do not republish native relief as exact ENU or ranked analogs.",
+  "scheduler_created": false
+}

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pae-pipeline"
+version = "0.1.0"
+description = "Planetary Analog Explorer offline data ingestion, geospatial terrain analysis, and analog scoring pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "numpy>=1.26,<3.0",
+  "Pillow>=11.0,<14.0",
+  "rasterio>=1.3,<2.0",
+  "pyproj>=3.6,<4.0",
+  "shapely>=2.0,<3.0",
+  "requests>=2.31,<3.0",
+  "jsonschema[format]>=4.21,<5.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0,<9.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

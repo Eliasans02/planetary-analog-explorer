@@ -1,0 +1,595 @@
+{
+  "added_sites": [
+    {
+      "id": "lola-site01-center",
+      "name": "Connecting ridge \u00b7 LOLA Site01",
+      "body": "moon",
+      "description": "Actual published LOLA 5 m/pixel DEM, project-selected 129 by 129 native sample window.",
+      "coordinates": {
+        "longitude_deg": -137.50198490762307,
+        "latitude_deg": -89.4631577569723,
+        "frame": "MOON_ME_DE421",
+        "provenance": "MOON_ME reference frame of ephemeris DE421 per NASA PGDA product page and README; inverse native projection only."
+      },
+      "source_ids": [
+        "nasa-lola-site01-center"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          5.0,
+          5.0
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Native projected raster metre spacing; X/Z follow source columns/rows. Projected spacing is not exact ground distance; no reprojection, not ENU.",
+        "heights": {
+          "path": "/assets/surfaces/lola-site01-center/heights.f32",
+          "sha256": "1d2fd29198633cba817a99060ad21790d5731a02663b983362a496d5370500b6",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/surfaces/lola-site01-center/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": 1874.5247802734375,
+        "vertical_datum": null,
+        "vertical_datum_status": "unverified",
+        "native_crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+        "native_origin": [
+          -11317.5,
+          -11682.5
+        ],
+        "native_spacing": [
+          5.0,
+          -5.0
+        ],
+        "native_units": "m"
+      },
+      "stats": {
+        "min_source_height_m": 1874.5247802734375,
+        "max_source_height_m": 1957.73046875,
+        "relief_m": 83.2056884765625,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "PROJECT_SELECTED native center window",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+        "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+        "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+        "LOLA surface includes interpolated pixels; direct laser-return counts not acquired.",
+        "Absolute lunar vertical datum remains unverified."
+      ],
+      "provenance": {
+        "path": "/assets/surfaces/lola-site01-center/provenance.json",
+        "sha256": "eab5868b598366786757ce28cf39d06432611f8d205af684519a597b1579e1c7",
+        "bytes": 20095
+      }
+    },
+    {
+      "id": "lola-site06-center",
+      "name": "Nobile rim 1 \u00b7 LOLA Site06",
+      "body": "moon",
+      "description": "Actual published LOLA 5 m/pixel DEM, project-selected 129 by 129 native sample window.",
+      "coordinates": {
+        "longitude_deg": 37.36812005733697,
+        "latitude_deg": -85.43811594434003,
+        "frame": "MOON_ME_DE421",
+        "provenance": "MOON_ME reference frame of ephemeris DE421 per NASA PGDA product page and README; inverse native projection only."
+      },
+      "source_ids": [
+        "nasa-lola-site06-center"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          5.0,
+          5.0
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Native projected raster metre spacing; X/Z follow source columns/rows. Projected spacing is not exact ground distance; no reprojection, not ENU.",
+        "heights": {
+          "path": "/assets/surfaces/lola-site06-center/heights.f32",
+          "sha256": "e22addc8e8103a14724435d7ecaebdeb167bb8f3afc2eb2f57a39a4b0ed62975",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/surfaces/lola-site06-center/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": 5834.52490234375,
+        "vertical_datum": null,
+        "vertical_datum_status": "unverified",
+        "native_crs_wkt": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",1737400,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+        "native_origin": [
+          83682.5,
+          110317.5
+        ],
+        "native_spacing": [
+          5.0,
+          -5.0
+        ],
+        "native_units": "m"
+      },
+      "stats": {
+        "min_source_height_m": 5834.52490234375,
+        "max_source_height_m": 6021.20654296875,
+        "relief_m": 186.681640625,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "PROJECT_SELECTED native center window",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+        "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+        "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+        "LOLA surface includes interpolated pixels; direct laser-return counts not acquired.",
+        "Absolute lunar vertical datum remains unverified."
+      ],
+      "provenance": {
+        "path": "/assets/surfaces/lola-site06-center/provenance.json",
+        "sha256": "32d95fa8073a2359feb23e346b854598f932d1bb7affd51d867db904c46c961b",
+        "bytes": 28603
+      }
+    },
+    {
+      "id": "mars-gale-hirise",
+      "name": "Gale crater \u00b7 HiRISE native DTM",
+      "body": "mars",
+      "description": "Actual published HiRISE stereo DEM, project-selected 129 by 129 native sample window.",
+      "coordinates": {
+        "longitude_deg": 137.48690196668775,
+        "latitude_deg": -4.556985104655536,
+        "frame": "MARS_HIRISE_PLANETOCENTRIC",
+        "provenance": "Source PDS planetocentric east-longitude native equirectangular CRS; source local-radius sphere preserved in WKT; no IAU realization transformation."
+      },
+      "source_ids": [
+        "nasa-mars-gale-hirise"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          1.0117630165416,
+          1.0117630165416
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Native projected raster metre spacing; X/Z follow source columns/rows. Projected spacing is not exact ground distance; no reprojection, not ENU.",
+        "heights": {
+          "path": "/assets/surfaces/mars-gale-hirise/heights.f32",
+          "sha256": "02078ad83841923b9b7c0793cdbf8ddfb10f1b2f3fffcddc92bae8d42d10584b",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/surfaces/mars-gale-hirise/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": -4516.95458984375,
+        "vertical_datum": "Meters above martian equipotential surface (Mars 2000 Datum), declared in source PDS label.",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",137.49],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "native_origin": [
+          -248.38782056096306,
+          -270049.1608636102
+        ],
+        "native_spacing": [
+          1.0117630165416,
+          -1.0117630165416
+        ],
+        "native_units": "m"
+      },
+      "stats": {
+        "min_source_height_m": -4516.95458984375,
+        "max_source_height_m": -4510.62158203125,
+        "relief_m": 6.3330078125,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "PROJECT_SELECTED native center window",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+        "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+        "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+        "Stereo-derived source DEM; only exact byte ranges acquired, complete IMG checksum unavailable.",
+        "Source Mars mapping realization retained without IAU frame transformation."
+      ],
+      "provenance": {
+        "path": "/assets/surfaces/mars-gale-hirise/provenance.json",
+        "sha256": "dd259e2ac856be92d091cb390d8ed4f6d3264300aca1ca0493100cd98dfc970d",
+        "bytes": 12031
+      }
+    },
+    {
+      "id": "mars-eberswalde-hirise",
+      "name": "Eberswalde crater \u00b7 HiRISE native DTM",
+      "body": "mars",
+      "description": "Actual published HiRISE stereo DEM, project-selected 129 by 129 native sample window.",
+      "coordinates": {
+        "longitude_deg": -33.095118568468706,
+        "latitude_deg": -23.931721087814918,
+        "frame": "MARS_HIRISE_PLANETOCENTRIC",
+        "provenance": "Source PDS planetocentric east-longitude native equirectangular CRS; source local-radius sphere preserved in WKT; no IAU realization transformation."
+      },
+      "source_ids": [
+        "nasa-mars-eberswalde-hirise"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          1.0081884109784,
+          1.0081884109784
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Native projected raster metre spacing; X/Z follow source columns/rows. Projected spacing is not exact ground distance; no reprojection, not ENU.",
+        "heights": {
+          "path": "/assets/surfaces/mars-eberswalde-hirise/heights.f32",
+          "sha256": "38ca289729ebf67f2557943b8abd5e47ca41a5b6004908a8f58d49be9e2360ba",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/surfaces/mars-eberswalde-hirise/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": -1349.4686279296875,
+        "vertical_datum": "Meters above martian equipotential surface (Mars 2000 Datum), declared in source PDS label.",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3393830,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",-20],PARAMETER[\"central_meridian\",326.9],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "native_origin": [
+          207.18271845616164,
+          -1417495.2625384382
+        ],
+        "native_spacing": [
+          1.0081884109784,
+          -1.0081884109784
+        ],
+        "native_units": "m"
+      },
+      "stats": {
+        "min_source_height_m": -1349.4686279296875,
+        "max_source_height_m": -1342.215087890625,
+        "relief_m": 7.2535400390625,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "PROJECT_SELECTED native center window",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+        "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+        "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+        "Stereo-derived source DEM; only exact byte ranges acquired, complete IMG checksum unavailable.",
+        "Source Mars mapping realization retained without IAU frame transformation."
+      ],
+      "provenance": {
+        "path": "/assets/surfaces/mars-eberswalde-hirise/provenance.json",
+        "sha256": "c6f1f5da865eb208aa0661ddd5b0c17b78ad1448fdd4cab3457a40a9c373eb80",
+        "bytes": 11897
+      }
+    }
+  ],
+  "source_sample_comparisons": {
+    "lola-site01-center": [
+      {
+        "crop_row_col": [
+          0,
+          0
+        ],
+        "source_height_m": 1922.2303466796875,
+        "height_offset_m": 47.70556640625,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          0,
+          128
+        ],
+        "source_height_m": 1940.5374755859375,
+        "height_offset_m": 66.0126953125,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          64,
+          64
+        ],
+        "source_height_m": 1944.76708984375,
+        "height_offset_m": 70.2423095703125,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          128,
+          0
+        ],
+        "source_height_m": 1952.3905029296875,
+        "height_offset_m": 77.86572265625,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          128,
+          128
+        ],
+        "source_height_m": 1874.5247802734375,
+        "height_offset_m": 0.0,
+        "valid": true,
+        "exact_float32_match": true
+      }
+    ],
+    "lola-site06-center": [
+      {
+        "crop_row_col": [
+          0,
+          0
+        ],
+        "source_height_m": 5993.40625,
+        "height_offset_m": 158.88134765625,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          0,
+          128
+        ],
+        "source_height_m": 5834.52490234375,
+        "height_offset_m": 0.0,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          64,
+          64
+        ],
+        "source_height_m": 5946.380859375,
+        "height_offset_m": 111.85595703125,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          128,
+          0
+        ],
+        "source_height_m": 6021.20654296875,
+        "height_offset_m": 186.681640625,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          128,
+          128
+        ],
+        "source_height_m": 5873.1259765625,
+        "height_offset_m": 38.60107421875,
+        "valid": true,
+        "exact_float32_match": true
+      }
+    ],
+    "mars-gale-hirise": [
+      {
+        "crop_row_col": [
+          0,
+          0
+        ],
+        "source_height_m": -4515.587890625,
+        "height_offset_m": 1.36669921875,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          0,
+          128
+        ],
+        "source_height_m": -4512.556640625,
+        "height_offset_m": 4.39794921875,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          64,
+          64
+        ],
+        "source_height_m": -4515.45361328125,
+        "height_offset_m": 1.5009765625,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          128,
+          0
+        ],
+        "source_height_m": -4510.859375,
+        "height_offset_m": 6.09521484375,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          128,
+          128
+        ],
+        "source_height_m": -4514.13818359375,
+        "height_offset_m": 2.81640625,
+        "valid": true,
+        "exact_float32_match": true
+      }
+    ],
+    "mars-eberswalde-hirise": [
+      {
+        "crop_row_col": [
+          0,
+          0
+        ],
+        "source_height_m": -1348.6396484375,
+        "height_offset_m": 0.8289794921875,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          0,
+          128
+        ],
+        "source_height_m": -1345.03564453125,
+        "height_offset_m": 4.4329833984375,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          64,
+          64
+        ],
+        "source_height_m": -1346.7506103515625,
+        "height_offset_m": 2.718017578125,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          128,
+          0
+        ],
+        "source_height_m": -1345.61474609375,
+        "height_offset_m": 3.8538818359375,
+        "valid": true,
+        "exact_float32_match": true
+      },
+      {
+        "crop_row_col": [
+          128,
+          128
+        ],
+        "source_height_m": -1342.21630859375,
+        "height_offset_m": 7.2523193359375,
+        "valid": true,
+        "exact_float32_match": true
+      }
+    ]
+  },
+  "original_records_preserved": true
+}

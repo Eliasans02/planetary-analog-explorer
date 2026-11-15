@@ -1,0 +1,34 @@
+{
+  "schema_validation": "passed",
+  "semantic_and_output_hash_byte_mask_checks": "passed",
+  "surface_asset_bytes": 707753,
+  "catalog_bytes": 35281,
+  "raster_sample_count": 116487,
+  "scientific_scores_computed": false,
+  "source_datum_transformations": false,
+  "offline_repeat_export_identical": true,
+  "verified_asset_sha256": {
+    "web-client\\public\\data\\surface_catalog.json": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539",
+    "web-client\\public\\assets\\surfaces\\lola-site01-center\\heights.f32": "1d2fd29198633cba817a99060ad21790d5731a02663b983362a496d5370500b6",
+    "web-client\\public\\assets\\surfaces\\lola-site01-center\\valid-mask.u8": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+    "web-client\\public\\assets\\surfaces\\lola-site01-center\\provenance.json": "eab5868b598366786757ce28cf39d06432611f8d205af684519a597b1579e1c7",
+    "web-client\\public\\assets\\surfaces\\lola-site06-center\\heights.f32": "e22addc8e8103a14724435d7ecaebdeb167bb8f3afc2eb2f57a39a4b0ed62975",
+    "web-client\\public\\assets\\surfaces\\lola-site06-center\\valid-mask.u8": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+    "web-client\\public\\assets\\surfaces\\lola-site06-center\\provenance.json": "32d95fa8073a2359feb23e346b854598f932d1bb7affd51d867db904c46c961b",
+    "web-client\\public\\assets\\surfaces\\mars-gale-hirise\\heights.f32": "02078ad83841923b9b7c0793cdbf8ddfb10f1b2f3fffcddc92bae8d42d10584b",
+    "web-client\\public\\assets\\surfaces\\mars-gale-hirise\\valid-mask.u8": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+    "web-client\\public\\assets\\surfaces\\mars-gale-hirise\\provenance.json": "dd259e2ac856be92d091cb390d8ed4f6d3264300aca1ca0493100cd98dfc970d",
+    "web-client\\public\\assets\\surfaces\\mars-eberswalde-hirise\\heights.f32": "38ca289729ebf67f2557943b8abd5e47ca41a5b6004908a8f58d49be9e2360ba",
+    "web-client\\public\\assets\\surfaces\\mars-eberswalde-hirise\\valid-mask.u8": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+    "web-client\\public\\assets\\surfaces\\mars-eberswalde-hirise\\provenance.json": "c6f1f5da865eb208aa0661ddd5b0c17b78ad1448fdd4cab3457a40a9c373eb80"
+  },
+  "source_pixel_samples_compared": 66564,
+  "focused_tests": {
+    "test_surface_expansion.py": "3 passed",
+    "test_surface_export.py": "5 passed"
+  },
+  "complete_lunar_source_sha256": {
+    "lola-site01-center": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+    "lola-site06-center": "cca17e8067601dd659b583f889204db6bce685bc30c60a9e62427a8bce36b03d"
+  }
+}

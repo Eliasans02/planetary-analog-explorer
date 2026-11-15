@@ -1,0 +1,69 @@
+test_surface_analysis (unittest.loader._FailedTest.test_surface_analysis) ... ERROR
+test_surface_expansion (unittest.loader._FailedTest.test_surface_expansion) ... ERROR
+test_surface_export (unittest.loader._FailedTest.test_surface_export) ... ERROR
+test_surface_imagery (unittest.loader._FailedTest.test_surface_imagery) ... ERROR
+
+======================================================================
+ERROR: test_surface_analysis (unittest.loader._FailedTest.test_surface_analysis)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_surface_analysis
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\tests\test_surface_analysis.py", line 9, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+
+======================================================================
+ERROR: test_surface_expansion (unittest.loader._FailedTest.test_surface_expansion)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_surface_expansion
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\tests\test_surface_expansion.py", line 8, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+
+======================================================================
+ERROR: test_surface_export (unittest.loader._FailedTest.test_surface_export)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_surface_export
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\tests\test_surface_export.py", line 10, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+
+======================================================================
+ERROR: test_surface_imagery (unittest.loader._FailedTest.test_surface_imagery)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_surface_imagery
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\HP\NasaAstras\planetary-analog-explorer\data-pipeline\tests\test_surface_imagery.py", line 7, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (errors=4)

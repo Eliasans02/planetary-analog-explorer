@@ -1,0 +1,269 @@
+{
+  "checkpoint": "SURFACE_SITES_ANALYSIS_COLOR_VERIFIED_2026-11-14",
+  "recorded_at": "2026-11-14T12:12:15.870616+00:00",
+  "native_dem_sources": [
+    {
+      "id": "nasa-lola-site04",
+      "provider": "NASA GSFC / LOLA",
+      "product": "LOLA Site04 Shackleton rim 5 m/pixel adjusted surface",
+      "product_url": "https://pgda.gsfc.nasa.gov/products/78",
+      "access_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_surf.tif",
+      "retrieved_at": "2026-11-14T08:08:30.626038Z",
+      "sha256": "38ff70dbdf2f066c2cfa94a646c3a59d653ce7f6b4528b15fc1b43ee397ce758",
+      "license": "NASA public scientific data; retain source attribution",
+      "local_path": "/assets/surfaces/lola-site04-roi3/provenance.json"
+    },
+    {
+      "id": "usgs-3dep-n20w156",
+      "provider": "U.S. Geological Survey / The National Map / 3DEP",
+      "product": "USGS 1 Arc Second n20w156 20250611",
+      "product_url": "https://www.sciencebase.gov/catalog/item/684a3701d4be026f96d9de35",
+      "access_url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1/TIFF/historical/n20w156/USGS_1_n20w156_20250611.tif",
+      "retrieved_at": "2026-11-14T09:30:10.619694Z",
+      "sha256": "75b69b4df0ac16cc7e1cccaa30c59ecb3a6834944d62aba245b0a36aa8d3b270",
+      "license": "Public domain (source XML)",
+      "local_path": "/assets/surfaces/usgs-hawaii-summit/provenance.json"
+    },
+    {
+      "id": "nasa-hirise-jezero-dtm",
+      "provider": "NASA/JPL-Caltech/UArizona",
+      "product": "HiRISE DTEEC_045994_1985_046060_1985_U01 native DTM (exact range window)",
+      "product_url": "https://www.uahirise.org/dtm/dtm.php?ID=ESP_045994_1985",
+      "access_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/DTEEC_045994_1985_046060_1985_U01.IMG",
+      "retrieved_at": "2026-11-14T10:38:38.631162+00:00",
+      "sha256": "6cb88e69f4c43e67d7a90a0a5c8e3880ae1956b70b8223845662d6ace69f90b4",
+      "license": "Public domain per HiRISE image usage policy; credit NASA/JPL/University of Arizona; https://www.uahirise.org/media/usage.php",
+      "local_path": "/assets/surfaces/mars-jezero-hirise/provenance.json"
+    },
+    {
+      "id": "nasa-lola-site01-center",
+      "provider": "NASA GSFC / LOLA",
+      "product": "Site01 native 5 m/pixel LOLA surface",
+      "product_url": "https://pgda.gsfc.nasa.gov/products/78",
+      "access_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "retrieved_at": "2026-11-14T11:46:11.766180+00:00",
+      "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+      "license": "NASA public scientific data; retain attribution",
+      "local_path": "/assets/surfaces/lola-site01-center/provenance.json"
+    },
+    {
+      "id": "nasa-lola-site06-center",
+      "provider": "NASA GSFC / LOLA",
+      "product": "Site06 native 5 m/pixel LOLA surface",
+      "product_url": "https://pgda.gsfc.nasa.gov/products/78",
+      "access_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site06/Site06_final_adj_5mpp_surf.tif",
+      "retrieved_at": "2026-11-14T11:47:58.006096+00:00",
+      "sha256": "cca17e8067601dd659b583f889204db6bce685bc30c60a9e62427a8bce36b03d",
+      "license": "NASA public scientific data; retain attribution",
+      "local_path": "/assets/surfaces/lola-site06-center/provenance.json"
+    },
+    {
+      "id": "nasa-mars-gale-hirise",
+      "provider": "NASA/JPL-Caltech/UArizona",
+      "product": "HiRISE DTEEC_023957_1755_024023_1755_U01 (exact source rows only)",
+      "product_url": "https://www.uahirise.org/dtm/dtm.php?ID=ESP_023957_1755",
+      "access_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/DTEEC_023957_1755_024023_1755_U01.IMG",
+      "retrieved_at": "2026-11-14T11:48:22.309921+00:00",
+      "sha256": "fecba029598e04d54bf27235ad6a69147bf79022e9f5eb4d43edcaae45ef0840",
+      "license": "Public domain per https://www.uahirise.org/media/usage.php; credit NASA/JPL/University of Arizona",
+      "local_path": "/assets/surfaces/mars-gale-hirise/provenance.json"
+    },
+    {
+      "id": "nasa-mars-eberswalde-hirise",
+      "provider": "NASA/JPL-Caltech/UArizona",
+      "product": "HiRISE DTEEC_016065_1560_016210_1560_U01 (exact source rows only)",
+      "product_url": "https://www.uahirise.org/dtm/dtm.php?ID=ESP_016065_1560",
+      "access_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_016000_016099/ESP_016065_1560_ESP_016210_1560/DTEEC_016065_1560_016210_1560_U01.IMG",
+      "retrieved_at": "2026-11-14T11:48:26.210377+00:00",
+      "sha256": "1c5603f86e3afaab98956280f0431bb16c7210c4c9bbc65b32ad947c78a98fd1",
+      "license": "Public domain per https://www.uahirise.org/media/usage.php; credit NASA/JPL/University of Arizona",
+      "local_path": "/assets/surfaces/mars-eberswalde-hirise/provenance.json"
+    }
+  ],
+  "imagery_sources": [
+    {
+      "surface_id": "lola-site04-roi3",
+      "layer": "orbital-color",
+      "color_mode": "global_display_mosaic",
+      "registration": "approximate_global_mosaic",
+      "source_urls": [
+        "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.img",
+        "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.lbl",
+        "https://svs.gsfc.nasa.gov/4720/",
+        "https://svs.gsfc.nasa.gov/4720/ displacement section",
+        "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+        "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_4k.tif",
+        "https://tempo.multiverse.music"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/lola-site04-roi3/orbital-color/provenance.json",
+        "bytes": 20787,
+        "sha256": "381e5041f93142bf0bb77dd5fe8d9d8f53efbf8db5c279d62fa4b40cdabac9a0"
+      }
+    },
+    {
+      "surface_id": "mars-jezero-hirise",
+      "layer": "orbital-color",
+      "color_mode": "global_display_mosaic",
+      "registration": "approximate_global_mosaic",
+      "source_urls": [
+        "https://www.mars.asu.edu/data/mdim_color/",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n045.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n135.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n225.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n315.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s045.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s135.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s225.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s315.png"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/mars-jezero-hirise/orbital-color/provenance.json",
+        "bytes": 12815,
+        "sha256": "57e8fab085d8e96809f7ce5e70fa3c1402b9d0c3f2bf16949e7feffbb9b79609"
+      }
+    },
+    {
+      "surface_id": "mars-jezero-hirise",
+      "layer": "local-ortho",
+      "color_mode": "published_grayscale",
+      "registration": "projected_ortho",
+      "source_urls": [
+        "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+        "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.LBL",
+        "https://pds-imaging.jpl.nasa.gov"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/mars-jezero-hirise/local-ortho/provenance.json",
+        "bytes": 58735,
+        "sha256": "d40fcca2af15b306f8ef9309242a517c257616cfe2233472cb509f91cd70c68f"
+      }
+    },
+    {
+      "surface_id": "lola-site01-center",
+      "layer": "orbital-color",
+      "color_mode": "global_display_mosaic",
+      "registration": "approximate_global_mosaic",
+      "source_urls": [
+        "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.img",
+        "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.lbl",
+        "https://svs.gsfc.nasa.gov/4720/",
+        "https://svs.gsfc.nasa.gov/4720/ displacement section",
+        "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+        "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_4k.tif",
+        "https://tempo.multiverse.music"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/lola-site01-center/orbital-color/provenance.json",
+        "bytes": 20787,
+        "sha256": "d8cc8c0ee26483f010966fc39df501649f6563ad2b5fe0558f7d9f443f18794a"
+      }
+    },
+    {
+      "surface_id": "lola-site06-center",
+      "layer": "orbital-color",
+      "color_mode": "global_display_mosaic",
+      "registration": "approximate_global_mosaic",
+      "source_urls": [
+        "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.img",
+        "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_4.lbl",
+        "https://svs.gsfc.nasa.gov/4720/",
+        "https://svs.gsfc.nasa.gov/4720/ displacement section",
+        "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+        "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_4k.tif",
+        "https://tempo.multiverse.music"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/lola-site06-center/orbital-color/provenance.json",
+        "bytes": 20792,
+        "sha256": "31417c4a36bb49937814614c52522721215ffc9af53bc7718b780061d51de685"
+      }
+    },
+    {
+      "surface_id": "mars-gale-hirise",
+      "layer": "orbital-color",
+      "color_mode": "global_display_mosaic",
+      "registration": "approximate_global_mosaic",
+      "source_urls": [
+        "https://www.mars.asu.edu/data/mdim_color/",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n045.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n135.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n225.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n315.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s045.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s135.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s225.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s315.png"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/mars-gale-hirise/orbital-color/provenance.json",
+        "bytes": 12820,
+        "sha256": "cfd8240c82e45ebff5078e712bf33c7a6abcd313f8e9f91574e51ec0bcddf8e2"
+      }
+    },
+    {
+      "surface_id": "mars-gale-hirise",
+      "layer": "local-ortho",
+      "color_mode": "published_false_color",
+      "registration": "projected_ortho",
+      "source_urls": [
+        "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/ESP_023957_1755_IRB_C_01_ORTHO.JP2",
+        "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/ESP_023957_1755_IRB_C_01_ORTHO.LBL",
+        "https://pds-imaging.jpl.nasa.gov"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/mars-gale-hirise/local-ortho/provenance.json",
+        "bytes": 33607,
+        "sha256": "b6857f6d9dfca35f0619fcfbda4b23129cbe674341807961de31c00093f43f27"
+      }
+    },
+    {
+      "surface_id": "mars-eberswalde-hirise",
+      "layer": "orbital-color",
+      "color_mode": "global_display_mosaic",
+      "registration": "approximate_global_mosaic",
+      "source_urls": [
+        "https://www.mars.asu.edu/data/mdim_color/",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n045.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n135.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n225.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45n315.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s045.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s135.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s225.png",
+        "https://www.mars.asu.edu/data/mdim_color/large/mars45s315.png"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/mars-eberswalde-hirise/orbital-color/provenance.json",
+        "bytes": 12820,
+        "sha256": "eea66b2f4a55c40286067c7f7587460b22319164206e857c3305404741e0a42c"
+      }
+    },
+    {
+      "surface_id": "mars-eberswalde-hirise",
+      "layer": "local-ortho",
+      "color_mode": "published_grayscale",
+      "registration": "projected_ortho",
+      "source_urls": [
+        "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_016000_016099/ESP_016065_1560_ESP_016210_1560/ESP_016065_1560_RED_C_01_ORTHO.JP2",
+        "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_016000_016099/ESP_016065_1560_ESP_016210_1560/ESP_016065_1560_RED_C_01_ORTHO.LBL",
+        "https://pds-imaging.jpl.nasa.gov"
+      ],
+      "provenance": {
+        "path": "web-client/public/assets/surface-imagery/mars-eberswalde-hirise/local-ortho/provenance.json",
+        "bytes": 76696,
+        "sha256": "2c5b3de462c47c41078dc191dbc1e57415cf204bb5b0221af35c592eec46a424"
+      }
+    }
+  ],
+  "checksum_scope": "Read each provenance receipt: native HiRISE DEM hashes cover exact downloaded ranges; imagery JP2 hashes cover complete assembled products. Never interpret a range hash as a full DEM hash.",
+  "scientific_values_invented": false,
+  "scientific_derivatives_computed": true,
+  "research_sources": [
+    "https://gdal.org/en/stable/programs/gdaldem.html",
+    "https://github.com/OSGeo/gdal/blob/v3.11.0/apps/gdaldem_lib.cpp",
+    "https://www.usgs.gov/publications/effect-resolution-terrain-feature-extraction",
+    "https://pgda.gsfc.nasa.gov/products/78",
+    "https://www.uahirise.org/dtm/howto.php"
+  ]
+}

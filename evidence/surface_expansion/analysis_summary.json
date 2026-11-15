@@ -1,0 +1,206 @@
+{
+  "analysis_sha256": "71264c8ef2f15e1d364b38ca6957048d96a04ddeffe0ad11556c9c57d1519db0",
+  "catalog_sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539",
+  "surface_count": 7,
+  "validation": "schema + input hash + exact read-only scientific recomputation passed",
+  "tests": 13,
+  "gdal_runtime_comparison": "unavailable: osgeo bindings not installed; GDAL v3.11 algorithm source reviewed",
+  "results": [
+    {
+      "surface_id": "lola-site04-roi3",
+      "inputs": {
+        "heights_sha256": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          5.0,
+          5.0
+        ]
+      },
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 129.775146484375,
+        "mean_slope_deg": 13.8021566782362,
+        "p95_slope_deg": 28.70182409246599,
+        "max_slope_deg": 36.49554517317462,
+        "mean_roughness_m": 3.0126380880203167,
+        "max_roughness_m": 9.0052490234375,
+        "mean_tri_m": 3.1490336511434918
+      }
+    },
+    {
+      "surface_id": "usgs-hawaii-summit",
+      "inputs": {
+        "heights_sha256": "3d3af24aec04a00e5b92662a323f8e321069dd78e237e6e2f7f9c2301ed7ba22",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          29.101407512309834,
+          30.750571350377374
+        ]
+      },
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 524.91259765625,
+        "mean_slope_deg": 11.631564038400995,
+        "p95_slope_deg": 26.09091506459179,
+        "max_slope_deg": 34.07481720605527,
+        "mean_roughness_m": 16.125052267194377,
+        "max_roughness_m": 55.221923828125,
+        "mean_tri_m": 16.020692021358204
+      }
+    },
+    {
+      "surface_id": "mars-jezero-hirise",
+      "inputs": {
+        "heights_sha256": "0bac451f8f7d9f1e4d301f024c8b0edc8c4a7a5587136c20ad05db579d2afefd",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          1.0096633268711,
+          1.0096633268711
+        ]
+      },
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 4.17626953125,
+        "mean_slope_deg": 2.2689129649966895,
+        "p95_slope_deg": 4.969453201064895,
+        "max_slope_deg": 12.72500158151502,
+        "mean_roughness_m": 0.10443242761485523,
+        "max_roughness_m": 0.57275390625,
+        "mean_tri_m": 0.10388684876181259
+      }
+    },
+    {
+      "surface_id": "lola-site01-center",
+      "inputs": {
+        "heights_sha256": "1d2fd29198633cba817a99060ad21790d5731a02663b983362a496d5370500b6",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          5.0,
+          5.0
+        ]
+      },
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 83.2056884765625,
+        "mean_slope_deg": 5.290469847954737,
+        "p95_slope_deg": 13.152228925692969,
+        "max_slope_deg": 27.195042880296043,
+        "mean_roughness_m": 1.230501036685667,
+        "max_roughness_m": 7.0576171875,
+        "mean_tri_m": 1.179132598790585
+      }
+    },
+    {
+      "surface_id": "lola-site06-center",
+      "inputs": {
+        "heights_sha256": "e22addc8e8103a14724435d7ecaebdeb167bb8f3afc2eb2f57a39a4b0ed62975",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          5.0,
+          5.0
+        ]
+      },
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 186.681640625,
+        "mean_slope_deg": 14.503856405107694,
+        "p95_slope_deg": 20.444761336833142,
+        "max_slope_deg": 45.42251556436169,
+        "mean_roughness_m": 3.1779847368288485,
+        "max_roughness_m": 15.2666015625,
+        "mean_tri_m": 3.2149575169857125
+      }
+    },
+    {
+      "surface_id": "mars-gale-hirise",
+      "inputs": {
+        "heights_sha256": "02078ad83841923b9b7c0793cdbf8ddfb10f1b2f3fffcddc92bae8d42d10584b",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          1.0117630165416,
+          1.0117630165416
+        ]
+      },
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 6.3330078125,
+        "mean_slope_deg": 4.318044589033175,
+        "p95_slope_deg": 8.653393696008223,
+        "max_slope_deg": 16.897059087771858,
+        "mean_roughness_m": 0.20113945208359166,
+        "max_roughness_m": 0.81494140625,
+        "mean_tri_m": 0.2044539979414897
+      }
+    },
+    {
+      "surface_id": "mars-eberswalde-hirise",
+      "inputs": {
+        "heights_sha256": "38ca289729ebf67f2557943b8abd5e47ca41a5b6004908a8f58d49be9e2360ba",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          1.0081884109784,
+          1.0081884109784
+        ]
+      },
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 7.2535400390625,
+        "mean_slope_deg": 5.3678809440972515,
+        "p95_slope_deg": 11.620821107818378,
+        "max_slope_deg": 22.734395348341575,
+        "mean_roughness_m": 0.24255901636803273,
+        "max_roughness_m": 1.1748046875,
+        "mean_tri_m": 0.2390304403475258
+      }
+    }
+  ]
+}

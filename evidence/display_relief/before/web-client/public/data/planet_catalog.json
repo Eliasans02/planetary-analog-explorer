@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-14T10:47:32.478927+00:00",
+  "planets": [
+    {
+      "id": "moon",
+      "name": "Moon",
+      "textures": [
+        {
+          "path": "/assets/planets/moon/color-1024.jpg",
+          "sha256": "035cb414b7c2595b84ed196c019b4e8cef37883fe20a02f3240da427a424fbc4",
+          "bytes": 155485,
+          "width": 1024,
+          "height": 512,
+          "label": "1K"
+        },
+        {
+          "path": "/assets/planets/moon/color-2048.jpg",
+          "sha256": "12cc434945fa30fe52658611d2a4bf88cd5c3983e1a040ca56faaa0d396afe24",
+          "bytes": 598048,
+          "width": 2048,
+          "height": 1024,
+          "label": "2K"
+        },
+        {
+          "path": "/assets/planets/moon/color-4096.jpg",
+          "sha256": "b01b0842d9ec1b24140b925cba0de485e9887741c34add25dd5c41f47c47ee91",
+          "bytes": 2484879,
+          "width": 4096,
+          "height": 2048,
+          "label": "4K"
+        }
+      ],
+      "projection": "equirectangular",
+      "longitude_center_deg": 0,
+      "source_url": "https://svs.gsfc.nasa.gov/4720/",
+      "source_credit": "NASA Scientific Visualization Studio / Ernie Wright; LRO LROC and LOLA teams",
+      "source_sha256": "918649a7f8ed2f1329b2cd95bb0d25483befdcb60ae1a66db681a637cc21344f",
+      "provenance": {
+        "path": "/assets/planets/moon/provenance.json",
+        "sha256": "2ccef947a76a3b6f5e0a76e489d7e5fa85dd6cbb4247aa3e916a606450c78b7f",
+        "bytes": 16980
+      },
+      "limitations": [
+        "NASA visualization color map optimized for aesthetics, not science; exposure/white balance adjusted and high-latitude gaps inpainted.",
+        "LROC color covers 70 N to 70 S; polar regions use lower resolution monochromatic LOLA albedo fill.",
+        "JPEG derivatives are display imagery, not scientific feature or similarity evidence."
+      ],
+      "displacement": {
+        "asset": {
+          "path": "/assets/planets/moon/global-heights-m.f32",
+          "sha256": "2724eb919e9dff40b2bd0ebb7fe0ee88959aee91375478ef84e6f122250b5302",
+          "bytes": 4147200
+        },
+        "width": 1440,
+        "height": 720,
+        "radius_m": 1737400,
+        "height_unit": "m",
+        "source_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+        "reference": "LOLA radial elevation relative to 1737.4 km sphere; source Float32 km multiplied by 1000. Pixel-center lon=-179.875+0.25*c, lat=89.875-0.25*r."
+      }
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "textures": [
+        {
+          "path": "/assets/planets/mars/color-1024.jpg",
+          "sha256": "1655a482b0c97f8fd9f05b45d606accf0247ccbf021d435c7e22b545ee111bf6",
+          "bytes": 230213,
+          "width": 1024,
+          "height": 512,
+          "label": "1K"
+        },
+        {
+          "path": "/assets/planets/mars/color-2048.jpg",
+          "sha256": "3851b23009166c15779293d02f415785df69989070fdcb128d4de90e5d22a135",
+          "bytes": 883751,
+          "width": 2048,
+          "height": 1024,
+          "label": "2K"
+        },
+        {
+          "path": "/assets/planets/mars/color-4096.jpg",
+          "sha256": "2f9ed79e506a6ae6d3e86dd59c8d1ed541a65602e7016ea9e4294ffd91627e02",
+          "bytes": 3226210,
+          "width": 4096,
+          "height": 2048,
+          "label": "4K"
+        }
+      ],
+      "projection": "equirectangular",
+      "longitude_center_deg": 0,
+      "source_url": "https://www.mars.asu.edu/data/mdim_color/",
+      "source_credit": "NASA Viking Orbiter / Arizona State University Mars Global Data Sets; MDIM 1.0",
+      "source_sha256": "3a051a5ccc30ff987059f8dbe1a8635da07977435595a6fe0302c239a47ddfc0",
+      "provenance": {
+        "path": "/assets/planets/mars/provenance.json",
+        "sha256": "f70dbc16b3aa7f37b4d0da8708ace8ee605dbd3635743b78ef85838f4e39b6a9",
+        "bytes": 9079
+      },
+      "limitations": [
+        "Viking color mosaic sharpened with MDIM 1.0; source nominal 64 pixels/degree, about 920 m/pixel.",
+        "Global imagery has historical mosaic seams and is separate from the local HiRISE DTM; no global Mars displacement is supplied.",
+        "JPEG derivatives are display imagery, not calibrated photometry or a similarity score."
+      ],
+      "displacement": null
+    }
+  ]
+}

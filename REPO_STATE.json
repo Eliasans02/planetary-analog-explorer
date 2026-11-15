@@ -1,0 +1,2269 @@
+{
+  "loop": "LOOP_0",
+  "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+  "hackathon_elapsed_hours": null,
+  "planning_window_hours": [
+    0,
+    2
+  ],
+  "phase5_committed": false,
+  "modules": {
+    "shared_contract": {
+      "status": "IN_PROGRESS",
+      "artifact_created": true,
+      "human_pass": false
+    },
+    "Dev_A_fetch_and_score": {
+      "status": "IN_PROGRESS",
+      "implementation_created": true,
+      "human_pass": false,
+      "implementation_location": "local_repository",
+      "local_integration_complete": true,
+      "independent_local_execution_verified": true,
+      "external_role": "Dev_A",
+      "hotfix_status": "LOCAL_SOL_PATCHES_TESTED_SCIENTIFIC_AND_HUMAN_ACCEPTANCE_PENDING",
+      "source_capture": {
+        "role": "Dev_A",
+        "artifact_path_in_remote_workspace": "reports/dev_a_source_bundle.json",
+        "artifact_sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+        "file_count": 17,
+        "exact_json_bytes": 224050,
+        "capture_location": "browser_capture_and_local_repository_file",
+        "exact_json_captured": true,
+        "all_embedded_file_hashes_verified": true,
+        "hash_verification_scope": "Exact JSON bytes and every embedded content length/hash independently verified from the local artifact.",
+        "local_filesystem_artifact_path": "incoming/dev_a_source_bundle_r1.json",
+        "local_filesystem_receipt_pending": false,
+        "independently_locally_executed": false,
+        "human_pass": false,
+        "evidence_basis": "Current-turn Astra parent transport observation plus independent local file/hash validation.",
+        "local_filesystem_receipt_verified": true,
+        "local_receipt": {
+          "event_id": "DEV_A_R1_EXACT_LOCAL_RECEIPT_VERIFIED_2026-11-14",
+          "recorded_at": "2026-11-14T09:09:07.044681Z",
+          "path": "incoming/dev_a_source_bundle_r1.json",
+          "bytes": 224050,
+          "sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+          "file_count": 17,
+          "all_embedded_file_hashes_verified_locally": true,
+          "all_embedded_file_byte_counts_verified_locally": true,
+          "transport": "Loopback receipt form used by Astra after browser download failed.",
+          "verification_basis": "Local file read and independent UTF-8 content byte-count/SHA256 recomputation by Astra delegated agent.",
+          "code_executed": false,
+          "scientific_tests_run": false,
+          "next_owner": "viewer_api",
+          "next_step": "Safe extraction and static checks; no source execution."
+        }
+      },
+      "current_review_findings": {
+        "code": 10,
+        "security": 5
+      },
+      "source_received_locally": true,
+      "review_package": {
+        "path": "incoming/dev_a_r1_review/REVIEW_BUNDLE.json",
+        "bytes": 222513,
+        "sha256": "a2c34ae90a1d6d43ce6bd59328445bdeeb0bcab3b9336e227ffdcbebda85a86b",
+        "file_count": 17,
+        "same_source_file_hash_manifest_as_exact_json": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+        "source_file_hash_manifest_equivalence_verified_locally": true,
+        "packaging_hash_is_distinct_from_exact_json_hash": true,
+        "code_executed": false,
+        "note": "The repackaged review artifact and the exact export have distinct package hashes but identical 17 source-file path/hash manifests. The external A reviews remain bound to the original exact JSON hash."
+      },
+      "current_checks": "evidence/local_a05_checks/results.json"
+    },
+    "Dev_B_Viewport3D": {
+      "status": "IN_PROGRESS",
+      "implementation_created": true,
+      "human_pass": false,
+      "implementation_location": "local_repository",
+      "local_integration_complete": true,
+      "independent_local_execution_verified": true,
+      "external_role": "Dev_B",
+      "hotfix_status": "LOCAL_SOL_PATCHES_TESTED_SCIENTIFIC_AND_HUMAN_ACCEPTANCE_PENDING",
+      "generator_reported_verification": {
+        "revision": "B03",
+        "source": "Dev_B remote report observed by Astra parent",
+        "execution_location": "remote_AI_Studio",
+        "reported_checks": {
+          "typecheck": "reported_pass",
+          "unit_tests": {
+            "passed": 15
+          },
+          "build": "reported_pass",
+          "e2e": {
+            "passed": 7,
+            "skipped": 1,
+            "skip_reason": "real ground scientific data unavailable"
+          },
+          "verify_assets": {
+            "status": "reported_FAIL",
+            "reason": "required real scientific data/assets absent"
+          }
+        },
+        "reported_checks_independently_executed_locally": false,
+        "raw_command_logs_received_locally": false,
+        "source_artifact_sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+        "source_artifact_received_locally": true,
+        "desktop_evidence": {
+          "path": "evidence/dev_b_b03_analog_passport.png",
+          "bytes": 209500,
+          "sha256": "2112ef01c9e0900d68f6ac2a70bf84b6aa2806be4cc268854bba0167992252ab",
+          "locally_present_and_hashed": true,
+          "scope": "Actual B03 Analog Passport desktop image; not proof of underlying scientific data, command execution, contrast compliance or human acceptance."
+        },
+        "real_data_integration_verified": false,
+        "performance_verified": false,
+        "human_pass": false
+      },
+      "dependency_migration": {
+        "task_id": "B03",
+        "status": "COMPLETED_REMOTE_RECEIVED_LOCALLY_REVIEW_RUNNING",
+        "actually_dispatched": true,
+        "completion_observed": true,
+        "session_url": "https://aistudio.google.com/apps/e459d060-5a02-4acc-aeb6-cfcaa1f5368b",
+        "prompt": "prompts/roles/DEV_B_UI_SDK.md",
+        "research_evidence": "docs/research/UI_SDK_INTEGRATION.md",
+        "scope": [
+          "Vercel UI SDK adoption",
+          "React migration",
+          "Analog Passport explanation and limitations UI"
+        ],
+        "dependency_pins": {
+          "@ui-sdk/core": "0.1.0-beta.1",
+          "@ui-sdk/react": "0.1.0-beta.1",
+          "react": "19.3.1",
+          "react-dom": "19.3.1",
+          "@types/react": "19.3.0",
+          "@types/react-dom": "19.3.0",
+          "@types/node": "22.14.0"
+        },
+        "dependency_declared_pins_verified_in_local_bundle": true,
+        "peer_resolution_correction": {
+          "package": "@types/node",
+          "version": "22.14.0",
+          "basis": "Actual author peer-resolution correction reported by Astra parent; declaration independently read from received package.json.",
+          "independent_local_install_or_peer_resolution_verified": false
+        },
+        "baseline_supersession": "Explicit React 18 baseline superseded by React 19.3.1 and matching types; author also corrected @types/node to 22.14.0 for reported peer resolution. Scientific/shared/offline/licensing requirements remain unchanged.",
+        "shared_contract_changed": false,
+        "independent_local_build_verified": false,
+        "source_receipt": {
+          "event_id": "B03_LOCAL_RECEIPT_REVIEW_RUNNING_DESIGN03_ADVISORY_2026-11-14",
+          "recorded_at": "2026-11-14T09:15:13.844850Z",
+          "role": "Dev_B",
+          "revision": "B03",
+          "path": "incoming/dev_b_source_bundle_b03.json",
+          "bytes": 336551,
+          "sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+          "file_count": 36,
+          "exact_json_captured": true,
+          "local_filesystem_receipt_verified": true,
+          "all_embedded_file_hashes_verified_locally": true,
+          "all_embedded_file_byte_counts_verified_locally": true,
+          "verification_basis": "Independent local read and recomputation from exact UTF-8 content in the captured JSON bundle.",
+          "code_executed_locally": false,
+          "scientific_tests_run_locally": false,
+          "human_pass": false
+        },
+        "generator_reported_verification": {
+          "revision": "B03",
+          "source": "Dev_B remote report observed by Astra parent",
+          "execution_location": "remote_AI_Studio",
+          "reported_checks": {
+            "typecheck": "reported_pass",
+            "unit_tests": {
+              "passed": 15
+            },
+            "build": "reported_pass",
+            "e2e": {
+              "passed": 7,
+              "skipped": 1,
+              "skip_reason": "real ground scientific data unavailable"
+            },
+            "verify_assets": {
+              "status": "reported_FAIL",
+              "reason": "required real scientific data/assets absent"
+            }
+          },
+          "reported_checks_independently_executed_locally": false,
+          "raw_command_logs_received_locally": false,
+          "source_artifact_sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+          "source_artifact_received_locally": true,
+          "desktop_evidence": {
+            "path": "evidence/dev_b_b03_analog_passport.png",
+            "bytes": 209500,
+            "sha256": "2112ef01c9e0900d68f6ac2a70bf84b6aa2806be4cc268854bba0167992252ab",
+            "locally_present_and_hashed": true,
+            "scope": "Actual B03 Analog Passport desktop image; not proof of underlying scientific data, command execution, contrast compliance or human acceptance."
+          },
+          "real_data_integration_verified": false,
+          "performance_verified": false,
+          "human_pass": false
+        }
+      },
+      "source_received_locally": true,
+      "source_capture": {
+        "event_id": "B03_LOCAL_RECEIPT_REVIEW_RUNNING_DESIGN03_ADVISORY_2026-11-14",
+        "recorded_at": "2026-11-14T09:15:13.844850Z",
+        "role": "Dev_B",
+        "revision": "B03",
+        "path": "incoming/dev_b_source_bundle_b03.json",
+        "bytes": 336551,
+        "sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+        "file_count": 36,
+        "exact_json_captured": true,
+        "local_filesystem_receipt_verified": true,
+        "all_embedded_file_hashes_verified_locally": true,
+        "all_embedded_file_byte_counts_verified_locally": true,
+        "verification_basis": "Independent local read and recomputation from exact UTF-8 content in the captured JSON bundle.",
+        "code_executed_locally": false,
+        "scientific_tests_run_locally": false,
+        "human_pass": false
+      },
+      "current_checks": "evidence/local_b04_checks/app/combined_final_checks.json"
+    },
+    "scientific_demo_dataset": {
+      "status": "IN_PROGRESS",
+      "reason": "Two real native unranked surface views are published. Scored comparison dataset and exact ENU assets remain unavailable."
+    },
+    "splat_reconstruction": {
+      "status": "BLOCKED",
+      "reason": "No real reconstruction and metric registration yet"
+    },
+    "raw_data_acquisition": {
+      "status": "IN_PROGRESS",
+      "raw_bytes_verified": true,
+      "scientific_interpretation_verified": false,
+      "evidence_path": "docs/research/NATIVE_DEM_AUDIT.json",
+      "human_pass": false
+    },
+    "native_surface_explorer": {
+      "status": "IN_PROGRESS",
+      "implementation_created": true,
+      "local_integration_complete": true,
+      "real_data_rendering_verified": true,
+      "checks": "evidence/real_surface_ui/REAL_SURFACE_CHECKPOINT.json",
+      "human_pass": false
+    },
+    "planet_explorer": {
+      "status": "IN_PROGRESS",
+      "engineering_implementation_complete": true,
+      "engineering_checks": "VERIFIED_WITH_RUNTIME_LIMITATIONS",
+      "human_pass": false,
+      "evidence": [
+        "evidence/display_relief/check-status.json",
+        "evidence/display_relief/browser-observation.json",
+        "evidence/display_relief/source-attribution.json",
+        "evidence/display_relief/SOURCE_MANIFEST.json",
+        "docs/research/MARS_DISPLAY_REVIEW.md"
+      ],
+      "latest_checkpoint": "MARS_SOURCE_RELIEF_VERIFIED_2026-11-14"
+    }
+  },
+  "browser_dispatch": {
+    "Dev_A": {
+      "sent": true,
+      "status": "A04_SENT_RUNNING_AFTER_SAME_HASH_FAIL",
+      "url": "https://aistudio.google.com/apps/b23221c8-34d2-41f3-b042-9acd4815ecfa",
+      "prompt": "prompts/LOOP_0_DEV_A.md",
+      "service": "Google AI Studio",
+      "tab_retention_confirmed": true,
+      "available_at_last_observation": true,
+      "historical_only": true
+    },
+    "Dev_B": {
+      "sent": true,
+      "status": "B03_COMPLETED_REMOTE_LOCAL_EXPORT_VERIFIED_REVIEWS_RUNNING",
+      "url": "https://aistudio.google.com/apps/e459d060-5a02-4acc-aeb6-cfcaa1f5368b",
+      "prompt": "prompts/LOOP_0_DEV_B.md",
+      "service": "Google AI Studio",
+      "tab_retention_confirmed": true,
+      "available_at_last_observation": true,
+      "historical_only": true
+    },
+    "Researcher": {
+      "sent": true,
+      "status": "RESOURCE01_REMOTE_REPORT_COMPLETED",
+      "url": "https://aistudio.google.com/apps/91f11ed0-ad51-49b0-a170-8db2fae2b8a8",
+      "prompt": "prompts/roles/RESEARCHER.md",
+      "service": "Google AI Studio",
+      "tab_retention_confirmed": true,
+      "available_at_last_observation": true,
+      "historical_only": true
+    },
+    "Code_Reviewer": {
+      "sent": true,
+      "status": "B03_FULL_SOURCE_SAME_HASH_REVIEW_RUNNING",
+      "url": "https://aistudio.google.com/apps/6dac933c-8ebd-468c-ba43-8a2319994414",
+      "prompt": "prompts/roles/CODE_REVIEWER.md",
+      "service": "Google AI Studio",
+      "tab_retention_confirmed": true,
+      "available_at_last_observation": true,
+      "historical_only": true
+    },
+    "Security_Evaluator": {
+      "sent": true,
+      "status": "B03_FULL_SOURCE_SAME_HASH_REVIEW_RUNNING",
+      "url": "https://aistudio.google.com/apps/d75bf7a0-c2cd-47a1-b9fc-2bea8b54907a",
+      "prompt": "prompts/roles/SECURITY_EVALUATOR.md",
+      "service": "Google AI Studio",
+      "tab_retention_confirmed": true,
+      "available_at_last_observation": true,
+      "historical_only": true
+    },
+    "Requirements_Manager": {
+      "sent": true,
+      "status": "RESOURCE_UNIQUENESS_FOLLOWUP_COMPLETED_REMOTE",
+      "url": "https://aistudio.google.com/apps/c2bba280-7869-40c8-a717-2bc541badbe2",
+      "prompt": "prompts/roles/REQUIREMENTS_MANAGER.md",
+      "service": "Google AI Studio",
+      "tab_retention_confirmed": true,
+      "available_at_last_observation": true,
+      "historical_only": true
+    },
+    "Stitch_Design_Reviewer": {
+      "sent": true,
+      "status": "DESIGN03_COMPLETED_ADVISORY_ONLY_NO_DESIGN_PASS",
+      "url": "https://stitch.google.com/projects/9839050915596126064?pli=1",
+      "prompt": null,
+      "service": "Google Stitch",
+      "tab_retention_confirmed": true,
+      "available_at_last_observation": true,
+      "historical_only": true
+    }
+  },
+  "next_gate": "Human acceptance pending; broader scientific coverage, calibration and reconstruction remain.",
+  "state_transition_rule": "Do not advance to PHASE 5 until both human PASS signals; FAIL/PERF_WARN enters diagnostic re-loop",
+  "contract_verification": {
+    "schema_checks": 11,
+    "schema_result": "CONTRACT_CHECK_OK",
+    "typescript_strict": "passed",
+    "human_module_pass": false
+  },
+  "updated_at": "2026-11-14T12:40:42.148509+00:00",
+  "state_update_kind": "ENGINEERING_CHECKPOINT_NOT_HUMAN_ACCEPTANCE",
+  "external_agent_board": "docs/orchestration/AGENT_BOARD.json",
+  "external_roles_launched": 7,
+  "review_snapshot": {
+    "artifact_role": "Dev_B",
+    "revision": "B03",
+    "artifact_path": "incoming/dev_b_source_bundle_b03.json",
+    "artifact_sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+    "artifact_hash_independently_verified_locally": true,
+    "scope": "Full exact B03 source JSON sent to both independent reviewers under the same SHA256.",
+    "code_review": {
+      "status": "RUNNING",
+      "actually_sent": true,
+      "verdict": null,
+      "finding_count": null,
+      "session_url": "https://aistudio.google.com/apps/6dac933c-8ebd-468c-ba43-8a2319994414"
+    },
+    "security_review": {
+      "status": "RUNNING",
+      "actually_sent": true,
+      "verdict": null,
+      "finding_count": null,
+      "session_url": "https://aistudio.google.com/apps/d75bf7a0-c2cd-47a1-b9fc-2bea8b54907a"
+    },
+    "local_source_code_executed": false,
+    "current_closure_status": "AWAITING_BOTH_INDEPENDENT_REVIEW_RESULTS",
+    "evidence_basis": "Actual reviewer dispatch and running state observed by Astra parent; local source identity independently checked."
+  },
+  "requirements_review_snapshot": {
+    "status": "RESOURCE_AND_UNIQUENESS_REPORT_COMPLETED_REMOTE",
+    "resource_followup_actually_sent": true,
+    "uniqueness_followup_actually_sent": true,
+    "resource_count": 11,
+    "local_report_path": null,
+    "new_verdict_totals": null,
+    "runtime_implementation_verified": false,
+    "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time."
+  },
+  "data_acquisition": {
+    "status": "acquired_headers_inspected_pending_scientific_review",
+    "evidence_path": "docs/research/acquisition_status.json",
+    "unique_source_artifact_count": 5,
+    "raw_scientific_raster_count": 3,
+    "documentation_file_count": 1,
+    "catalog_metadata_file_count": 1,
+    "total_actual_bytes": 122946855,
+    "raw_bytes_reverified_at": "2026-11-14T08:22:07.083332Z",
+    "all_raw_hashes_match": true,
+    "scientific_features_computed": false,
+    "scores_calculated": false,
+    "roi_created": false,
+    "normalization_profile_created": false,
+    "render_assets_created": false,
+    "srtm_elevation_payload_acquired": false,
+    "head_size_disagreements": [
+      {
+        "id": "srtm_n19w156_cmr_metadata",
+        "head_content_length": 0,
+        "actual_bytes": 2672,
+        "difference_bytes": 2672,
+        "handling": "Observed mismatch retained explicitly. GET byte count, expected JSON granule identifier and independent disk hash passed; this record is catalog metadata, not an SRTM elevation payload."
+      }
+    ],
+    "pending": [
+      "Header dimensions, GeoTIFF tags and nodata strings inspected with installed Pillow. Full geospatial CRS transformation, vertical reference interpretation, support masking and ROI review remain pending; rasterio is not installed.",
+      "SRTM protected scientific payload has not been requested.",
+      "No location coordinates, ROI, normalization profile, scientific features or scores have been created."
+    ]
+  },
+  "native_delegation": {
+    "hydrogen_role_responses": "unavailable",
+    "workaround": "Separate browser sessions launched for six AI Studio roles and one Stitch design role.",
+    "astra_local_delegation": "Separate from Hydrogen browser capabilities; not limited by the external role reports."
+  },
+  "browser_transport": {
+    "status": "RECONNECTED",
+    "reconnections_this_turn": 2,
+    "original_sessions_available_at_last_observation": 7,
+    "all_original_session_urls_preserved": true,
+    "tab_retention_confirmed": true,
+    "retention_scope": "Availability at the observed current-turn snapshot only; no promise of persistent availability.",
+    "full_source_captured_in_browser": true,
+    "full_source_received_locally": true,
+    "local_filesystem_receipt": "Dev_A_R1_and_Dev_B_B03_exact_JSON_verified",
+    "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time.",
+    "recorded_at": "2026-11-14T09:08:12.186124Z",
+    "pending_action": "Observe A04 and B03 review results; corrected A04 source is a future revision. Integrate only after review prerequisites, then run local tests.",
+    "local_fallback_code_written": false,
+    "received_roles": [
+      "Dev_A",
+      "Dev_B"
+    ],
+    "pending_source_receipt_roles": [],
+    "receipt_transport": "validated_loopback_form",
+    "download_blocker_for_received_sources_resolved": true,
+    "receiver_script": "scripts/receive_source.py",
+    "current_cua_segment_closed": true,
+    "availability_scope": "All seven sessions were available at the last observation before the current CUA segment closed; no unattended monitoring is running."
+  },
+  "prepared_followups": [
+    {
+      "role": "Dev_A",
+      "task_id": "A-EXPORT",
+      "prompt": "prompts/roles/DEV_A_SOURCE_EXPORT.md",
+      "status": "SENT_EXPORT_RECEIVED_LOCALLY_ALL_HASHES_VERIFIED",
+      "local_prompt_sha256": "373c9402fd38016d547b44b9b53cc2a0eb4acc6eabed81f04c4b10b1e25c1004",
+      "local_artifact_path": "incoming/dev_a_source_bundle_r1.json"
+    },
+    {
+      "role": "Dev_A",
+      "task_id": "RESOURCE-01",
+      "prompt": "prompts/roles/CHALLENGE_RESOURCES_ADDENDUM.md",
+      "status": "ACTUALLY_SENT",
+      "local_prompt_sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6"
+    },
+    {
+      "role": "Dev_B",
+      "task_id": "B02",
+      "prompt": "prompts/roles/DEV_B_UX_REVIEW_ACTIONS.md",
+      "status": "REMOTE_REPORTED_COMPLETE_LOCAL_CHECKS_PENDING",
+      "local_prompt_sha256": "57476984e6a087efc5e960593f6df4c164915a80cdd680ec1cfec93eed99b918"
+    },
+    {
+      "role": "Dev_B",
+      "task_id": "RESOURCE-01",
+      "prompt": "prompts/roles/CHALLENGE_RESOURCES_ADDENDUM.md",
+      "status": "ACTUALLY_SENT",
+      "local_prompt_sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6"
+    },
+    {
+      "role": "Researcher",
+      "task_id": "RESOURCE-01",
+      "prompt": "prompts/roles/CHALLENGE_RESOURCES_ADDENDUM.md",
+      "status": "REMOTE_REPORT_COMPLETED",
+      "remote_report_sha256": "68a06b9ba407953cc2684a2bda6160d92ab354e6fffc25a0d1c661a9ba83b235",
+      "local_prompt_sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6"
+    },
+    {
+      "role": "Requirements_Manager",
+      "task_id": "RESOURCE_AND_UNIQUENESS",
+      "status": "SENT_REMOTE_REPORT_COMPLETED"
+    },
+    {
+      "task_id": "A04",
+      "status": "SENT_RUNNING",
+      "actually_dispatched": true,
+      "session_url": "https://aistudio.google.com/apps/b23221c8-34d2-41f3-b042-9acd4815ecfa",
+      "prompt_path": null,
+      "prompt_delivery": "actual_browser_message",
+      "trigger": "Both independent reviews returned FAIL for exact source hash e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+      "scope": [
+        "method identifiers",
+        "coordinate frames",
+        "temperature quantities",
+        "antimeridian handling",
+        "scale comparability",
+        "POWER parsing",
+        "provenance",
+        "transactional asset publication",
+        "path bounds",
+        "resource caps",
+        "splat validation"
+      ],
+      "completion_observed": false,
+      "findings_closed": false
+    },
+    {
+      "task_id": "B03",
+      "status": "COMPLETED_REMOTE_RECEIVED_LOCALLY_REVIEW_RUNNING",
+      "actually_dispatched": true,
+      "completion_observed": true,
+      "session_url": "https://aistudio.google.com/apps/e459d060-5a02-4acc-aeb6-cfcaa1f5368b",
+      "prompt": "prompts/roles/DEV_B_UI_SDK.md",
+      "research_evidence": "docs/research/UI_SDK_INTEGRATION.md",
+      "scope": [
+        "Vercel UI SDK adoption",
+        "React migration",
+        "Analog Passport explanation and limitations UI"
+      ],
+      "dependency_pins": {
+        "@ui-sdk/core": "0.1.0-beta.1",
+        "@ui-sdk/react": "0.1.0-beta.1",
+        "react": "19.3.1",
+        "react-dom": "19.3.1",
+        "@types/react": "19.3.0",
+        "@types/react-dom": "19.3.0",
+        "@types/node": "22.14.0"
+      },
+      "dependency_declared_pins_verified_in_local_bundle": true,
+      "peer_resolution_correction": {
+        "package": "@types/node",
+        "version": "22.14.0",
+        "basis": "Actual author peer-resolution correction reported by Astra parent; declaration independently read from received package.json.",
+        "independent_local_install_or_peer_resolution_verified": false
+      },
+      "baseline_supersession": "Explicit React 18 baseline superseded by React 19.3.1 and matching types; author also corrected @types/node to 22.14.0 for reported peer resolution. Scientific/shared/offline/licensing requirements remain unchanged.",
+      "shared_contract_changed": false,
+      "independent_local_build_verified": false,
+      "source_receipt": {
+        "event_id": "B03_LOCAL_RECEIPT_REVIEW_RUNNING_DESIGN03_ADVISORY_2026-11-14",
+        "recorded_at": "2026-11-14T09:15:13.844850Z",
+        "role": "Dev_B",
+        "revision": "B03",
+        "path": "incoming/dev_b_source_bundle_b03.json",
+        "bytes": 336551,
+        "sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+        "file_count": 36,
+        "exact_json_captured": true,
+        "local_filesystem_receipt_verified": true,
+        "all_embedded_file_hashes_verified_locally": true,
+        "all_embedded_file_byte_counts_verified_locally": true,
+        "verification_basis": "Independent local read and recomputation from exact UTF-8 content in the captured JSON bundle.",
+        "code_executed_locally": false,
+        "scientific_tests_run_locally": false,
+        "human_pass": false
+      },
+      "generator_reported_verification": {
+        "revision": "B03",
+        "source": "Dev_B remote report observed by Astra parent",
+        "execution_location": "remote_AI_Studio",
+        "reported_checks": {
+          "typecheck": "reported_pass",
+          "unit_tests": {
+            "passed": 15
+          },
+          "build": "reported_pass",
+          "e2e": {
+            "passed": 7,
+            "skipped": 1,
+            "skip_reason": "real ground scientific data unavailable"
+          },
+          "verify_assets": {
+            "status": "reported_FAIL",
+            "reason": "required real scientific data/assets absent"
+          }
+        },
+        "reported_checks_independently_executed_locally": false,
+        "raw_command_logs_received_locally": false,
+        "source_artifact_sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+        "source_artifact_received_locally": true,
+        "desktop_evidence": {
+          "path": "evidence/dev_b_b03_analog_passport.png",
+          "bytes": 209500,
+          "sha256": "2112ef01c9e0900d68f6ac2a70bf84b6aa2806be4cc268854bba0167992252ab",
+          "locally_present_and_hashed": true,
+          "scope": "Actual B03 Analog Passport desktop image; not proof of underlying scientific data, command execution, contrast compliance or human acceptance."
+        },
+        "real_data_integration_verified": false,
+        "performance_verified": false,
+        "human_pass": false
+      }
+    },
+    {
+      "task_id": "DESIGN03",
+      "status": "COMPLETED_DESCRIPTION_BASED_ADVISORY_ONLY",
+      "actually_dispatched": true,
+      "completion_observed": true,
+      "session_url": "https://stitch.google.com/projects/9839050915596126064?pli=1",
+      "scope": "Text review based on supplied description; no screenshot attached.",
+      "screenshot_upload_succeeded": false,
+      "direct_visual_review_verified": false,
+      "previous_concept_approved": false,
+      "design_pass": false,
+      "useful_advisories": [
+        "Clearly disclose unavailable data",
+        "Preserve source fidelity",
+        "Separate client UI behavior from scientific claims",
+        "Check Tab, Enter, Space keyboard behavior, ARIA and visible focus"
+      ],
+      "not_adopted_claims": [
+        "Incorrect Radix labeling",
+        "Non-contract field names",
+        "Unsupported 3:1 contrast claim for monospaced headers"
+      ],
+      "contrast_measured": false,
+      "whole_proposal_adopted": false,
+      "next_action": "Apply only contract-compatible advisories after implementation review; measure actual visual contrast and keyboard behavior separately."
+    }
+  ],
+  "challenge_resource_integration": {
+    "updated_at": "2026-11-14T09:08:12.186124Z",
+    "manifest": "docs/research/CHALLENGE_RESOURCES.json",
+    "integration_plan": "docs/research/RESOURCE_INTEGRATION.md",
+    "alignment_review": "docs/orchestration/CHALLENGE_ALIGNMENT_REVIEW.md",
+    "requirements_addendum": "docs/orchestration/REQUIREMENTS_CHALLENGE_ADDENDUM.json",
+    "resource_count": 11,
+    "membership_evidence": "user_provided_page_content",
+    "direct_page_retrieval_verified": false,
+    "provider_verification": "recorded_separately_per_resource",
+    "external_dispatch": "RESOURCE01_SENT_TO_DEV_A_DEV_B_RESEARCHER_REQUIREMENTS_UPDATED",
+    "scientific_runtime_changes": false,
+    "listed_nasa_source_use_end_to_end": "NOT_VERIFIED",
+    "new_candidate_discovery": "REQUIRED_NOT_IMPLEMENTED",
+    "shared_contract_changed": false,
+    "resource_manifest_sha256": "2af7a6439773d8efac7ab819bb73b3900fff8f4b15af48e0fe54109212f88805",
+    "dispatch_sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6",
+    "alignment_criteria_count": 9,
+    "runtime_use_verified": false,
+    "research_report": {
+      "task_id": "RESOURCE-01",
+      "status": "REMOTE_REPORT_COMPLETED",
+      "actually_dispatched": true,
+      "remote_report_sha256": "68a06b9ba407953cc2684a2bda6160d92ab354e6fffc25a0d1c661a9ba83b235",
+      "hash_scope": "Remote report hash supplied in observed browser handoff; independent local report-byte verification pending.",
+      "local_report_path": null,
+      "resource_count": 11,
+      "scientific_runtime_use_verified": false,
+      "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time."
+    },
+    "requirements_followup": {
+      "status": "RESOURCE_AND_UNIQUENESS_REPORT_COMPLETED_REMOTE",
+      "resource_followup_actually_sent": true,
+      "uniqueness_followup_actually_sent": true,
+      "resource_count": 11,
+      "local_report_path": null,
+      "new_verdict_totals": null,
+      "runtime_implementation_verified": false,
+      "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time."
+    }
+  },
+  "status_history": [
+    {
+      "event_id": "ASTRA_C01_C02_BROWSER_RECONNECTED_2026-11-14",
+      "recorded_at": "2026-11-14T09:08:12.186124Z",
+      "reason": "Preserve prior snapshot before applying newer observed browser/review/dispatch facts.",
+      "prior_file_sha256": "5f1a5e91fc536eaebf902cfcdda22897eb587a51601a0a22457ba5a26d89b99f",
+      "prior_snapshot": {
+        "loop": "LOOP_0",
+        "phase": "PHASE_4_DIAGNOSTIC_AND_RELOOP",
+        "hackathon_elapsed_hours": null,
+        "planning_window_hours": [
+          0,
+          2
+        ],
+        "phase5_committed": false,
+        "modules": {
+          "shared_contract": {
+            "status": "IN_PROGRESS",
+            "artifact_created": true,
+            "human_pass": false
+          },
+          "Dev_A_fetch_and_score": {
+            "status": "IN_PROGRESS",
+            "implementation_created": true,
+            "human_pass": false,
+            "implementation_location": "remote_AI_Studio",
+            "local_integration_complete": false,
+            "independent_local_execution_verified": false,
+            "external_role": "Dev_A"
+          },
+          "Dev_B_Viewport3D": {
+            "status": "IN_PROGRESS",
+            "implementation_created": true,
+            "human_pass": false,
+            "implementation_location": "remote_AI_Studio",
+            "local_integration_complete": false,
+            "independent_local_execution_verified": false,
+            "external_role": "Dev_B",
+            "hotfix_status": "B01_reported_complete_source_not_received_local_verification_pending",
+            "generator_reported_verification": {
+              "source": "Actual Dev_B assistant response observed by Astra",
+              "artifact_path": "reports/source-bundle.json",
+              "reported_file_count": 29,
+              "artifact_received_locally": false,
+              "artifact_hash": null,
+              "reported_checks": {
+                "unit_tests": {
+                  "passed": 15
+                },
+                "typecheck": "reported_pass",
+                "build": "reported_pass",
+                "e2e": {
+                  "passed": 2,
+                  "skipped": 1,
+                  "skip_reason": "missing real data"
+                }
+              },
+              "raw_command_logs_received_locally": false,
+              "independently_locally_tested": false,
+              "real_data_integration_verified": false,
+              "performance_verified": false,
+              "human_pass": false
+            }
+          },
+          "scientific_demo_dataset": {
+            "status": "BLOCKED",
+            "reason": "LOLA raw products have been acquired and byte-verified, but scientific CRS/ROI/calibration review, Earth elevation payload, extracted features, scores and render assets are not ready."
+          },
+          "splat_reconstruction": {
+            "status": "BLOCKED",
+            "reason": "No real reconstruction and metric registration yet"
+          },
+          "raw_data_acquisition": {
+            "status": "IN_PROGRESS",
+            "raw_bytes_verified": true,
+            "scientific_interpretation_verified": false,
+            "evidence_path": "docs/research/acquisition_status.json",
+            "human_pass": false
+          }
+        },
+        "browser_dispatch": {
+          "Dev_A": {
+            "sent": true,
+            "status": "REMOTE_IMPLEMENTATION_GENERATED_PENDING_LOCAL_INTEGRATION",
+            "url": "https://aistudio.google.com/apps/b23221c8-34d2-41f3-b042-9acd4815ecfa",
+            "prompt": "prompts/LOOP_0_DEV_A.md",
+            "service": "Google AI Studio",
+            "tab_retention_confirmed": false
+          },
+          "Dev_B": {
+            "sent": true,
+            "status": "B01_REPORTED_COMPLETE_PENDING_FULL_SOURCE_RETRIEVAL_AND_REVIEW",
+            "url": "https://aistudio.google.com/apps/e459d060-5a02-4acc-aeb6-cfcaa1f5368b",
+            "prompt": "prompts/LOOP_0_DEV_B.md",
+            "service": "Google AI Studio",
+            "tab_retention_confirmed": false
+          },
+          "Researcher": {
+            "sent": true,
+            "status": "DISPATCHED_RESEARCH_PENDING_INTEGRATION",
+            "url": "https://aistudio.google.com/apps/91f11ed0-ad51-49b0-a170-8db2fae2b8a8",
+            "prompt": "prompts/roles/RESEARCHER.md",
+            "service": "Google AI Studio",
+            "tab_retention_confirmed": false
+          },
+          "Code_Reviewer": {
+            "sent": true,
+            "status": "FAIL_CAPTURED_CONFIG_SCOPE_AWAITING_B01_REVIEW",
+            "url": "https://aistudio.google.com/apps/6dac933c-8ebd-468c-ba43-8a2319994414",
+            "prompt": "prompts/roles/CODE_REVIEWER.md",
+            "service": "Google AI Studio",
+            "tab_retention_confirmed": false
+          },
+          "Security_Evaluator": {
+            "sent": true,
+            "status": "FAIL_CAPTURED_CONFIG_SCOPE_AWAITING_B01_REVIEW",
+            "url": "https://aistudio.google.com/apps/d75bf7a0-c2cd-47a1-b9fc-2bea8b54907a",
+            "prompt": "prompts/roles/SECURITY_EVALUATOR.md",
+            "service": "Google AI Studio",
+            "tab_retention_confirmed": false
+          },
+          "Requirements_Manager": {
+            "sent": true,
+            "status": "BASELINE_REPORTED_PROMPT_SNAPSHOT_ONLY",
+            "url": "https://aistudio.google.com/apps/c2bba280-7869-40c8-a717-2bc541badbe2",
+            "prompt": "prompts/roles/REQUIREMENTS_MANAGER.md",
+            "service": "Google AI Studio",
+            "tab_retention_confirmed": false
+          },
+          "Stitch_Design_Reviewer": {
+            "sent": true,
+            "status": "DESIGN02_REPORTED_COMPLETE_INDIRECT_REVIEW_ONLY_MOCKUP_NOT_APPROVED",
+            "url": "https://stitch.google.com/projects/9839050915596126064?pli=1",
+            "prompt": null,
+            "service": "Google Stitch",
+            "tab_retention_confirmed": false
+          }
+        },
+        "next_gate": [
+          "Recover browser transport and retrieve complete source artifacts",
+          "Hash B01 full bundle and independently re-review changed scope",
+          "Perform local implementation checks; preserve missing-real-data E2E gap",
+          "Directly inspect DESIGN02; mockup remains unapproved",
+          "Explicit human PASS from Dev_A for the accepted revision",
+          "Explicit human PASS from Dev_B for the same integrated revision"
+        ],
+        "state_transition_rule": "Do not advance to PHASE 5 until both human PASS signals; FAIL/PERF_WARN enters diagnostic re-loop",
+        "contract_verification": {
+          "schema_checks": 11,
+          "schema_result": "CONTRACT_CHECK_OK",
+          "typescript_strict": "passed",
+          "human_module_pass": false
+        },
+        "updated_at": "2026-11-14T08:31:14.886209Z",
+        "state_update_kind": "Status persistence only; not a PHASE_5 acceptance commit.",
+        "external_agent_board": "docs/orchestration/AGENT_BOARD.json",
+        "external_roles_launched": 7,
+        "review_snapshot": {
+          "artifact_path": "incoming/dev_b_config_r1/REVIEW_BUNDLE.json",
+          "artifact_sha256": "cc1d785ffbf180904a08119a63a550d224ca1ce0d24fcdf85fa24faaf8cde482",
+          "artifact_hash_independently_verified_locally": true,
+          "scope": "Two pre-hotfix Dev_B configuration source files plus CAPTURE.md; not the complete application.",
+          "source_paths": [
+            "package.json",
+            "vite.config.ts"
+          ],
+          "capture_note": "CAPTURE.md",
+          "code_review_verdict": "FAIL",
+          "security_review_verdict": "FAIL",
+          "verdict_evidence": "Observed external-session responses relayed by Astra; full report JSON files not persisted locally in this snapshot.",
+          "local_source_code_executed": false,
+          "findings": [
+            "Dependency policy/version drift including @google/genai presence",
+            "Default dev command binds 0.0.0.0 instead of loopback"
+          ],
+          "current_closure_status": "OPEN_PENDING_B01_CAPTURE_REVIEW_AND_LOCAL_VERIFICATION",
+          "hotfix": {
+            "id": "B01",
+            "generator_reported_complete": true,
+            "claimed_changes": [
+              "Pin dependencies",
+              "Remove @google/genai",
+              "Use loopback binding",
+              "Generate reports/source-bundle.json"
+            ],
+            "replacement_artifact_sha256": null,
+            "independently_locally_tested": false,
+            "reviewer_findings_closed": false,
+            "generator_reported_verification": {
+              "source": "Actual Dev_B assistant response observed by Astra",
+              "artifact_path": "reports/source-bundle.json",
+              "reported_file_count": 29,
+              "artifact_received_locally": false,
+              "artifact_hash": null,
+              "reported_checks": {
+                "unit_tests": {
+                  "passed": 15
+                },
+                "typecheck": "reported_pass",
+                "build": "reported_pass",
+                "e2e": {
+                  "passed": 2,
+                  "skipped": 1,
+                  "skip_reason": "missing real data"
+                }
+              },
+              "raw_command_logs_received_locally": false,
+              "independently_locally_tested": false,
+              "real_data_integration_verified": false,
+              "performance_verified": false,
+              "human_pass": false
+            }
+          }
+        },
+        "requirements_review_snapshot": {
+          "scope": "Supplied prompt snapshot only",
+          "total_requirements": 32,
+          "partial": 3,
+          "not_verified": 29,
+          "pass": 0,
+          "implementation_verified": false,
+          "local_report_path": null,
+          "evidence": "Astra-observed external Requirements_Manager response; original matrix statuses remain a separate planning snapshot."
+        },
+        "data_acquisition": {
+          "status": "acquired_headers_inspected_pending_scientific_review",
+          "evidence_path": "docs/research/acquisition_status.json",
+          "unique_source_artifact_count": 5,
+          "raw_scientific_raster_count": 3,
+          "documentation_file_count": 1,
+          "catalog_metadata_file_count": 1,
+          "total_actual_bytes": 122946855,
+          "raw_bytes_reverified_at": "2026-11-14T08:22:07.083332Z",
+          "all_raw_hashes_match": true,
+          "scientific_features_computed": false,
+          "scores_calculated": false,
+          "roi_created": false,
+          "normalization_profile_created": false,
+          "render_assets_created": false,
+          "srtm_elevation_payload_acquired": false,
+          "head_size_disagreements": [
+            {
+              "id": "srtm_n19w156_cmr_metadata",
+              "head_content_length": 0,
+              "actual_bytes": 2672,
+              "difference_bytes": 2672,
+              "handling": "Observed mismatch retained explicitly. GET byte count, expected JSON granule identifier and independent disk hash passed; this record is catalog metadata, not an SRTM elevation payload."
+            }
+          ],
+          "pending": [
+            "Header dimensions, GeoTIFF tags and nodata strings inspected with installed Pillow. Full geospatial CRS transformation, vertical reference interpretation, support masking and ROI review remain pending; rasterio is not installed.",
+            "SRTM protected scientific payload has not been requested.",
+            "No location coordinates, ROI, normalization profile, scientific features or scores have been created."
+          ]
+        },
+        "native_delegation": {
+          "hydrogen_role_responses": "unavailable",
+          "workaround": "Separate browser sessions launched for six AI Studio roles and one Stitch design role.",
+          "astra_local_delegation": "Separate from Hydrogen browser capabilities; not limited by the external role reports."
+        },
+        "browser_transport": {
+          "status": "unavailable_after_reports_received",
+          "failure": "Browser-control connection failed during source-tree inspection; getTab/getState subsequently timed out in service_info.",
+          "full_source_received_locally": false,
+          "tab_retention_confirmed": false,
+          "recovery": "Use recorded external session URLs when browser transport is available; do not claim sessions/tabs remain open.",
+          "pending_action": "Retrieve and hash complete Dev_A and Dev_B source artifacts before local integration."
+        },
+        "prepared_followups": [
+          {
+            "role": "Dev_A",
+            "prompt": "prompts/roles/DEV_A_SOURCE_EXPORT.md",
+            "status": "PREPARED_NOT_DISPATCHED",
+            "sha256": "373c9402fd38016d547b44b9b53cc2a0eb4acc6eabed81f04c4b10b1e25c1004",
+            "reason": "Browser transport unavailable; follow-up has not been sent."
+          },
+          {
+            "role": "Dev_B",
+            "prompt": "prompts/roles/DEV_B_UX_REVIEW_ACTIONS.md",
+            "status": "PREPARED_NOT_DISPATCHED",
+            "sha256": "57476984e6a087efc5e960593f6df4c164915a80cdd680ec1cfec93eed99b918",
+            "reason": "Browser transport unavailable; follow-up has not been sent."
+          },
+          {
+            "role": "ALL_RESOURCE_ROLES",
+            "task_id": "RESOURCE-01",
+            "prompt": "prompts/roles/CHALLENGE_RESOURCES_ADDENDUM.md",
+            "status": "PREPARED_NOT_DISPATCHED",
+            "sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6",
+            "reason": "Updated from the user-supplied complete resource list; external browser transport remains unavailable."
+          }
+        ],
+        "challenge_resource_integration": {
+          "updated_at": "2026-11-14T08:29:45.711372Z",
+          "manifest": "docs/research/CHALLENGE_RESOURCES.json",
+          "integration_plan": "docs/research/RESOURCE_INTEGRATION.md",
+          "alignment_review": "docs/orchestration/CHALLENGE_ALIGNMENT_REVIEW.md",
+          "requirements_addendum": "docs/orchestration/REQUIREMENTS_CHALLENGE_ADDENDUM.json",
+          "resource_count": 11,
+          "membership_evidence": "user_provided_page_content",
+          "direct_page_retrieval_verified": false,
+          "provider_verification": "recorded_separately_per_resource",
+          "external_dispatch": "PREPARED_NOT_DISPATCHED_BROWSER_UNAVAILABLE",
+          "scientific_runtime_changes": false,
+          "listed_nasa_source_use_end_to_end": "NOT_VERIFIED",
+          "new_candidate_discovery": "REQUIRED_NOT_IMPLEMENTED",
+          "shared_contract_changed": false,
+          "resource_manifest_sha256": "2af7a6439773d8efac7ab819bb73b3900fff8f4b15af48e0fe54109212f88805",
+          "dispatch_sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6",
+          "alignment_criteria_count": 9
+        }
+      }
+    },
+    {
+      "event_id": "DEV_A_R1_EXACT_LOCAL_RECEIPT_VERIFIED_2026-11-14",
+      "recorded_at": "2026-11-14T09:09:07.044681Z",
+      "snapshot_kind": "evidence_delta",
+      "prior_dev_a_capture": {
+        "role": "Dev_A",
+        "artifact_path_in_remote_workspace": "reports/dev_a_source_bundle.json",
+        "artifact_sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+        "file_count": 17,
+        "exact_json_bytes": 224050,
+        "capture_location": "controlled_browser_session",
+        "exact_json_captured": true,
+        "all_embedded_file_hashes_verified": true,
+        "hash_verification_scope": "Astra-verified browser capture; not receipt as a local repository artifact.",
+        "local_filesystem_artifact_path": null,
+        "local_filesystem_receipt_pending": true,
+        "independently_locally_executed": false,
+        "human_pass": false,
+        "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time."
+      },
+      "prior_browser_transport": {
+        "status": "RECONNECTED",
+        "reconnections_this_turn": 2,
+        "original_sessions_available_at_last_observation": 7,
+        "all_original_session_urls_preserved": true,
+        "tab_retention_confirmed": true,
+        "retention_scope": "Availability at the observed current-turn snapshot only; no promise of persistent availability.",
+        "full_source_captured_in_browser": true,
+        "full_source_received_locally": false,
+        "local_filesystem_receipt": "pending",
+        "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time.",
+        "recorded_at": "2026-11-14T09:08:12.186124Z",
+        "pending_action": "Observe A04/B03 completion, capture new exact source bundles, complete local receipt and checks.",
+        "local_fallback_code_written": false
+      },
+      "new_receipt": {
+        "event_id": "DEV_A_R1_EXACT_LOCAL_RECEIPT_VERIFIED_2026-11-14",
+        "recorded_at": "2026-11-14T09:09:07.044681Z",
+        "path": "incoming/dev_a_source_bundle_r1.json",
+        "bytes": 224050,
+        "sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+        "file_count": 17,
+        "all_embedded_file_hashes_verified_locally": true,
+        "all_embedded_file_byte_counts_verified_locally": true,
+        "transport": "Loopback receipt form used by Astra after browser download failed.",
+        "verification_basis": "Local file read and independent UTF-8 content byte-count/SHA256 recomputation by Astra delegated agent.",
+        "code_executed": false,
+        "scientific_tests_run": false,
+        "next_owner": "viewer_api",
+        "next_step": "Safe extraction and static checks; no source execution."
+      }
+    },
+    {
+      "event_id": "B03_LOCAL_RECEIPT_REVIEW_RUNNING_DESIGN03_ADVISORY_2026-11-14",
+      "recorded_at": "2026-11-14T09:15:13.844850Z",
+      "snapshot_kind": "current_evidence_delta",
+      "prior_browser_transport": {
+        "status": "RECONNECTED",
+        "reconnections_this_turn": 2,
+        "original_sessions_available_at_last_observation": 7,
+        "all_original_session_urls_preserved": true,
+        "tab_retention_confirmed": true,
+        "retention_scope": "Availability at the observed current-turn snapshot only; no promise of persistent availability.",
+        "full_source_captured_in_browser": true,
+        "full_source_received_locally": true,
+        "local_filesystem_receipt": "Dev_A_R1_verified_Dev_B_pending",
+        "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time.",
+        "recorded_at": "2026-11-14T09:08:12.186124Z",
+        "pending_action": "Static review of received Dev_A R1; observe A04/B03 completion and receive their new exact revisions before local implementation tests.",
+        "local_fallback_code_written": false,
+        "received_roles": [
+          "Dev_A"
+        ],
+        "pending_source_receipt_roles": [
+          "Dev_B"
+        ],
+        "receipt_transport": "loopback_form"
+      },
+      "prior_review_snapshot": {
+        "artifact_role": "Dev_A",
+        "artifact_sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+        "artifact_location": "incoming/dev_a_source_bundle_r1.json; exact same hash as both completed FAIL reviews",
+        "scope": "The same exact Dev_A source bundle supplied to independent code and security reviewers.",
+        "code_review": {
+          "status": "FINISHED",
+          "verdict": "FAIL",
+          "finding_count": 10,
+          "session_url": "https://aistudio.google.com/apps/6dac933c-8ebd-468c-ba43-8a2319994414"
+        },
+        "security_review": {
+          "status": "FINISHED",
+          "verdict": "FAIL",
+          "finding_count": 5,
+          "session_url": "https://aistudio.google.com/apps/d75bf7a0-c2cd-47a1-b9fc-2bea8b54907a"
+        },
+        "raw_report_local_paths": null,
+        "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time.",
+        "local_source_code_executed": false,
+        "current_closure_status": "OPEN_A04_SENT_RUNNING",
+        "hotfix": {
+          "task_id": "A04",
+          "status": "SENT_RUNNING",
+          "actually_dispatched": true,
+          "session_url": "https://aistudio.google.com/apps/b23221c8-34d2-41f3-b042-9acd4815ecfa",
+          "prompt_path": null,
+          "prompt_delivery": "actual_browser_message",
+          "trigger": "Both independent reviews returned FAIL for exact source hash e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+          "scope": [
+            "method identifiers",
+            "coordinate frames",
+            "temperature quantities",
+            "antimeridian handling",
+            "scale comparability",
+            "POWER parsing",
+            "provenance",
+            "transactional asset publication",
+            "path bounds",
+            "resource caps",
+            "splat validation"
+          ],
+          "completion_observed": false,
+          "findings_closed": false
+        },
+        "artifact_path": "incoming/dev_a_source_bundle_r1.json",
+        "artifact_hash_independently_verified_locally": true
+      },
+      "prior_prepared_followups": [
+        {
+          "role": "Dev_A",
+          "task_id": "A-EXPORT",
+          "prompt": "prompts/roles/DEV_A_SOURCE_EXPORT.md",
+          "status": "SENT_EXPORT_RECEIVED_LOCALLY_ALL_HASHES_VERIFIED",
+          "local_prompt_sha256": "373c9402fd38016d547b44b9b53cc2a0eb4acc6eabed81f04c4b10b1e25c1004",
+          "local_artifact_path": "incoming/dev_a_source_bundle_r1.json"
+        },
+        {
+          "role": "Dev_A",
+          "task_id": "RESOURCE-01",
+          "prompt": "prompts/roles/CHALLENGE_RESOURCES_ADDENDUM.md",
+          "status": "ACTUALLY_SENT",
+          "local_prompt_sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6"
+        },
+        {
+          "role": "Dev_B",
+          "task_id": "B02",
+          "prompt": "prompts/roles/DEV_B_UX_REVIEW_ACTIONS.md",
+          "status": "REMOTE_REPORTED_COMPLETE_LOCAL_CHECKS_PENDING",
+          "local_prompt_sha256": "57476984e6a087efc5e960593f6df4c164915a80cdd680ec1cfec93eed99b918"
+        },
+        {
+          "role": "Dev_B",
+          "task_id": "RESOURCE-01",
+          "prompt": "prompts/roles/CHALLENGE_RESOURCES_ADDENDUM.md",
+          "status": "ACTUALLY_SENT",
+          "local_prompt_sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6"
+        },
+        {
+          "role": "Researcher",
+          "task_id": "RESOURCE-01",
+          "prompt": "prompts/roles/CHALLENGE_RESOURCES_ADDENDUM.md",
+          "status": "REMOTE_REPORT_COMPLETED",
+          "remote_report_sha256": "68a06b9ba407953cc2684a2bda6160d92ab354e6fffc25a0d1c661a9ba83b235",
+          "local_prompt_sha256": "cbe8314354f9ee7f9153c6d62ad6e218bfb0dd54d25d39e37d3cb72a7b6f78c6"
+        },
+        {
+          "role": "Requirements_Manager",
+          "task_id": "RESOURCE_AND_UNIQUENESS",
+          "status": "SENT_REMOTE_REPORT_COMPLETED"
+        },
+        {
+          "task_id": "A04",
+          "status": "SENT_RUNNING",
+          "actually_dispatched": true,
+          "session_url": "https://aistudio.google.com/apps/b23221c8-34d2-41f3-b042-9acd4815ecfa",
+          "prompt_path": null,
+          "prompt_delivery": "actual_browser_message",
+          "trigger": "Both independent reviews returned FAIL for exact source hash e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+          "scope": [
+            "method identifiers",
+            "coordinate frames",
+            "temperature quantities",
+            "antimeridian handling",
+            "scale comparability",
+            "POWER parsing",
+            "provenance",
+            "transactional asset publication",
+            "path bounds",
+            "resource caps",
+            "splat validation"
+          ],
+          "completion_observed": false,
+          "findings_closed": false
+        },
+        {
+          "task_id": "B03",
+          "status": "SENT_RUNNING",
+          "actually_dispatched": true,
+          "session_url": "https://aistudio.google.com/apps/e459d060-5a02-4acc-aeb6-cfcaa1f5368b",
+          "prompt": "prompts/roles/DEV_B_UI_SDK.md",
+          "research_evidence": "docs/research/UI_SDK_INTEGRATION.md",
+          "scope": [
+            "Vercel UI SDK adoption",
+            "React migration",
+            "Analog Passport explanation and limitations UI"
+          ],
+          "dependency_pins": {
+            "@ui-sdk/core": "0.1.0-beta.1",
+            "@ui-sdk/react": "0.1.0-beta.1",
+            "react": "19.3.1",
+            "react-dom": "19.3.1",
+            "@types/react": "19.3.0",
+            "@types/react-dom": "19.3.0"
+          },
+          "baseline_supersession": "Deliberately supersedes only the earlier React 18 baseline and its matching React types. All other contract, scientific, offline, licensing and review requirements remain in force.",
+          "shared_contract_changed": false,
+          "completion_observed": false,
+          "independent_local_build_verified": false,
+          "local_prompt_sha256": "911c4df41bdfabaa04c696555910298bd086455ddd8c1ce5e7964961e09c3a49"
+        },
+        {
+          "task_id": "DESIGN03",
+          "status": "ACTUALLY_SENT_DESCRIPTION_BASED",
+          "actually_dispatched": true,
+          "scope": "Description-based review; screenshot upload failed.",
+          "screenshot_upload_succeeded": false,
+          "direct_visual_review_verified": false,
+          "previous_concept_approved": false,
+          "completion_observed": false,
+          "session_url": "https://stitch.google.com/projects/9839050915596126064?pli=1"
+        }
+      ],
+      "prior_continuous_orchestration": {
+        "prompt": "prompts/ASTRA_CONTINUOUS_LOOP.md",
+        "strategy": "docs/orchestration/UNIQUENESS_STRATEGY.md",
+        "status": "CREATED_AND_ACTUALLY_APPLIED_IN_ACTIVE_TURN",
+        "cycles": [
+          {
+            "id": "C01",
+            "status": "EXECUTED_REPAIR_PENDING",
+            "observed_actions": [
+              "Dev_A exact source capture and hashes",
+              "Same-hash independent code/security review with FAIL",
+              "A04 repair actually sent and running",
+              "Exact Dev_A R1 JSON received locally; package and all 17 embedded content hashes/lengths independently verified"
+            ],
+            "acceptance_complete": false
+          },
+          {
+            "id": "C02",
+            "status": "EXECUTED_B03_RUNNING",
+            "observed_actions": [
+              "B02 remote results and actual desktop capture",
+              "B03 SDK/React/Analog Passport actually sent",
+              "Research and requirements resource/uniqueness follow-ups",
+              "DESIGN03 description-based dispatch"
+            ],
+            "acceptance_complete": false
+          },
+          {
+            "id": "C03",
+            "status": "PENDING_LOCAL_INTEGRATION",
+            "next_actions": [
+              "Complete safe extraction/static checks of received Dev_A R1 without code execution",
+              "Receive corrected A04/B03 exact source artifacts and verify new hashes/finding closure",
+              "Run local source and real-data checks",
+              "Obtain explicit human Dev_A and Dev_B PASS"
+            ],
+            "completed_preparation": [
+              {
+                "event_id": "DEV_A_R1_EXACT_LOCAL_RECEIPT_VERIFIED_2026-11-14",
+                "recorded_at": "2026-11-14T09:09:07.044681Z",
+                "path": "incoming/dev_a_source_bundle_r1.json",
+                "bytes": 224050,
+                "sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+                "file_count": 17,
+                "all_embedded_file_hashes_verified_locally": true,
+                "all_embedded_file_byte_counts_verified_locally": true,
+                "transport": "Loopback receipt form used by Astra after browser download failed.",
+                "verification_basis": "Local file read and independent UTF-8 content byte-count/SHA256 recomputation by Astra delegated agent.",
+                "code_executed": false,
+                "scientific_tests_run": false,
+                "next_owner": "viewer_api",
+                "next_step": "Safe extraction and static checks; no source execution."
+              }
+            ]
+          }
+        ],
+        "autonomous_background_daemon": false,
+        "continuation_scope": "active_turn_only",
+        "local_fallback_code_written": false,
+        "scientific_scores_verified": false,
+        "phase5_committed": false,
+        "human_pass": {
+          "Dev_A": false,
+          "Dev_B": false
+        },
+        "prompt_sha256": "7cc4261356d821700c4c0b73354d4c012450b9962ad1ead6ebbced78cd8befee",
+        "strategy_sha256": "19898f3317bacf93b3966c729b7352b4fe7db6d4ec343d112c6203b946d7e7a5"
+      },
+      "new_dev_b_receipt": {
+        "event_id": "B03_LOCAL_RECEIPT_REVIEW_RUNNING_DESIGN03_ADVISORY_2026-11-14",
+        "recorded_at": "2026-11-14T09:15:13.844850Z",
+        "role": "Dev_B",
+        "revision": "B03",
+        "path": "incoming/dev_b_source_bundle_b03.json",
+        "bytes": 336551,
+        "sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+        "file_count": 36,
+        "exact_json_captured": true,
+        "local_filesystem_receipt_verified": true,
+        "all_embedded_file_hashes_verified_locally": true,
+        "all_embedded_file_byte_counts_verified_locally": true,
+        "verification_basis": "Independent local read and recomputation from exact UTF-8 content in the captured JSON bundle.",
+        "code_executed_locally": false,
+        "scientific_tests_run_locally": false,
+        "human_pass": false
+      }
+    },
+    {
+      "event_id": "CONTINUOUS_PROMPT_RESUME_CHECKPOINT_REFRESH_2026-11-14",
+      "recorded_at": "2026-11-14T09:15:39.206221Z",
+      "old_prompt_sha256": "7cc4261356d821700c4c0b73354d4c012450b9962ad1ead6ebbced78cd8befee",
+      "new_prompt_sha256": "b4dbe1852314dce533dd786162dfd242945c801ec5f5041fc6e73f736c363211",
+      "current_cua_segment_closed": true,
+      "final_observed_statuses": {
+        "Dev_A": "A04_RUNNING",
+        "Dev_B": "B03_COMPLETE_INDEPENDENT_REVIEWS_RUNNING",
+        "Stitch": "DESIGN03_DONE_ADVISORY_ONLY"
+      }
+    },
+    {
+      "id": "SOL_LOCAL_HANDOFF_VERIFIED_2026-11-14",
+      "recorded_at": "2026-11-14T09:59:02.544132+00:00",
+      "evidence": "evidence/local_b04_checks/INTEGRATION_CHECKPOINT.json"
+    }
+  ],
+  "continuous_orchestration": {
+    "prompt": "prompts/ASTRA_CONTINUOUS_LOOP.md",
+    "strategy": "docs/orchestration/UNIQUENESS_STRATEGY.md",
+    "status": "CREATED_AND_ACTUALLY_APPLIED_IN_ACTIVE_TURN",
+    "cycles": [
+      {
+        "id": "C01",
+        "status": "EXECUTED_REPAIR_PENDING",
+        "observed_actions": [
+          "Dev_A exact source capture and hashes",
+          "Same-hash independent code/security review with FAIL",
+          "A04 repair actually sent and running",
+          "Exact Dev_A R1 JSON received locally; package and all 17 embedded content hashes/lengths independently verified"
+        ],
+        "acceptance_complete": false
+      },
+      {
+        "id": "C02",
+        "status": "EXECUTED_B03_COMPLETED_LOCAL_RECEIPT_VERIFIED_REVIEW_RUNNING",
+        "observed_actions": [
+          "B02 remote results and actual desktop capture",
+          "B03 SDK/React/Analog Passport actually sent",
+          "Research and requirements resource/uniqueness follow-ups",
+          "DESIGN03 description-based dispatch",
+          "B03 completed remotely: typecheck/build, 15 unit and 7 E2E passes reported; one real-ground skip and verify_assets failure retained",
+          "Exact 36-file B03 JSON received locally and all package/file hashes and byte lengths verified",
+          "Same B03 source SHA sent to independent code/security reviewers; both running",
+          "DESIGN03 completed as description-based advisory only; unsupported claims not adopted"
+        ],
+        "acceptance_complete": false
+      },
+      {
+        "id": "C03",
+        "status": "PENDING_LOCAL_INTEGRATION_BOTH_EXPORTS_RECEIVED",
+        "next_actions": [
+          "Receive both independent B03 review results for its exact hash",
+          "Observe A04 completion, receive corrected revision and verify findings under its new hash",
+          "Complete safe static checks and integrate permitted source revisions",
+          "Run local Python/frontend and real-data checks; keep missing scientific assets explicit",
+          "Obtain explicit human Dev_A and Dev_B PASS"
+        ],
+        "completed_preparation": [
+          {
+            "event_id": "DEV_A_R1_EXACT_LOCAL_RECEIPT_VERIFIED_2026-11-14",
+            "recorded_at": "2026-11-14T09:09:07.044681Z",
+            "path": "incoming/dev_a_source_bundle_r1.json",
+            "bytes": 224050,
+            "sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+            "file_count": 17,
+            "all_embedded_file_hashes_verified_locally": true,
+            "all_embedded_file_byte_counts_verified_locally": true,
+            "transport": "Loopback receipt form used by Astra after browser download failed.",
+            "verification_basis": "Local file read and independent UTF-8 content byte-count/SHA256 recomputation by Astra delegated agent.",
+            "code_executed": false,
+            "scientific_tests_run": false,
+            "next_owner": "viewer_api",
+            "next_step": "Safe extraction and static checks; no source execution."
+          },
+          {
+            "event_id": "B03_LOCAL_RECEIPT_REVIEW_RUNNING_DESIGN03_ADVISORY_2026-11-14",
+            "recorded_at": "2026-11-14T09:15:13.844850Z",
+            "role": "Dev_B",
+            "revision": "B03",
+            "path": "incoming/dev_b_source_bundle_b03.json",
+            "bytes": 336551,
+            "sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+            "file_count": 36,
+            "exact_json_captured": true,
+            "local_filesystem_receipt_verified": true,
+            "all_embedded_file_hashes_verified_locally": true,
+            "all_embedded_file_byte_counts_verified_locally": true,
+            "verification_basis": "Independent local read and recomputation from exact UTF-8 content in the captured JSON bundle.",
+            "code_executed_locally": false,
+            "scientific_tests_run_locally": false,
+            "human_pass": false
+          },
+          {
+            "path": "incoming/dev_a_r1_review/REVIEW_BUNDLE.json",
+            "bytes": 222513,
+            "sha256": "a2c34ae90a1d6d43ce6bd59328445bdeeb0bcab3b9336e227ffdcbebda85a86b",
+            "file_count": 17,
+            "same_source_file_hash_manifest_as_exact_json": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+            "source_file_hash_manifest_equivalence_verified_locally": true,
+            "packaging_hash_is_distinct_from_exact_json_hash": true,
+            "code_executed": false,
+            "note": "The repackaged review artifact and the exact export have distinct package hashes but identical 17 source-file path/hash manifests. The external A reviews remain bound to the original exact JSON hash."
+          }
+        ]
+      }
+    ],
+    "autonomous_background_daemon": false,
+    "continuation_scope": "active_turn_only",
+    "local_fallback_code_written": false,
+    "scientific_scores_verified": false,
+    "phase5_committed": false,
+    "human_pass": {
+      "Dev_A": false,
+      "Dev_B": false
+    },
+    "prompt_sha256": "b4dbe1852314dce533dd786162dfd242945c801ec5f5041fc6e73f736c363211",
+    "strategy_sha256": "19898f3317bacf93b3966c729b7352b4fe7db6d4ec343d112c6203b946d7e7a5",
+    "resume_state_path": "ASTRA_LOOP_STATE.json",
+    "resume_rule": "Read ASTRA_LOOP_STATE.json first, resume unfinished actions, and do not repeat completed dispatches. Initial prompt snapshot is explicitly historical.",
+    "current_cua_segment_closed": true
+  },
+  "current_artifacts": {
+    "dev_a_browser_source": {
+      "role": "Dev_A",
+      "artifact_path_in_remote_workspace": "reports/dev_a_source_bundle.json",
+      "artifact_sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+      "file_count": 17,
+      "exact_json_bytes": 224050,
+      "capture_location": "browser_capture_and_local_repository_file",
+      "exact_json_captured": true,
+      "all_embedded_file_hashes_verified": true,
+      "hash_verification_scope": "Exact JSON bytes and every embedded content length/hash independently verified from the local artifact.",
+      "local_filesystem_artifact_path": "incoming/dev_a_source_bundle_r1.json",
+      "local_filesystem_receipt_pending": false,
+      "independently_locally_executed": false,
+      "human_pass": false,
+      "evidence_basis": "Current-turn Astra parent transport observation plus independent local file/hash validation.",
+      "local_filesystem_receipt_verified": true,
+      "local_receipt": {
+        "event_id": "DEV_A_R1_EXACT_LOCAL_RECEIPT_VERIFIED_2026-11-14",
+        "recorded_at": "2026-11-14T09:09:07.044681Z",
+        "path": "incoming/dev_a_source_bundle_r1.json",
+        "bytes": 224050,
+        "sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+        "file_count": 17,
+        "all_embedded_file_hashes_verified_locally": true,
+        "all_embedded_file_byte_counts_verified_locally": true,
+        "transport": "Loopback receipt form used by Astra after browser download failed.",
+        "verification_basis": "Local file read and independent UTF-8 content byte-count/SHA256 recomputation by Astra delegated agent.",
+        "code_executed": false,
+        "scientific_tests_run": false,
+        "next_owner": "viewer_api",
+        "next_step": "Safe extraction and static checks; no source execution."
+      }
+    },
+    "dev_b_b02_checks": {
+      "revision": "B02",
+      "source": "Dev_B remote response observed by Astra",
+      "execution_location": "remote_AI_Studio",
+      "reported_checks": {
+        "typecheck": "reported_pass",
+        "unit_tests": {
+          "passed": 15
+        },
+        "build": "reported_pass",
+        "e2e": {
+          "passed": 3,
+          "skipped": 1,
+          "skip_reason": "real ground data unavailable"
+        }
+      },
+      "desktop_evidence": {
+        "path": "evidence/dev_b_b02_desktop.png",
+        "bytes": 118821,
+        "sha256": "52795f4c8fbc9d58994b0ac80281efa6f321fd8dfa96e750f21cbf9e12703831",
+        "scope": "Actual desktop capture; not proof of underlying science, test execution, performance or human acceptance.",
+        "locally_present_and_hashed": true
+      },
+      "raw_command_logs_received_locally": false,
+      "independently_locally_tested": false,
+      "real_data_integration_verified": false,
+      "performance_verified": false,
+      "human_pass": false
+    },
+    "dev_b_desktop": {
+      "path": "evidence/dev_b_b03_analog_passport.png",
+      "bytes": 209500,
+      "sha256": "2112ef01c9e0900d68f6ac2a70bf84b6aa2806be4cc268854bba0167992252ab",
+      "locally_present_and_hashed": true,
+      "scope": "Actual B03 Analog Passport desktop image; not proof of underlying scientific data, command execution, contrast compliance or human acceptance.",
+      "actually_viewed_by_astra_parent": true
+    },
+    "research_remote_report": {
+      "task_id": "RESOURCE-01",
+      "status": "REMOTE_REPORT_COMPLETED",
+      "actually_dispatched": true,
+      "remote_report_sha256": "68a06b9ba407953cc2684a2bda6160d92ab354e6fffc25a0d1c661a9ba83b235",
+      "hash_scope": "Remote report hash supplied in observed browser handoff; independent local report-byte verification pending.",
+      "local_report_path": null,
+      "resource_count": 11,
+      "scientific_runtime_use_verified": false,
+      "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time."
+    },
+    "dev_a_local_source": {
+      "role": "Dev_A",
+      "artifact_path_in_remote_workspace": "reports/dev_a_source_bundle.json",
+      "artifact_sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+      "file_count": 17,
+      "exact_json_bytes": 224050,
+      "capture_location": "browser_capture_and_local_repository_file",
+      "exact_json_captured": true,
+      "all_embedded_file_hashes_verified": true,
+      "hash_verification_scope": "Exact JSON bytes and every embedded content length/hash independently verified from the local artifact.",
+      "local_filesystem_artifact_path": "incoming/dev_a_source_bundle_r1.json",
+      "local_filesystem_receipt_pending": false,
+      "independently_locally_executed": false,
+      "human_pass": false,
+      "evidence_basis": "Current-turn Astra parent transport observation plus independent local file/hash validation.",
+      "local_filesystem_receipt_verified": true,
+      "local_receipt": {
+        "event_id": "DEV_A_R1_EXACT_LOCAL_RECEIPT_VERIFIED_2026-11-14",
+        "recorded_at": "2026-11-14T09:09:07.044681Z",
+        "path": "incoming/dev_a_source_bundle_r1.json",
+        "bytes": 224050,
+        "sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+        "file_count": 17,
+        "all_embedded_file_hashes_verified_locally": true,
+        "all_embedded_file_byte_counts_verified_locally": true,
+        "transport": "Loopback receipt form used by Astra after browser download failed.",
+        "verification_basis": "Local file read and independent UTF-8 content byte-count/SHA256 recomputation by Astra delegated agent.",
+        "code_executed": false,
+        "scientific_tests_run": false,
+        "next_owner": "viewer_api",
+        "next_step": "Safe extraction and static checks; no source execution."
+      }
+    },
+    "dev_b_local_source": {
+      "event_id": "B03_LOCAL_RECEIPT_REVIEW_RUNNING_DESIGN03_ADVISORY_2026-11-14",
+      "recorded_at": "2026-11-14T09:15:13.844850Z",
+      "role": "Dev_B",
+      "revision": "B03",
+      "path": "incoming/dev_b_source_bundle_b03.json",
+      "bytes": 336551,
+      "sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+      "file_count": 36,
+      "exact_json_captured": true,
+      "local_filesystem_receipt_verified": true,
+      "all_embedded_file_hashes_verified_locally": true,
+      "all_embedded_file_byte_counts_verified_locally": true,
+      "verification_basis": "Independent local read and recomputation from exact UTF-8 content in the captured JSON bundle.",
+      "code_executed_locally": false,
+      "scientific_tests_run_locally": false,
+      "human_pass": false
+    },
+    "dev_b_b03_checks": {
+      "revision": "B03",
+      "source": "Dev_B remote report observed by Astra parent",
+      "execution_location": "remote_AI_Studio",
+      "reported_checks": {
+        "typecheck": "reported_pass",
+        "unit_tests": {
+          "passed": 15
+        },
+        "build": "reported_pass",
+        "e2e": {
+          "passed": 7,
+          "skipped": 1,
+          "skip_reason": "real ground scientific data unavailable"
+        },
+        "verify_assets": {
+          "status": "reported_FAIL",
+          "reason": "required real scientific data/assets absent"
+        }
+      },
+      "reported_checks_independently_executed_locally": false,
+      "raw_command_logs_received_locally": false,
+      "source_artifact_sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+      "source_artifact_received_locally": true,
+      "desktop_evidence": {
+        "path": "evidence/dev_b_b03_analog_passport.png",
+        "bytes": 209500,
+        "sha256": "2112ef01c9e0900d68f6ac2a70bf84b6aa2806be4cc268854bba0167992252ab",
+        "locally_present_and_hashed": true,
+        "scope": "Actual B03 Analog Passport desktop image; not proof of underlying scientific data, command execution, contrast compliance or human acceptance."
+      },
+      "real_data_integration_verified": false,
+      "performance_verified": false,
+      "human_pass": false
+    },
+    "dev_b_b02_desktop": {
+      "path": "evidence/dev_b_b02_desktop.png",
+      "bytes": 118821,
+      "sha256": "52795f4c8fbc9d58994b0ac80281efa6f321fd8dfa96e750f21cbf9e12703831",
+      "scope": "Actual desktop capture; not proof of underlying science, test execution, performance or human acceptance.",
+      "locally_present_and_hashed": true
+    },
+    "dev_b_b03_desktop": {
+      "path": "evidence/dev_b_b03_analog_passport.png",
+      "bytes": 209500,
+      "sha256": "2112ef01c9e0900d68f6ac2a70bf84b6aa2806be4cc268854bba0167992252ab",
+      "locally_present_and_hashed": true,
+      "scope": "Actual B03 Analog Passport desktop image; not proof of underlying scientific data, command execution, contrast compliance or human acceptance.",
+      "actually_viewed_by_astra_parent": true
+    },
+    "dev_a_local_review_package": {
+      "path": "incoming/dev_a_r1_review/REVIEW_BUNDLE.json",
+      "bytes": 222513,
+      "sha256": "a2c34ae90a1d6d43ce6bd59328445bdeeb0bcab3b9336e227ffdcbebda85a86b",
+      "file_count": 17,
+      "same_source_file_hash_manifest_as_exact_json": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+      "source_file_hash_manifest_equivalence_verified_locally": true,
+      "packaging_hash_is_distinct_from_exact_json_hash": true,
+      "code_executed": false,
+      "note": "The repackaged review artifact and the exact export have distinct package hashes but identical 17 source-file path/hash manifests. The external A reviews remain bound to the original exact JSON hash."
+    },
+    "source_receipt_transport_helper": {
+      "path": "scripts/receive_source.py",
+      "bytes": 16187,
+      "sha256": "d32f93a53b356335ec0817f793f1805832821235090331f15b053afba06a6e03",
+      "author": "Astra (Orchestrator)",
+      "purpose": "Developer-only loopback transport form receiving and saving exact source JSON.",
+      "received_payload_executed": false,
+      "form_validation_reported_by": "Astra parent implementation/validation handoff",
+      "local_file_existence_and_hash_verified": true,
+      "production_application_code": false,
+      "scientific_pipeline_code": false,
+      "evidence_scope": "Helper behavior validation is from parent evidence; this state update independently checks file identity only."
+    }
+  },
+  "local_fallback_code_written": true,
+  "reviews_by_artifact": {
+    "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a": {
+      "artifact_role": "Dev_A",
+      "artifact_sha256": "e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+      "artifact_location": "incoming/dev_a_source_bundle_r1.json; exact same hash as both completed FAIL reviews",
+      "scope": "The same exact Dev_A source bundle supplied to independent code and security reviewers.",
+      "code_review": {
+        "status": "FINISHED",
+        "verdict": "FAIL",
+        "finding_count": 10,
+        "session_url": "https://aistudio.google.com/apps/6dac933c-8ebd-468c-ba43-8a2319994414"
+      },
+      "security_review": {
+        "status": "FINISHED",
+        "verdict": "FAIL",
+        "finding_count": 5,
+        "session_url": "https://aistudio.google.com/apps/d75bf7a0-c2cd-47a1-b9fc-2bea8b54907a"
+      },
+      "raw_report_local_paths": null,
+      "evidence_basis": "Current-turn Astra parent handoff of actual observed browser sessions; local document and screenshot existence/hashes checked separately. Observation time is not fabricated; recorded_at is this persistence time.",
+      "local_source_code_executed": false,
+      "current_closure_status": "OPEN_A04_SENT_RUNNING",
+      "hotfix": {
+        "task_id": "A04",
+        "status": "SENT_RUNNING",
+        "actually_dispatched": true,
+        "session_url": "https://aistudio.google.com/apps/b23221c8-34d2-41f3-b042-9acd4815ecfa",
+        "prompt_path": null,
+        "prompt_delivery": "actual_browser_message",
+        "trigger": "Both independent reviews returned FAIL for exact source hash e438d1228ea2e8c922d7247808ead159853381da6029d3c602895048bfa5a33a",
+        "scope": [
+          "method identifiers",
+          "coordinate frames",
+          "temperature quantities",
+          "antimeridian handling",
+          "scale comparability",
+          "POWER parsing",
+          "provenance",
+          "transactional asset publication",
+          "path bounds",
+          "resource caps",
+          "splat validation"
+        ],
+        "completion_observed": false,
+        "findings_closed": false
+      },
+      "artifact_path": "incoming/dev_a_source_bundle_r1.json",
+      "artifact_hash_independently_verified_locally": true
+    },
+    "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506": {
+      "artifact_role": "Dev_B",
+      "revision": "B03",
+      "artifact_path": "incoming/dev_b_source_bundle_b03.json",
+      "artifact_sha256": "9a6d29de8654d9baae7707cf69432728559f7bba003039c32b3a13d1977f7506",
+      "artifact_hash_independently_verified_locally": true,
+      "scope": "Full exact B03 source JSON sent to both independent reviewers under the same SHA256.",
+      "code_review": {
+        "status": "RUNNING",
+        "actually_sent": true,
+        "verdict": null,
+        "finding_count": null,
+        "session_url": "https://aistudio.google.com/apps/6dac933c-8ebd-468c-ba43-8a2319994414"
+      },
+      "security_review": {
+        "status": "RUNNING",
+        "actually_sent": true,
+        "verdict": null,
+        "finding_count": null,
+        "session_url": "https://aistudio.google.com/apps/d75bf7a0-c2cd-47a1-b9fc-2bea8b54907a"
+      },
+      "local_source_code_executed": false,
+      "current_closure_status": "AWAITING_BOTH_INDEPENDENT_REVIEW_RESULTS",
+      "evidence_basis": "Actual reviewer dispatch and running state observed by Astra parent; local source identity independently checked."
+    }
+  },
+  "design_review_snapshot": {
+    "task_id": "DESIGN03",
+    "status": "COMPLETED_DESCRIPTION_BASED_ADVISORY_ONLY",
+    "actually_dispatched": true,
+    "completion_observed": true,
+    "session_url": "https://stitch.google.com/projects/9839050915596126064?pli=1",
+    "scope": "Text review based on supplied description; no screenshot attached.",
+    "screenshot_upload_succeeded": false,
+    "direct_visual_review_verified": false,
+    "previous_concept_approved": false,
+    "design_pass": false,
+    "useful_advisories": [
+      "Clearly disclose unavailable data",
+      "Preserve source fidelity",
+      "Separate client UI behavior from scientific claims",
+      "Check Tab, Enter, Space keyboard behavior, ARIA and visible focus"
+    ],
+    "not_adopted_claims": [
+      "Incorrect Radix labeling",
+      "Non-contract field names",
+      "Unsupported 3:1 contrast claim for monospaced headers"
+    ],
+    "contrast_measured": false,
+    "whole_proposal_adopted": false,
+    "next_action": "Apply only contract-compatible advisories after implementation review; measure actual visual contrast and keyboard behavior separately."
+  },
+  "local_preview": {
+    "url": "http://127.0.0.1:4173/",
+    "source_directory": "web-client",
+    "status": "RUNNING_NASA_MARS_SOURCE_RELIEF_BUILD",
+    "evidence": "evidence/display_relief/browser-observation.json",
+    "real_native_relief_verified": true,
+    "global_mars_dem_verified": false,
+    "exact_enu_or_splat_verified": false
+  },
+  "execution_mode": "parallel_local_sol_6_1_medium",
+  "active_team_state": "docs/orchestration/SOL_TEAM_STATE.json",
+  "gemini_generation_status": "daily_quota_exceeded; B04 and A04 re-reviews did not execute",
+  "current_checkpoint": {
+    "id": "MARS_SOURCE_RELIEF_VERIFIED_2026-11-14",
+    "recorded_at": "2026-11-14T12:40:42.148509+00:00",
+    "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+    "phase5_committed": false,
+    "human_pass": {
+      "Dev_A": false,
+      "Dev_B": false
+    },
+    "execution_mode": "parallel_local_sol_6_1_medium_with_astra_root",
+    "url": "http://127.0.0.1:4173/",
+    "contracts": {
+      "planet_catalog": "1.0.0",
+      "surface_catalog": "1.1.0",
+      "comparison": "1.0.0 unchanged",
+      "surface_analysis": "1.0.0",
+      "surface_imagery": "1.0.0"
+    },
+    "catalogs": [
+      {
+        "path": "web-client/public/data/planet_catalog.json",
+        "bytes": 4303,
+        "sha256": "e0e1d3d2d27be2ec26e500a812201e1cabb094240be1e56dbd3a9ab04a782949"
+      },
+      {
+        "path": "web-client/public/data/surface_catalog.json",
+        "bytes": 35281,
+        "sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539"
+      },
+      {
+        "path": "web-client/public/data/surface_analysis.json",
+        "bytes": 24037,
+        "sha256": "71264c8ef2f15e1d364b38ca6957048d96a04ddeffe0ad11556c9c57d1519db0"
+      },
+      {
+        "path": "web-client/public/data/surface_imagery.json",
+        "bytes": 21832,
+        "sha256": "df1e1b07bfd58b1462099aea5c04fea38be20d7f0f0c0e3023dac76ea6dbf25c"
+      }
+    ],
+    "built_js": {
+      "path": "web-client/dist/assets/index-BWJd2ss1.js",
+      "bytes": 1355460,
+      "sha256": "995ce048b5a15a15a312335c1c9af8663cd649e5e6eefb2491765be7d8194349"
+    },
+    "built_css": {
+      "path": "web-client/dist/assets/index-DxUfEtlc.css",
+      "bytes": 54260,
+      "sha256": "5605c8aff96dacf5eda1305344d4140cada593e264599ab8176e090f029df856"
+    },
+    "implemented": [
+      "Replaced Mars global display imagery with NASA Viking/USGS/JPL-Caltech published source; exact Native 1440x720 JPEG and downsampled 1K only.",
+      "Regenerated approximate Mars orbital drapes from that source; retained local HiRISE images and all native DEM/analysis values.",
+      "Added neutral color-plus-shape and original-image globe modes, independent display-light control and per-body available source resolution.",
+      "Added neutral DEM-slope lighting and original-image surface modes, camera-preserving image/lighting changes and compact controls.",
+      "Reserved separate toolbar, fitted-canvas and status rows so globe controls cannot occlude the planet."
+    ],
+    "remaining": [
+      "Acquire broader and finer source-backed terrain/local imagery coverage.",
+      "Acquire and register a real global Mars DEM before claiming global topographic relief.",
+      "Calibrate comparable spatial support, body-frame/ENU registration and scientific analog similarity.",
+      "Reconstruct and register source-backed Gaussian splats.",
+      "Benchmark foreground FPS/RAM and native pointer lock in a supporting browser.",
+      "Receive human Dev_A and Dev_B acceptance."
+    ],
+    "checks": {
+      "frontend_tests_passed": 165,
+      "frontend_files_passed": 18,
+      "full_suite_before_final_presentation_edits": true,
+      "final_targeted_tests": {
+        "tests_passed": 5,
+        "files_passed": 2,
+        "log": "evidence/display_relief/light-targeted.txt",
+        "command": "npx vitest run src/terrain/surfaceAppearance.test.ts src/terrain/surfaceUv.test.ts",
+        "scope": "Focused surface appearance/UV tests after presentation-only edits",
+        "exit_code": 0
+      },
+      "python_tests_passed": 8,
+      "typecheck": "PASS",
+      "build": "PASS",
+      "verify_planets": "PASS",
+      "verify_surfaces": "PASS",
+      "analysis_unchanged_surfaces": 7,
+      "browser": "FUNCTIONAL_SOURCE_COLOR_RELIEF_CONTROLS_AND_NAVIGATION_OBSERVATIONS",
+      "performance_benchmark": "NOT_PERFORMED",
+      "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET_NOT_RERUN"
+    },
+    "evidence": [
+      "evidence/display_relief/check-status.json",
+      "evidence/display_relief/browser-observation.json",
+      "evidence/display_relief/source-attribution.json",
+      "evidence/display_relief/SOURCE_MANIFEST.json",
+      "docs/research/MARS_DISPLAY_REVIEW.md"
+    ],
+    "screenshots": [
+      {
+        "path": "evidence/display_relief/relief-mars.jpg",
+        "bytes": 136030,
+        "sha256": "3d8126ffa5d81d47ab5dbfb4f3f09c9454557be23f7c956524960bb6f014d886"
+      },
+      {
+        "path": "evidence/display_relief/relief-ground.jpg",
+        "bytes": 134885,
+        "sha256": "3ff2461875a5914bd18ce8acb84575e2abf42d6604603d22f95a89ea55a55394"
+      },
+      {
+        "path": "evidence/display_relief/relief-moon.jpg",
+        "bytes": 131052,
+        "sha256": "21905e2cd4dda5d9bcfc6095896cea8b389b1a85975932d5e957f372fc56746d"
+      }
+    ],
+    "scheduler_created": false,
+    "daemon_running": false
+  },
+  "checkpoint_history": [
+    {
+      "id": "SOL_LOCAL_HANDOFF_VERIFIED_2026-11-14",
+      "recorded_at": "2026-11-14T09:59:02.544132+00:00",
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "source_archive": {
+        "path": "archives/gemini-handoff-2026-11-14.zip",
+        "bytes": 670330,
+        "sha256": "17b158d12d7cb663040b7adda4bb495f2cd4af1f8e1b5dfbbaf9039a5d508f7a"
+      },
+      "source_archive_scope": "Latest received Gemini A04 (17 files), B03 (36 files), available visible conversations/reports, and orchestration context; not a complete Google account history export.",
+      "source_manifest": "evidence/local_b04_checks/SOL_SOURCE_MANIFEST.json",
+      "pipeline_tests_passed": 47,
+      "frontend_tests_passed": 61,
+      "frontend_typecheck": "PASS",
+      "frontend_config_tests": "PASS",
+      "frontend_build": "PASS",
+      "asset_verification": "FAIL_MISSING_PREPARED_DATASET",
+      "independent_review": "Both concrete score and splat numeric findings fixed and independently re-reviewed; bounded source scope only",
+      "independent_review_path": "evidence/local_b04_checks/independent-review.md",
+      "science_audit": "docs/research/NATIVE_DEM_AUDIT.md",
+      "publication_gates": [
+        "Explicit versioned lunar frame decision",
+        "Supplemental product absolute height definition",
+        "Exact source-to-ENU geometry or separately explicit projected display contract",
+        "Display validity versus laser coverage policy",
+        "Real buffer/camera/gap-safe collision checks and ground-view inspection"
+      ],
+      "real_ground_verified": false,
+      "performance_verified": false,
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "preview_evidence": "evidence/local_b04_checks/preview/observation.json",
+      "continuation_prompt": "prompts/ASTRA_SOL_LOOP.md",
+      "no_unattended_scheduler": true
+    },
+    {
+      "id": "REAL_NATIVE_SURFACES_INTEGRATED_2026-11-14",
+      "recorded_at": "2026-11-14T10:26:48.480437+00:00",
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "url": "http://127.0.0.1:4173/",
+      "catalog": {
+        "path": "web-client/public/data/surface_catalog.json",
+        "bytes": 12305,
+        "sha256": "5fc055e0cdf37dc78ddc8db278b2e4653eee9841a457a17e68ee251be1c70399"
+      },
+      "contracts": {
+        "comparison": "1.0.0 unchanged",
+        "surface_catalog": "1.0.0 separate unranked native relief"
+      },
+      "surfaces": [
+        {
+          "id": "lola-site04-roi3",
+          "name": "Shackleton rim · LOLA Site04 ROI 3",
+          "body": "moon",
+          "coordinates": {
+            "latitude_deg": -89.77989162018713,
+            "longitude_deg": -156.26739892005892,
+            "frame": "MOON_ME_DE421",
+            "provenance": "MOON_ME reference frame of ephemeris DE421 per README; planetocentric latitude and east longitude via native projection inversion only; no IAU/WGS84 transform"
+          },
+          "stats": {
+            "min_source_height_m": 1609.3466796875,
+            "max_source_height_m": 1739.121826171875,
+            "relief_m": 129.775146484375,
+            "valid_samples": 16641,
+            "total_samples": 16641,
+            "direct_return_samples": 1726
+          }
+        },
+        {
+          "id": "usgs-hawaii-summit",
+          "name": "Hawaii 3DEP summit window",
+          "body": "earth",
+          "coordinates": {
+            "latitude_deg": 19.82069444425608,
+            "longitude_deg": -155.46819444474266,
+            "frame": "NAD83",
+            "provenance": "EPSG:4269 NAD83; no datum transformation"
+          },
+          "stats": {
+            "min_source_height_m": 3679.77197265625,
+            "max_source_height_m": 4204.6845703125,
+            "relief_m": 524.91259765625,
+            "valid_samples": 16641,
+            "total_samples": 16641,
+            "direct_return_samples": null
+          }
+        }
+      ],
+      "checks": {
+        "export_tests_passed": 5,
+        "source_pixel_comparisons_passed": 33282,
+        "frontend_full_suite_passed": 77,
+        "final_padding_guard_targeted_tests_passed": 14,
+        "note": "Full suite preceded final zero-padding validation guard; targeted tests, typecheck and build passed after that guard. Counts overlap and must not be added.",
+        "typecheck": "PASS",
+        "build": "PASS",
+        "verify_surfaces": "PASS",
+        "scored_dataset_verify_assets": "NOT_SATISFIED_MISSING_SCORED_DATASET",
+        "browser_native_relief": "PASS_WITHOUT_PERFORMANCE_CLAIM"
+      },
+      "evidence": [
+        "evidence/real_surface_export/validation.json",
+        "evidence/real_surface_export/focused-tests.txt",
+        "evidence/real_surface_review.md",
+        "evidence/real_surface_ui/check-status.json",
+        "evidence/real_surface_ui/padding-guard-status.json",
+        "evidence/real_surface_ui/browser-observation.json",
+        "evidence/real_surface_ui/SOURCE_MANIFEST.json"
+      ],
+      "remaining": [
+        "Mars source integration",
+        "Comparable analysis support and calibrated similarity profiles",
+        "Absolute vertical datum and exact ENU/body-frame registration",
+        "Registered source-backed Gaussian splat reconstruction",
+        "Performance benchmarking and human acceptance"
+      ],
+      "next_action": "Add further source-backed layers and comparable ROI metrics while preserving verified native surface browsing; do not republish native relief as exact ENU or ranked analogs.",
+      "scheduler_created": false
+    },
+    {
+      "id": "PLANET_EXPLORER_NATIVE_WALK_2026-11-14",
+      "recorded_at": "2026-11-14T11:04:25.876740+00:00",
+      "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "url": "http://127.0.0.1:4173/",
+      "contracts": {
+        "planet_catalog": "1.0.0",
+        "surface_catalog": "1.1.0",
+        "comparison": "1.0.0 unchanged"
+      },
+      "catalogs": [
+        {
+          "path": "web-client/public/data/planet_catalog.json",
+          "bytes": 4417,
+          "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+        },
+        {
+          "path": "web-client/public/data/surface_catalog.json",
+          "bytes": 17163,
+          "sha256": "0a94f8074e25e7863fa9412d2a781096660e2ad3cab7a1e58a4c2641ce8cee9f"
+        }
+      ],
+      "built_js": {
+        "bytes": 1321670,
+        "path": "web-client/dist/assets/index-ZfJGDHkp.js",
+        "sha256": "c427994e3bf96f01c90025bdc7f18dca2c2b1e0a707b0f787a534a6b536b451c"
+      },
+      "implemented": [
+        "Source-backed Moon/Mars360degree orbit",
+        "Independent side-by-side comparison",
+        "Local1K/2K/4K source-derived textures",
+        "Prepared-site astronaut drop and unsupported-coverage notice",
+        "Moon/Mars native DEM first-person navigation with valid-triangle collision",
+        "Pointer-lock fallback: drag look, focused WASD, Escape/blur cleanup",
+        "Source provenance, limits and preserved Earth surface archive"
+      ],
+      "checks": {
+        "frontend_tests_passed": 100,
+        "frontend_files_passed": 11,
+        "source_pipeline_tests_passed": 7,
+        "moon_registration_samples_verified": 1036800,
+        "mars_source_samples_verified": 16641,
+        "typecheck": "PASS",
+        "build": "PASS",
+        "verify_planets": "PASS",
+        "verify_surfaces": "PASS",
+        "browser": "VERIFIED_WITH_POINTER_LOCK_FALLBACK",
+        "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET",
+        "performance_benchmark": "NOT_PERFORMED"
+      },
+      "evidence": [
+        "evidence/planet_explorer/check-status.json",
+        "evidence/planet_explorer/browser-observation.json",
+        "evidence/planet_explorer/independent-review.md",
+        "evidence/planet_explorer/SOURCE_MANIFEST.json",
+        "evidence/planet_assets/validation.json"
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/planet_explorer/planet-split.jpg",
+          "bytes": 53259,
+          "sha256": "fca313cf332ad656856791cb8685f0e391f6d5f757615ad3649ff1af8c59daba"
+        },
+        {
+          "path": "evidence/planet_explorer/planet-walk.jpg",
+          "bytes": 86090,
+          "sha256": "4717e747603d151e6fa98aef95f7d3571d7d4c3492586c150365c1870cdd3b47"
+        }
+      ],
+      "remaining": [
+        "Expand real local terrain coverage and add registered source imagery.",
+        "Preserve camera orientation across texture-quality changes.",
+        "Reconstruct and register real source-backed Gaussian splats.",
+        "Complete calibrated similarity and exact ENU/body-frame registration.",
+        "Benchmark foreground FPS/RAM and verify native pointer-lock success in a supporting browser.",
+        "Receive human Dev_A and Dev_B acceptance."
+      ],
+      "scheduler_created": false
+    },
+    {
+      "id": "NAVIGATION_CONTINUITY_VERIFIED_2026-11-14",
+      "recorded_at": "2026-11-14T11:39:05.154811+00:00",
+      "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "url": "http://127.0.0.1:4173/",
+      "contracts": {
+        "planet_catalog": "1.0.0",
+        "surface_catalog": "1.1.0",
+        "comparison": "1.0.0 unchanged"
+      },
+      "catalogs": [
+        {
+          "path": "web-client/public/data/planet_catalog.json",
+          "bytes": 4417,
+          "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+        },
+        {
+          "path": "web-client/public/data/surface_catalog.json",
+          "bytes": 17163,
+          "sha256": "0a94f8074e25e7863fa9412d2a781096660e2ad3cab7a1e58a4c2641ce8cee9f"
+        }
+      ],
+      "built_js": {
+        "path": "web-client/dist/assets/index-BIWJTfWF.js",
+        "bytes": 1325481,
+        "sha256": "fa3fd5e41c4709f6ff7492a92a06d8b4d9a44933c868573b797e55b271d801ab"
+      },
+      "implemented": [
+        "Race-safe texture-only quality replacement retaining displayed map, camera and DEM; actual loading/showing status and retry.",
+        "Per-body orbital view memory and relative zoom across split panels and ground return; stale Locate requests cleared.",
+        "Explicit Start/Pause/Resume, keyboard arrow look, guarded input cleanup and final native position publishing.",
+        "Responsive ground toolbar/help and display-only grid-spacing formatting."
+      ],
+      "checks": {
+        "frontend_tests_passed": 105,
+        "frontend_files_passed": 12,
+        "full_suite_scope": "All navigation source changes passed 105 tests in 12 files. Display-only grid-spacing formatting was added afterwards; final typecheck and build passed after that edit.",
+        "typecheck": "PASS",
+        "build": "PASS",
+        "verify_planets": "PASS",
+        "verify_surfaces": "PASS",
+        "browser": "FUNCTIONAL_OBSERVATIONS_WITH_POINTER_LOCK_FALLBACK",
+        "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET",
+        "performance_benchmark": "NOT_PERFORMED"
+      },
+      "evidence": [
+        "evidence/navigation_improvements/check-status.json",
+        "evidence/navigation_improvements/browser-observation.json",
+        "evidence/navigation_improvements/independent-review.md",
+        "evidence/navigation_improvements/SOURCE_MANIFEST.json"
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/navigation_improvements/navigation-orbit.jpg",
+          "bytes": 55898,
+          "sha256": "645eb9c490147d32bae0bda167e68bc0ffd6cbb698ab8459180e8c81bb61f351"
+        },
+        {
+          "path": "evidence/navigation_improvements/navigation-ground.jpg",
+          "bytes": 86545,
+          "sha256": "6656756d6d975d0c55d7a2cb09a248ff28f328c0091f7e771f8ca1d713d4d648"
+        }
+      ],
+      "remaining": [
+        "Expand real native terrain coverage and add registered source imagery.",
+        "Reconstruct and register real source-backed Gaussian splats.",
+        "Complete calibrated similarity and exact ENU/body-frame registration.",
+        "Benchmark foreground FPS/RAM and input timing; verify native pointer lock in a supporting browser.",
+        "Receive human Dev_A and Dev_B acceptance."
+      ],
+      "no_unattended_scheduler": true
+    },
+    {
+      "id": "SURFACE_SITES_ANALYSIS_COLOR_VERIFIED_2026-11-14",
+      "recorded_at": "2026-11-14T12:12:15.870616+00:00",
+      "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+      "phase5_committed": false,
+      "human_pass": {
+        "Dev_A": false,
+        "Dev_B": false
+      },
+      "execution_mode": "parallel_local_sol_6_1_medium",
+      "url": "http://127.0.0.1:4173/",
+      "contracts": {
+        "planet_catalog": "1.0.0",
+        "surface_catalog": "1.1.0",
+        "comparison": "1.0.0 unchanged",
+        "surface_analysis": "1.0.0",
+        "surface_imagery": "1.0.0"
+      },
+      "catalogs": [
+        {
+          "path": "web-client/public/data/planet_catalog.json",
+          "bytes": 4417,
+          "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+        },
+        {
+          "path": "web-client/public/data/surface_catalog.json",
+          "bytes": 35281,
+          "sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539"
+        },
+        {
+          "path": "web-client/public/data/surface_analysis.json",
+          "bytes": 24037,
+          "sha256": "71264c8ef2f15e1d364b38ca6957048d96a04ddeffe0ad11556c9c57d1519db0"
+        },
+        {
+          "path": "web-client/public/data/surface_imagery.json",
+          "bytes": 21325,
+          "sha256": "d6b26ada6264b71abbb519fef48a6702144d787379bf98b1530325d0dac907d6"
+        }
+      ],
+      "surface_counts": {
+        "moon": 3,
+        "mars": 3,
+        "earth": 1
+      },
+      "imagery_records": 6,
+      "imagery_layers": 9,
+      "built_js": {
+        "path": "web-client/dist/assets/index-7jGhMrdp.js",
+        "bytes": 1348544,
+        "sha256": "004ba44510811f0faf5b5bbd9281bdfff33d8c84f87304e1e6d8fa2a7340e4ef"
+      },
+      "implemented": [
+        "Added four source-backed native terrain windows: LOLA Site01/Site06 and HiRISE Gale/Eberswalde; six planetary pins plus retained Earth surface.",
+        "Offline Horn slopes, relief, 3x3 range roughness, Riley TRI and slope distribution with source binding and validity coverage.",
+        "Six orbital mosaic drapes and three HiRISE local images; published RGB/grayscale preserved and color modes labeled.",
+        "Hash-bound optional imagery loader, PDS-label mapping checks, pixel-center UVs, bounded resource cleanup and camera-preserving mode swaps."
+      ],
+      "checks": {
+        "frontend_tests_passed": 155,
+        "frontend_files_passed": 15,
+        "python_tests_passed": 26,
+        "typecheck": "PASS",
+        "build": "PASS",
+        "verify_planets": "PASS",
+        "verify_surfaces": "PASS",
+        "analysis_recomputation": "PASS",
+        "browser": "FUNCTIONAL_COLOR_AND_NAVIGATION_OBSERVATIONS_WITH_POINTER_LOCK_FALLBACK",
+        "performance_benchmark": "NOT_PERFORMED",
+        "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET"
+      },
+      "evidence": [
+        "evidence/surface_imagery/check-status.json",
+        "evidence/surface_imagery/browser-observation.json",
+        "evidence/surface_imagery/verification.json",
+        "evidence/surface_imagery/review-pipeline.md",
+        "evidence/surface_imagery/review-render.md",
+        "evidence/surface_imagery/SOURCE_MANIFEST.json",
+        "evidence/surface_expansion/review-assets.md",
+        "evidence/surface_expansion/review-analysis.md"
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/surface_imagery/imagery-moon.jpg",
+          "bytes": 134045,
+          "sha256": "d73804dac8142b79f1919f4bb5052b854dd391291e469940aa9ee1f83cc4267e"
+        },
+        {
+          "path": "evidence/surface_imagery/imagery-mars.jpg",
+          "bytes": 135641,
+          "sha256": "a626ab566c9f169004200090eb6d4b87366099f64d2db7a00fd955da46fe3b87"
+        },
+        {
+          "path": "evidence/surface_imagery/imagery-local.jpg",
+          "bytes": 135642,
+          "sha256": "56102ce68ec520ace86b7ff2be5b7b963770f81d6ee2adcff98a4c33c2f84eb2"
+        },
+        {
+          "path": "evidence/surface_expansion/expansion-pins.jpg",
+          "bytes": 139078,
+          "sha256": "7922f9f8969be5ee63e39cf0d14a56db8eda8efd69a245cfdf07c5d6d12a9e0a"
+        }
+      ],
+      "remaining": [
+        "Acquire finer real local lunar imagery and broader source-backed terrain windows.",
+        "Reconstruct and register real source-backed Gaussian splats.",
+        "Calibrate comparable spatial-support analysis and similarity; complete exact body-frame/ENU registration.",
+        "Benchmark foreground FPS/RAM and native pointer lock in a supporting browser.",
+        "Receive human Dev_A and Dev_B acceptance."
+      ],
+      "scheduler_created": false,
+      "daemon_running": false
+    }
+  ],
+  "native_surface_contract": {
+    "schema_version": "1.1.0",
+    "planet_catalog_version": "1.0.0",
+    "comparison_contract_unchanged": true
+  },
+  "scheduler_created": false,
+  "daemon_running": false
+}

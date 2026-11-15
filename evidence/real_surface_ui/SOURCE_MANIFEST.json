@@ -1,0 +1,115 @@
+{
+  "recorded_at": "2026-11-14T10:26:48.480437+00:00",
+  "files": [
+    {
+      "path": "data-pipeline/export_surface_catalog.py",
+      "bytes": 22912,
+      "sha256": "85d51f3ffe3d6280ce3c57a5117b3798f6a14cd70e7df166bcfdea6a02f6125e"
+    },
+    {
+      "path": "data-pipeline/tests/test_surface_export.py",
+      "bytes": 5276,
+      "sha256": "22dfaf0f10f75a2ff30bc88717d31da68149198327d921e7cf1ffcbcb0092a0f"
+    },
+    {
+      "path": "shared/types/surface-catalog.ts",
+      "bytes": 1577,
+      "sha256": "fa6f7cd2aa2382019d26b8b651a7c4d6361fc1bc4e00e5a5e34ab95bf2af6e5e"
+    },
+    {
+      "path": "shared/schemas/surface_catalog.schema.json",
+      "bytes": 9827,
+      "sha256": "76ee4ead787d6a7ffca51f3fe1d9a2f79373e295d8f674c83e0b0c31d505237d"
+    },
+    {
+      "path": "web-client/src/App.tsx",
+      "bytes": 17124,
+      "sha256": "6476ce10b692b31a0f07b4c403be20e1a104f6fd4858569709c9d57441b52f8e"
+    },
+    {
+      "path": "web-client/src/components/SurfaceExplorer.tsx",
+      "bytes": 10907,
+      "sha256": "66510a17eeba03d890146c38e7804395578796a6c59a91f1b099899c1d2debee"
+    },
+    {
+      "path": "web-client/src/components/SurfaceViewport.tsx",
+      "bytes": 11598,
+      "sha256": "6cba7f7935922591440dd6f28f9b0a450e017c5190d56a56aa2dbce17b0f31e0"
+    },
+    {
+      "path": "web-client/src/components/surface-explorer.css",
+      "bytes": 8943,
+      "sha256": "76b5dcb57c054dac08bb41fa2430e62c75fdd6be4fa4b2bf14272451ca080d0d"
+    },
+    {
+      "path": "web-client/src/data/surfaceCatalog.ts",
+      "bytes": 6438,
+      "sha256": "ecd53fe29756d34448a4665f0c11783932907145f6f431f5760884437a805315"
+    },
+    {
+      "path": "web-client/src/data/surfaceCatalog.test.ts",
+      "bytes": 5184,
+      "sha256": "0cc5f0a05f50adad0ef6611aae644220cb6cb44e4f4035f7d9abb683a6ddb7bd"
+    },
+    {
+      "path": "web-client/src/terrain/surfaceGeometry.ts",
+      "bytes": 3349,
+      "sha256": "1f8bfb276000c0d640f822423ff3cbc0dd8ddfa991bf3574116ab8cb2d997b28"
+    },
+    {
+      "path": "web-client/src/terrain/surfaceGeometry.test.ts",
+      "bytes": 1638,
+      "sha256": "15b710e58c243aff1c1b485309b53f178a75a9c4d7002430cf56523c3ca2d22d"
+    },
+    {
+      "path": "web-client/scripts/verify-surface-assets.mjs",
+      "bytes": 3060,
+      "sha256": "4048c9ae7bf93ba145ec135fdfcd49c7c2f190931e041a24620af8b4cd104c15"
+    },
+    {
+      "path": "web-client/package.json",
+      "bytes": 1653,
+      "sha256": "76b43264648ab524c643590b3d564940bd3b3116d357b5c3accf4d650c26e560"
+    },
+    {
+      "path": "docs/native_surface_contract.md",
+      "bytes": 3528,
+      "sha256": "7cbf583fa882e0c096a004f3b39c1045ce1751c4d1cf295f9f616cd13b1fb0e7"
+    },
+    {
+      "path": "web-client/public/data/surface_catalog.json",
+      "bytes": 12305,
+      "sha256": "5fc055e0cdf37dc78ddc8db278b2e4653eee9841a457a17e68ee251be1c70399"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site04-roi3/heights.f32",
+      "bytes": 66564,
+      "sha256": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site04-roi3/provenance.json",
+      "bytes": 23503,
+      "sha256": "fb54ab5a222fc5e4bc17c8d6377b84a628401ace41ed57ab3243b5195c2ce756"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/lola-site04-roi3/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/usgs-hawaii-summit/heights.f32",
+      "bytes": 66564,
+      "sha256": "3d3af24aec04a00e5b92662a323f8e321069dd78e237e6e2f7f9c2301ed7ba22"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/usgs-hawaii-summit/provenance.json",
+      "bytes": 17593,
+      "sha256": "25bbcb7ad0f0f3827f490273e973b3718c07f4121cd55eb9eb9939037e4008ee"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/usgs-hawaii-summit/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    }
+  ]
+}

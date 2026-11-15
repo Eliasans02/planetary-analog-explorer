@@ -1,0 +1,314 @@
+{
+  "registry_version": "0.2.0",
+  "reviewed_on": "2026-11-14",
+  "scope": "Catalog references plus verified local acquisition status. Scientific derived features, scores and render assets are not yet produced. Challenge-list membership and provider evidence are separate.",
+  "sources": [
+    {
+      "id": "lro_lola_gdr",
+      "title": "LRO LOLA Gridded Data Records",
+      "provider": "NASA PDS Geosciences Node / LOLA Science Team",
+      "catalog_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/",
+      "documentation_url": "https://pds-geosciences.wustl.edu/missions/lro/lola.htm",
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Lunar elevation products from laser altimetry.",
+      "limitations": [
+        "Read the selected product label for scale, offset, reference radius, coordinate system and nodata.",
+        "Slope and roughness must be derived for an explicit ROI and physical analysis scale; no crater-wide topographic constants are supplied by this registry."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [
+        "challenge_nasa_lro",
+        "challenge_nasa_pds"
+      ],
+      "challenge_relationship": "instrument_archive_under_listed_portals"
+    },
+    {
+      "id": "lro_lola_south_pole_5m",
+      "title": "Improved LOLA Elevation Maps for South Pole Landing Sites",
+      "provider": "NASA Goddard Planetary Geodynamics Data Archive",
+      "catalog_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/",
+      "documentation_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/",
+      "catalog_verified": true,
+      "downloaded": true,
+      "usage_status": "raw_acquired_not_processed",
+      "scope": "Site-specific lunar south-pole elevation TIFFs and associated methodology.",
+      "limitations": [
+        "Select a file whose footprint covers the actual ROI.",
+        "A site name does not establish a verified landing coordinate or thermal environment."
+      ],
+      "selected_product_id": "Site04_final_adj_5mpp_surf.tif",
+      "selected_product_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_surf.tif",
+      "retrieved_at": "2026-11-14T08:08:30.626038Z",
+      "sha256": "38ff70dbdf2f066c2cfa94a646c3a59d653ce7f6b4528b15fc1b43ee397ce758",
+      "challenge_resource_ids": [
+        "challenge_nasa_lro"
+      ],
+      "challenge_relationship": "supplemental_lola_product_not_explicitly_listed",
+      "acquisition_evidence": "docs/research/acquisition_status.json"
+    },
+    {
+      "id": "lro_diviner",
+      "title": "LRO Diviner archives and global/polar temperature maps",
+      "provider": "NASA PDS Geosciences Node / UCLA Diviner Science Team",
+      "catalog_url": "https://pds-geosciences.wustl.edu/missions/lro/diviner.htm",
+      "documentation_url": "https://www.diviner.ucla.edu/data",
+      "related_urls": [
+        "https://luna1.diviner.ucla.edu/~jpierre/diviner/level4_polar/"
+      ],
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Lunar radiometric surface-temperature products.",
+      "limitations": [
+        "Record temperature definition, units, quality flags, temporal coverage and aggregation.",
+        "Cannot directly score against Earth two-metre air temperature.",
+        "The polar-directory URL is linked by the instrument team, but direct access timed out during source discovery."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [
+        "challenge_nasa_diviner",
+        "challenge_nasa_lro",
+        "challenge_nasa_pds"
+      ],
+      "challenge_relationship": "diviner_canonical_url_directly_listed"
+    },
+    {
+      "id": "mgs_mola_megdr",
+      "title": "MGS MOLA Mission Experiment Gridded Data Record",
+      "provider": "NASA PDS Geosciences Node",
+      "catalog_url": "https://pds-geosciences.wustl.edu/mgs/",
+      "documentation_url": "https://ode.rsl.wustl.edu/mars/pagehelp/Content/Missions_Instruments/MGS/MOLA/MEGDR.htm",
+      "doi_urls": [
+        "https://doi.org/10.17189/1519460",
+        "https://doi.org/10.17189/1z1b-kv84"
+      ],
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Gridded Mars radius, areoid, topography and observation-count products.",
+      "limitations": [
+        "Topography, radius and areoid are distinct products; inspect labels before conversion.",
+        "Do not compare slope values computed at incompatible DEM resolutions."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [
+        "challenge_nasa_pds"
+      ],
+      "challenge_relationship": "planetary_archive_product_candidate"
+    },
+    {
+      "id": "mro_hirise_jezero_candidate_dtm",
+      "title": "HiRISE Candidate Landing Site for 2020 Mission in Jezero Crater DTM",
+      "provider": "NASA/JPL-Caltech/University of Arizona",
+      "catalog_url": "https://www.uahirise.org/dtm/dtm.php?ID=ESP_045994_1985",
+      "documentation_url": "https://hirise.lpl.arizona.edu/dtm/howto.php",
+      "related_urls": [
+        "https://www.uahirise.org/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/",
+        "https://www.uahirise.org/hiwish/maps/dtms.jsp"
+      ],
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "A verified Jezero stereo DTM catalog entry with associated orthoimages.",
+      "limitations": [
+        "The catalog identifies product DTEEC_045994_1985_046060_1985_U01; it has not been selected, downloaded, clipped or measured by this project.",
+        "Image or DTM centers are not the Perseverance landing coordinate.",
+        "The archive supplies no asserted ready-made Gaussian splat asset."
+      ],
+      "catalog_product_id": "DTEEC_045994_1985_046060_1985_U01",
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [
+        "challenge_nasa_pds"
+      ],
+      "challenge_relationship": "planetary_archive_product_candidate"
+    },
+    {
+      "id": "srtm",
+      "title": "Shuttle Radar Topography Mission",
+      "provider": "NASA / USGS",
+      "catalog_url": "https://data.nasa.gov/dataset/shuttle-radar-topography-mission-dted-level-1-3-arc-second-data-dted-1",
+      "documentation_url": "https://lpdaac.usgs.gov/documents/13/SRTM_Quick_Guide.pdf",
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Earth elevation; this catalog reference describes the DTED-1 product, not an assertion that a 1-arcsecond tile has been acquired.",
+      "limitations": [
+        "Coverage is 60 degrees north to 56 degrees south.",
+        "McMurdo Dry Valleys and Iceland Highlands are outside SRTM coverage; never substitute invented SRTM measurements.",
+        "Select and record the exact product/version, horizontal and vertical datums, resolution and quality mask before processing."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [
+        "challenge_nasa_earthdata_search"
+      ],
+      "challenge_relationship": "exact_cmr_metadata_links_to_listed_earthdata_search",
+      "candidate_collection_id": "C2763266360-LPCLOUD",
+      "candidate_granule_id": "G2821072105-LPCLOUD",
+      "candidate_product": "SRTMGL1 V003 N19W156.SRTMGL1.hgt",
+      "catalog_metadata_downloaded": true,
+      "scientific_payload_downloaded": false,
+      "candidate_earthdata_search_url": "https://search.earthdata.nasa.gov/search/granules?p=C2763266360-LPCLOUD"
+    },
+    {
+      "id": "pgc_polar_dems",
+      "title": "ArcticDEM and Reference Elevation Model of Antarctica",
+      "provider": "Polar Geospatial Center and project partners",
+      "catalog_url": "https://www.pgc.umn.edu/guides/stereo-derived-elevation-models/pgc-dem-products-arcticdem-rema-and-earthdem/",
+      "documentation_url": "https://www.pgc.umn.edu/data/elevation/",
+      "related_urls": [
+        "https://data.pgc.umn.edu/elev/dem/setsm/REMA/mosaic/v2.0/2m/",
+        "https://data.pgc.umn.edu/elev/dem/setsm/ArcticDEM/mosaic/v4.1/2m/"
+      ],
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Candidate open polar-elevation sources for Antarctica and Iceland where SRTM is absent.",
+      "limitations": [
+        "These are not SRTM products and must retain their own attribution.",
+        "Acquire only required tiles, check masks, datum and observation dates, and verify distribution terms for the selected product.",
+        "A mosaic can combine multiple acquisition dates."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [],
+      "challenge_relationship": "supplemental_not_named_in_supplied_challenge_list"
+    },
+    {
+      "id": "nasa_power_daily",
+      "title": "NASA POWER Daily API",
+      "provider": "NASA Langley Research Center POWER Project",
+      "catalog_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "documentation_url": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+      "related_urls": [
+        "https://power.larc.nasa.gov/parameters/",
+        "https://power.larc.nasa.gov/docs/methodology/data/sources_hydrology/"
+      ],
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Earth meteorological and solar-radiation time series for explicit locations and dates.",
+      "limitations": [
+        "T2M_MIN/MAX are two-metre air-temperature quantities, not lunar surface temperature.",
+        "RH2M is relative humidity, not the P/PET aridity index.",
+        "Read parameter units and fill values from each API response; do not assume all communities use identical radiation units.",
+        "A point query samples a source grid cell; it is not automatically a fine-resolution polygon average."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [],
+      "challenge_relationship": "supplemental_not_named_in_supplied_challenge_list"
+    },
+    {
+      "id": "modis_mcd43a3_061",
+      "title": "MODIS/Terra+Aqua MCD43A3 Collection 6.1 BRDF/Albedo",
+      "provider": "NASA LAADS / LP DAAC",
+      "catalog_url": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/MCD43A3",
+      "documentation_url": "https://doi.org/10.5067/MODIS/MCD43A3.061",
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Earth surface albedo products with defined spectral bands and illumination conventions.",
+      "limitations": [
+        "Black-sky, white-sky and different spectral-band albedos cannot be freely interchanged.",
+        "Record QA, temporal compositing, band, scale factor and illumination definition before comparing with planetary albedo."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [
+        "challenge_nasa_earthdata_search"
+      ],
+      "challenge_relationship": "earthdata_product_candidate"
+    },
+    {
+      "id": "isric_soilgrids",
+      "title": "SoilGrids global gridded soil information",
+      "provider": "ISRIC World Soil Information",
+      "catalog_url": "https://isric.org/explore/soilgrids/",
+      "documentation_url": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_01.html",
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Predicted basic soil properties, depth intervals and prediction uncertainty.",
+      "license": "CC-BY-4.0",
+      "limitations": [
+        "Particle-size fractions are not mineral fractions.",
+        "SoilGrids alone cannot verify basalt, regolith-analog or volcanic-ash composition.",
+        "Preserve depth interval, unit conversion and uncertainty metadata; do not relabel these data as NASA measurements or Apache-2.0 content."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [],
+      "challenge_relationship": "supplemental_not_named_in_supplied_challenge_list"
+    },
+    {
+      "id": "usgs_iau_planetary_names",
+      "title": "Gazetteer of Planetary Nomenclature",
+      "provider": "USGS Astrogeology / IAU WGPSN",
+      "catalog_url": "https://planetarynames.wr.usgs.gov/Nomenclature",
+      "documentation_url": "https://planetarynames.wr.usgs.gov/Page/Introduction",
+      "related_urls": [
+        "https://planetarynames.wr.usgs.gov/Feature/5450",
+        "https://planetarynames.wr.usgs.gov/Feature/14502",
+        "https://planetarynames.wr.usgs.gov/SearchResults?Feature+Type=31_Planitia%2C+planitiae&Target=20_Mars"
+      ],
+      "catalog_verified": true,
+      "downloaded": false,
+      "usage_status": "referenced_only",
+      "scope": "Names, reference coordinates and approximate geographic extents of planetary features.",
+      "limitations": [
+        "A feature center or approximate extent does not establish a NASA-approved landing site.",
+        "Preserve control network, planetographic/planetocentric convention, longitude direction and wrap convention.",
+        "No project ROI has been derived or exported from these references."
+      ],
+      "selected_product_id": null,
+      "selected_product_url": null,
+      "retrieved_at": null,
+      "sha256": null,
+      "challenge_resource_ids": [],
+      "challenge_relationship": "supplemental_not_named_in_supplied_challenge_list"
+    }
+  ],
+  "policy_references": [
+    {
+      "id": "space_apps_2026_legal",
+      "url": "https://www.spaceappschallenge.org/legal/",
+      "reviewed_on": "2026-11-14",
+      "scope": "Original submissions must be freely available or OSI open source; Apache-2.0 is the stated default when no specific OSI license is given. This does not relicense third-party dependencies or data.",
+      "is_scientific_data": false
+    },
+    {
+      "id": "space_apps_resources_guidance",
+      "url": "https://github.com/nasa/spaceapps/discussions/1827",
+      "reviewed_on": "2026-11-14",
+      "scope": "Resource attribution guidance for reused code, text and images.",
+      "is_scientific_data": false
+    }
+  ],
+  "challenge_resources_manifest": "docs/research/CHALLENGE_RESOURCES.json",
+  "challenge_membership_evidence": "user_provided_resource_tab_text_2026_11_14"
+}

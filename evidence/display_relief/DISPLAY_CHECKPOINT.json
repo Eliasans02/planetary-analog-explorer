@@ -1,0 +1,114 @@
+{
+  "id": "MARS_SOURCE_RELIEF_VERIFIED_2026-11-14",
+  "recorded_at": "2026-11-14T12:40:42.148509+00:00",
+  "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+  "phase5_committed": false,
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "execution_mode": "parallel_local_sol_6_1_medium_with_astra_root",
+  "url": "http://127.0.0.1:4173/",
+  "contracts": {
+    "planet_catalog": "1.0.0",
+    "surface_catalog": "1.1.0",
+    "comparison": "1.0.0 unchanged",
+    "surface_analysis": "1.0.0",
+    "surface_imagery": "1.0.0"
+  },
+  "catalogs": [
+    {
+      "path": "web-client/public/data/planet_catalog.json",
+      "bytes": 4303,
+      "sha256": "e0e1d3d2d27be2ec26e500a812201e1cabb094240be1e56dbd3a9ab04a782949"
+    },
+    {
+      "path": "web-client/public/data/surface_catalog.json",
+      "bytes": 35281,
+      "sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539"
+    },
+    {
+      "path": "web-client/public/data/surface_analysis.json",
+      "bytes": 24037,
+      "sha256": "71264c8ef2f15e1d364b38ca6957048d96a04ddeffe0ad11556c9c57d1519db0"
+    },
+    {
+      "path": "web-client/public/data/surface_imagery.json",
+      "bytes": 21832,
+      "sha256": "df1e1b07bfd58b1462099aea5c04fea38be20d7f0f0c0e3023dac76ea6dbf25c"
+    }
+  ],
+  "built_js": {
+    "path": "web-client/dist/assets/index-BWJd2ss1.js",
+    "bytes": 1355460,
+    "sha256": "995ce048b5a15a15a312335c1c9af8663cd649e5e6eefb2491765be7d8194349"
+  },
+  "built_css": {
+    "path": "web-client/dist/assets/index-DxUfEtlc.css",
+    "bytes": 54260,
+    "sha256": "5605c8aff96dacf5eda1305344d4140cada593e264599ab8176e090f029df856"
+  },
+  "implemented": [
+    "Replaced Mars global display imagery with NASA Viking/USGS/JPL-Caltech published source; exact Native 1440x720 JPEG and downsampled 1K only.",
+    "Regenerated approximate Mars orbital drapes from that source; retained local HiRISE images and all native DEM/analysis values.",
+    "Added neutral color-plus-shape and original-image globe modes, independent display-light control and per-body available source resolution.",
+    "Added neutral DEM-slope lighting and original-image surface modes, camera-preserving image/lighting changes and compact controls.",
+    "Reserved separate toolbar, fitted-canvas and status rows so globe controls cannot occlude the planet."
+  ],
+  "remaining": [
+    "Acquire broader and finer source-backed terrain/local imagery coverage.",
+    "Acquire and register a real global Mars DEM before claiming global topographic relief.",
+    "Calibrate comparable spatial support, body-frame/ENU registration and scientific analog similarity.",
+    "Reconstruct and register source-backed Gaussian splats.",
+    "Benchmark foreground FPS/RAM and native pointer lock in a supporting browser.",
+    "Receive human Dev_A and Dev_B acceptance."
+  ],
+  "checks": {
+    "frontend_tests_passed": 165,
+    "frontend_files_passed": 18,
+    "full_suite_before_final_presentation_edits": true,
+    "final_targeted_tests": {
+      "tests_passed": 5,
+      "files_passed": 2,
+      "log": "evidence/display_relief/light-targeted.txt",
+      "command": "npx vitest run src/terrain/surfaceAppearance.test.ts src/terrain/surfaceUv.test.ts",
+      "scope": "Focused surface appearance/UV tests after presentation-only edits",
+      "exit_code": 0
+    },
+    "python_tests_passed": 8,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "verify_planets": "PASS",
+    "verify_surfaces": "PASS",
+    "analysis_unchanged_surfaces": 7,
+    "browser": "FUNCTIONAL_SOURCE_COLOR_RELIEF_CONTROLS_AND_NAVIGATION_OBSERVATIONS",
+    "performance_benchmark": "NOT_PERFORMED",
+    "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET_NOT_RERUN"
+  },
+  "evidence": [
+    "evidence/display_relief/check-status.json",
+    "evidence/display_relief/browser-observation.json",
+    "evidence/display_relief/source-attribution.json",
+    "evidence/display_relief/SOURCE_MANIFEST.json",
+    "docs/research/MARS_DISPLAY_REVIEW.md"
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/display_relief/relief-mars.jpg",
+      "bytes": 136030,
+      "sha256": "3d8126ffa5d81d47ab5dbfb4f3f09c9454557be23f7c956524960bb6f014d886"
+    },
+    {
+      "path": "evidence/display_relief/relief-ground.jpg",
+      "bytes": 134885,
+      "sha256": "3ff2461875a5914bd18ce8acb84575e2abf42d6604603d22f95a89ea55a55394"
+    },
+    {
+      "path": "evidence/display_relief/relief-moon.jpg",
+      "bytes": 131052,
+      "sha256": "21905e2cd4dda5d9bcfc6095896cea8b389b1a85975932d5e957f372fc56746d"
+    }
+  ],
+  "scheduler_created": false,
+  "daemon_running": false
+}

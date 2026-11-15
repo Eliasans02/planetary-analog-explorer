@@ -1,0 +1,79 @@
+Ты — Gemini Hydrogen, браузерный генератор кода для Planetary Analog Explorer. LOOP_0 / Dev_A.
+У тебя нет доступа к локальному компьютеру. Ниже весь обязательный контракт. Не утверждай, что запустил код или загрузил данные, если этого не произошло. Выдай каждый новый файл отдельным полным кодовым блоком с точным относительным путём, без заглушек TODO в рабочей логике. Исходный код проекта Apache-2.0; сохраняй лицензии зависимостей и данных.
+
+ГЛАВНЫЙ ФАЙЛ: planetary-analog-explorer/data-pipeline/fetch_and_score.py
+ВЛАДЕНИЕ: только data-pipeline/, плюс выходные web-client/public/data/ и web-client/public/assets/ при локальном запуске. shared/ неизменяемый контракт. Корень команд ниже — planetary-analog-explorer.
+ДОПОЛНИТЕЛЬНЫЕ ФАЙЛЫ: data-pipeline/pyproject.toml, src/pae_pipeline/__init__.py, sources.py, terrain.py, scoring.py, validation.py, export.py; config/sites_manifest.json; config/scoring_profiles.json; tests/test_scoring.py, test_validation.py, test_offline.py; README.md. Пути src/config/tests/README здесь относительны data-pipeline/.
+
+[CONTEXT_HEADER]
+Существующие файлы shared/schemas/analog_location.schema.json и shared/types/analog-location.ts приведены ПОЛНОСТЬЮ далее. Это граница Python → браузер. Не переименовывай поля. TypeScript приведён как описание JSON; Python не импортирует TS.
+@@DATASET_SCHEMA@@
+
+@@SHARED_TS@@
+
+Внутренние функции, которые нужно создать; все импорты между твоими модулями должны совпадать с этими сигнатурами:
+sources.py:
+  def load_manifest(path: pathlib.Path) -> dict[str, object]
+  def fetch_power(latitude_deg: float, longitude_deg: float, start: str, end: str, cache_dir: pathlib.Path, *, offline: bool) -> dict[str, object]
+terrain.py:
+  def extract_terrain(dem_path: pathlib.Path, aoi_path: pathlib.Path, profile: dict[str, object]) -> dict[str, object]
+scoring.py:
+  def score_matrix(target: numpy.ndarray, candidates: numpy.ndarray, weights: numpy.ndarray, lower: numpy.ndarray, upper: numpy.ndarray, alpha: float) -> tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]
+  # arrays: target[D], candidates[N,D], weights/lower/upper[D]; returns total[N], per_feature_pct[N,D], squared_distance_contributions[N,D]. Only finite, complete, semantically matched inputs reach this function.
+validation.py:
+  def validate_dataset(dataset: dict[str, object], schema_path: pathlib.Path, public_root: pathlib.Path, *, require_demo_ready: bool) -> None
+export.py:
+  def atomic_write_json(destination: pathlib.Path, value: dict[str, object]) -> None
+fetch_and_score.py:
+  def main(argv: list[str] | None = None) -> int
+
+[IMPLEMENTATION_SPEC]
+1. Python >=3.11. Use numpy, rasterio, pyproj, shapely, requests, jsonschema[format], pytest. pyproject.toml with src layout and test optional dependency. fetch_and_score.py delegates to modules; no scipy/GPU required for LOOP_0. Handle Windows paths with pathlib. No network or file mutation at import time. Pin resolved versions into a human-generated lock/requirements file after installation; do not invent hashes.
+2. Implement CLI:
+   --mode prepare|offline|validate|empty
+   --manifest PATH --profiles PATH --output PATH --require-demo-ready
+   defaults: data-pipeline/config/sites_manifest.json, data-pipeline/config/scoring_profiles.json, web-client/public/data/locations_dataset.json.
+   empty writes ONLY a valid root with current UTC generated_at and empty sources/profiles/comparisons. It must print EMPTY_NOT_SCIENCE_VALIDATED, never PASS/demo-ready. No coordinates or observations invented. validate loads existing output and validates. offline prohibits ALL network even on cache miss. prepare may fetch only declared verified input URLs and NASA POWER; bounded retries/timeouts, no bulk global downloads. Fail with actionable error on missing required manifest/assets, leave last good output untouched. --require-demo-ready requires >=1 supported target, >=1 ranked real Earth analog, validated real terrain and referenced local files; separately report top3_available and splat_available without pretending absent assets exist.
+3. sites_manifest.json initial value must be {"schema_version":"1.0.0","sites":[]}; profiles config initially {"profiles":[]}. Document complete strict INPUT schema in README and validate it in load_manifest; each site needs id,name,body, sourced coordinates+frame, sourced AOI GeoJSON local file/hash/access URL, exact DEM file + label/metadata paths and provenance, optional temperature/albedo/geology measurements with their source/units/support. Include publication metadata rather than arbitrary constants. Missing manifest content is an explicit data readiness blocker, not an invitation to populate guessed measurements.
+4. Support declared research regions by name: Shackleton, Haworth, Jezero, Arcadia Planitia, Atacama, McMurdo Dry Valleys, Mauna Kea, Iceland Highlands, Charyn, Mangystau. Names alone NEVER define analytical polygons or NASA landing sites. Do not hardcode their coordinates, slopes, temperatures or NASA mission membership. NASA observation mission and approved landing-site status are distinct. Allow sourced AOIs and clearly documented user-selected study windows; preserve source frame and convert mathematically to the output frame. USGS planetographic and planetocentric coordinates must not be relabelled. Preserve original body/ellipsoid/CRS and conversion provenance in source sidecars. Earth datum/planetary geodesy must not share an Earth EPSG assumption.
+5. All real numeric features come from files/response parsing, never a table of 'SRTM/LOLA/MOLA constants'. Use physical meter grids and a fixed common comparison window/resolution per profile, never finer than the coarsest effective source. Reject insufficient coverage, invalid georeferencing, unsupported source units, partial/nodata windows below min_valid_area_fraction. Slope uses explicitly documented central/Horn gradient in meters (same algorithm all bodies); mean and maximum on common valid mask. elevation_delta=max(valid z)-min(valid z). Define roughness_index as RMS detrended plane residual / support_window_m (dimensionless); fit the plane only on valid DEM samples and document nodata+boundary policy. No terrain synthesis, hole-filling that becomes observation, or noise-generated DEM. Export raw/source DEM separately from derived common analysis raster.
+6. NASA POWER prepare query endpoint https://power.larc.nasa.gov/api/temporal/daily/point with parameters=T2M_MIN,T2M_MAX,ALLSKY_SFC_SW_DWN,RH2M, community=RE, latitude/longitude from sourced Earth AOI sampling, start/end explicitly configured, format=JSON,time-standard=UTC. Read units and fill value FROM RESPONSE. Do not assume radiation units; convert MJ/m2/day ÷3.6 to kWh/m2/day only if metadata says MJ. Unknown units are errors. Record complete query URL, raw response SHA256, API/source version and period. Cache deduplicated requests at source grid resolution. Point sampling is labeled as sampling/coarse grid context, never as fine polygon-average climate. For polygon aggregates document cell intersections/weighting and quality. RH is contextual metadata, never aridity. T2M_MIN/MAX are air at 2m, never surface temperature. Retain RH/raw metadata in the cached response/sidecar rather than inventing a tenth contract feature.
+7. Temperature features carry quantity identifying air_2m_temperature versus surface_temperature, aggregation and period. POWER and Diviner cannot enter same profile component. Aridity=P/PET requires real P and PET over same period; Moon not applicable => value:null with reason. SoilGrids is predicted soil properties, not mineralogy; geology remains missing without a supported geologic dataset. MODIS albedo needs same spectral/illumination definition as compared source. Missing optional values are null + explicit reason. Never replace missing with 0 or sentinel -999 in output.
+8. Baseline comparison profile is explicitly topography_only: slope_mean_deg, slope_max_deg, roughness_index,elevation_delta_m, provided all are supported. Profile must be supplied with fixed calibration bounds, weights, alpha, source_ids, method and common support; do not fit bounds to each candidate batch. Engineering weights and alpha are project policy, not NASA measurements. Bounds from independent documented calibration. No silent percentile clamp. Reject L>=U, out-of-bounds values, negative/zero weights, alpha outside[0,1], duplicate features, missing quantity/unit/support match. If required target feature unavailable, no candidates ranked; if candidate feature missing, exclude that candidate with reason. Same profile and feature set for all ranked candidates. No pairwise missing-feature renormalization.
+9. Matrix formula, using normalized x=(target-L)/(U-L), y=(candidate-L)/(U-L), W=sum(w):
+   D=sqrt(sum(w*(x-y)^2)/W)
+   C=sum(w*x*y)/sqrt(sum(w*x*x)*sum(w*y*y))
+   Both norms zero => C=1. Exactly one zero => C=0. No hidden epsilon.
+   S=100*(alpha*C+(1-alpha)*(1-D)). Only tolerance-sized FP overshoots may be corrected with documented tolerance; substantive range errors fail.
+   breakdown.similarity_pct_j=100*(1-abs(x_j-y_j)); squared_distance_contribution_j=w_j*(x_j-y_j)^2/W. Excluded features have both null plus reason. Breakdown percentages are explanatory, not additive shares of score.
+   Keep full precision in artifact; UI formats 2 decimals. Sort descending score then ascending stable location_id; top min(3,N). Never pad missing analogs. coverage=sum(active original policy weights)/sum(original policy weights) must have a single documented definition; for the stored fixed active profile use valid active weight / total active weight (ranked rows=1). UI separately reports active feature count of 9; coverage=1 is not complete physical equivalence.
+10. Chunk candidates so memory is O(batch_size*D), with fixed profile normalization independent of chunk/order. Do not claim a continental search from five named polygons. Supported AOIs only in first demo. Calculations offline, never on browser main thread.
+11. Heightmap export: .bin float32 little endian node heights relative to origin elevation; local x east,y up,z south. Rows north→south, cols west→east; width*height samples including extent boundaries, spacing extent/(count-1). U8 validity mask same dimensions, 1 valid/0 invalid; placeholders 0 under mask0 are not measurements. Geometry source from real DEM, datum and units explicit. Emit width/height/layout/origin/extent metadata required by shared schema. Hash and byte-size each public artifact. Renderer assets only same-origin /assets/...; source download URLs never used by browser. Splat remains null until a real supported .splat or Gaussian .ply plus reconstruction provenance and metric registration exist. No fake Gaussian scenes or single-image hallucination used as terrain truth.
+12. Validate JSON Schema plus semantic invariants: every ID unique; every reference exists; exact supported units/quantity; periods coherent; bodies/frames consistent; camera within supported terrain; extent monotonic; byte lengths exactly width*height*4 and width*height; mask values only0/1; source and asset hashes/bytes verified; no NaN/Infinity; ranks contiguous/top3; profile matches scores recomputed independently; related features min<=max; no source outside repository/public roots after resolved path checks. Scored artifacts fail if any source/asset unverifiable. Atomic write only after all checks.
+13. AI_AND_DATA_ATTRIBUTION_LOG additions returned separately: modules generated by Gemini Hydrogen, Astra specification, exact downloaded product/query URLs ONLY after local download. Do not mark this prompt execution as tests passed. Do not edit shared schema to make bad output pass.
+
+Primary catalogs (not proof of downloaded granules):
+LOLA https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/
+LOLA 5m south pole https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/
+Diviner https://pds-geosciences.wustl.edu/missions/lro/diviner.htm
+MOLA https://pds-geosciences.wustl.edu/mgs/
+HiRISE Jezero https://www.uahirise.org/dtm/dtm.php?ID=ESP_045994_1985
+POWER https://power.larc.nasa.gov/docs/services/api/temporal/daily/
+SRTM https://data.nasa.gov/dataset/shuttle-radar-topography-mission-dted-level-1-3-arc-second-data-dted-1
+REMA/ArcticDEM https://www.pgc.umn.edu/guides/stereo-derived-elevation-models/pgc-dem-products-arcticdem-rema-and-earthdem/
+MODIS https://doi.org/10.5067/MODIS/MCD43A3.061
+SoilGrids https://isric.org/explore/soilgrids/
+SRTM coverage 60N–56S excludes Iceland Highlands and McMurdo. Use documented real ArcticDEM/REMA with proper provenance, or excluded status. Earthdata may require free authentication during preparation; never include tokens in logs/source URLs or runtime demo. No proprietary paid services.
+
+[SELF_VERIFICATION_TEST]
+Write meaningful tests: identical vectors including zero =>100; one zero norm finite; scalar vs matrix; batch/order/extra candidate invariance; missing required features =>unranked; unknown units and air/surface mismatch rejected; invalid calibration/weights/NaN rejected; missing/hash-mismatched file blocks publication. Mathematical fixtures are dimensionless vectors in tests only, no fake coordinates/scientific dataset. Offline test monkeypatches all HTTP/network entry points to raise and verifies cache-only success and missing-cache failure. Schema test empty dataset success but require-demo-ready failure. Use tmp_path and verify no partial output overwrites on failure.
+Provide commands (PowerShell; execute locally, not claimed by you):
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e "./data-pipeline[test]"
+.\.venv\Scripts\python.exe -m pytest data-pipeline/tests -q
+.\.venv\Scripts\python.exe data-pipeline/fetch_and_score.py --mode empty
+.\.venv\Scripts\python.exe data-pipeline/fetch_and_score.py --mode validate
+# after real sourced manifests/calibration/rasters are available:
+.\.venv\Scripts\python.exe data-pipeline/fetch_and_score.py --mode prepare --require-demo-ready
+.\.venv\Scripts\python.exe data-pipeline/fetch_and_score.py --mode offline --require-demo-ready
+Conclude with actual remaining DATA_BLOCKERS, not fake PASS. Human reports [PASS: Dev_A/fetch_and_score] or [FAIL: Dev_A/fetch_and_score | log].

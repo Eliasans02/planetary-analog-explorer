@@ -1,0 +1,386 @@
+{
+  "recorded_at": "2026-11-14T11:04:25.876740+00:00",
+  "scope": "Current implementation, contracts, public planet/Mars assets and evidence; raw identities retained in source sidecars.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5202,
+      "sha256": "6bf56cc440d3777a26ed07347ea1c417e68196701bb69b57a0974e974f8a8b7c"
+    },
+    {
+      "path": "data-pipeline/export_mars_surface.py",
+      "bytes": 9665,
+      "sha256": "5773c34c8fd55169887d10f722b846843e00a7bdce4be4f9b73aab69ff389c9b"
+    },
+    {
+      "path": "data-pipeline/fetch_planet_assets.py",
+      "bytes": 13192,
+      "sha256": "06cb52b78de0694bcb3d4b1446f0ddf9b079a881d2f8c2bf735a0e3e54b2a73b"
+    },
+    {
+      "path": "data-pipeline/tests/test_planet_assets.py",
+      "bytes": 3666,
+      "sha256": "c63b6d106f00aa7c58b861adb1eed30d678764c38471e6f831f9f3a13d9d8b14"
+    },
+    {
+      "path": "data-pipeline/tests/test_surface_export.py",
+      "bytes": 5715,
+      "sha256": "71ac03e926c5561df3f14a5a377eb8046a153b37f46c0b72d82e0aee9ac56f66"
+    },
+    {
+      "path": "docs/planet_explorer_contract.md",
+      "bytes": 4430,
+      "sha256": "3153edf1dd43b24670b1f41281e1493f8feaf29d06d8c5718142a2420e9b00b0"
+    },
+    {
+      "path": "docs/research/PLANET_ASSETS.md",
+      "bytes": 7290,
+      "sha256": "2191c030f0ad9e19c58a976d79557770b8f5767a18acd4aaf0f575d70a4871a8"
+    },
+    {
+      "path": "evidence/planet_assets/validation.json",
+      "bytes": 3631,
+      "sha256": "8c57dc8827d6ef260e7347fe87de63958b02668ecad5c98c13e70e4289e79371"
+    },
+    {
+      "path": "evidence/planet_explorer/browser-observation.json",
+      "bytes": 2937,
+      "sha256": "3965b961cdcd2d01c1a53a92d7df80faf82a50a25398c8b2b25de99bfe95e2a4"
+    },
+    {
+      "path": "evidence/planet_explorer/check-status.json",
+      "bytes": 2122,
+      "sha256": "7f27fb339df372c0b5016fcdaebefb906496a76e23e7da5b6503d9ac1f2321e0"
+    },
+    {
+      "path": "evidence/planet_explorer/independent-review.md",
+      "bytes": 16317,
+      "sha256": "d46218a911e8d5226fd144ecb96e8453adda1bb5c585d7037caedf5ac1fcd54e"
+    },
+    {
+      "path": "prompts/ASTRA_SOL_LOOP.md",
+      "bytes": 5813,
+      "sha256": "7445e9a5f3d15cc46a6e0963703538fe4db5513fe2f1bff55b797552148dbb59"
+    },
+    {
+      "path": "shared/schemas/analog_location.schema.json",
+      "bytes": 14476,
+      "sha256": "4cbb315d992f19b8b91c52789fa3f4b99d16d18cc04c8aee1c0b66eb4b3d7b61"
+    },
+    {
+      "path": "shared/schemas/planet_catalog.schema.json",
+      "bytes": 6418,
+      "sha256": "e76e0e3636bc235ddb7d622c3903e4be10ddba90167073202e64383afa563138"
+    },
+    {
+      "path": "shared/schemas/scoring_profile.schema.json",
+      "bytes": 2580,
+      "sha256": "79e8edcdb9eeea45920276ef8acd2b8f6c943031f32c02a8e06ba48b2b9cd93e"
+    },
+    {
+      "path": "shared/schemas/surface_catalog.schema.json",
+      "bytes": 10442,
+      "sha256": "2bd16f0771522d3eac3a94d84a09a9a273fc95cdc404b0efa87c0aad862dbf19"
+    },
+    {
+      "path": "shared/types/analog-location.ts",
+      "bytes": 5156,
+      "sha256": "d072f39544a8c4c72f01459fa46fc7da070291e2f5b1cba06169833a7e9e3e06"
+    },
+    {
+      "path": "shared/types/planet-catalog.ts",
+      "bytes": 919,
+      "sha256": "a66fdfcca736d195dd0169e9e65ca354ca8a952df24faa4f305822c34aa22e88"
+    },
+    {
+      "path": "shared/types/surface-catalog.ts",
+      "bytes": 1627,
+      "sha256": "8799bd9fcb5fbedc7fd30fe2b603e0856a0a06f7cd17658a1c18ba02543fba2c"
+    },
+    {
+      "path": "web-client/package.json",
+      "bytes": 1717,
+      "sha256": "48031d33fcc6f7d4f84eb60a1d45937e81c8787c4e34250aae69c0717cb309a6"
+    },
+    {
+      "path": "web-client/public/assets/planets/mars/color-1024.jpg",
+      "bytes": 230213,
+      "sha256": "1655a482b0c97f8fd9f05b45d606accf0247ccbf021d435c7e22b545ee111bf6"
+    },
+    {
+      "path": "web-client/public/assets/planets/mars/color-2048.jpg",
+      "bytes": 883751,
+      "sha256": "3851b23009166c15779293d02f415785df69989070fdcb128d4de90e5d22a135"
+    },
+    {
+      "path": "web-client/public/assets/planets/mars/color-4096.jpg",
+      "bytes": 3226210,
+      "sha256": "2f9ed79e506a6ae6d3e86dd59c8d1ed541a65602e7016ea9e4294ffd91627e02"
+    },
+    {
+      "path": "web-client/public/assets/planets/mars/provenance.json",
+      "bytes": 9079,
+      "sha256": "f70dbc16b3aa7f37b4d0da8708ace8ee605dbd3635743b78ef85838f4e39b6a9"
+    },
+    {
+      "path": "web-client/public/assets/planets/mars/source-image-manifest.json",
+      "bytes": 817,
+      "sha256": "3a051a5ccc30ff987059f8dbe1a8635da07977435595a6fe0302c239a47ddfc0"
+    },
+    {
+      "path": "web-client/public/assets/planets/moon/color-1024.jpg",
+      "bytes": 155485,
+      "sha256": "035cb414b7c2595b84ed196c019b4e8cef37883fe20a02f3240da427a424fbc4"
+    },
+    {
+      "path": "web-client/public/assets/planets/moon/color-2048.jpg",
+      "bytes": 598048,
+      "sha256": "12cc434945fa30fe52658611d2a4bf88cd5c3983e1a040ca56faaa0d396afe24"
+    },
+    {
+      "path": "web-client/public/assets/planets/moon/color-4096.jpg",
+      "bytes": 2484879,
+      "sha256": "b01b0842d9ec1b24140b925cba0de485e9887741c34add25dd5c41f47c47ee91"
+    },
+    {
+      "path": "web-client/public/assets/planets/moon/global-heights-m.f32",
+      "bytes": 4147200,
+      "sha256": "2724eb919e9dff40b2bd0ebb7fe0ee88959aee91375478ef84e6f122250b5302"
+    },
+    {
+      "path": "web-client/public/assets/planets/moon/provenance.json",
+      "bytes": 16980,
+      "sha256": "2ccef947a76a3b6f5e0a76e489d7e5fa85dd6cbb4247aa3e916a606450c78b7f"
+    },
+    {
+      "path": "web-client/public/assets/planets/moon/source-image-manifest.json",
+      "bytes": 112,
+      "sha256": "9e06a88e33aa497a1919035a8a10e8a99806af2acb29d234bac982fca7b26118"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-jezero-hirise/heights.f32",
+      "bytes": 66564,
+      "sha256": "0bac451f8f7d9f1e4d301f024c8b0edc8c4a7a5587136c20ad05db579d2afefd"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-jezero-hirise/provenance.json",
+      "bytes": 11596,
+      "sha256": "061d2e0af52afc0d3f3d502c55089454c5af6875e2dc4694eecc699b61dd8768"
+    },
+    {
+      "path": "web-client/public/assets/surfaces/mars-jezero-hirise/valid-mask.u8",
+      "bytes": 16641,
+      "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+    },
+    {
+      "path": "web-client/public/data/planet_catalog.json",
+      "bytes": 4417,
+      "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+    },
+    {
+      "path": "web-client/public/data/surface_catalog.json",
+      "bytes": 17163,
+      "sha256": "0a94f8074e25e7863fa9412d2a781096660e2ad3cab7a1e58a4c2641ce8cee9f"
+    },
+    {
+      "path": "web-client/scripts/verify-planet-assets.mjs",
+      "bytes": 3346,
+      "sha256": "a8ebd779deca8a989ccda9858a0e90421be61d6c3ac8c8c99d473e18a5c51ccc"
+    },
+    {
+      "path": "web-client/src/App.tsx",
+      "bytes": 17358,
+      "sha256": "f2db5652875972b19c27fef815e209ad2f431e902f81597cc04957498fb09800"
+    },
+    {
+      "path": "web-client/src/components/AnalogPassport.tsx",
+      "bytes": 29326,
+      "sha256": "54e6e536812c95a0d7c8e083fe1445845b3405fbb569f01d60ef91441c34d0f0"
+    },
+    {
+      "path": "web-client/src/components/PlanetExplorer.tsx",
+      "bytes": 11532,
+      "sha256": "2ae02e04dd96932c46d9d98c84bf9451802efa59cbf6033f051dbe3a9b1621da"
+    },
+    {
+      "path": "web-client/src/components/PlanetViewport.tsx",
+      "bytes": 9642,
+      "sha256": "03d0e095f0748af190968799c78bfd81c2ee7149ba7e9fe981ced9c1d99833c2"
+    },
+    {
+      "path": "web-client/src/components/SurfaceExplorer.tsx",
+      "bytes": 11050,
+      "sha256": "1307edcbbde1a95fcd472d9f6bdf5922287c4a695d7b594de51d3e49a2dd517e"
+    },
+    {
+      "path": "web-client/src/components/SurfaceViewport.tsx",
+      "bytes": 20431,
+      "sha256": "a364158160d074ba3a676eb9c2135d52fc740c54f8a9f8f8b80def15f056ae11"
+    },
+    {
+      "path": "web-client/src/components/TelemetryHUD.tsx",
+      "bytes": 12208,
+      "sha256": "35ee3994a922a999d9e7ba86f26888ff2ef98812a9785ec15f5e34f9cf581d61"
+    },
+    {
+      "path": "web-client/src/components/Viewport3D.lifecycle.test.ts",
+      "bytes": 5202,
+      "sha256": "706736a2b9ad976f4a86e2d5ac74eb873e0b2f66a92368f89736c85a2682e492"
+    },
+    {
+      "path": "web-client/src/components/Viewport3D.tsx",
+      "bytes": 70208,
+      "sha256": "feb3725cdd642183786410c7a76414c4ee8d354ccd3f01fc40b8c2af8e0639df"
+    },
+    {
+      "path": "web-client/src/components/planet-explorer.css",
+      "bytes": 9895,
+      "sha256": "6fbd49e4736f4d0ac46a9acda3a084d144193956440948da1aef22b3c4967690"
+    },
+    {
+      "path": "web-client/src/components/surface-explorer.css",
+      "bytes": 8943,
+      "sha256": "76b5dcb57c054dac08bb41fa2430e62c75fdd6be4fa4b2bf14272451ca080d0d"
+    },
+    {
+      "path": "web-client/src/components/ui/InfoDisclosure.tsx",
+      "bytes": 1545,
+      "sha256": "3b863d2926211ea219d11d2873f5a6fe8122cfa765c0ccc00755b639e4609c74"
+    },
+    {
+      "path": "web-client/src/data/loadDataset.test.ts",
+      "bytes": 12929,
+      "sha256": "2951930ee6ca8cf3d888f30e2938ea4945ffa8656e8cb3e29cb8b4f837a9c80e"
+    },
+    {
+      "path": "web-client/src/data/loadDataset.ts",
+      "bytes": 23844,
+      "sha256": "71f35cacaa5fc9b6bf6a55c9db8c355de444f3eff7eec640099a33be9fa5940e"
+    },
+    {
+      "path": "web-client/src/data/planetCatalog.test.ts",
+      "bytes": 2521,
+      "sha256": "d78cc359a45ac38b7afcab40ee908d20797d2b79f6cd36eadf77dfc27f778893"
+    },
+    {
+      "path": "web-client/src/data/planetCatalog.ts",
+      "bytes": 5632,
+      "sha256": "85726076cfd7d9aed09107af63d4ec7f6eabd50a9384312b3a13a0ea9b9db792"
+    },
+    {
+      "path": "web-client/src/data/selection.test.ts",
+      "bytes": 1242,
+      "sha256": "b81255e58f4e1a201390b6e5595824781e2a524273aa8a6a97d88b590121414b"
+    },
+    {
+      "path": "web-client/src/data/selection.ts",
+      "bytes": 3956,
+      "sha256": "ce314ebce26765509e86a2a9988b09cb75e9c0f604ebec4bb53a51272a19b460"
+    },
+    {
+      "path": "web-client/src/data/surfaceCatalog.test.ts",
+      "bytes": 5722,
+      "sha256": "711076cf7a2b3ccfd1198c8488b45332948abbd9ec620f4d308e718d8dfc8f01"
+    },
+    {
+      "path": "web-client/src/data/surfaceCatalog.ts",
+      "bytes": 6491,
+      "sha256": "d823dcd552dcfacdbc0c690799df81e20eb04e27ed717518c8819135dba716f2"
+    },
+    {
+      "path": "web-client/src/main.tsx",
+      "bytes": 232,
+      "sha256": "055735c1f2a805ceeca8a1376b884c7a8ae1b9d69ad42753b2d23b4e277bfebb"
+    },
+    {
+      "path": "web-client/src/styles.css",
+      "bytes": 1342,
+      "sha256": "ea7fc2b6d91fb5fa5e3154380f0f651a11b5e4527070517ff0b8cf139d260432"
+    },
+    {
+      "path": "web-client/src/terrain/assetSecurity.test.ts",
+      "bytes": 8909,
+      "sha256": "ce39490a5236eccb90b119a4721e6d04c1ab10af699acebd8c50e072f1a30b12"
+    },
+    {
+      "path": "web-client/src/terrain/coordinates.ts",
+      "bytes": 2522,
+      "sha256": "2a405134bd7ed5f836ea9115881ca0f6a9376820ea40b2d8edfad652998ac99d"
+    },
+    {
+      "path": "web-client/src/terrain/heightfield.test.ts",
+      "bytes": 8282,
+      "sha256": "f4595b917b556ca7db92d81a287e0ddf9a0bc62627bcc8ac8d8ec20c51a9f99c"
+    },
+    {
+      "path": "web-client/src/terrain/heightfield.ts",
+      "bytes": 17705,
+      "sha256": "220be4510707f95e69e6b183f9279b4a238c79942c2a4f388ccd553786bfbe4c"
+    },
+    {
+      "path": "web-client/src/terrain/planetGeometry.test.ts",
+      "bytes": 1985,
+      "sha256": "fcc82bd320256b1babee45f2533e7dd9d9d8ede4543ebcc1b9dbe98f322204b3"
+    },
+    {
+      "path": "web-client/src/terrain/planetGeometry.ts",
+      "bytes": 2854,
+      "sha256": "0817b8914dd85f4ee2608fe3b97cba82ea48a6ff4544a27662e789b25529baa5"
+    },
+    {
+      "path": "web-client/src/terrain/splatPayload.ts",
+      "bytes": 7409,
+      "sha256": "af33fe894154f684f6c9556c6d3ac983744666a6547b62dfce620f73a870600d"
+    },
+    {
+      "path": "web-client/src/terrain/splatUtils.ts",
+      "bytes": 4959,
+      "sha256": "ca0881e2f9b5b2bc06bafac3709e7ac4d6a0b48bf4aab1cabc562ca01673d54c"
+    },
+    {
+      "path": "web-client/src/terrain/surfaceGeometry.test.ts",
+      "bytes": 1638,
+      "sha256": "15b710e58c243aff1c1b485309b53f178a75a9c4d7002430cf56523c3ca2d22d"
+    },
+    {
+      "path": "web-client/src/terrain/surfaceGeometry.ts",
+      "bytes": 6011,
+      "sha256": "d9919a3b8ca84e6734af96a60785357acdcd82713497ff059042318f209564bb"
+    },
+    {
+      "path": "web-client/src/terrain/surfaceWalking.test.ts",
+      "bytes": 1319,
+      "sha256": "4fe2f8b46473413ccd53cd5d545b8948cbf739594406804c7a5a96ab27eb52d5"
+    },
+    {
+      "path": "web-client/src/terrain/terrain-worker-client.ts",
+      "bytes": 2426,
+      "sha256": "4a134ba13f0b6fb0167fb3cc3cedb9b5c0e9164d56db63c2b529d281aa6df0b4"
+    },
+    {
+      "path": "web-client/src/terrain/terrain.worker.ts",
+      "bytes": 1083,
+      "sha256": "99ff902aad2137861a47d48916b4e55e726b68fed18a5ba2f4312b4f98a68a6b"
+    },
+    {
+      "path": "web-client/src/terrain/walkInput.test.ts",
+      "bytes": 790,
+      "sha256": "9497ff461cc1dabf8c898f4448be008a7a99000cbe2603103dcb40588192aee8"
+    },
+    {
+      "path": "web-client/src/terrain/walkInput.ts",
+      "bytes": 407,
+      "sha256": "6a5284c82f1e4e1730a6f6349ee92d708c49bdc18cd3c0cf339b87fff2ca5a02"
+    },
+    {
+      "path": "web-client/src/types/gaussian-splats-3d.d.ts",
+      "bytes": 932,
+      "sha256": "f7f260dc482372bdcb4b57e07a3a3272a245e349ee8d6c5cd83fd33c5da7d015"
+    },
+    {
+      "path": "web-client/src/vite-env.d.ts",
+      "bytes": 38,
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "raw_source_receipt": {
+    "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+    "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+    "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center.tif",
+    "complete_product_bytes": 40980810,
+    "bytes": 40980810,
+    "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+    "complete_product": true,
+    "identity_scope": "SHA256 of complete TIFF assembled from verified exact ranges.",
+    "retrieved_at": "2026-11-14T11:46:11.766180+00:00",
+    "http_headers": {
+      "Date": "Sat, 14 Nov 2026 11:46:11 GMT",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Powered-By": "Express",
+      "Accept-Ranges": "bytes",
+      "Cache-Control": "public, max-age=0",
+      "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+      "ETag": "W/\"271514a-17285c7fa58\"",
+      "Content-Type": "image/tiff",
+      "Content-Range": "bytes 0-65535/40980810",
+      "Content-Length": "65536",
+      "Connection": "close",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "Content-Security-Policy": "upgrade-insecure-requests"
+    }
+  },
+  "range_receipts": [
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-header.bin",
+      "range_start_inclusive": 0,
+      "range_end_inclusive": 65535,
+      "complete_product_bytes": 40980810,
+      "bytes": 65536,
+      "sha256": "cc5950c4860a9e5dc66a1a9c6e8d08a30ba3354dc96065f5107fa7f1b7ef2b69",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:46:11.766180+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:11 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 0-65535/40980810",
+        "Content-Length": "65536",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-0-4194303.bin",
+      "range_start_inclusive": 0,
+      "range_end_inclusive": 4194303,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "897532eb42448f5bf21ed90534d6bedec5844b7e9aa162832e068b540c9e3c21",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:46:23.886196+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:12 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 0-4194303/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-4194304-8388607.bin",
+      "range_start_inclusive": 4194304,
+      "range_end_inclusive": 8388607,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "0e6bc5209096e4f000535dd6c870d02e0b0eeca5cba937ac4dcdfc9dde0de27d",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:46:26.045539+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:12 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 4194304-8388607/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-8388608-12582911.bin",
+      "range_start_inclusive": 8388608,
+      "range_end_inclusive": 12582911,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "b2b441fb36f9e30cc45f7788d6f1a4050653c023d4475a8aba7932bf16dd8e8d",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:46:26.676868+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:12 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 8388608-12582911/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-12582912-16777215.bin",
+      "range_start_inclusive": 12582912,
+      "range_end_inclusive": 16777215,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "97a781241dc771e95c03a0a635ecab750f35a9dfa5f712347d7af57931f86c59",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:46:39.146622+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:12 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 12582912-16777215/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-16777216-20971519.bin",
+      "range_start_inclusive": 16777216,
+      "range_end_inclusive": 20971519,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "b762068a1f5321e44b43efc8d4d7e680ef55585ac5703e0ef86443171514d10c",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:47:03.628132+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:24 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 16777216-20971519/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-20971520-25165823.bin",
+      "range_start_inclusive": 20971520,
+      "range_end_inclusive": 25165823,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "b06fd1b0854d064b87078808fed089c10280a645e1950fadb9fe85102483a665",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:47:12.818280+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:26 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 20971520-25165823/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-25165824-29360127.bin",
+      "range_start_inclusive": 25165824,
+      "range_end_inclusive": 29360127,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "622bf0d2f0cab16be0abe46ca5e7c48644c81adf536d3fa7a60ac1f1c8a66cb8",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:47:18.759154+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:27 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 25165824-29360127/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-29360128-33554431.bin",
+      "range_start_inclusive": 29360128,
+      "range_end_inclusive": 33554431,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "beef2d79df3df02ab9acbb3af27683135fda4f3f19f26b09767702504c3e0a85",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:47:17.276070+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:46:39 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 29360128-33554431/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-33554432-37748735.bin",
+      "range_start_inclusive": 33554432,
+      "range_end_inclusive": 37748735,
+      "complete_product_bytes": 40980810,
+      "bytes": 4194304,
+      "sha256": "0b38e91a446a7fdd87cbc643f6b36908e85e111e566dbbc01d0d5760c704de66",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:47:56.367182+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:47:04 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 33554432-37748735/40980810",
+        "Content-Length": "4194304",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "final_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/lola-site01-center-37748736-40980809.bin",
+      "range_start_inclusive": 37748736,
+      "range_end_inclusive": 40980809,
+      "complete_product_bytes": 40980810,
+      "bytes": 3232074,
+      "sha256": "08314cdbabd201cbe20a2ebbd93b45cd33421a45bd0b05e77389382b43d2dc1a",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:47:55.122773+00:00",
+      "http_headers": {
+        "Date": "Sat, 14 Nov 2026 11:47:13 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Powered-By": "Express",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=0",
+        "Last-Modified": "Fri, 05 Jun 2020 18:39:35 GMT",
+        "ETag": "W/\"271514a-17285c7fa58\"",
+        "Content-Type": "image/tiff",
+        "Content-Range": "bytes 37748736-40980809/40980810",
+        "Content-Length": "3232074",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    }
+  ],
+  "source_metadata": {
+    "crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+    "transform": [
+      5.0,
+      0.0,
+      -19000.0,
+      0.0,
+      -5.0,
+      -4000.0
+    ],
+    "width": 3200,
+    "height": 3200,
+    "nodata": "nan",
+    "dtype": "float32",
+    "crop_origin": [
+      -11317.5,
+      -11682.5
+    ],
+    "spacing": [
+      5.0,
+      -5.0
+    ],
+    "coordinates": [
+      -137.50198490762307,
+      -89.4631577569723
+    ]
+  },
+  "source_label_text": null,
+  "window_col_row_width_height": [
+    1536,
+    1536,
+    129,
+    129
+  ],
+  "selection": "129 native pixels centered at floor(width/2),floor(height/2); project selection, not a published ROI.",
+  "processing": "Valid finite source samples minus valid crop minimum in float64 then little-endian Float32; invalid zero with UInt8 mask. No interpolation.",
+  "native_origin_semantics": "Pixel center row0,col0; signed native spacing follows raster columns/rows.",
+  "frame": "MOON_ME reference frame of ephemeris DE421 per NASA PGDA product page and README; inverse native projection only.",
+  "vertical_datum": null,
+  "source_sample_comparisons": [
+    {
+      "crop_row_col": [
+        0,
+        0
+      ],
+      "source_height_m": 1922.2303466796875,
+      "height_offset_m": 47.70556640625,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        0,
+        128
+      ],
+      "source_height_m": 1940.5374755859375,
+      "height_offset_m": 66.0126953125,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        64,
+        64
+      ],
+      "source_height_m": 1944.76708984375,
+      "height_offset_m": 70.2423095703125,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        128,
+        0
+      ],
+      "source_height_m": 1952.3905029296875,
+      "height_offset_m": 77.86572265625,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        128,
+        128
+      ],
+      "source_height_m": 1874.5247802734375,
+      "height_offset_m": 0.0,
+      "valid": true,
+      "exact_float32_match": true
+    }
+  ],
+  "limitations": [
+    "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+    "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+    "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+    "LOLA surface includes interpolated pixels; direct laser-return counts not acquired.",
+    "Absolute lunar vertical datum remains unverified."
+  ],
+  "source_hash_scope": "SHA256 of complete TIFF assembled from verified exact ranges."
+}

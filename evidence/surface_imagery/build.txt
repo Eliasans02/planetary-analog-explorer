@@ -1,0 +1,29 @@
+
+> planetary-analog-explorer-web@0.1.0 prebuild
+> npm run shared:check
+
+
+> planetary-analog-explorer-web@0.1.0 shared:check
+> node scripts/shared-preflight.mjs
+
+Shared contract: C:\Users\HP\NasaAstras\planetary-analog-explorer\shared
+
+> planetary-analog-explorer-web@0.1.0 build
+> vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 1914 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                             0.99 kB │ gzip:   0.47 kB
+dist/assets/terrain.worker-WbMYdD_P.js    163.88 kB
+dist/assets/index-BrMCF5He.css             52.48 kB │ gzip:  11.34 kB
+dist/assets/index-7jGhMrdp.js           1,348.54 kB │ gzip: 371.20 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 8.77s

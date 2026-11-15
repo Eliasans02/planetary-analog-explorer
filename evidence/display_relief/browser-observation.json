@@ -1,0 +1,46 @@
+{
+  "recorded_at": "2026-11-14T12:40:42.148509+00:00",
+  "observer": "Astra root through documented internal-browser CUA",
+  "url": "http://127.0.0.1:4173/",
+  "final_script_observed": "/assets/index-BWJd2ss1.js",
+  "final_css_observed": "/assets/index-DxUfEtlc.css",
+  "screenshots": [
+    {
+      "path": "evidence/display_relief/relief-mars.jpg",
+      "bytes": 136030,
+      "sha256": "3d8126ffa5d81d47ab5dbfb4f3f09c9454557be23f7c956524960bb6f014d886"
+    },
+    {
+      "path": "evidence/display_relief/relief-ground.jpg",
+      "bytes": 134885,
+      "sha256": "3ff2461875a5914bd18ce8acb84575e2abf42d6604603d22f95a89ea55a55394"
+    },
+    {
+      "path": "evidence/display_relief/relief-moon.jpg",
+      "bytes": 131052,
+      "sha256": "21905e2cd4dda5d9bcfc6095896cea8b389b1a85975932d5e957f372fc56746d"
+    }
+  ],
+  "console": {
+    "external_reference_warning_count": 3,
+    "external_reference": "LROC QuickMap reference URLs",
+    "local_application_warning_count": 0,
+    "local_application_error_count": 0
+  },
+  "observations": [
+    "Warm NASA published Mars source displayed; toolbar and map status do not overlap the globe.",
+    "Mars 1K/Native, Original image/Color + shape, and display-light -50 to -45 controls work.",
+    "Split view retains independent Moon 4K and Mars Native source selections.",
+    "Nobile Moon lit/unlit, light slider and compact surface panel remain clear.",
+    "Gale defaults to published enhanced local imagery and switches to NASA orbital color.",
+    "First-person W changes HUD Z to -0.8 m; pause followed by imagery/lighting toggles preserves the position and paused mode.",
+    "All displayed terrain-analysis numbers remain unchanged."
+  ],
+  "limitations": [
+    "Visual/functional browser observations, not GPU pixel equality or color-calibrated photometry.",
+    "Display lighting is neutral visualization illumination, not an astronomical Sun model.",
+    "Mars remains a spherical globe with no global DEM; local DEM windows retain 1x source relief.",
+    "Global image placement is empirical and approximate; no independent local geodetic registration certification.",
+    "No FPS/RAM benchmark or new native-pointer-lock acceptance claim."
+  ]
+}

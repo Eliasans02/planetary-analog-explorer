@@ -1,0 +1,367 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-14T10:12:35.376758+00:00",
+  "catalog_sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539",
+  "records": [
+    {
+      "surface_id": "lola-site04-roi3",
+      "inputs": {
+        "width": 129,
+        "height": 129,
+        "native_origin": [
+          -3007.5,
+          -5792.5
+        ],
+        "native_spacing": [
+          5.0,
+          -5.0
+        ],
+        "native_crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+        "heights_sha256": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+      },
+      "layers": [
+        {
+          "id": "orbital-color",
+          "label": "Orbital mosaic colors \u00b7 coarse display",
+          "color_mode": "global_display_mosaic",
+          "registration": "approximate_global_mosaic",
+          "source_url": "https://svs.gsfc.nasa.gov/4720/",
+          "image": {
+            "path": "/assets/surface-imagery/lola-site04-roi3/orbital-color/color.png",
+            "sha256": "e3a0acfc7f1937ff2186cb4a3e24e9a115c0cfb8d466f28fddd89a49a108db12",
+            "bytes": 1386,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/lola-site04-roi3/orbital-color/provenance.json",
+            "sha256": "381e5041f93142bf0bb77dd5fe8d9d8f53efbf8db5c279d62fa4b40cdabac9a0",
+            "bytes": 20787
+          },
+          "limitations": [
+            "NASA visualization color map optimized for aesthetics, not science; exposure/white balance adjusted and high-latitude gaps inpainted.",
+            "LROC color covers 70 N to 70 S; polar regions use lower resolution monochromatic LOLA albedo fill.",
+            "JPEG derivatives are display imagery, not scientific feature or similarity evidence.",
+            "Coarse display mosaic sampled by source longitude/latitude; approximate registration only, no independent tie-point alignment to local DEM.",
+            "Mosaic display frame and native DEM realization have not been transformed or independently registered; this is an illustrative image drape.",
+            "129-pixel output samples the existing orbital image; output size does not add source detail or ground resolution.",
+            "This south-polar location uses the published monochrome LOLA albedo fill, not a local color photograph; no color has been invented."
+          ]
+        }
+      ]
+    },
+    {
+      "surface_id": "mars-jezero-hirise",
+      "inputs": {
+        "width": 129,
+        "height": 129,
+        "native_origin": [
+          62.094294602471564,
+          1091876.6777565696
+        ],
+        "native_spacing": [
+          1.0096633268711,
+          -1.0096633268711
+        ],
+        "native_crs_wkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3394839.8133163,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",15],PARAMETER[\"central_meridian\",77.44],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "heights_sha256": "0bac451f8f7d9f1e4d301f024c8b0edc8c4a7a5587136c20ad05db579d2afefd",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+      },
+      "layers": [
+        {
+          "id": "orbital-color",
+          "label": "Orbital mosaic colors \u00b7 coarse display",
+          "color_mode": "global_display_mosaic",
+          "registration": "approximate_global_mosaic",
+          "source_url": "https://www.mars.asu.edu/data/mdim_color/",
+          "image": {
+            "path": "/assets/surface-imagery/mars-jezero-hirise/orbital-color/color.png",
+            "sha256": "30d5d43867e208a8feefce5381c35114de6011667f1414ed4996b3ee74ff99a9",
+            "bytes": 258,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/mars-jezero-hirise/orbital-color/provenance.json",
+            "sha256": "57e8fab085d8e96809f7ce5e70fa3c1402b9d0c3f2bf16949e7feffbb9b79609",
+            "bytes": 12815
+          },
+          "limitations": [
+            "Viking color mosaic sharpened with MDIM 1.0; source nominal 64 pixels/degree, about 920 m/pixel.",
+            "Global imagery has historical mosaic seams and is separate from the local HiRISE DTM; no global Mars displacement is supplied.",
+            "JPEG derivatives are display imagery, not calibrated photometry or a similarity score.",
+            "Coarse display mosaic sampled by source longitude/latitude; approximate registration only, no independent tie-point alignment to local DEM.",
+            "Mosaic display frame and native DEM realization have not been transformed or independently registered; this is an illustrative image drape.",
+            "129-pixel output samples the existing orbital image; output size does not add source detail or ground resolution."
+          ]
+        },
+        {
+          "id": "local-ortho",
+          "label": "HiRISE local ortho \u00b7 published grayscale",
+          "color_mode": "published_grayscale",
+          "registration": "projected_ortho",
+          "source_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/ESP_045994_1985_RED_C_01_ORTHO.JP2",
+          "image": {
+            "path": "/assets/surface-imagery/mars-jezero-hirise/local-ortho/color.png",
+            "sha256": "ce33f65b2408351ba44dfd73d89b4ca616cea813c515135a429b1aa66843e879",
+            "bytes": 10839,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/mars-jezero-hirise/local-ortho/provenance.json",
+            "sha256": "d40fcca2af15b306f8ef9309242a517c257616cfe2233472cb509f91cd70c68f",
+            "bytes": 58735
+          },
+          "limitations": [
+            "Published HiRISE ortho pixels retain original image illumination, shadows and display processing; no new contrast stretch or colorization.",
+            "Projected ortho and DEM are mapped through their declared CRSs; no independent tie-point or photometric calibration is claimed.",
+            "Published RED-channel image is grayscale; RGB channels repeat its gray value without invented color.",
+            "Nearest source-pixel sampling; texture and DEM spatial resolution remain distinct."
+          ]
+        }
+      ]
+    },
+    {
+      "surface_id": "lola-site01-center",
+      "inputs": {
+        "width": 129,
+        "height": 129,
+        "native_origin": [
+          -11317.5,
+          -11682.5
+        ],
+        "native_spacing": [
+          5.0,
+          -5.0
+        ],
+        "native_crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+        "heights_sha256": "1d2fd29198633cba817a99060ad21790d5731a02663b983362a496d5370500b6",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+      },
+      "layers": [
+        {
+          "id": "orbital-color",
+          "label": "Orbital mosaic colors \u00b7 coarse display",
+          "color_mode": "global_display_mosaic",
+          "registration": "approximate_global_mosaic",
+          "source_url": "https://svs.gsfc.nasa.gov/4720/",
+          "image": {
+            "path": "/assets/surface-imagery/lola-site01-center/orbital-color/color.png",
+            "sha256": "e9cbb5d1426f52e459f36e1f6065a0d4716fb192e53271be2d5bf9dce72b7068",
+            "bytes": 987,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/lola-site01-center/orbital-color/provenance.json",
+            "sha256": "d8cc8c0ee26483f010966fc39df501649f6563ad2b5fe0558f7d9f443f18794a",
+            "bytes": 20787
+          },
+          "limitations": [
+            "NASA visualization color map optimized for aesthetics, not science; exposure/white balance adjusted and high-latitude gaps inpainted.",
+            "LROC color covers 70 N to 70 S; polar regions use lower resolution monochromatic LOLA albedo fill.",
+            "JPEG derivatives are display imagery, not scientific feature or similarity evidence.",
+            "Coarse display mosaic sampled by source longitude/latitude; approximate registration only, no independent tie-point alignment to local DEM.",
+            "Mosaic display frame and native DEM realization have not been transformed or independently registered; this is an illustrative image drape.",
+            "129-pixel output samples the existing orbital image; output size does not add source detail or ground resolution.",
+            "This south-polar location uses the published monochrome LOLA albedo fill, not a local color photograph; no color has been invented."
+          ]
+        }
+      ]
+    },
+    {
+      "surface_id": "lola-site06-center",
+      "inputs": {
+        "width": 129,
+        "height": 129,
+        "native_origin": [
+          83682.5,
+          110317.5
+        ],
+        "native_spacing": [
+          5.0,
+          -5.0
+        ],
+        "native_crs_wkt": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",1737400,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+        "heights_sha256": "e22addc8e8103a14724435d7ecaebdeb167bb8f3afc2eb2f57a39a4b0ed62975",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+      },
+      "layers": [
+        {
+          "id": "orbital-color",
+          "label": "Orbital mosaic colors \u00b7 coarse display",
+          "color_mode": "global_display_mosaic",
+          "registration": "approximate_global_mosaic",
+          "source_url": "https://svs.gsfc.nasa.gov/4720/",
+          "image": {
+            "path": "/assets/surface-imagery/lola-site06-center/orbital-color/color.png",
+            "sha256": "c8c5bf9a52e102696db1bcba97b9f4c7e535ce8638df279479a6d6527589ab25",
+            "bytes": 781,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/lola-site06-center/orbital-color/provenance.json",
+            "sha256": "31417c4a36bb49937814614c52522721215ffc9af53bc7718b780061d51de685",
+            "bytes": 20792
+          },
+          "limitations": [
+            "NASA visualization color map optimized for aesthetics, not science; exposure/white balance adjusted and high-latitude gaps inpainted.",
+            "LROC color covers 70 N to 70 S; polar regions use lower resolution monochromatic LOLA albedo fill.",
+            "JPEG derivatives are display imagery, not scientific feature or similarity evidence.",
+            "Coarse display mosaic sampled by source longitude/latitude; approximate registration only, no independent tie-point alignment to local DEM.",
+            "Mosaic display frame and native DEM realization have not been transformed or independently registered; this is an illustrative image drape.",
+            "129-pixel output samples the existing orbital image; output size does not add source detail or ground resolution.",
+            "This south-polar location uses the published monochrome LOLA albedo fill, not a local color photograph; no color has been invented."
+          ]
+        }
+      ]
+    },
+    {
+      "surface_id": "mars-gale-hirise",
+      "inputs": {
+        "width": 129,
+        "height": 129,
+        "native_origin": [
+          -248.38782056096306,
+          -270049.1608636102
+        ],
+        "native_spacing": [
+          1.0117630165416,
+          -1.0117630165416
+        ],
+        "native_crs_wkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",137.49],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "heights_sha256": "02078ad83841923b9b7c0793cdbf8ddfb10f1b2f3fffcddc92bae8d42d10584b",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+      },
+      "layers": [
+        {
+          "id": "orbital-color",
+          "label": "Orbital mosaic colors \u00b7 coarse display",
+          "color_mode": "global_display_mosaic",
+          "registration": "approximate_global_mosaic",
+          "source_url": "https://www.mars.asu.edu/data/mdim_color/",
+          "image": {
+            "path": "/assets/surface-imagery/mars-gale-hirise/orbital-color/color.png",
+            "sha256": "f5179981e665551dd976ba7af79c29254ed4f84ed5d15b513086795a15941a82",
+            "bytes": 258,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/mars-gale-hirise/orbital-color/provenance.json",
+            "sha256": "cfd8240c82e45ebff5078e712bf33c7a6abcd313f8e9f91574e51ec0bcddf8e2",
+            "bytes": 12820
+          },
+          "limitations": [
+            "Viking color mosaic sharpened with MDIM 1.0; source nominal 64 pixels/degree, about 920 m/pixel.",
+            "Global imagery has historical mosaic seams and is separate from the local HiRISE DTM; no global Mars displacement is supplied.",
+            "JPEG derivatives are display imagery, not calibrated photometry or a similarity score.",
+            "Coarse display mosaic sampled by source longitude/latitude; approximate registration only, no independent tie-point alignment to local DEM.",
+            "Mosaic display frame and native DEM realization have not been transformed or independently registered; this is an illustrative image drape.",
+            "129-pixel output samples the existing orbital image; output size does not add source detail or ground resolution."
+          ]
+        },
+        {
+          "id": "local-ortho",
+          "label": "HiRISE local ortho \u00b7 enhanced IRB",
+          "color_mode": "published_false_color",
+          "registration": "projected_ortho",
+          "source_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/ESP_023957_1755_IRB_C_01_ORTHO.JP2",
+          "image": {
+            "path": "/assets/surface-imagery/mars-gale-hirise/local-ortho/color.png",
+            "sha256": "cae014a3c53633a1f5a1032d516314adec70b2b4f49b68d3772b41aa95c0ca57",
+            "bytes": 13871,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/mars-gale-hirise/local-ortho/provenance.json",
+            "sha256": "b6857f6d9dfca35f0619fcfbda4b23129cbe674341807961de31c00093f43f27",
+            "bytes": 33607
+          },
+          "limitations": [
+            "Published HiRISE ortho pixels retain original image illumination, shadows and display processing; no new contrast stretch or colorization.",
+            "Projected ortho and DEM are mapped through their declared CRSs; no independent tie-point or photometric calibration is claimed.",
+            "IRB is enhanced infrared-red-blue false color, not human-eye natural color.",
+            "Nearest source-pixel sampling; texture and DEM spatial resolution remain distinct."
+          ]
+        }
+      ]
+    },
+    {
+      "surface_id": "mars-eberswalde-hirise",
+      "inputs": {
+        "width": 129,
+        "height": 129,
+        "native_origin": [
+          207.18271845616164,
+          -1417495.2625384382
+        ],
+        "native_spacing": [
+          1.0081884109784,
+          -1.0081884109784
+        ],
+        "native_crs_wkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3393830,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",-20],PARAMETER[\"central_meridian\",326.9],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "heights_sha256": "38ca289729ebf67f2557943b8abd5e47ca41a5b6004908a8f58d49be9e2360ba",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1"
+      },
+      "layers": [
+        {
+          "id": "orbital-color",
+          "label": "Orbital mosaic colors \u00b7 coarse display",
+          "color_mode": "global_display_mosaic",
+          "registration": "approximate_global_mosaic",
+          "source_url": "https://www.mars.asu.edu/data/mdim_color/",
+          "image": {
+            "path": "/assets/surface-imagery/mars-eberswalde-hirise/orbital-color/color.png",
+            "sha256": "76df32ba422b4540ab0f81e6f61ea44e58df6a70491d22e1145236caeec7ff6e",
+            "bytes": 258,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/mars-eberswalde-hirise/orbital-color/provenance.json",
+            "sha256": "eea66b2f4a55c40286067c7f7587460b22319164206e857c3305404741e0a42c",
+            "bytes": 12820
+          },
+          "limitations": [
+            "Viking color mosaic sharpened with MDIM 1.0; source nominal 64 pixels/degree, about 920 m/pixel.",
+            "Global imagery has historical mosaic seams and is separate from the local HiRISE DTM; no global Mars displacement is supplied.",
+            "JPEG derivatives are display imagery, not calibrated photometry or a similarity score.",
+            "Coarse display mosaic sampled by source longitude/latitude; approximate registration only, no independent tie-point alignment to local DEM.",
+            "Mosaic display frame and native DEM realization have not been transformed or independently registered; this is an illustrative image drape.",
+            "129-pixel output samples the existing orbital image; output size does not add source detail or ground resolution."
+          ]
+        },
+        {
+          "id": "local-ortho",
+          "label": "HiRISE local ortho \u00b7 published grayscale",
+          "color_mode": "published_grayscale",
+          "registration": "projected_ortho",
+          "source_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_016000_016099/ESP_016065_1560_ESP_016210_1560/ESP_016065_1560_RED_C_01_ORTHO.JP2",
+          "image": {
+            "path": "/assets/surface-imagery/mars-eberswalde-hirise/local-ortho/color.png",
+            "sha256": "bfe5979f04a7b739ac52d22d44651a16aff9f61d2f2b5411ba8c17f343331d8a",
+            "bytes": 10746,
+            "width": 129,
+            "height": 129
+          },
+          "provenance": {
+            "path": "/assets/surface-imagery/mars-eberswalde-hirise/local-ortho/provenance.json",
+            "sha256": "2c5b3de462c47c41078dc191dbc1e57415cf204bb5b0221af35c592eec46a424",
+            "bytes": 76696
+          },
+          "limitations": [
+            "Published HiRISE ortho pixels retain original image illumination, shadows and display processing; no new contrast stretch or colorization.",
+            "Projected ortho and DEM are mapped through their declared CRSs; no independent tie-point or photometric calibration is claimed.",
+            "Published RED-channel image is grayscale; RGB channels repeat its gray value without invented color.",
+            "Nearest source-pixel sampling; texture and DEM spatial resolution remain distinct."
+          ]
+        }
+      ]
+    }
+  ]
+}

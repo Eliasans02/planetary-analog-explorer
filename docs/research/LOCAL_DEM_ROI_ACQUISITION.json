@@ -1,0 +1,11 @@
+{
+  "canonical_url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_ROIs.tgz",
+  "retrieved_at_utc": "2026-11-14T09:26:41.790734Z",
+  "local_path": "data-pipeline/cache/raw/fast-path/Site04_ROIs.tgz",
+  "bytes": 1712,
+  "sha256": "8e8b788f9fdf6400f23fd36dad02138102bd1a905b4b71a5739a9a4fd8a0e07a",
+  "tls_verification": "enabled",
+  "archive_extracted_to_filesystem": false,
+  "source_geometry_created_by_project": false,
+  "source_manifest_modified": false
+}

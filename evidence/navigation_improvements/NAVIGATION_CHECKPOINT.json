@@ -1,0 +1,78 @@
+{
+  "id": "NAVIGATION_CONTINUITY_VERIFIED_2026-11-14",
+  "recorded_at": "2026-11-14T11:39:05.154811+00:00",
+  "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+  "phase5_committed": false,
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "execution_mode": "parallel_local_sol_6_1_medium",
+  "url": "http://127.0.0.1:4173/",
+  "contracts": {
+    "planet_catalog": "1.0.0",
+    "surface_catalog": "1.1.0",
+    "comparison": "1.0.0 unchanged"
+  },
+  "catalogs": [
+    {
+      "path": "web-client/public/data/planet_catalog.json",
+      "bytes": 4417,
+      "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+    },
+    {
+      "path": "web-client/public/data/surface_catalog.json",
+      "bytes": 17163,
+      "sha256": "0a94f8074e25e7863fa9412d2a781096660e2ad3cab7a1e58a4c2641ce8cee9f"
+    }
+  ],
+  "built_js": {
+    "path": "web-client/dist/assets/index-BIWJTfWF.js",
+    "bytes": 1325481,
+    "sha256": "fa3fd5e41c4709f6ff7492a92a06d8b4d9a44933c868573b797e55b271d801ab"
+  },
+  "implemented": [
+    "Race-safe texture-only quality replacement retaining displayed map, camera and DEM; actual loading/showing status and retry.",
+    "Per-body orbital view memory and relative zoom across split panels and ground return; stale Locate requests cleared.",
+    "Explicit Start/Pause/Resume, keyboard arrow look, guarded input cleanup and final native position publishing.",
+    "Responsive ground toolbar/help and display-only grid-spacing formatting."
+  ],
+  "checks": {
+    "frontend_tests_passed": 105,
+    "frontend_files_passed": 12,
+    "full_suite_scope": "All navigation source changes passed 105 tests in 12 files. Display-only grid-spacing formatting was added afterwards; final typecheck and build passed after that edit.",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "verify_planets": "PASS",
+    "verify_surfaces": "PASS",
+    "browser": "FUNCTIONAL_OBSERVATIONS_WITH_POINTER_LOCK_FALLBACK",
+    "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET",
+    "performance_benchmark": "NOT_PERFORMED"
+  },
+  "evidence": [
+    "evidence/navigation_improvements/check-status.json",
+    "evidence/navigation_improvements/browser-observation.json",
+    "evidence/navigation_improvements/independent-review.md",
+    "evidence/navigation_improvements/SOURCE_MANIFEST.json"
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/navigation_improvements/navigation-orbit.jpg",
+      "bytes": 55898,
+      "sha256": "645eb9c490147d32bae0bda167e68bc0ffd6cbb698ab8459180e8c81bb61f351"
+    },
+    {
+      "path": "evidence/navigation_improvements/navigation-ground.jpg",
+      "bytes": 86545,
+      "sha256": "6656756d6d975d0c55d7a2cb09a248ff28f328c0091f7e771f8ca1d713d4d648"
+    }
+  ],
+  "remaining": [
+    "Expand real native terrain coverage and add registered source imagery.",
+    "Reconstruct and register real source-backed Gaussian splats.",
+    "Complete calibrated similarity and exact ENU/body-frame registration.",
+    "Benchmark foreground FPS/RAM and input timing; verify native pointer lock in a supporting browser.",
+    "Receive human Dev_A and Dev_B acceptance."
+  ],
+  "no_unattended_scheduler": true
+}

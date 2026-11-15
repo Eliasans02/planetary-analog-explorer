@@ -1,0 +1,89 @@
+{
+  "manifest_sha256": "d6b26ada6264b71abbb519fef48a6702144d787379bf98b1530325d0dac907d6",
+  "manifest_bytes": 21325,
+  "surface_catalog_sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539",
+  "surface_analysis_sha256": "71264c8ef2f15e1d364b38ca6957048d96a04ddeffe0ad11556c9c57d1519db0",
+  "records": 6,
+  "layers": 9,
+  "RGB_pixels_source_compared": 149769,
+  "RGB_channel_values_source_compared": 449307,
+  "focused_tests_passed": 5,
+  "all_png_pixel_registration": "PNG row matches DEM row; UV=(col+.5)/width,(row+.5)/height; imageOrientation none; flipY false",
+  "public_imagery_asset_bytes": 309243,
+  "layers_verified": [
+    {
+      "surface_id": "lola-site04-roi3",
+      "layer_id": "orbital-color",
+      "source_color_mode": "global_display_mosaic",
+      "image_sha256": "e3a0acfc7f1937ff2186cb4a3e24e9a115c0cfb8d466f28fddd89a49a108db12",
+      "image_bytes": 1386,
+      "unique_published_colors_in_crop": 14
+    },
+    {
+      "surface_id": "mars-jezero-hirise",
+      "layer_id": "orbital-color",
+      "source_color_mode": "global_display_mosaic",
+      "image_sha256": "30d5d43867e208a8feefce5381c35114de6011667f1414ed4996b3ee74ff99a9",
+      "image_bytes": 258,
+      "unique_published_colors_in_crop": 1
+    },
+    {
+      "surface_id": "mars-jezero-hirise",
+      "layer_id": "local-ortho",
+      "source_color_mode": "published_grayscale",
+      "image_sha256": "ce33f65b2408351ba44dfd73d89b4ca616cea813c515135a429b1aa66843e879",
+      "image_bytes": 10839,
+      "unique_published_colors_in_crop": 90
+    },
+    {
+      "surface_id": "lola-site01-center",
+      "layer_id": "orbital-color",
+      "source_color_mode": "global_display_mosaic",
+      "image_sha256": "e9cbb5d1426f52e459f36e1f6065a0d4716fb192e53271be2d5bf9dce72b7068",
+      "image_bytes": 987,
+      "unique_published_colors_in_crop": 11
+    },
+    {
+      "surface_id": "lola-site06-center",
+      "layer_id": "orbital-color",
+      "source_color_mode": "global_display_mosaic",
+      "image_sha256": "c8c5bf9a52e102696db1bcba97b9f4c7e535ce8638df279479a6d6527589ab25",
+      "image_bytes": 781,
+      "unique_published_colors_in_crop": 6
+    },
+    {
+      "surface_id": "mars-gale-hirise",
+      "layer_id": "orbital-color",
+      "source_color_mode": "global_display_mosaic",
+      "image_sha256": "f5179981e665551dd976ba7af79c29254ed4f84ed5d15b513086795a15941a82",
+      "image_bytes": 258,
+      "unique_published_colors_in_crop": 1
+    },
+    {
+      "surface_id": "mars-gale-hirise",
+      "layer_id": "local-ortho",
+      "source_color_mode": "published_false_color",
+      "image_sha256": "cae014a3c53633a1f5a1032d516314adec70b2b4f49b68d3772b41aa95c0ca57",
+      "image_bytes": 13871,
+      "unique_published_colors_in_crop": 272
+    },
+    {
+      "surface_id": "mars-eberswalde-hirise",
+      "layer_id": "orbital-color",
+      "source_color_mode": "global_display_mosaic",
+      "image_sha256": "76df32ba422b4540ab0f81e6f61ea44e58df6a70491d22e1145236caeec7ff6e",
+      "image_bytes": 258,
+      "unique_published_colors_in_crop": 1
+    },
+    {
+      "surface_id": "mars-eberswalde-hirise",
+      "layer_id": "local-ortho",
+      "source_color_mode": "published_grayscale",
+      "image_sha256": "bfe5979f04a7b739ac52d22d44651a16aff9f61d2f2b5411ba8c17f343331d8a",
+      "image_bytes": 10746,
+      "unique_published_colors_in_crop": 107
+    }
+  ],
+  "readonly_repeat_export_identical": true,
+  "readonly_repeat_verified_artifact_count": 20
+}

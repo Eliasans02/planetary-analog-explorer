@@ -1,0 +1,68 @@
+{
+  "status": "bounded_actual_gis_audit_complete_ground_publication_gated",
+  "observations_path": "evidence/native_dem_audit/observations.json",
+  "reproduction": "previews/a04/.venv/Scripts/python.exe evidence/native_dem_audit/audit.py",
+  "scientific_features_computed": false,
+  "scores_computed": false,
+  "contracts_modified": false,
+  "raw_sources_modified": false,
+  "assets_published": false,
+  "human_pass": false,
+  "observations": {
+    "ordinary_gis_imports_succeeded": true,
+    "safe_archive_regular_components_read": 4,
+    "archive_symlinks_followed_or_extracted": 0,
+    "source_roi_records_invalid": [1, 2],
+    "source_roi_records_valid": [3, 4],
+    "lunar_rasters_exactly_registered": true,
+    "all_roi_bounds_inside_lunar_rasters": true,
+    "roi_and_raster_wkt_crs_equals": false,
+    "roi_and_raster_vertex_inverse_projection_max_difference_deg": 0.0,
+    "lunar_scale": 1.0,
+    "lunar_offset": 0.0,
+    "lunar_band_units_tag_present": false,
+    "lunar_units_evidence": "cached official LOLA_README.txt",
+    "lunar_absolute_height_zero_verified": false,
+    "source_realization": "MOON_ME / DE421 from product README",
+    "record3_diagnostic_source_frame_point": {
+      "frame": "MOON_ME_DE421",
+      "convention": "planetocentric latitude, east-positive longitude",
+      "longitude_deg": -156.26739892005892,
+      "latitude_deg": -89.77989162018713,
+      "native_xy_m": [-2686.25, -6110.0],
+      "not_an_approved_camera_or_landing_point": true
+    },
+    "record3_bounded_window_col_row_width_height": [1259, 1410, 13, 24],
+    "record3_centers_covered": 126,
+    "record3_surface_centers_finite_gdal_valid": 126,
+    "record3_zero_laser_return_pixels": 106,
+    "earth_crs": "EPSG:4269 NAD83",
+    "earth_vertical_xml_declaration": "NAVD88, metres; lineage/region-specific interpretation unresolved",
+    "earth_pixels_analyzed": false
+  },
+  "proposal_not_applied": {
+    "contract_version": "1.1.0",
+    "add_coordinate_frame_enum": "moon_me_de421_planetocentric",
+    "also_update": ["Moon/body conditional enum", "source-frame validation", "consumer types/runtime validation", "exact realization semantics and sidecar retention"],
+    "preserve_old_enum_without_silent_reinterpretation": true,
+    "preserve_exact_enu_contract": true,
+    "initial_source_roi_record": 3,
+    "selection_is_project_policy": true,
+    "initial_ranked_analogs": [],
+    "alternative_diagnostic_preview": "An explicitly named native projected relief view may retain unresolved absolute height zero; it cannot claim current exact ENU frame."
+  },
+  "current_pipeline_review": {
+    "half_pixel_center_adjustment_present": true,
+    "raw_nodata_mask_before_scale_present": true,
+    "unresolved": "AEQD horizontal coordinates plus mean-subtracted source heights are exported as exact local ENU; PROJ also does not implement MOON_ME_DE421 to IAU_MOON orientation."
+  },
+  "publication_gates": ["Explicit versioned lunar frame decision", "Supplemental product absolute height definition", "Exact source-to-ENU geometry or separately explicit projected display contract", "Display validity versus laser coverage policy", "Real buffer/camera/gap-safe collision checks and ground-view inspection"],
+  "ranking_gates": ["Earth AOI and verified horizontal/vertical datum handling", "Common physical support and methods", "Independent fixed calibration"],
+  "primary_sources": [
+    "https://pgda.gsfc.nasa.gov/products/78",
+    "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/README.txt",
+    "https://ntrs.nasa.gov/citations/20205009660",
+    "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_080317.tf",
+    "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1/TIFF/historical/n20w156/USGS_1_n20w156_20250611.xml"
+  ]
+}

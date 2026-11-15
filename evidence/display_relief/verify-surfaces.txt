@@ -1,0 +1,72 @@
+
+> planetary-analog-explorer-web@0.1.0 verify:surfaces
+> node scripts/verify-surface-assets.mjs
+
+{
+  "status": "passed",
+  "surfaces": [
+    {
+      "id": "lola-site04-roi3",
+      "body": "moon",
+      "frame": "MOON_ME_DE421",
+      "samples": 16641,
+      "relief_m": 129.775146484375,
+      "assets_sha256": "verified",
+      "provenance": "parsed"
+    },
+    {
+      "id": "usgs-hawaii-summit",
+      "body": "earth",
+      "frame": "NAD83",
+      "samples": 16641,
+      "relief_m": 524.91259765625,
+      "assets_sha256": "verified",
+      "provenance": "parsed"
+    },
+    {
+      "id": "mars-jezero-hirise",
+      "body": "mars",
+      "frame": "MARS_HIRISE_PLANETOCENTRIC",
+      "samples": 16641,
+      "relief_m": 4.17626953125,
+      "assets_sha256": "verified",
+      "provenance": "parsed"
+    },
+    {
+      "id": "lola-site01-center",
+      "body": "moon",
+      "frame": "MOON_ME_DE421",
+      "samples": 16641,
+      "relief_m": 83.2056884765625,
+      "assets_sha256": "verified",
+      "provenance": "parsed"
+    },
+    {
+      "id": "lola-site06-center",
+      "body": "moon",
+      "frame": "MOON_ME_DE421",
+      "samples": 16641,
+      "relief_m": 186.681640625,
+      "assets_sha256": "verified",
+      "provenance": "parsed"
+    },
+    {
+      "id": "mars-gale-hirise",
+      "body": "mars",
+      "frame": "MARS_HIRISE_PLANETOCENTRIC",
+      "samples": 16641,
+      "relief_m": 6.3330078125,
+      "assets_sha256": "verified",
+      "provenance": "parsed"
+    },
+    {
+      "id": "mars-eberswalde-hirise",
+      "body": "mars",
+      "frame": "MARS_HIRISE_PLANETOCENTRIC",
+      "samples": 16641,
+      "relief_m": 7.2535400390625,
+      "assets_sha256": "verified",
+      "provenance": "parsed"
+    }
+  ]
+}

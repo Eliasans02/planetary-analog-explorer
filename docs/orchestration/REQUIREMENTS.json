@@ -1,0 +1,951 @@
+{
+  "document": "PAE_REQUIREMENTS_ACCEPTANCE_MATRIX",
+  "version": "1.0.0",
+  "created_at": "2026-11-14",
+  "language": "ru",
+  "scope": "Исходный Planetary Analog Explorer и ускоренное параллельное исполнение; требования сохранены, выполненность не предполагается.",
+  "source_of_truth": [
+    "Исходный user project vision и NASA compliance guardrails",
+    "shared/schemas/analog_location.schema.json",
+    "shared/schemas/scoring_profile.schema.json",
+    "shared/types/analog-location.ts",
+    "docs/contract_semantics.md",
+    "docs/scientific_constraints.md"
+  ],
+  "snapshot": {
+    "loop": "LOOP_0",
+    "phase": "PHASE_2_CONTEXT_INJECTED_DISPATCH",
+    "elapsed_hours": null,
+    "implementation_acceptance": "NOT_VERIFIED",
+    "scientific_data_acquired": false,
+    "human_pass_dev_a": false,
+    "human_pass_dev_b": false,
+    "note": "Снимок на момент создания матрицы. Состояние репозитория/браузерного dispatch может изменяться; проверяющий обязан запросить актуальные evidence. Этот файл не меняет REPO_STATE."
+  },
+  "status_policy": {
+    "initial_allowed": [
+      "NOT_VERIFIED",
+      "PARTIAL"
+    ],
+    "meaning": {
+      "NOT_VERIFIED": "Нет достаточных свидетельств реализации и проверки.",
+      "PARTIAL": "Есть спецификация/артефакт/частичное свидетельство; критерии целиком не приняты."
+    },
+    "pass_rule": "Только явные human PASS Dev_A и Dev_B могут разрешить PHASE_5. Reviewer не выдаёт human PASS и не коммитит состояние.",
+    "priority": {
+      "P0": "Блокирует честную работающую foundation/demo или научную достоверность.",
+      "P1": "Исходное продуктовое требование; планирование позже не отменяет и не превращает его в выполненное."
+    }
+  },
+  "loops": [
+    {
+      "id": "LOOP_0",
+      "title": "Foundation and contract",
+      "planned_hours": [
+        0,
+        2
+      ],
+      "depends_on": [],
+      "scope": [
+        "Контракт, CLI skeleton/scoring, viewport lifecycle, roles и owner boundaries"
+      ],
+      "exit_evidence": [
+        "Проверка контракта",
+        "Локальные foundation tests/build",
+        "Оба human PASS для текущей foundation ревизии"
+      ],
+      "preparation_can_parallelize": true
+    },
+    {
+      "id": "LOOP_1",
+      "title": "Real-data vertical slice",
+      "planned_hours": [
+        2,
+        16
+      ],
+      "depends_on": [
+        "LOOP_0"
+      ],
+      "scope": [
+        "Реальная цель и три Earth кандидата",
+        "Calibrated profile и static export",
+        "Orbit/Pegman/DEM ground/HUD интеграция"
+      ],
+      "exit_evidence": [
+        "Raw provenance и real dataset",
+        "Offline воспроизводимый рейтинг",
+        "Реальная ground integration",
+        "Оба human PASS для интегрированной ревизии"
+      ],
+      "preparation_can_parallelize": true
+    },
+    {
+      "id": "LOOP_2",
+      "title": "Split-screen and registered splat",
+      "planned_hours": [
+        16,
+        34
+      ],
+      "depends_on": [
+        "LOOP_1"
+      ],
+      "scope": [
+        "Синхронное сравнение",
+        "Реальная metric reconstruction и viewer integration",
+        "Подтверждённая аналитика горизонта/Солнца либо честный gap"
+      ],
+      "exit_evidence": [
+        "Real splat registration",
+        "Headed navigation/split-screen",
+        "Lifecycle checks",
+        "Оба human PASS; gaps остаются явно открытыми"
+      ],
+      "preparation_can_parallelize": true
+    },
+    {
+      "id": "LOOP_3",
+      "title": "Offline, performance and judge readiness",
+      "planned_hours": [
+        34,
+        48
+      ],
+      "depends_on": [
+        "LOOP_2"
+      ],
+      "scope": [
+        "Покрытие Moon/Mars",
+        "Offline package и measured performance",
+        "Лицензии/attribution/pitch",
+        "Полный requirements audit"
+      ],
+      "exit_evidence": [
+        "Disconnected external network demo",
+        "60-second benchmark",
+        "Judge rehearsal",
+        "Финальный human sign-off обоих разработчиков и список известных gaps"
+      ],
+      "preparation_can_parallelize": true
+    }
+  ],
+  "parallel_execution_policy": {
+    "allowed": [
+      "Подготовка prompts/контрактов будущих loop без объявления завершения текущего",
+      "Независимые data/frontend/review роли в отдельных stateless окнах",
+      "Review предоставленных immutable snapshots и отчётов"
+    ],
+    "forbidden": [
+      "Одновременная запись одного файла несколькими владельцами",
+      "Переход PHASE_5 по AI self-report",
+      "Работа на guessed imports или не предоставленных локальных файлах",
+      "Скрытие FAIL/PERF_WARN, skip или отсутствующих научных данных"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "title": "Строгий общий контракт Python → TypeScript",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Astra",
+      "depends_on": [],
+      "acceptance_checks": [
+        "Schema 2020-12 запрещает неизвестные поля; TS отражает поля и nullable-значения.",
+        "Валидатор проверяет структуру, timestamps и семантические связи; Python и браузер используют schema_version 1.0.0.",
+        "Изменение контракта согласовано с обоими разработчиками до генерации зависимого кода."
+      ],
+      "evidence_required": [
+        "shared/schemas/analog_location.schema.json",
+        "shared/schemas/scoring_profile.schema.json",
+        "shared/types/analog-location.ts",
+        "Логи проверки контракта и строгого TypeScript с идентификатором проверенной ревизии"
+      ],
+      "status": "PARTIAL",
+      "current_evidence": [
+        {
+          "kind": "artifact_presence",
+          "path": "shared/schemas/analog_location.schema.json",
+          "scope": "Создана схема; наличие не подтверждает реализацию потребителей.",
+          "execution_verified": false
+        },
+        {
+          "kind": "artifact_presence",
+          "path": "shared/types/analog-location.ts",
+          "scope": "Созданы типы; runtime-проверки обязательны.",
+          "execution_verified": false
+        }
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "title": "Происхождение каждого научного числа и геометрии",
+      "priority": "P0",
+      "loop": "LOOP_1",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-001"
+      ],
+      "acceptance_checks": [
+        "Ненулевые измерения, AOI, координаты и assets ссылаются на реально приобретённые входные данные.",
+        "Source содержит точный access_url, product/version, дату получения, SHA-256 реальных bytes, локальный путь и лицензию; companion labels/CRS/QA сохранены.",
+        "Каталожные ссылки, имена регионов и догадки не используются как измерения; нет синтетических научных datasets."
+      ],
+      "evidence_required": [
+        "Raw-data manifests и sidecars",
+        "Проверка hashes входных/выходных файлов",
+        "Прослеживаемый расчёт минимум одного результата до сырого продукта"
+      ],
+      "status": "PARTIAL",
+      "current_evidence": [
+        {
+          "kind": "artifact_presence",
+          "path": "docs/source_registry.json",
+          "scope": "Справочник каталогов; научные payload ещё не приобретены.",
+          "execution_verified": false
+        }
+      ]
+    },
+    {
+      "id": "REQ-003",
+      "title": "Физическая сравнимость параметров и честные пропуски",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-001"
+      ],
+      "acceptance_checks": [
+        "Null имеет причину; отсутствие/неприменимость не заменены нулём.",
+        "2m air temperature не сравнивается с surface temperature; RH не становится aridity; soil texture не называется минералогией.",
+        "Количество, единицы, temporal aggregation, spatial support и методы согласованы; incompatible features не включены в рейтинг.",
+        "Percent score явно является проектным индексом, не вероятностью обитаемости."
+      ],
+      "evidence_required": [
+        "Тесты semantic validation",
+        "Dataset с фактическим missing/incompatible объяснением",
+        "UI/README ограничений"
+      ],
+      "status": "PARTIAL",
+      "current_evidence": [
+        {
+          "kind": "artifact_presence",
+          "path": "docs/scientific_constraints.md",
+          "scope": "Ограничения сформулированы, исполнение pipeline/UI не проверено.",
+          "execution_verified": false
+        }
+      ]
+    },
+    {
+      "id": "REQ-004",
+      "title": "Матричный weighted cosine + normalized Euclidean score",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-001",
+        "REQ-003"
+      ],
+      "acceptance_checks": [
+        "Реализована формула contract_semantics с неизменным профилем и весами для всех кандидатов цели.",
+        "Все обязательные признаки полны; неполные кандидаты исключены с причиной; нет pairwise renormalization.",
+        "Нулевые нормы имеют оговорённое поведение; score конечен в [0,100]; сортировка по полной точности и ID.",
+        "Breakdown не выдаётся за аддитивное разложение общей формулы."
+      ],
+      "evidence_required": [
+        "data-pipeline/src/pae_pipeline/scoring.py",
+        "Логи scalar/vectorized equivalence, identity, zero-norm, bounds и missing-data tests"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-005",
+      "title": "Воспроизводимость и независимость нормализации от кандидатов",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-004"
+      ],
+      "acceptance_checks": [
+        "Границы из versioned независимой калибровки; lower<upper; без скрытого clipping.",
+        "Добавление/удаление/перестановка кандидатов не меняет существующий score.",
+        "Повторный запуск с одинаковыми входами и профилем воспроизводит научные результаты; округление только отображения."
+      ],
+      "evidence_required": [
+        "Тесты cohort independence, stable ties, out-of-range rejection",
+        "Ревизия profile и source lineage для calibration"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-006",
+      "title": "Модульный Python pipeline и управляемая загрузка",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-001"
+      ],
+      "acceptance_checks": [
+        "Python 3.11+ CLI fetch_and_score.py разделяет sources, terrain, scoring, validation и export.",
+        "Загрузка выполняется только на этапе preprocessing, с явными manifest/config, timeout/retry/cache и проверкой ответа.",
+        "Ошибка источника не порождает выдуманных чисел; partial download не публикуется."
+      ],
+      "evidence_required": [
+        "Исходные файлы pipeline",
+        "Логи CLI и тесты failure/cache handling",
+        "Зафиксированные зависимости"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-007",
+      "title": "Строгий offline режим pipeline",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-006"
+      ],
+      "acceptance_checks": [
+        "--offline запрещает все сетевые обращения.",
+        "Отсутствующий cache/DEM/profile даёт понятную ошибку/пустой неготовый dataset, но не demo PASS.",
+        "Экспорт записывается атомарно после валидации."
+      ],
+      "evidence_required": [
+        "Тест, в котором любые сетевые вызовы запрещены",
+        "Логи offline success на реальном cache и failure при missing input"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-008",
+      "title": "Подтверждённые AOI, системы координат и миссии",
+      "priority": "P0",
+      "loop": "LOOP_1",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-002"
+      ],
+      "acceptance_checks": [
+        "У каждой цели/аналога есть реальный AOI и источник координат; named-feature center не назван посадочной площадкой NASA.",
+        "Planetocentric/planetographic и longitude conventions конвертируются, не переименовываются.",
+        "GeoJSON ranges/rings/closure/antimeridian и membership проверяются; frame соответствует body.",
+        "Пользовательская область явно описана как выбранная область анализа."
+      ],
+      "evidence_required": [
+        "Опубликованные AOI GeoJSON",
+        "Сырые geometry/coordinate references",
+        "Логи spatial validation"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-009",
+      "title": "Рельеф из реальных DEM в одинаковом масштабе",
+      "priority": "P0",
+      "loop": "LOOP_1",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-008",
+        "REQ-013"
+      ],
+      "acceptance_checks": [
+        "Slope mean/max, roughness и elevation delta вычислены из валидных DEM pixels.",
+        "Согласованы effective grid resolution, physical support window, datum, units, derivative/roughness definitions и masks.",
+        "SRTM не используется вне покрытия; McMurdo/Iceland используют подтверждённый разрешённый источник либо unavailable."
+      ],
+      "evidence_required": [
+        "Source DEM + labels + processing config",
+        "Extraction report с valid fraction и resolution",
+        "Сопоставимая контрольная проверка расчётов"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-010",
+      "title": "Реальный NASA POWER контекст Земли",
+      "priority": "P1",
+      "loop": "LOOP_1",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-002",
+        "REQ-006",
+        "REQ-008"
+      ],
+      "acceptance_checks": [
+        "POWER запрос использует подтверждённые координаты и явный интервал.",
+        "Фактические units/fill values/QA прочитаны из response; radiation конвертируется документированно.",
+        "Point grid sample не называется точным средним по полигону; климатические величины хранят их физическое определение.",
+        "Нет сопоставления с несовместимыми planetary quantities."
+      ],
+      "evidence_required": [
+        "Кэш настоящего POWER response",
+        "Точный URL запроса и hash",
+        "Логи парсинга/единиц и export context"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-011",
+      "title": "Минимальный реальный planetary-to-Earth vertical slice",
+      "priority": "P0",
+      "loop": "LOOP_1",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-002",
+        "REQ-008",
+        "REQ-009",
+        "REQ-013",
+        "REQ-014"
+      ],
+      "acceptance_checks": [
+        "Хотя бы одна реальная Moon или Mars цель и три валидных Earth кандидата проходят единый профиль.",
+        "Рейтинг содержит честный top-3; при меньшем числе пригодных данных UI показывает фактическое число, а top-3 acceptance остаётся невыполненным.",
+        "Каждый показанный score можно воспроизвести offline."
+      ],
+      "evidence_required": [
+        "locations_dataset.json с реальными source bytes",
+        "Повторяемая команда генерации",
+        "Human dataset review и logs"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-012",
+      "title": "Покрытие исходной продуктовой области и честные ограничения поиска",
+      "priority": "P1",
+      "loop": "LOOP_3",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-011"
+      ],
+      "acceptance_checks": [
+        "Представлены хотя бы одна реальная лунная и одна реальная марсианская цель.",
+        "Shackleton, Haworth, Jezero, Arcadia и земные примеры Atacama, McMurdo, Mauna Kea, Iceland, Charyn/Mangystau имеют явный каталоговый статус: acquired/validated/unavailable с причиной; не обязаны притворяться все готовыми.",
+        "Заявленная площадь/количество проверенных кандидатов выводится только из реально обработанных AOI; обещание миллионов км² не выдаётся за сделанный benchmark.",
+        "Будущее расширение каталога сохраняет воспроизводимость и профиль."
+      ],
+      "evidence_required": [
+        "Catalog coverage report",
+        "Настоящие Moon/Mars comparisons",
+        "Обоснованный coverage/area calculation или явное 'не измерено'"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-013",
+      "title": "Калиброванный фиксированный scoring profile",
+      "priority": "P0",
+      "loop": "LOOP_1",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-001",
+        "REQ-003"
+      ],
+      "acceptance_checks": [
+        "Profile bounds имеют реальные calibration sources и метод; weights/alpha явно обозначены как проектные параметры.",
+        "Каждый feature key уникален; quantities/units совпадают; profile immutable/versioned.",
+        "При отсутствии пригодного профиля выдача не содержит числового rank; topography-only подписан как ограниченный профиль."
+      ],
+      "evidence_required": [
+        "Валидный scoring profile",
+        "Документированная calibration provenance",
+        "Проверка matching features и границ"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-014",
+      "title": "Проверенные статические научные артефакты",
+      "priority": "P0",
+      "loop": "LOOP_1",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-006",
+        "REQ-009",
+        "REQ-013"
+      ],
+      "acceptance_checks": [
+        "locations_dataset.json проходит schema и semantic checks.",
+        "DEM/heightmap/mask/AOI/metadata используют same-origin пути; bytes/hash/форматы сверяются.",
+        "Heightmap Float32LE row-major grid nodes + U8 mask корректны; invalid padding не становится рельефом.",
+        "Публикация не позволяет path/symlink escape и не содержит тестовых fixtures."
+      ],
+      "evidence_required": [
+        "Exporter и asset manifest",
+        "Логи schema/semantic/hash/size validation",
+        "Побайтовая проверка width*height buffers"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-015",
+      "title": "Vite + React + TypeScript + Three.js фундамент",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-001"
+      ],
+      "acceptance_checks": [
+        "Сборка, strict typecheck и meaningful tests проходят на закреплённых совместимых зависимостях.",
+        "Dataset валидируется runtime; отсутствующий/невалидный JSON даёт читаемое empty/error состояние.",
+        "Нет внешних CDN/API requests в runtime; нейтральная сфера подписана как reference UI."
+      ],
+      "evidence_required": [
+        "web-client package/lock/config/source",
+        "Логи typecheck,test,build",
+        "Empty/error state evidence"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-016",
+      "title": "Орбитальная навигация и выбор тела",
+      "priority": "P1",
+      "loop": "LOOP_1",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-014",
+        "REQ-015"
+      ],
+      "acceptance_checks": [
+        "Можно выбрать Moon/Mars/Earth и реальные подготовленные AOI.",
+        "Привязка маркеров использует declared frame/longitude convention.",
+        "Выбор target ID согласован с dropdown и подготовленным dataset; несуществующая область не порождает score."
+      ],
+      "evidence_required": [
+        "Headed browser video/screenshots на реальных данных",
+        "Тест преобразований и selection IDs"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-017",
+      "title": "Pegman drag/drop и переход orbit→ground",
+      "priority": "P1",
+      "loop": "LOOP_1",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-016",
+        "REQ-018"
+      ],
+      "acceptance_checks": [
+        "Перетаскиваемый astronaut/rover marker выбирает только подготовленный AOI.",
+        "Snapping явно раскрыт; unsupported drop сообщает отсутствие данных.",
+        "Переход использует фактическую camera/heightmap; отсутствующая камера/геометрия не запускает придуманную сцену."
+      ],
+      "evidence_required": [
+        "Headed drag/drop acceptance recording",
+        "Тест unsupported drop и target selection consistency"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-018",
+      "title": "Наземный DEM renderer и корректная навигация",
+      "priority": "P0",
+      "loop": "LOOP_1",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-014",
+        "REQ-015"
+      ],
+      "acceptance_checks": [
+        "Heightmap отображается в local metres с правильными row/col order, extent и height origin.",
+        "PointerLockControls + WASD и Escape работают; camera ground collision соответствует настоящему DEM.",
+        "Нельзя проходить через invalid mask/вне DEM; корректны triangle interpolation и edge handling."
+      ],
+      "evidence_required": [
+        "Math unit tests",
+        "Headed manual pointer lock/WASD verification",
+        "Реальная ground scene с source identity"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-019",
+      "title": "HUD без выдуманной телеметрии",
+      "priority": "P1",
+      "loop": "LOOP_1",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-016",
+        "REQ-018"
+      ],
+      "acceptance_checks": [
+        "HUD показывает выбранные body/location/profile, score/breakdown и ограничения покрытия.",
+        "FPS/frame time берётся из измерения; локальные slopes из подтверждённой геометрии.",
+        "Sun azimuth/horizon показывают N/A до наличия модели/входов; не подставляются декоративные числа."
+      ],
+      "evidence_required": [
+        "HUD screenshots",
+        "Telemetry data flow review",
+        "Тест отсутствующего значения"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-020",
+      "title": "Единое владение renderer и освобождение ресурсов",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-015"
+      ],
+      "acceptance_checks": [
+        "Один renderer/RAF на viewport ownership; StrictMode не дублирует живые owners.",
+        "Generation tokens/abort/worker termination предотвращают stale async scene updates.",
+        "Async viewer.dispose сериализован с init; geometries/materials/textures/controls/listeners очищаются по ownership.",
+        "Context loss имеет понятную обработку."
+      ],
+      "evidence_required": [
+        "Lifecycle source review",
+        "Логи 20 переключений и cleanup counters",
+        "Context-loss/error path test evidence"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-021",
+      "title": "Split-screen синхронного сравнения",
+      "priority": "P1",
+      "loop": "LOOP_2",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-011",
+        "REQ-018",
+        "REQ-020"
+      ],
+      "acceptance_checks": [
+        "Target и Earth analog видны одновременно с явными labels/source/profile.",
+        "Камеры синхронизируют относительную ориентацию/действия с учётом независимых локальных frames и bounds; нет ложного общего географического положения.",
+        "Смена Earth rank синхронно обновляет scene/HUD и корректно очищает старые assets."
+      ],
+      "evidence_required": [
+        "Headed real-data split-screen recording",
+        "Тест переключения аналога во время загрузки",
+        "Описание точной политики синхронизации"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-022",
+      "title": "Реальный зарегистрированный Gaussian splat asset",
+      "priority": "P1",
+      "loop": "LOOP_2",
+      "owner": "Dev_A",
+      "depends_on": [
+        "REQ-002",
+        "REQ-009",
+        "REQ-014"
+      ],
+      "acceptance_checks": [
+        "Хотя бы одна наземная сцена получена из разрешённых реальных снимков/реконструкции.",
+        "Splat содержит Gaussian attributes, provenance, count, metric scale и registration в DEM frame.",
+        "Single-image inferred geometry помечена и исключена из science/collision; не выдаётся за измеренную поверхность.",
+        "Выбранный training/reconstruction pipeline имеет подходящую открытую лицензию; viewer license не заменяет training license."
+      ],
+      "evidence_required": [
+        "Настоящий .splat/.ply и исходные images/camera calibration",
+        "Reconstruction command/config/log и registration evidence",
+        "Лицензионная проверка компонентов"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-023",
+      "title": "Gaussian Splatting + Heightmap integration",
+      "priority": "P1",
+      "loop": "LOOP_2",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-018",
+        "REQ-020",
+        "REQ-022"
+      ],
+      "acceptance_checks": [
+        "@mkkellogg/gaussian-splats-3d интегрирован с фактически поддерживаемым API.",
+        "Метрический splat зарегистрирован вместе с DEM; WASD не использует выдуманную глубину.",
+        "Failed/missing splat оставляет доступный реальный DEM fallback и понятное сообщение.",
+        "Abort/dispose при смене location не оставляют старую сцену/worker."
+      ],
+      "evidence_required": [
+        "Real-asset browser acceptance",
+        "Ошибка/abort/fallback tests",
+        "Package-lock и verified adapter API"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-024",
+      "title": "Научные horizon и sun azimuth",
+      "priority": "P1",
+      "loop": "LOOP_2",
+      "owner": "Dev_A + Dev_B",
+      "depends_on": [
+        "REQ-018",
+        "REQ-019"
+      ],
+      "acceptance_checks": [
+        "Для реализованной аналитики определены момент времени, body frame, входные ephemeris/DEM и алгоритм.",
+        "Азимут/видимость горизонта имеют units/definition и проверены против независимого эталона.",
+        "При отсутствии входов остаётся N/A; требование отмечено невыполненным, а не замаскировано."
+      ],
+      "evidence_required": [
+        "Алгоритм и provenance входов",
+        "Численная reference validation",
+        "HUD evidence"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-025",
+      "title": "Offline-first судейская демонстрация",
+      "priority": "P0",
+      "loop": "LOOP_3",
+      "owner": "Dev_A + Dev_B",
+      "depends_on": [
+        "REQ-011",
+        "REQ-014",
+        "REQ-015"
+      ],
+      "acceptance_checks": [
+        "Собранная demo загружается с локального сервера при заблокированной внешней сети.",
+        "Все научные assets, scripts/fonts и metadata доступны локально; нет live NASA запросов.",
+        "30-секундный сценарий воспроизводим из cold launch; ошибка asset показывает честное состояние."
+      ],
+      "evidence_required": [
+        "Network log с запретом external origins",
+        "Cold-start recording и тайминги",
+        "demo-runbook с точными командами"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-026",
+      "title": "Измеренная производительность и budgets",
+      "priority": "P0",
+      "loop": "LOOP_3",
+      "owner": "Dev_B",
+      "depends_on": [
+        "REQ-020",
+        "REQ-021",
+        "REQ-023"
+      ],
+      "acceptance_checks": [
+        "60 FPS остаётся измеряемой целью, а не заявлением без реальных assets.",
+        "60-секундный benchmark сообщает median/p95 frame time, resolution, splat count, hardware/GPU/browser, cold-load time.",
+        "20 переходов не показывают утечки owners/монотонный рост; неподдерживаемая RAM metric отмечается N/A.",
+        "PERF_WARN останавливает phase progression и вызывает targeted fix до нового human PASS."
+      ],
+      "evidence_required": [
+        "Raw performance telemetry и environment fingerprint",
+        "Resource lifecycle counters",
+        "Human performance assessment"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-027",
+      "title": "Открытая лицензия проекта и третьих сторон",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Astra + Dev_A + Dev_B",
+      "depends_on": [],
+      "acceptance_checks": [
+        "Оригинальный код Apache-2.0; сохранены third-party licenses/notices.",
+        "Нет коммерческих закрытых API/платных ключей/рекламы; используемые библиотеки open source.",
+        "Dataset license не переименована в Apache-2.0; attribution requirements выполнены.",
+        "Research-only/noncommercial training не включён под видом OSI open source."
+      ],
+      "evidence_required": [
+        "LICENSE, NOTICE",
+        "Dependency/data license inventory",
+        "Ревью реальных lockfiles и reconstruction dependencies"
+      ],
+      "status": "PARTIAL",
+      "current_evidence": [
+        {
+          "kind": "artifact_presence",
+          "path": "LICENSE",
+          "scope": "Лицензия оригинального проекта создана.",
+          "execution_verified": false
+        },
+        {
+          "kind": "artifact_presence",
+          "path": "NOTICE",
+          "scope": "Создан шаблон notices; финальные зависимости ещё не проверены.",
+          "execution_verified": false
+        }
+      ]
+    },
+    {
+      "id": "REQ-028",
+      "title": "Постоянный AI_AND_DATA_ATTRIBUTION_LOG",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Astra",
+      "depends_on": [
+        "REQ-027"
+      ],
+      "acceptance_checks": [
+        "Astra orchestration и Gemini generation различены; planned/dispatched/generated/reviewed статусы честны.",
+        "Запись связывает созданный модуль с агентом, human reviewer и evidence/revision.",
+        "Точные реально использованные datasets URL перечислены отдельно от consulted catalogs; сохранены licenses."
+      ],
+      "evidence_required": [
+        "AI_AND_DATA_ATTRIBUTION_LOG.json",
+        "Сопоставление реальных созданных модулей с записями",
+        "Проверка финальной attribution UI"
+      ],
+      "status": "PARTIAL",
+      "current_evidence": [
+        {
+          "kind": "artifact_presence",
+          "path": "AI_AND_DATA_ATTRIBUTION_LOG.json",
+          "scope": "Реестр существует; не доказывает будущее generation/data usage.",
+          "execution_verified": false
+        }
+      ]
+    },
+    {
+      "id": "REQ-029",
+      "title": "Самодостаточный dispatch для stateless Hydrogen",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Astra",
+      "depends_on": [
+        "REQ-001"
+      ],
+      "acceptance_checks": [
+        "Каждая роль имеет точный output path, owner scope, CONTEXT_HEADER, IMPLEMENTATION_SPEC и SELF_VERIFICATION_TEST.",
+        "Зависимые imports/types/schema/signatures встроены; отсутствующие файлы не предполагаются доступными.",
+        "Новая роль не редактирует чужие файлы, не выдумывает результаты запуска и возвращает проверяемый artifact."
+      ],
+      "evidence_required": [
+        "Полные prompt snapshots",
+        "Dispatch registry и response artifacts",
+        "Проверка отсутствующих context placeholders"
+      ],
+      "status": "PARTIAL",
+      "current_evidence": [
+        {
+          "kind": "artifact_presence",
+          "path": "prompts/LOOP_0_DEV_A.md",
+          "scope": "Полный prompt подготовлен; это не implementation PASS.",
+          "execution_verified": false
+        },
+        {
+          "kind": "artifact_presence",
+          "path": "prompts/LOOP_0_DEV_B.md",
+          "scope": "Полный prompt подготовлен; это не implementation PASS.",
+          "execution_verified": false
+        }
+      ]
+    },
+    {
+      "id": "REQ-030",
+      "title": "Closed-loop gate с двумя человеческими PASS",
+      "priority": "P0",
+      "loop": "LOOP_0",
+      "owner": "Astra",
+      "depends_on": [],
+      "acceptance_checks": [
+        "PHASE_5/следующий execution loop разрешены только после явных human PASS Dev_A и Dev_B для одной интегрированной ревизии.",
+        "FAIL или PERF_WARN запускает диагностику/hotfix и сбрасывает соответствующее подтверждение после изменений.",
+        "Подготовка будущих контрактов/промптов может идти параллельно; она не считается переходом состояния.",
+        "Reviewer/AI code generation/пустой dataset/skipped WebGL тест не заменяют human PASS."
+      ],
+      "evidence_required": [
+        "REPO_STATE.json",
+        "Точные human signals с module/revision/command/log",
+        "Evidence gate audit"
+      ],
+      "status": "PARTIAL",
+      "current_evidence": [
+        {
+          "kind": "artifact_presence",
+          "path": "REPO_STATE.json",
+          "scope": "Gate задекларирован; human_module_pass=false.",
+          "execution_verified": false
+        }
+      ]
+    },
+    {
+      "id": "REQ-031",
+      "title": "Локальная интеграция и честные verification reports",
+      "priority": "P0",
+      "loop": "LOOP_1",
+      "owner": "Dev_A + Dev_B",
+      "depends_on": [
+        "REQ-011",
+        "REQ-014",
+        "REQ-018"
+      ],
+      "acceptance_checks": [
+        "Результат Dev_A реально потребляется Dev_B без ручной подмены полей.",
+        "Build/test logs связаны с файлами/ревизией; skipped assets/WebGL/manual checks названы явно.",
+        "Empty-state success не выдаётся за ground integration success.",
+        "Изменение контракта повторно проверяется обеими сторонами."
+      ],
+      "evidence_required": [
+        "Integration command log",
+        "Schema/asset validation + real UI demonstration",
+        "Human PASS/FAIL обоих владельцев"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    },
+    {
+      "id": "REQ-032",
+      "title": "Финальная страница, источники и воспроизводимый pitch",
+      "priority": "P1",
+      "loop": "LOOP_3",
+      "owner": "Dev_B + Astra",
+      "depends_on": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-031"
+      ],
+      "acceptance_checks": [
+        "Project/attribution view описывает достигнутое, реальные source URLs, AI contribution и ограничения.",
+        "30-секундный pitch демонстрирует подтверждённый pipeline результат без неподтверждённых claims.",
+        "README/runbook объясняет локальный запуск, regeneration и известные gaps; финальный report отражает невыполненные requirements."
+      ],
+      "evidence_required": [
+        "Финальные README/demo-runbook/attribution view",
+        "Pitch rehearsal recording",
+        "Финальный requirements evidence report"
+      ],
+      "status": "NOT_VERIFIED",
+      "current_evidence": []
+    }
+  ]
+}

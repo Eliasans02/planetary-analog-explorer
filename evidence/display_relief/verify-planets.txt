@@ -1,0 +1,28 @@
+
+> planetary-analog-explorer-web@0.1.0 verify:planets
+> node scripts/verify-planet-assets.mjs
+
+{
+  "status": "passed",
+  "planets": [
+    {
+      "body": "moon",
+      "textures": [
+        "1K 1024×512",
+        "2K 2048×1024",
+        "4K 4096×2048"
+      ],
+      "displacement": true,
+      "sha256": "verified"
+    },
+    {
+      "body": "mars",
+      "textures": [
+        "1K 1024×512",
+        "Native 1440×720"
+      ],
+      "displacement": false,
+      "sha256": "verified"
+    }
+  ]
+}

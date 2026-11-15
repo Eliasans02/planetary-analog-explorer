@@ -1,0 +1,85 @@
+{
+  "id": "PLANET_EXPLORER_NATIVE_WALK_2026-11-14",
+  "recorded_at": "2026-11-14T11:04:25.876740+00:00",
+  "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+  "phase5_committed": false,
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "execution_mode": "parallel_local_sol_6_1_medium",
+  "url": "http://127.0.0.1:4173/",
+  "contracts": {
+    "planet_catalog": "1.0.0",
+    "surface_catalog": "1.1.0",
+    "comparison": "1.0.0 unchanged"
+  },
+  "catalogs": [
+    {
+      "path": "web-client/public/data/planet_catalog.json",
+      "bytes": 4417,
+      "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+    },
+    {
+      "path": "web-client/public/data/surface_catalog.json",
+      "bytes": 17163,
+      "sha256": "0a94f8074e25e7863fa9412d2a781096660e2ad3cab7a1e58a4c2641ce8cee9f"
+    }
+  ],
+  "built_js": {
+    "bytes": 1321670,
+    "path": "web-client/dist/assets/index-ZfJGDHkp.js",
+    "sha256": "c427994e3bf96f01c90025bdc7f18dca2c2b1e0a707b0f787a534a6b536b451c"
+  },
+  "implemented": [
+    "Source-backed Moon/Mars360degree orbit",
+    "Independent side-by-side comparison",
+    "Local1K/2K/4K source-derived textures",
+    "Prepared-site astronaut drop and unsupported-coverage notice",
+    "Moon/Mars native DEM first-person navigation with valid-triangle collision",
+    "Pointer-lock fallback: drag look, focused WASD, Escape/blur cleanup",
+    "Source provenance, limits and preserved Earth surface archive"
+  ],
+  "checks": {
+    "frontend_tests_passed": 100,
+    "frontend_files_passed": 11,
+    "source_pipeline_tests_passed": 7,
+    "moon_registration_samples_verified": 1036800,
+    "mars_source_samples_verified": 16641,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "verify_planets": "PASS",
+    "verify_surfaces": "PASS",
+    "browser": "VERIFIED_WITH_POINTER_LOCK_FALLBACK",
+    "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET",
+    "performance_benchmark": "NOT_PERFORMED"
+  },
+  "evidence": [
+    "evidence/planet_explorer/check-status.json",
+    "evidence/planet_explorer/browser-observation.json",
+    "evidence/planet_explorer/independent-review.md",
+    "evidence/planet_explorer/SOURCE_MANIFEST.json",
+    "evidence/planet_assets/validation.json"
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/planet_explorer/planet-split.jpg",
+      "bytes": 53259,
+      "sha256": "fca313cf332ad656856791cb8685f0e391f6d5f757615ad3649ff1af8c59daba"
+    },
+    {
+      "path": "evidence/planet_explorer/planet-walk.jpg",
+      "bytes": 86090,
+      "sha256": "4717e747603d151e6fa98aef95f7d3571d7d4c3492586c150365c1870cdd3b47"
+    }
+  ],
+  "remaining": [
+    "Expand real local terrain coverage and add registered source imagery.",
+    "Preserve camera orientation across texture-quality changes.",
+    "Reconstruct and register real source-backed Gaussian splats.",
+    "Complete calibrated similarity and exact ENU/body-frame registration.",
+    "Benchmark foreground FPS/RAM and verify native pointer-lock success in a supporting browser.",
+    "Receive human Dev_A and Dev_B acceptance."
+  ],
+  "scheduler_created": false
+}

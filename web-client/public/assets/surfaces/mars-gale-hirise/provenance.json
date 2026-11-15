@@ -1,0 +1,175 @@
+{
+  "raw_source_receipt": {
+    "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/DTEEC_023957_1755_024023_1755_U01.IMG",
+    "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/DTEEC_023957_1755_024023_1755_U01.IMG",
+    "local_path": "data-pipeline/cache/raw/surface-expansion/mars-gale-hirise-rows.bin",
+    "range_start_inclusive": 227249880,
+    "range_end_inclusive": 230740619,
+    "complete_product_bytes": 457936380,
+    "bytes": 3490740,
+    "sha256": "fecba029598e04d54bf27235ad6a69147bf79022e9f5eb4d43edcaae45ef0840",
+    "complete_product": false,
+    "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+    "retrieved_at": "2026-11-14T11:48:22.309921+00:00",
+    "http_headers": {
+      "Server": "nginx/1.18.0",
+      "Date": "Sat, 14 Nov 2026 11:48:14 GMT",
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "3490740",
+      "Connection": "close",
+      "Last-Modified": "Fri, 27 Jan 2012 18:25:56 GMT",
+      "ETag": "\"4f22ec34-1b4b8dfc\"",
+      "Content-Range": "bytes 227249880-230740619/457936380",
+      "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+    }
+  },
+  "range_receipts": [
+    {
+      "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/DTEEC_023957_1755_024023_1755_U01.IMG",
+      "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/DTEEC_023957_1755_024023_1755_U01.IMG",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/mars-gale-hirise-header.bin",
+      "range_start_inclusive": 0,
+      "range_end_inclusive": 65535,
+      "complete_product_bytes": 457936380,
+      "bytes": 65536,
+      "sha256": "1839ed851d0de5f46074534fbd2706793d036e75538e9652405f75aec60a8e66",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:48:12.873912+00:00",
+      "http_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Sat, 14 Nov 2026 11:48:12 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "65536",
+        "Connection": "close",
+        "Last-Modified": "Fri, 27 Jan 2012 18:25:56 GMT",
+        "ETag": "\"4f22ec34-1b4b8dfc\"",
+        "Content-Range": "bytes 0-65535/457936380",
+        "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+      }
+    },
+    {
+      "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/DTEEC_023957_1755_024023_1755_U01.IMG",
+      "final_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_023900_023999/ESP_023957_1755_ESP_024023_1755/DTEEC_023957_1755_024023_1755_U01.IMG",
+      "local_path": "data-pipeline/cache/raw/surface-expansion/mars-gale-hirise-rows.bin",
+      "range_start_inclusive": 227249880,
+      "range_end_inclusive": 230740619,
+      "complete_product_bytes": 457936380,
+      "bytes": 3490740,
+      "sha256": "fecba029598e04d54bf27235ad6a69147bf79022e9f5eb4d43edcaae45ef0840",
+      "complete_product": false,
+      "identity_scope": "SHA256 identifies this exact byte range only, not the complete product.",
+      "retrieved_at": "2026-11-14T11:48:22.309921+00:00",
+      "http_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Sat, 14 Nov 2026 11:48:14 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "3490740",
+        "Connection": "close",
+        "Last-Modified": "Fri, 27 Jan 2012 18:25:56 GMT",
+        "ETag": "\"4f22ec34-1b4b8dfc\"",
+        "Content-Range": "bytes 227249880-230740619/457936380",
+        "Access-Control-Allow-Origin": "https://pds-imaging.jpl.nasa.gov"
+      }
+    }
+  ],
+  "source_metadata": {
+    "crs_wkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",137.49],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "transform": [
+      1.0117630165416,
+      0.0,
+      -3605.9233909542627,
+      0.0,
+      -1.0117630165416,
+      -261552.88093220213
+    ],
+    "width": 6765,
+    "height": 16922,
+    "nodata": "-3.4028226550889045e+38",
+    "dtype": "float32",
+    "crop_origin": [
+      -248.38782056096306,
+      -270049.1608636102
+    ],
+    "spacing": [
+      1.0117630165416,
+      -1.0117630165416
+    ],
+    "coordinates": [
+      137.48690196668775,
+      -4.556985104655536
+    ]
+  },
+  "source_label_text": "PDS_VERSION_ID            = PDS3\r\n\r\n/* File format and length */\r\nRECORD_TYPE               = FIXED_LENGTH\r\nRECORD_BYTES              = 27060\r\nFILE_RECORDS              = 16923\r\n^IMAGE                    = 2\r\n\r\n/* Identification Information */\r\nDATA_SET_ID               = \"MRO-M-HIRISE-5-DTM-V1.0\"\r\nDATA_SET_NAME             = \"MRO MARS HIGH RESOLUTION IMAGING SCIENCE\r\n                             EXPERIMENT DTM V1.0\"\r\nPRODUCER_INSTITUTION_NAME = \"UNIVERSITY OF ARIZONA\"\r\nPRODUCER_ID               = \"UA\"\r\nPRODUCER_FULL_NAME        = \"ALFRED MCEWEN, USGS-ASTROGEOLOGY \"\r\nPRODUCT_ID                = \"DTEEC_023957_1755_024023_1755_U01\"\r\nPRODUCT_VERSION_ID        = \"1.0\"\r\nINSTRUMENT_HOST_NAME      = \"MARS RECONNAISSANCE ORBITER\"\r\nINSTRUMENT_HOST_ID        = \"MRO\"\r\nINSTRUMENT_NAME           = \"HIGH RESOLUTION IMAGING SCIENCE EXPERIMENT\"\r\nINSTRUMENT_ID             = \"HIRISE\"\r\nTARGET_NAME               = \"MARS\"\r\nSOURCE_PRODUCT_ID         = (ESP_023957_1755,ESP_024023_1755)\r\nRATIONALE_DESC            = \"MSL landing site in Gale Crater\"\r\nSOFTWARE_NAME             = \"SOCET SET 5.5.0\"\r\n\r\nOBJECT = IMAGE\r\n  LINES            = 16922\r\n  LINE_SAMPLES     = 6765\r\n  BANDS            = 1\r\n  OFFSET           = 0.0\r\n  SCALING_FACTOR   = 1.0\r\n  NOTE             = \"Pixel values in this file represent elevations in\r\n                      meters above the martian equipotential surface (Mars\r\n                      2000 Datum) defined by Smith, et al. (2001). Conversion\r\n                      from pixel units to geophysical units is given by the\r\n                      keyvalues for SCALING_FACTOR and OFFSET. This DTM was\r\n                      produced using ISIS and SOCET Set (copyright BAE\r\n                      Systems) software as described in Kirk et al. (2008).\"\r\n  SAMPLE_BITS      = 32\r\n  SAMPLE_BIT_MASK  = 2#11111111111111111111111111111111#\r\n  SAMPLE_TYPE      = PC_REAL\r\n  MISSING_CONSTANT = 16#FF7FFFFB#\r\n  VALID_MINIMUM    = -4534.51\r\n  VALID_MAXIMUM    = -3685.57\r\nEND_OBJECT = IMAGE\r\n\r\nOBJECT = IMAGE_MAP_PROJECTION\r\n  ^DATA_SET_MAP_PROJECTION     = \"DSMAP.CAT\"\r\n  MAP_PROJECTION_TYPE          = \"EQUIRECTANGULAR\"\r\n  PROJECTION_LATITUDE_TYPE     = PLANETOCENTRIC\r\n\r\n  /* NOTE: The EQUIRECTANGULAR projection is based on the formula  */\r\n  /* for a sphere. To eliminate confusion in the                   */\r\n  /* IMAGE_MAP_PROJECTION object we have set all three radii,      */\r\n  /* A_AXIS_RADIUS, B_AXIS_RADIUS, and C_AXIS_RADIUS to the same   */\r\n  /* number. The value recorded in the three radii is the local    */\r\n  /* radius at the center latitude on the Mars ellipsoid. That is, */\r\n  /* equatorial radius of 3396.190000 km and polar radius of       */\r\n  /* 3376.200000 kilometers. Using the local radius of the         */\r\n  /* ellipsoid implies that the MAP_SCALE and MAP_RESOLUTION are   */\r\n  /* true at the center latitude.                                  */\r\n  A_AXIS_RADIUS                = 3396.19 <KM>\r\n  B_AXIS_RADIUS                = 3396.19 <KM>\r\n  C_AXIS_RADIUS                = 3396.19 <KM>\r\n  COORDINATE_SYSTEM_NAME       = PLANETOCENTRIC\r\n  POSITIVE_LONGITUDE_DIRECTION = EAST\r\n  KEYWORD_LATITUDE_TYPE        = PLANETOCENTRIC\r\n\r\n  /* NOTE:  CENTER_LATITUDE and CENTER_LONGITUDE describe the location  */\r\n  /* of the center of projection, which is not necessarily equal to the */\r\n  /* location of the center point of the image.                         */\r\n  CENTER_LATITUDE              = 0.0 <DEG>\r\n  CENTER_LONGITUDE             = 137.49 <DEG>\r\n  LINE_FIRST_PIXEL             = 1\r\n  LINE_LAST_PIXEL              = 16922\r\n  SAMPLE_FIRST_PIXEL           = 1\r\n  SAMPLE_LAST_PIXEL            = 6765\r\n  MAP_PROJECTION_ROTATION      = 0.0 <DEG>\r\n  MAP_RESOLUTION               = 58585.55467457 <PIX/DEG>\r\n  MAP_SCALE                    = 1.0117630165416 <METERS/PIXEL>\r\n  MAXIMUM_LATITUDE             = -4.4125815075067 <DEG>\r\n  MINIMUM_LATITUDE             = -4.7014173711435 <DEG>\r\n  LINE_PROJECTION_OFFSET       = -258512.5 <PIXEL>\r\n  SAMPLE_PROJECTION_OFFSET     = 3563.5 <PIXEL>\r\n  EASTERNMOST_LONGITUDE        = 137.5446516 <DEG>\r\n  WESTERNMOST_LONGITUDE        = 137.42919544 <DEG>\r\nEND_OBJECT = IMAGE_MAP_PROJECTION\r\n\r\nOBJECT = VIEWING_PARAMETERS\r\n  NORTH_AZIMUTH = 270.0 <DEG>\r\nEND_OBJECT = VIEWING_PARAMETERS\r",
+  "window_col_row_width_height": [
+    3318,
+    8397,
+    129,
+    129
+  ],
+  "selection": "129 native pixels centered at floor(width/2),floor(height/2); project selection, not a published ROI.",
+  "processing": "Valid finite source samples minus valid crop minimum in float64 then little-endian Float32; invalid zero with UInt8 mask. No interpolation.",
+  "native_origin_semantics": "Pixel center row0,col0; signed native spacing follows raster columns/rows.",
+  "frame": "Source PDS planetocentric east-longitude native equirectangular CRS; source local-radius sphere preserved in WKT; no IAU realization transformation.",
+  "vertical_datum": "Meters above martian equipotential surface (Mars 2000 Datum), declared in source PDS label.",
+  "source_sample_comparisons": [
+    {
+      "crop_row_col": [
+        0,
+        0
+      ],
+      "source_height_m": -4515.587890625,
+      "height_offset_m": 1.36669921875,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        0,
+        128
+      ],
+      "source_height_m": -4512.556640625,
+      "height_offset_m": 4.39794921875,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        64,
+        64
+      ],
+      "source_height_m": -4515.45361328125,
+      "height_offset_m": 1.5009765625,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        128,
+        0
+      ],
+      "source_height_m": -4510.859375,
+      "height_offset_m": 6.09521484375,
+      "valid": true,
+      "exact_float32_match": true
+    },
+    {
+      "crop_row_col": [
+        128,
+        128
+      ],
+      "source_height_m": -4514.13818359375,
+      "height_offset_m": 2.81640625,
+      "valid": true,
+      "exact_float32_match": true
+    }
+  ],
+  "limitations": [
+    "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+    "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+    "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+    "Stereo-derived source DEM; only exact byte ranges acquired, complete IMG checksum unavailable.",
+    "Source Mars mapping realization retained without IAU frame transformation."
+  ],
+  "source_hash_scope": "SHA256 identifies this exact byte range only, not the complete product."
+}

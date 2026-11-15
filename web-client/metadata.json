@@ -1,0 +1,6 @@
+{
+  "name": "Planetary Analog Explorer",
+  "description": "3D viewport and telemetry explorer for planetary analog sites across Earth, the Moon, and Mars.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

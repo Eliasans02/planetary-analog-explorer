@@ -1,0 +1,248 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "catalog_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "method": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "const": "horn_3x3_v1"
+        },
+        "references": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "references"
+      ],
+      "additionalProperties": false
+    },
+    "surfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "surface_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "inputs": {
+            "type": "object",
+            "properties": {
+              "heights_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "valid_mask_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 257
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 257
+              },
+              "spacing_m": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "required": [
+              "heights_sha256",
+              "valid_mask_sha256",
+              "width",
+              "height",
+              "spacing_m"
+            ],
+            "additionalProperties": false
+          },
+          "coverage": {
+            "type": "object",
+            "properties": {
+              "valid_height_samples": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "total_samples": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "analyzed_centers": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "possible_interior_centers": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "valid_height_samples",
+              "total_samples",
+              "analyzed_centers",
+              "possible_interior_centers"
+            ],
+            "additionalProperties": false
+          },
+          "metrics": {
+            "type": "object",
+            "properties": {
+              "relief_m": {
+                "type": "number",
+                "minimum": 0
+              },
+              "mean_slope_deg": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 90
+              },
+              "p95_slope_deg": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 90
+              },
+              "max_slope_deg": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 90
+              },
+              "mean_roughness_m": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "max_roughness_m": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "mean_tri_m": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "required": [
+              "relief_m",
+              "mean_slope_deg",
+              "p95_slope_deg",
+              "max_slope_deg",
+              "mean_roughness_m",
+              "max_roughness_m",
+              "mean_tri_m"
+            ],
+            "additionalProperties": false
+          },
+          "slope_histogram": {
+            "type": "array",
+            "minItems": 5,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "properties": {
+                "min_deg": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 90
+                },
+                "max_deg": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 90
+                },
+                "samples": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "fraction_pct": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              },
+              "required": [
+                "min_deg",
+                "max_deg",
+                "samples",
+                "fraction_pct"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "surface_id",
+          "inputs",
+          "coverage",
+          "metrics",
+          "slope_histogram",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "catalog_sha256",
+    "method",
+    "surfaces"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planetary-analog-explorer.local/schemas/surface_analysis.schema.json",
+  "title": "Native-grid surface analysis catalog"
+}

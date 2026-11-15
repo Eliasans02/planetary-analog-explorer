@@ -1,0 +1,9 @@
+
+ RUN  v5.1.0 C:/Users/HP/NasaAstras/planetary-analog-explorer/web-client
+
+
+ Test Files  2 passed (2)
+      Tests  5 passed (5)
+   Start at  17:37:29
+   Duration  503ms (import 51%, transform 29%, worker 13%, tests 7%)
+

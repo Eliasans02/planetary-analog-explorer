@@ -1,0 +1,542 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-14T10:12:35.376758+00:00",
+  "catalog_sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539",
+  "method": {
+    "id": "horn_3x3_v1",
+    "references": [
+      "https://gdal.org/en/stable/programs/gdaldem.html",
+      "https://github.com/OSGeo/gdal/blob/v3.11.0/apps/gdaldem_lib.cpp",
+      "https://pgda.gsfc.nasa.gov/products/78",
+      "https://pubs.usgs.gov/publication/tm11B9",
+      "https://www.uahirise.org/dtm/howto.php"
+    ]
+  },
+  "surfaces": [
+    {
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 129.775146484375,
+        "mean_slope_deg": 13.8021566782362,
+        "p95_slope_deg": 28.70182409246599,
+        "max_slope_deg": 36.49554517317462,
+        "mean_roughness_m": 3.0126380880203167,
+        "max_roughness_m": 9.0052490234375,
+        "mean_tri_m": 3.1490336511434918
+      },
+      "slope_histogram": [
+        {
+          "min_deg": 0,
+          "max_deg": 5,
+          "samples": 2959,
+          "fraction_pct": 18.345836691673384
+        },
+        {
+          "min_deg": 5,
+          "max_deg": 10,
+          "samples": 3916,
+          "fraction_pct": 24.279248558497116
+        },
+        {
+          "min_deg": 10,
+          "max_deg": 20,
+          "samples": 4462,
+          "fraction_pct": 27.66445532891066
+        },
+        {
+          "min_deg": 20,
+          "max_deg": 30,
+          "samples": 4329,
+          "fraction_pct": 26.83985367970736
+        },
+        {
+          "min_deg": 30,
+          "max_deg": 90,
+          "samples": 463,
+          "fraction_pct": 2.8706057412114823
+        }
+      ],
+      "surface_id": "lola-site04-roi3",
+      "inputs": {
+        "heights_sha256": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          5.0,
+          5.0
+        ]
+      },
+      "limitations": [
+        "Unranked source relief; no terrain similarity, suitability, profile, or landing recommendation.",
+        "Native surface minus crop minimum; vertical display is relative, with no absolute ENU or datum conversion.",
+        "Context crop is separate from the published ROI.",
+        "Surface includes interpolation; valid surface does not imply direct LOLA laser returns.",
+        "Absolute height zero remains unverified.",
+        "Catalog horizontal method: Exact native south polar stereographic sample spacing; display axes follow raster columns/rows. This is projected relief, not ENU.",
+        "Computed from stored Float32 heights using Float64 arithmetic; constant vertical zero does not affect gradients or relief.",
+        "Kernel is 3 by 3 native source samples; no resampling or interpolation. Outer edges and any neighborhood with invalid heights are excluded.",
+        "Spacing uses catalog meters along raster axes. Projected distances and local metric approximations are not an exact ground-distance or ENU solution.",
+        "Slope extrema, percentiles, roughness and TRI depend on grid spacing, DEM resolution, source error and window extent; cross-scale equality is not implied.",
+        "Roughness range and Riley TRI include the local terrain gradient; they are not detrended rockiness measurements.",
+        "A valid DEM height may be interpolated or filled by the source provider; validity does not establish a direct instrument return.",
+        "These descriptive metrics do not establish traversability, landing suitability, terrain similarity or confidence."
+      ]
+    },
+    {
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 524.91259765625,
+        "mean_slope_deg": 11.631564038400995,
+        "p95_slope_deg": 26.09091506459179,
+        "max_slope_deg": 34.07481720605527,
+        "mean_roughness_m": 16.125052267194377,
+        "max_roughness_m": 55.221923828125,
+        "mean_tri_m": 16.020692021358204
+      },
+      "slope_histogram": [
+        {
+          "min_deg": 0,
+          "max_deg": 5,
+          "samples": 1586,
+          "fraction_pct": 9.833219666439334
+        },
+        {
+          "min_deg": 5,
+          "max_deg": 10,
+          "samples": 7271,
+          "fraction_pct": 45.08029016058032
+        },
+        {
+          "min_deg": 10,
+          "max_deg": 20,
+          "samples": 4790,
+          "fraction_pct": 29.698059396118794
+        },
+        {
+          "min_deg": 20,
+          "max_deg": 30,
+          "samples": 2388,
+          "fraction_pct": 14.805629611259223
+        },
+        {
+          "min_deg": 30,
+          "max_deg": 90,
+          "samples": 94,
+          "fraction_pct": 0.5828011656023312
+        }
+      ],
+      "surface_id": "usgs-hawaii-summit",
+      "inputs": {
+        "heights_sha256": "3d3af24aec04a00e5b92662a323f8e321069dd78e237e6e2f7f9c2301ed7ba22",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          29.101407512309834,
+          30.750571350377374
+        ]
+      },
+      "limitations": [
+        "Unranked source relief; no terrain similarity, suitability, profile, or landing recommendation.",
+        "Native surface minus crop minimum; vertical display is relative, with no absolute ENU or datum conversion.",
+        "Window is project-selected, not a NASA-recommended analog.",
+        "NAD83 retained; coordinates are not asserted to be WGS84.",
+        "XML declares NAVD88 but abstract says vertical reference varies outside CONUS; Hawaii datum applicability remains unverified.",
+        "Catalog horizontal method: Approximate horizontal display: constant X/Y metre distances from Geod on native NAD83 GRS80 ellipsoid at crop center, one native longitude/latitude increment each. Native degree sample centers retained; no reprojection or datum transformation, not ENU.",
+        "Computed from stored Float32 heights using Float64 arithmetic; constant vertical zero does not affect gradients or relief.",
+        "Kernel is 3 by 3 native source samples; no resampling or interpolation. Outer edges and any neighborhood with invalid heights are excluded.",
+        "Spacing uses catalog meters along raster axes. Projected distances and local metric approximations are not an exact ground-distance or ENU solution.",
+        "Slope extrema, percentiles, roughness and TRI depend on grid spacing, DEM resolution, source error and window extent; cross-scale equality is not implied.",
+        "Roughness range and Riley TRI include the local terrain gradient; they are not detrended rockiness measurements.",
+        "A valid DEM height may be interpolated or filled by the source provider; validity does not establish a direct instrument return.",
+        "These descriptive metrics do not establish traversability, landing suitability, terrain similarity or confidence."
+      ]
+    },
+    {
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 4.17626953125,
+        "mean_slope_deg": 2.2689129649966895,
+        "p95_slope_deg": 4.969453201064895,
+        "max_slope_deg": 12.72500158151502,
+        "mean_roughness_m": 0.10443242761485523,
+        "max_roughness_m": 0.57275390625,
+        "mean_tri_m": 0.10388684876181259
+      },
+      "slope_histogram": [
+        {
+          "min_deg": 0,
+          "max_deg": 5,
+          "samples": 15346,
+          "fraction_pct": 95.14539029078058
+        },
+        {
+          "min_deg": 5,
+          "max_deg": 10,
+          "samples": 727,
+          "fraction_pct": 4.5074090148180295
+        },
+        {
+          "min_deg": 10,
+          "max_deg": 20,
+          "samples": 56,
+          "fraction_pct": 0.3472006944013888
+        },
+        {
+          "min_deg": 20,
+          "max_deg": 30,
+          "samples": 0,
+          "fraction_pct": 0.0
+        },
+        {
+          "min_deg": 30,
+          "max_deg": 90,
+          "samples": 0,
+          "fraction_pct": 0.0
+        }
+      ],
+      "surface_id": "mars-jezero-hirise",
+      "inputs": {
+        "heights_sha256": "0bac451f8f7d9f1e4d301f024c8b0edc8c4a7a5587136c20ad05db579d2afefd",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          1.0096633268711,
+          1.0096633268711
+        ]
+      },
+      "limitations": [
+        "Project-selected native center window of the published HiRISE DTM, not a landing-site safety assessment.",
+        "Stereo-derived DTM samples are not individual laser returns; gaps remain masked.",
+        "Projected raster relief axes follow columns/rows; not exact ENU or a body-fixed reconstruction.",
+        "Source planetocentric mapping realization retained; no transformation to an IAU Mars reference realization.",
+        "Only exact source byte ranges were retrieved; the complete IMG checksum is unavailable.",
+        "Catalog horizontal method: Native equirectangular raster spacing from PDS label; source MAP_SCALE 1.0096633268711 m/pixel, true at projection center latitude 15 degrees. Display X/Z follow raster columns/rows.",
+        "Computed from stored Float32 heights using Float64 arithmetic; constant vertical zero does not affect gradients or relief.",
+        "Kernel is 3 by 3 native source samples; no resampling or interpolation. Outer edges and any neighborhood with invalid heights are excluded.",
+        "Spacing uses catalog meters along raster axes. Projected distances and local metric approximations are not an exact ground-distance or ENU solution.",
+        "Slope extrema, percentiles, roughness and TRI depend on grid spacing, DEM resolution, source error and window extent; cross-scale equality is not implied.",
+        "Roughness range and Riley TRI include the local terrain gradient; they are not detrended rockiness measurements.",
+        "A valid DEM height may be interpolated or filled by the source provider; validity does not establish a direct instrument return.",
+        "These descriptive metrics do not establish traversability, landing suitability, terrain similarity or confidence."
+      ]
+    },
+    {
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 83.2056884765625,
+        "mean_slope_deg": 5.290469847954737,
+        "p95_slope_deg": 13.152228925692969,
+        "max_slope_deg": 27.195042880296043,
+        "mean_roughness_m": 1.230501036685667,
+        "max_roughness_m": 7.0576171875,
+        "mean_tri_m": 1.179132598790585
+      },
+      "slope_histogram": [
+        {
+          "min_deg": 0,
+          "max_deg": 5,
+          "samples": 9338,
+          "fraction_pct": 57.895715791431584
+        },
+        {
+          "min_deg": 5,
+          "max_deg": 10,
+          "samples": 5061,
+          "fraction_pct": 31.378262756525512
+        },
+        {
+          "min_deg": 10,
+          "max_deg": 20,
+          "samples": 1694,
+          "fraction_pct": 10.502821005642012
+        },
+        {
+          "min_deg": 20,
+          "max_deg": 30,
+          "samples": 36,
+          "fraction_pct": 0.2232004464008928
+        },
+        {
+          "min_deg": 30,
+          "max_deg": 90,
+          "samples": 0,
+          "fraction_pct": 0.0
+        }
+      ],
+      "surface_id": "lola-site01-center",
+      "inputs": {
+        "heights_sha256": "1d2fd29198633cba817a99060ad21790d5731a02663b983362a496d5370500b6",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          5.0,
+          5.0
+        ]
+      },
+      "limitations": [
+        "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+        "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+        "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+        "LOLA surface includes interpolated pixels; direct laser-return counts not acquired.",
+        "Absolute lunar vertical datum remains unverified.",
+        "Catalog horizontal method: Native projected raster metre spacing; X/Z follow source columns/rows. Projected spacing is not exact ground distance; no reprojection, not ENU.",
+        "Computed from stored Float32 heights using Float64 arithmetic; constant vertical zero does not affect gradients or relief.",
+        "Kernel is 3 by 3 native source samples; no resampling or interpolation. Outer edges and any neighborhood with invalid heights are excluded.",
+        "Spacing uses catalog meters along raster axes. Projected distances and local metric approximations are not an exact ground-distance or ENU solution.",
+        "Slope extrema, percentiles, roughness and TRI depend on grid spacing, DEM resolution, source error and window extent; cross-scale equality is not implied.",
+        "Roughness range and Riley TRI include the local terrain gradient; they are not detrended rockiness measurements.",
+        "A valid DEM height may be interpolated or filled by the source provider; validity does not establish a direct instrument return.",
+        "These descriptive metrics do not establish traversability, landing suitability, terrain similarity or confidence."
+      ]
+    },
+    {
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 186.681640625,
+        "mean_slope_deg": 14.503856405107694,
+        "p95_slope_deg": 20.444761336833142,
+        "max_slope_deg": 45.42251556436169,
+        "mean_roughness_m": 3.1779847368288485,
+        "max_roughness_m": 15.2666015625,
+        "mean_tri_m": 3.2149575169857125
+      },
+      "slope_histogram": [
+        {
+          "min_deg": 0,
+          "max_deg": 5,
+          "samples": 260,
+          "fraction_pct": 1.612003224006448
+        },
+        {
+          "min_deg": 5,
+          "max_deg": 10,
+          "samples": 1757,
+          "fraction_pct": 10.893421786843573
+        },
+        {
+          "min_deg": 10,
+          "max_deg": 20,
+          "samples": 13101,
+          "fraction_pct": 81.2263624527249
+        },
+        {
+          "min_deg": 20,
+          "max_deg": 30,
+          "samples": 978,
+          "fraction_pct": 6.063612127224254
+        },
+        {
+          "min_deg": 30,
+          "max_deg": 90,
+          "samples": 33,
+          "fraction_pct": 0.2046004092008184
+        }
+      ],
+      "surface_id": "lola-site06-center",
+      "inputs": {
+        "heights_sha256": "e22addc8e8103a14724435d7ecaebdeb167bb8f3afc2eb2f57a39a4b0ed62975",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          5.0,
+          5.0
+        ]
+      },
+      "limitations": [
+        "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+        "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+        "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+        "LOLA surface includes interpolated pixels; direct laser-return counts not acquired.",
+        "Absolute lunar vertical datum remains unverified.",
+        "Catalog horizontal method: Native projected raster metre spacing; X/Z follow source columns/rows. Projected spacing is not exact ground distance; no reprojection, not ENU.",
+        "Computed from stored Float32 heights using Float64 arithmetic; constant vertical zero does not affect gradients or relief.",
+        "Kernel is 3 by 3 native source samples; no resampling or interpolation. Outer edges and any neighborhood with invalid heights are excluded.",
+        "Spacing uses catalog meters along raster axes. Projected distances and local metric approximations are not an exact ground-distance or ENU solution.",
+        "Slope extrema, percentiles, roughness and TRI depend on grid spacing, DEM resolution, source error and window extent; cross-scale equality is not implied.",
+        "Roughness range and Riley TRI include the local terrain gradient; they are not detrended rockiness measurements.",
+        "A valid DEM height may be interpolated or filled by the source provider; validity does not establish a direct instrument return.",
+        "These descriptive metrics do not establish traversability, landing suitability, terrain similarity or confidence."
+      ]
+    },
+    {
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 6.3330078125,
+        "mean_slope_deg": 4.318044589033175,
+        "p95_slope_deg": 8.653393696008223,
+        "max_slope_deg": 16.897059087771858,
+        "mean_roughness_m": 0.20113945208359166,
+        "max_roughness_m": 0.81494140625,
+        "mean_tri_m": 0.2044539979414897
+      },
+      "slope_histogram": [
+        {
+          "min_deg": 0,
+          "max_deg": 5,
+          "samples": 10618,
+          "fraction_pct": 65.83173166346333
+        },
+        {
+          "min_deg": 5,
+          "max_deg": 10,
+          "samples": 5180,
+          "fraction_pct": 32.116064232128466
+        },
+        {
+          "min_deg": 10,
+          "max_deg": 20,
+          "samples": 331,
+          "fraction_pct": 2.052204104408209
+        },
+        {
+          "min_deg": 20,
+          "max_deg": 30,
+          "samples": 0,
+          "fraction_pct": 0.0
+        },
+        {
+          "min_deg": 30,
+          "max_deg": 90,
+          "samples": 0,
+          "fraction_pct": 0.0
+        }
+      ],
+      "surface_id": "mars-gale-hirise",
+      "inputs": {
+        "heights_sha256": "02078ad83841923b9b7c0793cdbf8ddfb10f1b2f3fffcddc92bae8d42d10584b",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          1.0117630165416,
+          1.0117630165416
+        ]
+      },
+      "limitations": [
+        "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+        "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+        "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+        "Stereo-derived source DEM; only exact byte ranges acquired, complete IMG checksum unavailable.",
+        "Source Mars mapping realization retained without IAU frame transformation.",
+        "Catalog horizontal method: Native projected raster metre spacing; X/Z follow source columns/rows. Projected spacing is not exact ground distance; no reprojection, not ENU.",
+        "Computed from stored Float32 heights using Float64 arithmetic; constant vertical zero does not affect gradients or relief.",
+        "Kernel is 3 by 3 native source samples; no resampling or interpolation. Outer edges and any neighborhood with invalid heights are excluded.",
+        "Spacing uses catalog meters along raster axes. Projected distances and local metric approximations are not an exact ground-distance or ENU solution.",
+        "Slope extrema, percentiles, roughness and TRI depend on grid spacing, DEM resolution, source error and window extent; cross-scale equality is not implied.",
+        "Roughness range and Riley TRI include the local terrain gradient; they are not detrended rockiness measurements.",
+        "A valid DEM height may be interpolated or filled by the source provider; validity does not establish a direct instrument return.",
+        "These descriptive metrics do not establish traversability, landing suitability, terrain similarity or confidence."
+      ]
+    },
+    {
+      "coverage": {
+        "valid_height_samples": 16641,
+        "total_samples": 16641,
+        "analyzed_centers": 16129,
+        "possible_interior_centers": 16129
+      },
+      "metrics": {
+        "relief_m": 7.2535400390625,
+        "mean_slope_deg": 5.3678809440972515,
+        "p95_slope_deg": 11.620821107818378,
+        "max_slope_deg": 22.734395348341575,
+        "mean_roughness_m": 0.24255901636803273,
+        "max_roughness_m": 1.1748046875,
+        "mean_tri_m": 0.2390304403475258
+      },
+      "slope_histogram": [
+        {
+          "min_deg": 0,
+          "max_deg": 5,
+          "samples": 8430,
+          "fraction_pct": 52.26610453220906
+        },
+        {
+          "min_deg": 5,
+          "max_deg": 10,
+          "samples": 6324,
+          "fraction_pct": 39.208878417756836
+        },
+        {
+          "min_deg": 10,
+          "max_deg": 20,
+          "samples": 1362,
+          "fraction_pct": 8.444416888833779
+        },
+        {
+          "min_deg": 20,
+          "max_deg": 30,
+          "samples": 13,
+          "fraction_pct": 0.0806001612003224
+        },
+        {
+          "min_deg": 30,
+          "max_deg": 90,
+          "samples": 0,
+          "fraction_pct": 0.0
+        }
+      ],
+      "surface_id": "mars-eberswalde-hirise",
+      "inputs": {
+        "heights_sha256": "38ca289729ebf67f2557943b8abd5e47ca41a5b6004908a8f58d49be9e2360ba",
+        "valid_mask_sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          1.0081884109784,
+          1.0081884109784
+        ]
+      },
+      "limitations": [
+        "Project-selected native center crop; no landing recommendation, terrain ranking or suitability claim.",
+        "No smoothing, resampling, generated terrain or hole filling; native source gaps stay masked.",
+        "Relative source heights and projected raster axes; not exact ENU or body-fixed reconstruction.",
+        "Stereo-derived source DEM; only exact byte ranges acquired, complete IMG checksum unavailable.",
+        "Source Mars mapping realization retained without IAU frame transformation.",
+        "Catalog horizontal method: Native projected raster metre spacing; X/Z follow source columns/rows. Projected spacing is not exact ground distance; no reprojection, not ENU.",
+        "Computed from stored Float32 heights using Float64 arithmetic; constant vertical zero does not affect gradients or relief.",
+        "Kernel is 3 by 3 native source samples; no resampling or interpolation. Outer edges and any neighborhood with invalid heights are excluded.",
+        "Spacing uses catalog meters along raster axes. Projected distances and local metric approximations are not an exact ground-distance or ENU solution.",
+        "Slope extrema, percentiles, roughness and TRI depend on grid spacing, DEM resolution, source error and window extent; cross-scale equality is not implied.",
+        "Roughness range and Riley TRI include the local terrain gradient; they are not detrended rockiness measurements.",
+        "A valid DEM height may be interpolated or filled by the source provider; validity does not establish a direct instrument return.",
+        "These descriptive metrics do not establish traversability, landing suitability, terrain similarity or confidence."
+      ]
+    }
+  ]
+}

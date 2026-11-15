@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-11-14T12:12:15.870616+00:00",
+  "scope": "Historical pre-color expansion build",
+  "frontend_tests_passed": 119,
+  "frontend_files_passed": 13,
+  "commands": [
+    {
+      "command": "npm run test",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_expansion/test.txt"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_expansion/typecheck.txt"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_expansion/build.txt"
+    },
+    {
+      "command": "npm run verify:surfaces",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_expansion/verify-surfaces.txt"
+    },
+    {
+      "command": "npm run verify:planets",
+      "cwd": "web-client",
+      "exit_code": 0,
+      "log": "evidence/surface_expansion/verify-planets.txt"
+    }
+  ],
+  "built_js": "index-Cuab9JlK.js",
+  "superseded_by": "SURFACE_SITES_ANALYSIS_COLOR_VERIFIED_2026-11-14",
+  "final_checks": "evidence/surface_imagery/check-status.json"
+}

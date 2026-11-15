@@ -1,0 +1,53 @@
+{
+  "checked_at_utc": "2026-11-14T10:59:05.2889345+00:00",
+  "status": "passed",
+  "commands": [
+    {
+      "log": "tests.txt",
+      "exit_code": 0,
+      "command": "npm run test"
+    },
+    {
+      "log": "typecheck.txt",
+      "exit_code": 0,
+      "command": "npm run typecheck"
+    },
+    {
+      "log": "verify-planets.txt",
+      "exit_code": 0,
+      "command": "npm run verify:planets"
+    },
+    {
+      "log": "verify-surfaces.txt",
+      "exit_code": 0,
+      "command": "npm run verify:surfaces"
+    },
+    {
+      "log": "build.txt",
+      "exit_code": 0,
+      "command": "npm run build"
+    }
+  ],
+  "vitest": {
+    "tests_failed": 0,
+    "tests_passed": 100,
+    "files_passed": 11
+  },
+  "built_js": {
+    "bytes": 1321670,
+    "path": "web-client/dist/assets/index-ZfJGDHkp.js",
+    "sha256": "c427994e3bf96f01c90025bdc7f18dca2c2b1e0a707b0f787a534a6b536b451c"
+  },
+  "built_css": {
+    "bytes": 46920,
+    "path": "web-client/dist/assets/index-CTX47Wjm.css",
+    "sha256": "07de2dc9ac51a86ff3aff4dfe88a03bef4d974468483c8cefdcfd36b85e1322d"
+  },
+  "catalog_sha256": {
+    "surface": "0a94f8074e25e7863fa9412d2a781096660e2ad3cab7a1e58a4c2641ce8cee9f",
+    "planet": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+  },
+  "advisory": "Vite reports the existing main-bundle chunk-size advisory; build completed successfully.",
+  "scope": "Web unit tests, TypeScript, production build and offline asset integrity checks. Browser interaction observations are separate evidence.",
+  "post_suite_changes": "No source edits after the final 100-test full suite, TypeScript check, and production build. This suite includes the drag-look/focused keyboard fallback helpers. The final reviewed build also contains pointer-lock failure/late-grant lifecycle guards, a native-grid X/Z navigation HUD limited to approximately five updates per second, and walk-only terrain shadow-receive disabling. Planet and surface assets are unchanged from their earlier successful integrity verification. Actual browser observations are separate evidence."
+}

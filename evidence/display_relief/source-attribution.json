@@ -1,0 +1,97 @@
+{
+  "checkpoint": "MARS_SOURCE_RELIEF_VERIFIED_2026-11-14",
+  "recorded_at": "2026-11-14T12:40:42.148509+00:00",
+  "source_page": "https://science.nasa.gov/3d-resources/mars/",
+  "source_url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/mars/Mars.jpg",
+  "source_sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+  "source_bytes": 972896,
+  "source_dimensions": [
+    1440,
+    720
+  ],
+  "credit": "NASA/Jet Propulsion Laboratory & Caltech; Viking images processed at USGS",
+  "complete_source_receipt": {
+    "canonical_url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/mars/Mars.jpg",
+    "final_url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/mars/Mars.jpg",
+    "local_path": "data-pipeline/cache/raw/planet-explorer/nasa_mars_display.jpg",
+    "bytes": 972896,
+    "sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+    "retrieved_at": "2026-11-14T12:25:11.175411+00:00",
+    "http_headers": {
+      "Content-Type": "image/jpeg",
+      "Content-Length": "972896",
+      "Connection": "close",
+      "Server": "Apache",
+      "X-Dispatcher": "dispatcher1usgovwest1-29695207",
+      "X-Vhost": "nasa-prod-publish",
+      "Strict-Transport-Security": "max-age=43200; includeSubdomains;",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Mon, 02 Jun 2025 17:07:10 GMT",
+      "Accept-Ranges": "bytes",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Access-Control-Allow-Origin": "*",
+      "Date": "Sat, 14 Nov 2026 08:03:58 GMT",
+      "Cache-Control": "max-age=43200,stale-while-revalidate=300,stale-if-error=300",
+      "ETag": "\"ed860-63699cb5c8b80\"",
+      "X-Cache": "Hit from cloudfront",
+      "Via": "1.1 c630c028c0123d2a5e8fa36e68049386.cloudfront.net (CloudFront)",
+      "X-Amz-Cf-Pop": "FRA60-P10",
+      "X-Amz-Cf-Id": "9_G0XjBWMMYs_-AHOlaDX_PlYZnYwAcTmaA7nBbC4WMbCjwcUA7NOg==",
+      "Age": "15672"
+    },
+    "complete_product": true,
+    "download_bound_bytes": 2000000
+  },
+  "integrity_status": "Complete NASA JPEG decoding and locally computed SHA256 identify retrieved bytes. No publisher-provided independent checksum was available.",
+  "provenance": {
+    "path": "web-client/public/assets/planets/mars/provenance.json",
+    "bytes": 6557,
+    "sha256": "6113c730c1260bc2491af31afb640611d720a052b8094f762a7758321ed77481"
+  },
+  "source_native": {
+    "path": "web-client/public/assets/planets/mars/color-1440.jpg",
+    "bytes": 972896,
+    "sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780"
+  },
+  "processing": "Pillow LANCZOS downsampling of source RGB pixels; JPEG quality 92, no upsampling. Mars Native JPEG preserves complete source bytes; no application hue/saturation/gamma alteration.",
+  "orientation_verification": {
+    "reference_source_url": "https://www.mars.asu.edu/data/mdim_color/",
+    "reference_layout": "ASU provider tile geographic bounds: columns225,315,045,135; rows north,south",
+    "method": "Native1440 NASA grayscale minus GaussianBlur3 compared with ASU tiles downsampled to matching1440; exclude60 polar rows at each edge. No fitted warp or color transform.",
+    "correlations": {
+      "same_orientation": 0.9743225064319384,
+      "row_flip": 0.001408501557488679,
+      "column_flip": -0.0027244246706787725,
+      "longitude_half_turn": -0.00029630655610451306
+    },
+    "horizontal_shift_pixel_correlations": {
+      "-5": 0.05292694077100194,
+      "-4": 0.07027952636670434,
+      "-3": 0.10324802334935988,
+      "-2": 0.18008396325534387,
+      "-1": 0.5161439146802731,
+      "0": 0.9743225064319384,
+      "1": 0.5734929540351394,
+      "2": 0.2013865317989454,
+      "3": 0.11279733244773574,
+      "4": 0.07482899197830567,
+      "5": 0.05486435179515488
+    },
+    "result": "Same north-up, longitude -180..180 display pixel arrangement; empirical display correspondence only, not a datum or independent local registration certification."
+  },
+  "limitations": [
+    "NASA published Viking/USGS/JPL-Caltech visualization texture; not certified natural/true color or calibrated photometry.",
+    "Native source is 1440 by 720 pixels; coarse global display only, no metre-scale surface detail.",
+    "Display orientation empirically matched to ASU planetocentric -180..180 north-up mosaic; no independent datum transformation or local tie-point registration.",
+    "Historical mosaic illumination and seams remain; no global Mars displacement supplied."
+  ],
+  "replaced_source": "ASU published MDIM display pixels were authentically maroon/purple; replaced with NASA published display product, without hue/saturation correction.",
+  "earth_moon_native_terrain_local_hirise_and_analysis_unchanged": true,
+  "scientific_values_invented": false,
+  "new_display_source_acquired": true,
+  "research_review": {
+    "path": "docs/research/MARS_DISPLAY_REVIEW.md",
+    "bytes": 8682,
+    "sha256": "6e6a092a8f00b0c02b486081a8370149c7a9484647f3e8a17fcead7972980e6a"
+  }
+}

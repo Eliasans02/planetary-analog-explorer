@@ -1,0 +1,113 @@
+{
+  "id": "SURFACE_SITES_ANALYSIS_COLOR_VERIFIED_2026-11-14",
+  "recorded_at": "2026-11-14T12:12:15.870616+00:00",
+  "phase": "PHASE_4_ENGINEERING_VERIFIED_HUMAN_PASS_PENDING",
+  "phase5_committed": false,
+  "human_pass": {
+    "Dev_A": false,
+    "Dev_B": false
+  },
+  "execution_mode": "parallel_local_sol_6_1_medium",
+  "url": "http://127.0.0.1:4173/",
+  "contracts": {
+    "planet_catalog": "1.0.0",
+    "surface_catalog": "1.1.0",
+    "comparison": "1.0.0 unchanged",
+    "surface_analysis": "1.0.0",
+    "surface_imagery": "1.0.0"
+  },
+  "catalogs": [
+    {
+      "path": "web-client/public/data/planet_catalog.json",
+      "bytes": 4417,
+      "sha256": "5727a84a02993f7bad28ff707a51333951c9128297eb0e87547f57e42ae2208e"
+    },
+    {
+      "path": "web-client/public/data/surface_catalog.json",
+      "bytes": 35281,
+      "sha256": "d3da33af6e1eb8ac8fb92f7aeee351d890849efbd752fbe110492e0c5671d539"
+    },
+    {
+      "path": "web-client/public/data/surface_analysis.json",
+      "bytes": 24037,
+      "sha256": "71264c8ef2f15e1d364b38ca6957048d96a04ddeffe0ad11556c9c57d1519db0"
+    },
+    {
+      "path": "web-client/public/data/surface_imagery.json",
+      "bytes": 21325,
+      "sha256": "d6b26ada6264b71abbb519fef48a6702144d787379bf98b1530325d0dac907d6"
+    }
+  ],
+  "surface_counts": {
+    "moon": 3,
+    "mars": 3,
+    "earth": 1
+  },
+  "imagery_records": 6,
+  "imagery_layers": 9,
+  "built_js": {
+    "path": "web-client/dist/assets/index-7jGhMrdp.js",
+    "bytes": 1348544,
+    "sha256": "004ba44510811f0faf5b5bbd9281bdfff33d8c84f87304e1e6d8fa2a7340e4ef"
+  },
+  "implemented": [
+    "Added four source-backed native terrain windows: LOLA Site01/Site06 and HiRISE Gale/Eberswalde; six planetary pins plus retained Earth surface.",
+    "Offline Horn slopes, relief, 3x3 range roughness, Riley TRI and slope distribution with source binding and validity coverage.",
+    "Six orbital mosaic drapes and three HiRISE local images; published RGB/grayscale preserved and color modes labeled.",
+    "Hash-bound optional imagery loader, PDS-label mapping checks, pixel-center UVs, bounded resource cleanup and camera-preserving mode swaps."
+  ],
+  "checks": {
+    "frontend_tests_passed": 155,
+    "frontend_files_passed": 15,
+    "python_tests_passed": 26,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "verify_planets": "PASS",
+    "verify_surfaces": "PASS",
+    "analysis_recomputation": "PASS",
+    "browser": "FUNCTIONAL_COLOR_AND_NAVIGATION_OBSERVATIONS_WITH_POINTER_LOCK_FALLBACK",
+    "performance_benchmark": "NOT_PERFORMED",
+    "scored_dataset_verify_assets": "UNSATISFIED_MISSING_CALIBRATED_DATASET"
+  },
+  "evidence": [
+    "evidence/surface_imagery/check-status.json",
+    "evidence/surface_imagery/browser-observation.json",
+    "evidence/surface_imagery/verification.json",
+    "evidence/surface_imagery/review-pipeline.md",
+    "evidence/surface_imagery/review-render.md",
+    "evidence/surface_imagery/SOURCE_MANIFEST.json",
+    "evidence/surface_expansion/review-assets.md",
+    "evidence/surface_expansion/review-analysis.md"
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/surface_imagery/imagery-moon.jpg",
+      "bytes": 134045,
+      "sha256": "d73804dac8142b79f1919f4bb5052b854dd391291e469940aa9ee1f83cc4267e"
+    },
+    {
+      "path": "evidence/surface_imagery/imagery-mars.jpg",
+      "bytes": 135641,
+      "sha256": "a626ab566c9f169004200090eb6d4b87366099f64d2db7a00fd955da46fe3b87"
+    },
+    {
+      "path": "evidence/surface_imagery/imagery-local.jpg",
+      "bytes": 135642,
+      "sha256": "56102ce68ec520ace86b7ff2be5b7b963770f81d6ee2adcff98a4c33c2f84eb2"
+    },
+    {
+      "path": "evidence/surface_expansion/expansion-pins.jpg",
+      "bytes": 139078,
+      "sha256": "7922f9f8969be5ee63e39cf0d14a56db8eda8efd69a245cfdf07c5d6d12a9e0a"
+    }
+  ],
+  "remaining": [
+    "Acquire finer real local lunar imagery and broader source-backed terrain windows.",
+    "Reconstruct and register real source-backed Gaussian splats.",
+    "Calibrate comparable spatial-support analysis and similarity; complete exact body-frame/ENU registration.",
+    "Benchmark foreground FPS/RAM and native pointer lock in a supporting browser.",
+    "Receive human Dev_A and Dev_B acceptance."
+  ],
+  "scheduler_created": false,
+  "daemon_running": false
+}

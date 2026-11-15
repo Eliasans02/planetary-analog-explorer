@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-11-14T12:12:15.870616+00:00",
+  "observer": "Astra root through documented internal-browser CUA",
+  "url": "http://127.0.0.1:4173/",
+  "final_script_observed": "/assets/index-7jGhMrdp.js",
+  "final_console_warn_error_entries": [],
+  "screenshots": [
+    {
+      "path": "evidence/surface_imagery/imagery-moon.jpg",
+      "bytes": 134045,
+      "sha256": "d73804dac8142b79f1919f4bb5052b854dd391291e469940aa9ee1f83cc4267e"
+    },
+    {
+      "path": "evidence/surface_imagery/imagery-mars.jpg",
+      "bytes": 135641,
+      "sha256": "a626ab566c9f169004200090eb6d4b87366099f64d2db7a00fd955da46fe3b87"
+    },
+    {
+      "path": "evidence/surface_imagery/imagery-local.jpg",
+      "bytes": 135642,
+      "sha256": "56102ce68ec520ace86b7ff2be5b7b963770f81d6ee2adcff98a4c33c2f84eb2"
+    }
+  ],
+  "observations": [
+    "Connecting ridge orbital layer displays published lunar mosaic colors and coarse-image label.",
+    "Gale orbital layer displays the sampled global source color; Local image shows published enhanced IRB texture and label.",
+    "Orbital, local image and relief modes switch without resetting the visible orbital framing or analysis.",
+    "First-person W changed HUD Z from 0.0 to -1.0 m; Escape paused. Switching relief to Local image retained X 0.0, Z -1.0 m and paused mode.",
+    "Live preview restored and marked deliverable after saving all screenshots."
+  ],
+  "limitations": [
+    "No GPU pixel-equality measurement, color-calibrated monitor validation or FPS/RAM benchmark.",
+    "Exact source PNG samples were validated independently; global placement remains approximate.",
+    "Native pointer-lock success unverified; browser used explicit keyboard/drag fallback.",
+    "Imagery is display data, not a measured albedo or natural-RGB claim."
+  ]
+}
