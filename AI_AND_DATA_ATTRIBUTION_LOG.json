@@ -1218,6 +1218,46 @@
       "scientific_derivatives_changed": false,
       "new_datasets_acquired": false,
       "human_verification": "Existing scientific acceptance gate unchanged."
+    },
+    {
+      "actor": "Astra orchestration and scientific review; Gemini Hydrogen browser-based UI development; Codex integration and data-pipeline workers",
+      "checkpoint": "CHALLENGE5_EARTH_DISCOVERY_AND_EXPLORER_2026_11_15",
+      "recorded_at": "2026-11-15T06:49:09.059898+00:00",
+      "scope": [
+        "Hydrogen UI imported through authenticated Safari source exports",
+        "Twenty source-backed Moon/Mars destinations and real global relief",
+        "Bounded Ustyurt Earth discovery against NASA LOLA and HiRISE targets",
+        "Transparent terrain distance, sensitivity ranks, candidate map and downloadable evidence",
+        "Source validation, browser accessibility, responsive layouts and lazy loading"
+      ],
+      "hydrogen_earth_source_bundle_sha256": "d8754c6095766c8efe7198158caca8922d09d54f15b027d7caba80ffa494a460",
+      "scientific_values_invented": false,
+      "new_datasets_acquired": true,
+      "data_evidence": [
+        "evidence/earth_discovery/run_summary.json",
+        "evidence/earth_discovery/source_receipts.json",
+        "evidence/global_regions"
+      ],
+      "human_verification": "No new scientific approval or original calibrated-contract PASS inferred."
+    },
+    {
+      "actor": "Gemini 4 Hydrogen via Safari; Astra review; Codex integration and asset preparation",
+      "checkpoint": "EARTH_CONTEXT_GLOBE_2026_11_15",
+      "recorded_at": "2026-11-15T07:18:48.004318+00:00",
+      "scope": [
+        "Lazy 3D Earth context view in the analog finder",
+        "Real NASA Blue Marble imagery, orbit/zoom/keyboard controls and linked candidate location",
+        "Corrected survey distance scale and added physical-window regression check",
+        "Reused candidate GPU buffers, hollow locator, verified image loading and WebGL failure fallback"
+      ],
+      "hydrogen_source_bundle_sha256": "10801d2b366937cbeac5d81f62c0b623c871ab1c1150d09821eeff56d02adae5",
+      "scientific_values_invented": false,
+      "scientific_discovery_results_changed": false,
+      "data_evidence": [
+        "evidence/earth_context/source_receipt.json",
+        "evidence/earth_context/derivation.json"
+      ],
+      "human_verification": "No scientific acceptance or original calibrated-contract PASS inferred."
     }
   ],
   "data_usage": {
@@ -1553,7 +1593,7 @@
     "scientific_data_validated": false,
     "typescript_strict": "passed"
   },
-  "updated_at": "2026-11-14T12:40:42.148509+00:00",
+  "updated_at": "2026-11-15T07:18:48.004318+00:00",
   "external_agent_board": "docs/orchestration/AGENT_BOARD.json",
   "review_snapshot": {
     "artifact_role": "Dev_B",
@@ -4035,5 +4075,158 @@
     }
   ],
   "scheduler_created": false,
-  "daemon_running": false
+  "daemon_running": false,
+  "challenge5_delivery": {
+    "recorded_at": "2026-11-15T06:49:09.059898+00:00",
+    "status": "locally_verified_exploratory_prototype",
+    "preview": "http://127.0.0.1:4173/?workspace=earth",
+    "requirements_evidence": {
+      "identify_earth_locations": "1600 systematically enumerated 600 m Ustyurt windows, ranked against one Moon and one Mars target",
+      "use_nasa_data": "NASA LOLA Moon and HiRISE Mars elevations with exact byte identities; Copernicus DEM Earth comparison",
+      "interactive_map_or_dashboard": "Candidate map, search, full cohort, separated shortlist, metric and elevation comparisons",
+      "characterize_candidates": "Common 60 m aggregation, slope distribution, relief, roughness and sensitivity ranks",
+      "new_analog_scope": "Candidates outside three loaded reference regions; new-to-science status and full-environment equivalence remain unverified"
+    },
+    "cohort": {
+      "generated": 1600,
+      "eligible": 1600,
+      "excluded": 0,
+      "area_km2": 576,
+      "targets": 2,
+      "shortlist_per_target": 12
+    },
+    "output_sha256": "9216935934ef604c1e7d67c20afeccfb239af469227ba80bad35e99ebfdedf82",
+    "verification": {
+      "frontend_tests_passed": 179,
+      "python_targeted_tests_passed": 26,
+      "browser_suite_passed": 16,
+      "browser_suite_skipped": 1,
+      "final_affected_browser_tests_passed": 6,
+      "typecheck": "passed",
+      "production_build": "passed",
+      "source_asset_checks": "passed",
+      "repeated_export": "byte-identical"
+    },
+    "limitations": [
+      "Search is limited to one 576 km² Earth domain and two comparison targets.",
+      "Topographic distance is not calibrated analog probability or habitat suitability.",
+      "Geology, climate, atmosphere, gravity, radiation, water ice and access are not measured.",
+      "Legacy calibrated nine-feature dataset remains absent; its separate real-data test is skipped.",
+      "Changes are local and uncommitted; no deployment or GitHub publication performed."
+    ]
+  },
+  "earth_globe_delivery": {
+    "recorded_at": "2026-11-15T07:18:48.004318+00:00",
+    "status": "locally_verified",
+    "navigation": "Find Earth analogs → 3D Earth",
+    "texture": {
+      "schema_version": "1.0.0",
+      "title": "NASA Blue Marble: Next Generation — July 2004",
+      "credit": "NASA Earth Observatory / Blue Marble: Next Generation",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/july/world.200407.3x5400x2700.jpg",
+      "source_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+      "source_sha256": "f55226d46d27e05511f2118dc6aa24f5dbf9b6b2cddc87cc6e0e7dd067c00b11",
+      "source_bytes": 1617810,
+      "source_width": 5400,
+      "source_height": 2700,
+      "texture": {
+        "url": "/assets/earth-context/blue-marble-2048.jpg",
+        "sha256": "e4126e9c825685513369806d8e83aa659a755ef6ec69865a8950bc5f05222a9a",
+        "bytes": 251491,
+        "width": 2048,
+        "height": 1024
+      },
+      "disclaimer": "Historical monthly composite from July 2004 for planetary context imagery only; it is not the measured 600 m terrain used by the Earth analog search."
+    },
+    "verification": {
+      "frontend_tests_passed": 185,
+      "browser_tests_passed": 20,
+      "browser_tests_skipped": 1,
+      "typecheck": "passed",
+      "production_build": "passed",
+      "idle_webgl_draws": "unchanged during 400ms measured idle interval",
+      "renderer_disposal": "context lost after toggle; canvas count returns to zero",
+      "safari": "3D Earth and Source image verified visible"
+    },
+    "limitations": [
+      "July 2004 imagery supplies geographic context; it is not live imagery or the measured 600 m terrain.",
+      "Spherical Earth display without terrain elevation displacement.",
+      "Legacy calibrated-data browser test remains skipped because its separate dataset is absent."
+    ]
+  },
+  "unified_explorer_delivery": {
+    "recorded_at": "2026-11-15T08:19:07.012598+00:00",
+    "status": "verified_for_github_checkpoint",
+    "features": [
+      "One Earth/Moon/Mars explorer with persistent world selections and cameras",
+      "1600 measured Earth windows and 20 planetary destinations",
+      "Paired scientific 3D surfaces with shared elevation colours, physical axes, contours, mesh and profiles",
+      "Two guided planetary-to-Earth missions",
+      "Self-contained HTML and five-page vector PDF candidate reports",
+      "Keyboard-accessible heatmap cells",
+      "Progressive NASA August 2004 Earth imagery: verified local 2K and native 5400x2700 fallback, then visible GIBS tiles up to 500m"
+    ],
+    "hydrogen_ui_export_sha256": "25afa1115cab0b955c204e17a4b4f72bc9434ddb262b40fc453d065c2f6f3437",
+    "integration": "Hydrogen supplied four bounded unified UI files; local integration, measured terrain renderers, source validation, scientific plots, mission navigation and reports were reviewed and tested locally.",
+    "research_sources": [
+      "https://science.nasa.gov/solar-system/analog-explorer/",
+      "https://developers.google.com/maps/documentation/earth/measure-distances",
+      "https://github.com/vercel-labs/ui",
+      "https://nasa-gibs.github.io/gibs-api-docs/available-visualizations/",
+      "https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/1.0.0/WMTSCapabilities.xml",
+      "https://worldview.earthdata.nasa.gov/?l=BlueMarble_NextGeneration&lg=false"
+    ],
+    "earth_imagery_manifest": {
+      "schema_version": "1.0.0",
+      "title": "NASA Blue Marble: Next Generation — August 2004",
+      "credit": "NASA Earth Observatory / Blue Marble: Next Generation",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/august/world.200408.3x5400x2700.jpg",
+      "source_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+      "source_sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+      "source_bytes": 1616254,
+      "source_width": 5400,
+      "source_height": 2700,
+      "texture": {
+        "url": "/assets/earth-context/blue-marble-2048.jpg",
+        "sha256": "f5e6146df4efcbe840f8e798b86be351869c92f5388d19fd4e3736600a36e7f6",
+        "bytes": 250763,
+        "width": 2048,
+        "height": 1024
+      },
+      "detail_texture": {
+        "url": "/assets/earth-context/blue-marble-5400.jpg",
+        "sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+        "bytes": 1616254,
+        "width": 5400,
+        "height": 2700
+      },
+      "disclaimer": "Historical monthly composite from August 2004 for planetary context imagery only; it is not the measured 600 m terrain used by the Earth analog search."
+    },
+    "gibs_receipt": "evidence/earth_context/gibs_receipt.json",
+    "verification": {
+      "frontend_tests_passed": 203,
+      "frontend_test_files": 26,
+      "python_targeted_tests_passed": 13,
+      "combined_browser_suite_passed_before_final_bundle_fix": 26,
+      "combined_browser_suite_skipped": 1,
+      "final_affected_browser_tests_passed": 3,
+      "distinct_browser_scenarios_passed_across_runs": 27,
+      "typecheck": "passed",
+      "production_build": "passed",
+      "surface_and_planet_asset_sha256_checks": "passed",
+      "initial_javascript_budget": "under1050000 decoded bytes after lazy mission loading",
+      "live_nasa_tile_check": "48 HTTP200 tiles; no page errors",
+      "pdf": "Both target downloads verified; five A4 pages, vector charts, PDF1.3, no JavaScript",
+      "credential_pattern_scan": "no matches in changed or untracked project files"
+    },
+    "discovery_sha256": "9216935934ef604c1e7d67c20afeccfb239af469227ba80bad35e99ebfdedf82",
+    "limitations": [
+      "This checkpoint measures one576km2 Ustyurt domain against two planetary targets; worldwide research expansion is a subsequent user request.",
+      "Topographic distance does not measure geology, climate, radiation, gravity, operational suitability or calibrated analog probability.",
+      "GIBS tiles are historical geographic context and require network access; local verified overview remains available on failure.",
+      "Runtime GIBS tiles are dimensions-validated but not individually pinned to hashes.",
+      "Legacy calibrated nine-feature dataset remains unavailable; its browser test is skipped.",
+      "GitHub publication is requested; website deployment has not been performed."
+    ]
+  }
 }

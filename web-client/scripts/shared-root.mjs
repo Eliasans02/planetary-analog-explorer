@@ -4,6 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 const files = ['schemas/analog_location.schema.json', 'types/analog-location.ts'];
 export function resolveSharedRoot(projectRoot) {
+  projectRoot = fs.realpathSync(projectRoot);
   const canonical = path.resolve(projectRoot, '../shared');
   const bundled = path.resolve(projectRoot, 'shared');
   const roots = [canonical, bundled].filter(root => fs.existsSync(root));
@@ -21,7 +22,7 @@ export function resolveSharedRoot(projectRoot) {
 }
 export function writeSharedPaths(projectRoot) {
   const root = resolveSharedRoot(projectRoot);
-  const relative = path.relative(projectRoot, root).split(path.sep).join('/');
+  const relative = path.relative(fs.realpathSync(projectRoot), root).split(path.sep).join('/');
   const config = {compilerOptions: {paths: {'@/*': ['./*'], '@shared/*': [`${relative}/*`]}}};
   const output = path.join(projectRoot, 'tsconfig.shared.generated.json');
   const content = JSON.stringify(config, null, 2) + '\n';

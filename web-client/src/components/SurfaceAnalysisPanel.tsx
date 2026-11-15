@@ -13,16 +13,16 @@ const referenceTitle = (url: string) => ({
   'https://pubs.usgs.gov/publication/tm11B9': 'USGS DEM quality methods',
   'https://www.uahirise.org/dtm/howto.php': 'HiRISE DTM guide',
 }[url] ?? `${new URL(url).hostname} · method reference`);
-export function SurfaceAnalysisPanel({ surface, catalog }: { surface: SurfaceRecord; catalog: SurfaceCatalog }) {
+export function SurfaceAnalysisPanel({ surface, catalog, analysisPath = '/data/surface_analysis.json' }: { surface: SurfaceRecord; catalog: SurfaceCatalog; analysisPath?: string }) {
   const [data, setData] = useState<SurfaceAnalysisCatalog | null>(null);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const c = new AbortController(); setData(null); setError(null);
     const hash = getSurfaceCatalogSha256(catalog);
     if (!hash) { setError('Prepared analysis unavailable: source catalog identity has not been verified.'); return; }
-    loadSurfaceAnalysis(catalog, hash, c.signal).then(setData).catch(e => { if (!c.signal.aborted) setError(String(e.message ?? e)); });
+    loadSurfaceAnalysis(catalog, hash, c.signal, analysisPath).then(setData).catch(e => { if (!c.signal.aborted) setError(String(e.message ?? e)); });
     return () => c.abort();
-  }, [catalog]);
+  }, [analysisPath, catalog]);
   const record = data?.surfaces.find(r => r.surface_id === surface.id);
   return <section className="sa-panel" aria-labelledby="sa-title"><div className="sa-heading"><div><span className="px-eyebrow">DERIVED FROM SOURCE ELEVATION</span><h3 id="sa-title">Terrain analysis</h3></div><span>Native-grid estimates · no ranking</span></div>
     {error ? <p role="status">{error}</p> : !record ? <p role="status">Verifying prepared terrain analysis…</p> : <>

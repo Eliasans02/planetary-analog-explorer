@@ -12,6 +12,10 @@ test('TEST_ONLY canonical, standalone, mismatch and missing contract layouts',()
  install(bundled);assert.equal(resolveSharedRoot(project),fs.realpathSync(bundled));
  install(canonical);assert.equal(writeSharedPaths(project),fs.realpathSync(canonical));
  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(project,'tsconfig.shared.generated.json'))).compilerOptions.paths['@shared/*'],['../shared/*']);
+ const links=path.join(temp,'links');fs.mkdirSync(links);
+ const linkedProject=path.join(links,'web');fs.symlinkSync(project,linkedProject,'junction');
+ assert.equal(writeSharedPaths(linkedProject),fs.realpathSync(canonical));
+ assert.deepEqual(JSON.parse(fs.readFileSync(path.join(project,'tsconfig.shared.generated.json'))).compilerOptions.paths['@shared/*'],['../shared/*']);
  fs.writeFileSync(path.join(bundled,'types/analog-location.ts'),'CORRUPTED');assert.throws(()=>resolveSharedRoot(project),/mismatch/);
  fs.unlinkSync(path.join(bundled,'types/analog-location.ts'));assert.throws(()=>resolveSharedRoot(project),/Missing/);
  }finally{fs.rmSync(temp,{recursive:true,force:true});}

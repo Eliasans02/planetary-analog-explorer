@@ -40,7 +40,7 @@ test.describe('Planetary Analog Explorer - Empty / Error State & UX Disclosure',
       route.fulfill({ status: 404, body: 'Not Found' }),
     );
 
-    await page.goto('/');
+    await page.goto('/?workspace=calibrated');
 
     const banner = page.getByTestId('dataset-error-banner');
     await expect(banner).toBeVisible();
@@ -115,7 +115,7 @@ test.describe('Planetary Analog Explorer - Empty / Error State & UX Disclosure',
     );
 
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('/?workspace=calibrated');
 
     await expect(page.getByTestId('dataset-error-banner')).toBeVisible();
     await expect(page.getByTestId('telemetry-hud-panel')).toHaveCount(0);
@@ -147,7 +147,7 @@ test.describe('Planetary Analog Explorer - Empty / Error State & UX Disclosure',
       }),
     );
 
-    await page.goto('/');
+    await page.goto('/?workspace=calibrated');
     await expect(page.getByTestId('dataset-error-banner')).toContainText('Dataset Validation Failed');
     await expect(page.getByTestId('technical-details-disclosure')).not.toHaveAttribute('open', '');
     await expect(page.getByTestId('mode-btn-ground')).toBeDisabled();
@@ -163,7 +163,7 @@ test.describe('Planetary Analog Explorer - Real Dev_A Assets Integration', () =>
   test('supports target selection, orbit/ground switching, 20 rapid switches without canvas leaks, and splat failure DEM fallback', async ({
     page,
   }) => {
-    await page.goto('/');
+    await page.goto('/?workspace=calibrated');
 
     const webglUnavailable = await page.getByTestId('viewport3d-webgl-error').count();
     test.skip(webglUnavailable > 0, 'WebGL unavailable in test browser');

@@ -1,0 +1,27 @@
+{
+  "operation": "Resize the complete source image from 5400x2700 to 2048x1024 with Pillow LANCZOS for the overview; copy the original JPEG bytes unchanged for optional detail. No crop, upscaling, compositing, generation, or content replacement.",
+  "software": "Pillow 12.2.0",
+  "resampling": "Pillow Image.Resampling.LANCZOS",
+  "jpeg_settings": {
+    "quality": 88,
+    "subsampling": 2,
+    "optimize": true,
+    "progressive": false
+  },
+  "source_sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+  "source_bytes": 1616254,
+  "output_sha256": "f5e6146df4efcbe840f8e798b86be351869c92f5388d19fd4e3736600a36e7f6",
+  "output_bytes": 250763,
+  "output_dimensions": [
+    2048,
+    1024
+  ],
+  "detail_operation": "Exact byte-for-byte copy of the downloaded NASA source JPEG; no decoding or resampling.",
+  "detail_sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+  "detail_bytes": 1616254,
+  "detail_dimensions": [
+    5400,
+    2700
+  ],
+  "manifest_sha256": "895e0bb4ffd6cff851110cc600140318406402475f9342702aa16ba682b05e86"
+}

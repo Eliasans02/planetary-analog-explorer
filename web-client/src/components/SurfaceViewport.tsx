@@ -27,6 +27,7 @@ export interface SurfaceViewportProps {
 
   surface: SurfaceRecord;
   catalog?: SurfaceCatalog;
+  imageryPath?: string;
 
   heights: Float32Array;
 
@@ -35,11 +36,16 @@ export interface SurfaceViewportProps {
   onError?: (message: string) => void;
 
   mode?: 'orbit' | 'walk';
+  allowWalking?: boolean;
 
   initialGrid?: [number, number];
 
   onModeChange?: (mode: 'orbit' | 'walk') => void;
 
+}
+
+export function surfaceWalkMode(requestedMode: 'orbit' | 'walk' | undefined, allowWalking: boolean): 'orbit' | 'walk' {
+  return requestedMode === 'walk' && allowWalking ? 'walk' : 'orbit';
 }
 
 
@@ -52,7 +58,7 @@ const metres = (value: number) => value >= 1000 ? `${(value / 1000).toFixed(2)} 
 
 
 
-export function SurfaceViewport({ surface, catalog, heights, validMask, onError, mode: requestedMode, initialGrid, onModeChange }: SurfaceViewportProps) {
+export function SurfaceViewport({ surface, catalog, imageryPath = '/data/surface_imagery.json', heights, validMask, onError, mode: requestedMode, allowWalking = true, initialGrid, onModeChange }: SurfaceViewportProps) {
 
   const [imagery, setImagery] = useState<SurfaceImageryRecord | null>(null);
   const [imageryError, setImageryError] = useState<string | null>(null);
@@ -78,14 +84,14 @@ export function SurfaceViewport({ surface, catalog, heights, validMask, onError,
     if (!catalog) { setImageryError('Photographic imagery unavailable: source catalog was not supplied.'); setImageState({displayed:'relief'}); return; }
     const sha = getSurfaceCatalogSha256(catalog);
     if (!sha) { setImageryError('Photographic imagery unavailable: source catalog identity is unverified.'); setImageState({displayed:'relief'}); return; }
-    loadSurfaceImageryCatalog(catalog, sha, c.signal).then(data => {
+    loadSurfaceImageryCatalog(catalog, sha, c.signal, imageryPath).then(data => {
       const record = data.records.find(record => record.surface_id === surface.id);
       if (!record) throw new Error('No source imagery is prepared for this window.');
       setImagery(record);
       if (!explicitImageChoice.current) setChoice(record.layers.some(layer => layer.id === 'local-ortho') ? 'local-ortho' : 'orbital-color');
     }).catch(error => { if (!c.signal.aborted) { setImageryError(String(error.message ?? error)); setImageState(previous => ({displayed:previous.displayed ?? 'relief'})); } });
     return () => c.abort();
-  }, [catalog, surface.id, surface.body]);
+  }, [catalog, imageryPath, surface.id, surface.body]);
 
   const host = useRef<HTMLDivElement>(null);
 
@@ -99,7 +105,7 @@ export function SurfaceViewport({ surface, catalog, heights, validMask, onError,
 
   const modeCallback = useRef(onModeChange); modeCallback.current = onModeChange;
 
-  useEffect(() => { if(requestedMode === 'walk') actions.current?.walk(); else if(requestedMode === 'orbit') actions.current?.orbit(); }, [requestedMode]);
+  useEffect(() => { if(surfaceWalkMode(requestedMode, allowWalking) === 'walk') actions.current?.walk(); else actions.current?.orbit(); }, [allowWalking, requestedMode]);
 
   const [wireframe, setWireframe] = useState(false);
 
@@ -388,7 +394,7 @@ export function SurfaceViewport({ surface, catalog, heights, validMask, onError,
 
       const startFrame=()=>{if(frame)cancelAnimationFrame(frame);lastTime=0;frame=requestAnimationFrame(tick);};
 
-      const enterWalk=()=>{if(walking)return;const entry=surfaceWalkEntry(surface.grid,heights,validMask,gridPosition);if(!entry)return;gridPosition=entry;setWalkingHeight();updatePosition(performance.now(),true);walking=true;focused=false;stopFrame();setWalkStarted(false);terrain.receiveShadow=false;controls!.enabled=false;camera.near=.05;camera.updateProjectionMatrix();camera.lookAt(camera.position.clone().add(new THREE.Vector3(0,-.1,-1)));setMode('walk');setWalkHelp(lockUnavailable?'Mouse capture unavailable: arrows or drag terrain to look | WASD move | Escape pauses':'WASD move | Arrows or mouse look | Escape pauses');canvas.setAttribute('aria-label',`${surface.name}: first person terrain. Start exploration to enable WASD movement and arrow key look. Drag terrain to look if mouse capture is unavailable.`);modeCallback.current?.('walk');invalidate();};
+      const enterWalk=()=>{if(!allowWalking||walking)return;const entry=surfaceWalkEntry(surface.grid,heights,validMask,gridPosition);if(!entry)return;gridPosition=entry;setWalkingHeight();updatePosition(performance.now(),true);walking=true;focused=false;stopFrame();setWalkStarted(false);terrain.receiveShadow=false;controls!.enabled=false;camera.near=.05;camera.updateProjectionMatrix();camera.lookAt(camera.position.clone().add(new THREE.Vector3(0,-.1,-1)));setMode('walk');setWalkHelp(lockUnavailable?'Mouse capture unavailable: arrows or drag terrain to look | WASD move | Escape pauses':'WASD move | Arrows or mouse look | Escape pauses');canvas.setAttribute('aria-label',`${surface.name}: first person terrain. Start exploration to enable WASD movement and arrow key look. Drag terrain to look if mouse capture is unavailable.`);modeCallback.current?.('walk');invalidate();};
 
       const orbit=()=>{walking=false;terrain.receiveShadow=true;focused=false;releaseDrag();stopFrame();if(pointer?.isLocked)pointer.unlock();controls!.enabled=true;camera.near=extent/1000;camera.updateProjectionMatrix();setMode('orbit');canvas.setAttribute('aria-label',`${surface.name}: interactive three dimensional elevation model. Drag to orbit, scroll to zoom, right drag to pan.`);modeCallback.current?.('orbit');fit();};
 
@@ -446,7 +452,7 @@ export function SurfaceViewport({ surface, catalog, heights, validMask, onError,
 
       resize = new ResizeObserver(size); resize.observe(container); size();
 
-      if(requestedMode==='walk')enterWalk();else setMode('orbit');
+      if(surfaceWalkMode(requestedMode,allowWalking)==='walk')enterWalk();else setMode('orbit');
 
       const lost = (event: Event) => { event.preventDefault(); fail('The 3D graphics context was interrupted. Reload the view to continue.'); };
 
@@ -481,7 +487,7 @@ export function SurfaceViewport({ surface, catalog, heights, validMask, onError,
 
     };
 
-  }, [surface, heights, validMask]);
+  }, [surface, heights, validMask, allowWalking]);
 
 
 
@@ -495,7 +501,7 @@ export function SurfaceViewport({ surface, catalog, heights, validMask, onError,
 
     <div className="surface-viewport-header"><div>
 
-      <div style={{ fontSize: 10, letterSpacing: '0.14em', color: '#95b1bc', marginBottom: 7 }}>NATIVE PROJECTED RELIEF</div>
+      <div style={{ fontSize: 10, letterSpacing: '0.14em', color: '#95b1bc', marginBottom: 7 }}>{surface.id.startsWith('regional-') ? 'REGIONAL SOURCE RELIEF' : 'NATIVE PROJECTED RELIEF'}</div>
 
       <div style={{ fontSize: 11, color: '#aebfc8' }}>Relative source heights | 1x vertical scale</div>
 
@@ -504,7 +510,7 @@ export function SurfaceViewport({ surface, catalog, heights, validMask, onError,
     <div className="surface-viewport-actions">
 
       {mode === 'walk' && <button type="button" style={buttonStyle} onPointerDown={event => event.preventDefault()} onClick={() => walkActive ? actions.current?.pause() : actions.current?.engage()}>{walkActive ? 'Pause exploration' : walkStarted ? 'Resume exploration' : 'Start exploration'}</button>}
-      <button type="button" style={buttonStyle} onClick={() => mode === 'walk' ? actions.current?.orbit() : actions.current?.walk()}>{mode === 'walk' ? 'Orbit mode' : 'Enter first person'}</button>
+      {allowWalking && <button type="button" style={buttonStyle} onClick={() => mode === 'walk' ? actions.current?.orbit() : actions.current?.walk()}>{mode === 'walk' ? 'Orbit mode' : 'Enter first person'}</button>}
 
       <button type="button" style={buttonStyle} title="Restore the complete terrain view" onClick={() => actions.current?.reset()}><RotateCcw size={13} /> Reset</button>
 
@@ -537,7 +543,7 @@ export function SurfaceViewport({ surface, catalog, heights, validMask, onError,
     </div>
     <div className="surface-viewport-help" id="surface-navigation-help">
 
-      <div role="status" style={{ fontSize: 11, color:'#b9ee79', marginBottom:6 }}>{mode === 'walk' ? `First person | ${walkActive ? 'Active' : 'Paused'}` : 'Orbit mode'}</div>
+      <div role="status" style={{ fontSize: 11, color:'#b9ee79', marginBottom:6 }}>{mode === 'walk' ? `First person | ${walkActive ? 'Active' : 'Paused'}` : allowWalking ? 'Orbit mode' : surface.id.startsWith('regional-') ? 'Orbit only · coarse regional grid' : 'Touch orbit · walking requires a keyboard'}</div>
       <div style={{ fontSize: 11, marginBottom: 6 }}>{mode === 'walk' ? `${walkActive ? '' : 'Start or resume exploration | '}${walkHelp}` : 'Drag to orbit'} {mode === 'orbit' && ' | Scroll to zoom | Right drag to pan'}</div>
 
       {mode === 'walk' && walkPosition && <div style={{fontSize:11,marginBottom:6,color:'#b9ee79'}} aria-label="Native navigation position">Native axes: X {walkPosition.x.toFixed(1)} m | Z {walkPosition.z.toFixed(1)} m (grid centre origin)</div>}

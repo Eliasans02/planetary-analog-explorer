@@ -14,7 +14,8 @@
     "schema_version": {
       "enum": [
         "1.0.0",
-        "1.1.0"
+        "1.1.0",
+        "1.2.0"
       ]
     },
     "generated_at": {
@@ -174,7 +175,8 @@
               "enum": [
                 "MOON_ME_DE421",
                 "NAD83",
-                "MARS_HIRISE_PLANETOCENTRIC"
+                "MARS_HIRISE_PLANETOCENTRIC",
+                "MARS_IAU2000_PLANETOCENTRIC"
               ]
             },
             "provenance": {
@@ -424,6 +426,39 @@
                     "moon",
                     "earth"
                   ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "enum": [
+              "1.0.0",
+              "1.1.0"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "surfaces": {
+            "items": {
+              "properties": {
+                "coordinates": {
+                  "properties": {
+                    "frame": {
+                      "enum": [
+                        "MOON_ME_DE421",
+                        "NAD83",
+                        "MARS_HIRISE_PLANETOCENTRIC"
+                      ]
+                    }
+                  }
                 }
               }
             }

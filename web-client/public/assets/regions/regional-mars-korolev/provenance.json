@@ -1,0 +1,58 @@
+{
+  "body": "mars",
+  "feature_name": "Korolev",
+  "feature_reference_url": "https://planetarynames.wr.usgs.gov/Feature/3091",
+  "feature_reference_coordinates": {
+    "latitude_deg": 72.77,
+    "longitude_deg": 164.58
+  },
+  "source_grid": {
+    "width": 1440,
+    "height": 720,
+    "spacing_deg": 0.25,
+    "source_window_unwrapped": [
+      1362,
+      52,
+      33,
+      33
+    ]
+  },
+  "input_asset": {
+    "path": "/assets/planets/mars/global-topography-m.f32",
+    "sha256": "22959b41d1e90e884af442416498493682221eede730dba22b10fd32836376e2",
+    "bytes": 4147200
+  },
+  "vertical_reference": "GMM3 (mgm1025) degree/order 50 areoid",
+  "processing": "Exact original global grid nodes as little-endian Float32 source heights, vertical_zero_m=0. No resampling or hole filling.",
+  "imagery_processing": "Nearest published orbital image pixel at each DEM node; approximate display drape only, no generative pixels.",
+  "imagery_source": {
+    "path": "/assets/planets/mars/provenance.json",
+    "sha256": "aa54cb06feaab5ec378aae2014dfefec38fc5b5277cf69ae0c43115f11244288",
+    "bytes": 11156
+  },
+  "inputs": {
+    "width": 33,
+    "height": 33,
+    "native_origin": [
+      160.625,
+      76.875
+    ],
+    "native_spacing": [
+      0.25,
+      -0.25
+    ],
+    "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+    "heights_sha256": "3fb96381f5a71ed7e73bb674b4d8fb76a066674660df9e2e81cb057e8d655938",
+    "valid_mask_sha256": "c45de067306ec80ca23e5699c1e8e673c1ada4d805bd96815634710ef47b5a80"
+  },
+  "limitations": [
+    "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+    "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+    "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+    "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+    "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+    "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+    "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+    "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+  ]
+}

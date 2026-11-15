@@ -1,0 +1,1384 @@
+{
+  "schema_version": "1.2.0",
+  "generated_at": "2026-11-15T05:24:10.926931+00:00",
+  "sources": [
+    {
+      "id": "lola-global-4ppd",
+      "provider": "NASA / LRO / LOLA",
+      "product": "Global lunar radial elevation, 4 pixels per degree",
+      "product_url": "https://svs.gsfc.nasa.gov/4720/",
+      "access_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4.tif",
+      "retrieved_at": "2026-11-14T10:35:07.339740+00:00",
+      "sha256": "330afa2556a86fd05ac6ba2f912f246600fdade35de2a0d90593d50d07b01b65",
+      "license": "NASA public data; retain source credit",
+      "local_path": "data-pipeline/cache/raw/planet-explorer/ldem_4.tif"
+    },
+    {
+      "id": "mola-global-4ppd",
+      "provider": "NASA / MGS / MOLA",
+      "product": "MEGT90N000CB global topography v2.0, 4 pixels per degree",
+      "product_url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "access_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megt90n000cb.img",
+      "retrieved_at": "2026-11-15T05:24:10.926931+00:00",
+      "sha256": "25f16fb7aaf857898dcf98bc4f841341a24f8b9f7e98453ca083bc45d897ca2c",
+      "license": "NASA PDS publicly archived mission data; retain source credit",
+      "local_path": "data-pipeline/cache/raw/global-relief/megt90n000cb.img"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "regional-moon-tycho",
+      "name": "Tycho · regional relief",
+      "body": "moon",
+      "description": "Crater and surrounding highlands in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": -43.375,
+        "longitude_deg": -11.125,
+        "frame": "MOON_ME_DE421",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/6163; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "lola-global-4ppd"
+      ],
+      "grid": {
+        "width": 33,
+        "height": 33,
+        "spacing_m": [
+          5510.316788504725,
+          7580.83760603737
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-moon-tycho/heights.f32",
+          "sha256": "47325c672a115012fa48a0d31115694a9f9206ee66bdb2430b4fae21047b4a28",
+          "bytes": 4356
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-moon-tycho/valid-mask.u8",
+          "sha256": "c45de067306ec80ca23e5699c1e8e673c1ada4d805bd96815634710ef47b5a80",
+          "bytes": 1089
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "1737.4 km radius sphere",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MOON_ME_DE421\",DATUM[\"MOON_ME_DE421\",SPHEROID[\"Reference sphere\",1737400,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          -15.125,
+          -39.375
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -3465.5,
+        "max_source_height_m": 1469.0001220703125,
+        "relief_m": 4934.5001220703125,
+        "valid_samples": 1089,
+        "total_samples": 1089,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 33 × 33 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-moon-tycho/provenance.json",
+        "sha256": "a8fb4542e6ea832428049723c67431f3221dc9bb7151c68839c67d04f58f2324",
+        "bytes": 2332
+      }
+    },
+    {
+      "id": "regional-moon-aristarchus",
+      "name": "Aristarchus · regional relief",
+      "body": "moon",
+      "description": "Crater and surrounding plateau in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 23.625,
+        "longitude_deg": -47.375,
+        "frame": "MOON_ME_DE421",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/380; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "lola-global-4ppd"
+      ],
+      "grid": {
+        "width": 33,
+        "height": 33,
+        "spacing_m": [
+          6945.472119512138,
+          7580.83760603737
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-moon-aristarchus/heights.f32",
+          "sha256": "3914d9a52c80f15478045785f64a735a9cb018ff9bb6b182fee844f52b3807f0",
+          "bytes": 4356
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-moon-aristarchus/valid-mask.u8",
+          "sha256": "c45de067306ec80ca23e5699c1e8e673c1ada4d805bd96815634710ef47b5a80",
+          "bytes": 1089
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "1737.4 km radius sphere",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MOON_ME_DE421\",DATUM[\"MOON_ME_DE421\",SPHEROID[\"Reference sphere\",1737400,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          -51.375,
+          27.625
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -3214.500244140625,
+        "max_source_height_m": 1186.5001220703125,
+        "relief_m": 4401.0003662109375,
+        "valid_samples": 1089,
+        "total_samples": 1089,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 33 × 33 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-moon-aristarchus/provenance.json",
+        "sha256": "bbbd58193af938f29a13ae2176afd9257f50e7a6064699848bdd9303f2c77e41",
+        "bytes": 2336
+      }
+    },
+    {
+      "id": "regional-moon-imbrium",
+      "name": "Mare Imbrium · regional relief",
+      "body": "moon",
+      "description": "Broad lunar mare and basin margins in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 34.625,
+        "longitude_deg": -14.875,
+        "frame": "MOON_ME_DE421",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/3678; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "lola-global-4ppd"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          6238.184250203877,
+          7580.83760603737
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-moon-imbrium/heights.f32",
+          "sha256": "65ca0f1dd6c215a7741f808e1dbf090049b0c8a3b0c7860fe1be8d70b0d64f71",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-moon-imbrium/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "1737.4 km radius sphere",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MOON_ME_DE421\",DATUM[\"MOON_ME_DE421\",SPHEROID[\"Reference sphere\",1737400,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          -30.875,
+          50.625
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -4592.0,
+        "max_source_height_m": 2820.000244140625,
+        "relief_m": 7412.000244140625,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 129 × 129 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-moon-imbrium/provenance.json",
+        "sha256": "2388acfbc5fd5185925ce072231d4a97a1d326ee272ec7f0636cf6ff52e6d7c3",
+        "bytes": 2342
+      }
+    },
+    {
+      "id": "regional-moon-orientale",
+      "name": "Mare Orientale · regional relief",
+      "body": "moon",
+      "description": "Mare and surrounding ring terrain in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": -19.875,
+        "longitude_deg": -94.625,
+        "frame": "MOON_ME_DE421",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/SearchResults?Feature+Type=25_Mare%2C+maria&Target=16_Moon; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "lola-global-4ppd"
+      ],
+      "grid": {
+        "width": 65,
+        "height": 65,
+        "spacing_m": [
+          7129.296810524777,
+          7580.83760603737
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-moon-orientale/heights.f32",
+          "sha256": "dba1608d18aad76a5e7a1ba9301668c362c16b2489e201ce7b475ed12f69b8e8",
+          "bytes": 16900
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-moon-orientale/valid-mask.u8",
+          "sha256": "85eea23a3bc05659cedf6f34e7ab1f0f22eab7533f1ac82092727b9f1b08631a",
+          "bytes": 4225
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "1737.4 km radius sphere",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MOON_ME_DE421\",DATUM[\"MOON_ME_DE421\",SPHEROID[\"Reference sphere\",1737400,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          -102.625,
+          -11.875
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -4382.5,
+        "max_source_height_m": 4826.50048828125,
+        "relief_m": 9209.00048828125,
+        "valid_samples": 4225,
+        "total_samples": 4225,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 65 × 65 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            0,
+            64
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-moon-orientale/provenance.json",
+        "sha256": "4f37b4074baef270f01f2ab196388ac13ec8864d47026692f095e4f5e4a69fa1",
+        "bytes": 2389
+      }
+    },
+    {
+      "id": "regional-moon-tranquillitatis",
+      "name": "Mare Tranquillitatis · regional relief",
+      "body": "moon",
+      "description": "Nearside mare landscape in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 8.375,
+        "longitude_deg": 30.875,
+        "frame": "MOON_ME_DE421",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/SearchResults?Feature+Type=25_Mare%2C+maria&Target=16_Moon; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "lola-global-4ppd"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          7499.995398664475,
+          7580.83760603737
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-moon-tranquillitatis/heights.f32",
+          "sha256": "153b8ab788523b0b1424e361a59981b4e3be7d51c912053c820367fae1b8b339",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-moon-tranquillitatis/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "1737.4 km radius sphere",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MOON_ME_DE421\",DATUM[\"MOON_ME_DE421\",SPHEROID[\"Reference sphere\",1737400,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          14.875,
+          24.375
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -4121.5,
+        "max_source_height_m": 2833.000244140625,
+        "relief_m": 6954.500244140625,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 129 × 129 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-moon-tranquillitatis/provenance.json",
+        "sha256": "005302828c01da979fff12ea923fbe31584813797f157d968320f87f7c3ae9af",
+        "bytes": 2393
+      }
+    },
+    {
+      "id": "regional-moon-moscoviense",
+      "name": "Mare Moscoviense · regional relief",
+      "body": "moon",
+      "description": "Farside mare and basin terrain in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 27.375,
+        "longitude_deg": 148.125,
+        "frame": "MOON_ME_DE421",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/SearchResults?Feature+Type=25_Mare%2C+maria&Target=16_Moon; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "lola-global-4ppd"
+      ],
+      "grid": {
+        "width": 65,
+        "height": 65,
+        "spacing_m": [
+          6731.905850595468,
+          7580.83760603737
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-moon-moscoviense/heights.f32",
+          "sha256": "c3f74caf3a0b3c11f39838f1579ae3874b15446df4caa328f8df1fad975c8b17",
+          "bytes": 16900
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-moon-moscoviense/valid-mask.u8",
+          "sha256": "85eea23a3bc05659cedf6f34e7ab1f0f22eab7533f1ac82092727b9f1b08631a",
+          "bytes": 4225
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "1737.4 km radius sphere",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MOON_ME_DE421\",DATUM[\"MOON_ME_DE421\",SPHEROID[\"Reference sphere\",1737400,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          140.125,
+          35.375
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -5344.5,
+        "max_source_height_m": 5713.00048828125,
+        "relief_m": 11057.50048828125,
+        "valid_samples": 4225,
+        "total_samples": 4225,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 65 × 65 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            0,
+            64
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-moon-moscoviense/provenance.json",
+        "sha256": "aa38e6db929cda37c84aa4a88e6d8341b27777db0e669d9b1b66af2a0d469eed",
+        "bytes": 2389
+      }
+    },
+    {
+      "id": "regional-mars-olympus",
+      "name": "Olympus Mons · regional relief",
+      "body": "mars",
+      "description": "Volcanic edifice and surrounding plains in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 18.625,
+        "longitude_deg": -133.875,
+        "frame": "MARS_IAU2000_PLANETOCENTRIC",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/4453; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "mola-global-4ppd"
+      ],
+      "grid": {
+        "width": 65,
+        "height": 65,
+        "spacing_m": [
+          14041.82215686107,
+          14817.845349431858
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-mars-olympus/heights.f32",
+          "sha256": "c661c75df249c0ee7ac6b2e553eadd2b9ca73b5d4ba7b76bd2bea333610240b7",
+          "bytes": 16900
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-mars-olympus/valid-mask.u8",
+          "sha256": "85eea23a3bc05659cedf6f34e7ab1f0f22eab7533f1ac82092727b9f1b08631a",
+          "bytes": 4225
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "GMM3 (mgm1025) degree/order 50 areoid",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          -141.875,
+          26.625
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -2614.0,
+        "max_source_height_m": 21134.0,
+        "relief_m": 23748.0,
+        "valid_samples": 4225,
+        "total_samples": 4225,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 65 × 65 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            0,
+            64
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-mars-olympus/provenance.json",
+        "sha256": "062aa48cb64c0d61cde80ae6d3ed7fe022d4ffe92bf2c9a845c2e86934ef31ee",
+        "bytes": 2779
+      }
+    },
+    {
+      "id": "regional-mars-valles",
+      "name": "Valles Marineris · regional relief",
+      "body": "mars",
+      "description": "Central canyon system and surrounding plateau in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": -13.625,
+        "longitude_deg": -59.125,
+        "frame": "MARS_IAU2000_PLANETOCENTRIC",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/6288; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "mola-global-4ppd"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          14400.846108850768,
+          14817.845349431858
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-mars-valles/heights.f32",
+          "sha256": "920066a7544aec943b63ccefc3b5845b67bc916a3573541be6cf13e0a0c80501",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-mars-valles/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "GMM3 (mgm1025) degree/order 50 areoid",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          -75.125,
+          2.375
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -5185.0,
+        "max_source_height_m": 6121.0,
+        "relief_m": 11306.0,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 129 × 129 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-mars-valles/provenance.json",
+        "sha256": "878290c68c64c2ffab26a61ecbb6c35545d101c619a80a102b7f6d4cf4b1f7d3",
+        "bytes": 2785
+      }
+    },
+    {
+      "id": "regional-mars-hellas",
+      "name": "Hellas Planitia · regional relief",
+      "body": "mars",
+      "description": "Basin floor and regional relief in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": -42.625,
+        "longitude_deg": 70.125,
+        "frame": "MARS_IAU2000_PLANETOCENTRIC",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/2432; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "mola-global-4ppd"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          10902.99541615448,
+          14817.845349431858
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-mars-hellas/heights.f32",
+          "sha256": "483e0c5dfdb09add36baccb09ee7fecc28c30f986b7c9068f0529de06d812810",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-mars-hellas/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "GMM3 (mgm1025) degree/order 50 areoid",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          54.125,
+          -26.625
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -8068.0,
+        "max_source_height_m": 1757.0,
+        "relief_m": 9825.0,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 129 × 129 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-mars-hellas/provenance.json",
+        "sha256": "496cb89ac70b288e9c58d54bf135f84a111441638fa1f6da2f4be7612d4dc8ba",
+        "bytes": 2784
+      }
+    },
+    {
+      "id": "regional-mars-korolev",
+      "name": "Korolev · regional relief",
+      "body": "mars",
+      "description": "Northern crater and surrounding plains in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 72.875,
+        "longitude_deg": 164.625,
+        "frame": "MARS_IAU2000_PLANETOCENTRIC",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/3091; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "mola-global-4ppd"
+      ],
+      "grid": {
+        "width": 33,
+        "height": 33,
+        "spacing_m": [
+          4363.223335095829,
+          14817.845349431858
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-mars-korolev/heights.f32",
+          "sha256": "3fb96381f5a71ed7e73bb674b4d8fb76a066674660df9e2e81cb057e8d655938",
+          "bytes": 4356
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-mars-korolev/valid-mask.u8",
+          "sha256": "c45de067306ec80ca23e5699c1e8e673c1ada4d805bd96815634710ef47b5a80",
+          "bytes": 1089
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "GMM3 (mgm1025) degree/order 50 areoid",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          160.625,
+          76.875
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -6061.0,
+        "max_source_height_m": -3468.0,
+        "relief_m": 2593.0,
+        "valid_samples": 1089,
+        "total_samples": 1089,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 33 × 33 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-mars-korolev/provenance.json",
+        "sha256": "7fc8152d9a67bb94f5e05ffa05f239b5baa8c5e9211498e41ca1f683d531c6ec",
+        "bytes": 2773
+      }
+    },
+    {
+      "id": "regional-mars-arsia",
+      "name": "Arsia Mons · regional relief",
+      "body": "mars",
+      "description": "Tharsis volcanic edifice in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": -8.375,
+        "longitude_deg": -120.125,
+        "frame": "MARS_IAU2000_PLANETOCENTRIC",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/394; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "mola-global-4ppd"
+      ],
+      "grid": {
+        "width": 65,
+        "height": 65,
+        "spacing_m": [
+          14659.827543377782,
+          14817.845349431858
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-mars-arsia/heights.f32",
+          "sha256": "cdd9be91a8a5fb42cbcd3c61a9df4a58e8cc6bdf385cbc339233e386eed8f33a",
+          "bytes": 16900
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-mars-arsia/valid-mask.u8",
+          "sha256": "85eea23a3bc05659cedf6f34e7ab1f0f22eab7533f1ac82092727b9f1b08631a",
+          "bytes": 4225
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "GMM3 (mgm1025) degree/order 50 areoid",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          -128.125,
+          -0.375
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": 2698.0,
+        "max_source_height_m": 17562.0,
+        "relief_m": 14864.0,
+        "valid_samples": 4225,
+        "total_samples": 4225,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 65 × 65 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            0,
+            64
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-mars-arsia/provenance.json",
+        "sha256": "3637920155872accf70c9f1ad4cda66b74ee657cf5a0b8b01aa56436fdb02720",
+        "bytes": 2777
+      }
+    },
+    {
+      "id": "regional-mars-elysium",
+      "name": "Elysium Mons · regional relief",
+      "body": "mars",
+      "description": "Volcanic edifice and surrounding terrain in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 25.125,
+        "longitude_deg": 147.125,
+        "frame": "MARS_IAU2000_PLANETOCENTRIC",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/1783; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "mola-global-4ppd"
+      ],
+      "grid": {
+        "width": 65,
+        "height": 65,
+        "spacing_m": [
+          13415.834476374543,
+          14817.845349431858
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-mars-elysium/heights.f32",
+          "sha256": "33875625561cc7bcfcbc710c4386a3cf3d2e2d54a30b05295920d69bc9cd59c0",
+          "bytes": 16900
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-mars-elysium/valid-mask.u8",
+          "sha256": "85eea23a3bc05659cedf6f34e7ab1f0f22eab7533f1ac82092727b9f1b08631a",
+          "bytes": 4225
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "GMM3 (mgm1025) degree/order 50 areoid",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          139.125,
+          33.125
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -4048.0,
+        "max_source_height_m": 13653.0,
+        "relief_m": 17701.0,
+        "valid_samples": 4225,
+        "total_samples": 4225,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 65 × 65 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            0,
+            64
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-mars-elysium/provenance.json",
+        "sha256": "1572b032b41290813e52ddecf246b78ae7e742fc2162e6c81211825b8ba2d2fa",
+        "bytes": 2779
+      }
+    },
+    {
+      "id": "regional-mars-utopia",
+      "name": "Utopia Planitia · regional relief",
+      "body": "mars",
+      "description": "Northern lowland regional window in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 46.625,
+        "longitude_deg": 117.625,
+        "frame": "MARS_IAU2000_PLANETOCENTRIC",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/Feature/6260; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "mola-global-4ppd"
+      ],
+      "grid": {
+        "width": 129,
+        "height": 129,
+        "spacing_m": [
+          10176.457835625379,
+          14817.845349431858
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-mars-utopia/heights.f32",
+          "sha256": "6963886d16749804dcf31b4ff5e8db1c26fce290c51164788df88cafb02b93e2",
+          "bytes": 66564
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-mars-utopia/valid-mask.u8",
+          "sha256": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+          "bytes": 16641
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "GMM3 (mgm1025) degree/order 50 areoid",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          101.625,
+          62.625
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -6261.0,
+        "max_source_height_m": -4028.0,
+        "relief_m": 2233.0,
+        "valid_samples": 16641,
+        "total_samples": 16641,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 129 × 129 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            128,
+            0
+          ],
+          [
+            128,
+            128
+          ],
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-mars-utopia/provenance.json",
+        "sha256": "d60b0526cbca5ee31839afb7cd36dc6c7bf26ae94822a1ebd0d8d0f261331108",
+        "bytes": 2786
+      }
+    },
+    {
+      "id": "regional-mars-mawrth",
+      "name": "Mawrth Vallis · regional relief",
+      "body": "mars",
+      "description": "Valley region and surrounding plateau in a source-backed coarse global DEM window.",
+      "coordinates": {
+        "latitude_deg": 22.375,
+        "longitude_deg": -16.875,
+        "frame": "MARS_IAU2000_PLANETOCENTRIC",
+        "provenance": "Window center is an actual DEM node. Named-feature locator: https://planetarynames.wr.usgs.gov/SearchResults?Target=20_Mars; source frame retained without a tie-point transformation."
+      },
+      "source_ids": [
+        "mola-global-4ppd"
+      ],
+      "grid": {
+        "width": 65,
+        "height": 65,
+        "spacing_m": [
+          13702.242652619976,
+          14817.845349431858
+        ],
+        "display_frame": "native_projected_relief",
+        "horizontal_method": "Original 0.25-degree source nodes, flattened using spherical meters at window center; coarse regional visualization.",
+        "heights": {
+          "path": "/assets/regions/regional-mars-mawrth/heights.f32",
+          "sha256": "cd8cf339f6531a1c4471d414101c08d40929e416f1ec71d14249a9d99de5c4c4",
+          "bytes": 16900
+        },
+        "valid_mask": {
+          "path": "/assets/regions/regional-mars-mawrth/valid-mask.u8",
+          "sha256": "85eea23a3bc05659cedf6f34e7ab1f0f22eab7533f1ac82092727b9f1b08631a",
+          "bytes": 4225
+        },
+        "vertical_zero_m": 0,
+        "vertical_datum": "GMM3 (mgm1025) degree/order 50 areoid",
+        "vertical_datum_status": "source_declared",
+        "native_crs_wkt": "GEOGCS[\"MARS_IAU2000_PLANETOCENTRIC\",DATUM[\"MARS_IAU2000_PLANETOCENTRIC\",SPHEROID[\"Reference sphere\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433]]",
+        "native_origin": [
+          -24.875,
+          30.375
+        ],
+        "native_spacing": [
+          0.25,
+          -0.25
+        ],
+        "native_units": "deg"
+      },
+      "stats": {
+        "min_source_height_m": -5082.0,
+        "max_source_height_m": -704.0,
+        "relief_m": 4378.0,
+        "valid_samples": 4225,
+        "total_samples": 4225,
+        "direct_return_samples": null
+      },
+      "roi": {
+        "label": "Project regional window · 65 × 65 original samples",
+        "kind": "project_selected_window",
+        "outline_grid": [
+          [
+            0,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            0,
+            64
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "source_record": null
+      },
+      "limitations": [
+        "Coarse regional orbit view from a 0.25-degree global DEM; no metre-scale terrain detail or ground-walking coverage is implied.",
+        "Project-selected window around the named feature; the window is not its official boundary or a landing recommendation.",
+        "Grid heights preserve exact source nodes; source provider modeling/interpolation remains present.",
+        "Flat display uses east-west spacing at the window-center latitude and north-south spherical arc spacing. It is approximate over this broad region, not exact ENU.",
+        "USGS feature coordinates are approximate locators; no transformation between the feature control network and source DEM realization is claimed.",
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+      ],
+      "provenance": {
+        "path": "/assets/regions/regional-mars-mawrth/provenance.json",
+        "sha256": "50bea55690e3a10a0afe4bc8486f8f83924911c8d431976be7d1b0b83a55ce46",
+        "bytes": 2795
+      }
+    }
+  ]
+}

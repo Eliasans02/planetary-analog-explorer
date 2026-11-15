@@ -1,0 +1,12 @@
+{
+  "canonical_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/july/world.200407.3x5400x2700.jpg",
+  "source_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+  "local_path": "evidence/earth_context/world.200407.3x5400x2700.jpg",
+  "retrieved_at": "2026-11-15T06:54:17.713635+00:00",
+  "http_headers": {},
+  "sha256": "f55226d46d27e05511f2118dc6aa24f5dbf9b6b2cddc87cc6e0e7dd067c00b11",
+  "bytes": 1617810,
+  "width": 5400,
+  "height": 2700,
+  "identity_scope": "SHA256 identifies the complete downloaded NASA JPEG object."
+}

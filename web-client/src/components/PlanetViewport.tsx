@@ -33,7 +33,7 @@ export function PlanetViewport({ planet, surfaces, resolution, onDrop, onSelect,
   useEffect(()=> { textureRequest.current?.(resolution); },[resolution]);
   useEffect(()=> {
     const container=host.current; if(!container) return;
-    const abort=new AbortController(); let disposed=false, frame=0, renderer:THREE.WebGLRenderer|undefined, controls:OrbitControls|undefined, observer:ResizeObserver|undefined;
+    const abort=new AbortController(); let disposed=false, frame=0, flight=0, renderer:THREE.WebGLRenderer|undefined, controls:OrbitControls|undefined, observer:ResizeObserver|undefined;
     const geometries:THREE.BufferGeometry[]=[], materials:THREE.Material[]=[]; let removeEvents=()=>{};
     let releaseMaps=()=>{};
     setMapState({loading:requestedResolution.current});
@@ -70,16 +70,50 @@ export function PlanetViewport({ planet, surfaces, resolution, onDrop, onSelect,
       releaseMaps=()=>maps.dispose();
       textureRequest.current=(level)=>{void maps.request(level);};
       textureRequest.current(requestedResolution.current);
-      const markerGeometry=new THREE.SphereGeometry(.04,16,12); geometries.push(markerGeometry); const markerMaterial=new THREE.MeshBasicMaterial({color:'#c5f18a'}); materials.push(markerMaterial);
-      const markers=surfaces.filter(s=>s.body===planet.id).map(surface=> { const mesh=new THREE.Mesh(markerGeometry,markerMaterial); mesh.position.set(...latLonToPoint(surface.coordinates.latitude_deg,surface.coordinates.longitude_deg,1.05)); mesh.userData.surface=surface; scene.add(mesh);return mesh; });
-      const selectedMaterial=new THREE.MeshBasicMaterial({color:'#ffe3a0'});materials.push(selectedMaterial);
-      highlightSite.current=(id)=>{markers.forEach(mesh=>{const selected=mesh.userData.surface.id===id;mesh.material=selected?selectedMaterial:markerMaterial;mesh.scale.setScalar(selected?1.3:1);});invalidate();};highlightSite.current(selectedSite.current);
+      const markerGeometry=new THREE.SphereGeometry(.016,16,12); geometries.push(markerGeometry);
+      const outlineGeometry=new THREE.SphereGeometry(.016,16,12); geometries.push(outlineGeometry);
+      const hitGeometry=new THREE.SphereGeometry(.085,12,10); geometries.push(hitGeometry);
+      const markerMaterial=new THREE.MeshBasicMaterial({color:'#bae6fd'}); materials.push(markerMaterial);
+      const selectedMaterial=new THREE.MeshBasicMaterial({color:'#38bdf8'}); materials.push(selectedMaterial);
+      const outlineMaterial=new THREE.MeshBasicMaterial({color:'#05070b',side:THREE.BackSide}); materials.push(outlineMaterial);
+      const hitMaterial=new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false}); materials.push(hitMaterial);
+      const markerEntries=surfaces.filter(s=>s.body===planet.id).map(surface=> {
+        const pos=latLonToPoint(surface.coordinates.latitude_deg,surface.coordinates.longitude_deg,1.025);
+        const mesh=new THREE.Mesh(markerGeometry,markerMaterial);
+        mesh.position.set(...pos); mesh.userData.surface=surface;
+        const outline=new THREE.Mesh(outlineGeometry,outlineMaterial);
+        outline.scale.setScalar(1.42); outline.visible=false;
+        mesh.add(outline);
+        const hitMesh=new THREE.Mesh(hitGeometry,hitMaterial);
+        hitMesh.position.set(...pos); hitMesh.userData.surface=surface;
+        scene.add(mesh,hitMesh);
+        return {mesh,outline,hitMesh};
+      });
+      const markers=markerEntries.map(e=>e.mesh);
+      const hitTargets=markerEntries.map(e=>e.hitMesh);
+      highlightSite.current=(id)=>{markerEntries.forEach(({mesh,outline})=>{const selected=mesh.userData.surface.id===id;mesh.material=selected?selectedMaterial:markerMaterial;mesh.scale.setScalar(selected?1.25:1);outline.visible=selected;});invalidate();};highlightSite.current(selectedSite.current);
       controls=new OrbitControls(camera,renderer.domElement); controls.enablePan=false;controls.enableDamping=false;controls.minDistance=1.15;controls.maxDistance=9;controls.minPolarAngle=.001;controls.maxPolarAngle=Math.PI-.001;
-      focusSite.current=(id)=>{const site=surfaces.find(s=>s.id===id&&s.body===planet.id);if(!site)return;camera.position.set(...latLonToPoint(site.coordinates.latitude_deg,site.coordinates.longitude_deg,camera.position.length()));controls?.update();invalidate();};
+      const stopFlight=()=>{cancelAnimationFrame(flight);flight=0;};
+      controls.addEventListener('start',stopFlight);
+      focusSite.current=(id)=>{
+        const site=surfaces.find(s=>s.id===id&&s.body===planet.id);if(!site)return;
+        stopFlight();
+        const start=camera.position.clone(), destination=new THREE.Vector3(...latLonToPoint(site.coordinates.latitude_deg,site.coordinates.longitude_deg,start.length()));
+        if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){camera.position.copy(destination);controls?.update();invalidate();return;}
+        const rotation=new THREE.Quaternion().setFromUnitVectors(start.clone().normalize(),destination.clone().normalize());
+        const started=performance.now();
+        const advance=(now:number)=>{
+          if(disposed)return;
+          const progress=Math.min(1,(now-started)/850), eased=progress*progress*(3-2*progress);
+          camera.position.copy(start).applyQuaternion(new THREE.Quaternion().slerp(rotation,eased));
+          controls?.update();invalidate();flight=progress<1?requestAnimationFrame(advance):0;
+        };
+        flight=requestAnimationFrame(advance);
+      };
       let previousFit:number|undefined;
       let applying=false; const changed=()=>{appearance.updateLight(camera,displaySettings.current.lightAngle);invalidate();if(!applying&&controls)callbacks.current.onViewChange?.({azimuth:controls.getAzimuthalAngle(),polar:controls.getPolarAngle(),distance:camera.position.length(),fitDistance:previousFit});}; controls.addEventListener('change',changed);
       applyView.current=(v)=>{if(!controls)return;applying=true;camera.position.setFromSpherical(new THREE.Spherical(Math.max(1.15,v.distance*(previousFit&&v.fitDistance?previousFit/v.fitDistance:1)),Math.max(.001,Math.min(Math.PI-.001,v.polar)),v.azimuth));controls.maxDistance=Math.max(controls.maxDistance,camera.position.length());controls.update();applying=false;invalidate();}; if(latestView.current)applyView.current(latestView.current);
-      const raycaster=new THREE.Raycaster(); const locate=(event:MouseEvent|DragEvent, markerOnly=false)=>{if(!renderer)return;const r=renderer.domElement.getBoundingClientRect();raycaster.setFromCamera(new THREE.Vector2((event.clientX-r.left)/r.width*2-1,-(event.clientY-r.top)/r.height*2+1),camera);const hit=raycaster.intersectObjects([globe,...markers])[0];if(!hit)return;const site=hit.object.userData.surface as SurfaceRecord|undefined;if(site){if(markerOnly && callbacks.current.onSelect){callbacks.current.onSelect(site);return;}callbacks.current.onDrop({body:planet.id,latitude_deg:site.coordinates.latitude_deg,longitude_deg:site.coordinates.longitude_deg,surfaceId:site.id});}else if(!markerOnly){callbacks.current.onDrop({body:planet.id,...pointToLatLon(hit.point.x,hit.point.y,hit.point.z),surfaceId:null});}};
+      const raycaster=new THREE.Raycaster(); const locate=(event:MouseEvent|DragEvent, markerOnly=false)=>{if(!renderer)return;const r=renderer.domElement.getBoundingClientRect();raycaster.setFromCamera(new THREE.Vector2((event.clientX-r.left)/r.width*2-1,-(event.clientY-r.top)/r.height*2+1),camera);const directHit=raycaster.intersectObjects([globe,...markers],false)[0];const hit=directHit?.object.userData.surface?directHit:raycaster.intersectObjects([globe,...hitTargets],false)[0];if(!hit)return;const site=hit.object.userData.surface as SurfaceRecord|undefined;if(site){if(markerOnly && callbacks.current.onSelect){callbacks.current.onSelect(site);return;}callbacks.current.onDrop({body:planet.id,latitude_deg:site.coordinates.latitude_deg,longitude_deg:site.coordinates.longitude_deg,surfaceId:site.id});}else if(!markerOnly){callbacks.current.onDrop({body:planet.id,...pointToLatLon(hit.point.x,hit.point.y,hit.point.z),surfaceId:null});}};
       const over=(e:DragEvent)=>{if(e.dataTransfer?.types.includes('application/x-pae-astronaut')){e.preventDefault();e.dataTransfer.dropEffect='copy';}};
       const drop=(e:DragEvent)=>{if(!e.dataTransfer?.types.includes('application/x-pae-astronaut'))return;e.preventDefault();locate(e);};
       let down:[number,number]=[0,0];const pointerdown=(e:MouseEvent)=>{down=[e.clientX,e.clientY];};const click=(e:MouseEvent)=>{if(Math.hypot(e.clientX-down[0],e.clientY-down[1])<5)locate(e,true);};
@@ -99,7 +133,7 @@ export function PlanetViewport({ planet, surfaces, resolution, onDrop, onSelect,
         previousFit=fit;controls!.update();invalidate();
       };observer=new ResizeObserver(size);observer.observe(container);size();if(requestedFocus.current)focusSite.current(requestedFocus.current.surfaceId);setStatus('');
     } catch(error){if(!disposed){const message=error instanceof Error?error.message:'Unable to load source globe.';setStatus(message);callbacks.current.onError?.(message);}} })();
-    return()=>{disposed=true;abort.abort();if(frame)cancelAnimationFrame(frame);applyView.current=null;focusSite.current=null;highlightSite.current=null;textureRequest.current=null;updateDisplay.current=null;releaseMaps();observer?.disconnect();removeEvents();controls?.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());renderer?.dispose();renderer?.forceContextLoss();renderer?.domElement.remove();};
+    return()=>{disposed=true;abort.abort();if(frame)cancelAnimationFrame(frame);cancelAnimationFrame(flight);applyView.current=null;focusSite.current=null;highlightSite.current=null;textureRequest.current=null;updateDisplay.current=null;releaseMaps();observer?.disconnect();removeEvents();controls?.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());renderer?.dispose();renderer?.forceContextLoss();renderer?.domElement.remove();};
   },[planet,surfaces]);
   const sourceLabel=(level:PlanetTexture['label'])=>{const source=planet.textures.find(texture=>texture.label===level);return source?`${level} (${source.width} × ${source.height} px)`:level;};
   return <div className="planet-viewport">

@@ -58,6 +58,18 @@ describe('surface imagery source binding', () => {
       expect(() => JSON.parse(readFileSync(new URL(layer.provenance.path.slice(1), publicRoot), 'utf8'))).not.toThrow();
     }
   });
+  it('accepts all shipped regional imagery records and loads a requested safe endpoint', async () => {
+    const publicRoot = new URL('../../public/', import.meta.url);
+    const catalogBytes = readFileSync(new URL('data/regional_catalog.json', publicRoot));
+    const catalog = JSON.parse(catalogBytes.toString('utf8')) as SurfaceCatalog;
+    const hash = createHash('sha256').update(catalogBytes).digest('hex');
+    const value = JSON.parse(readFileSync(new URL('data/regional_imagery.json', publicRoot), 'utf8'));
+    expect(validateSurfaceImageryCatalog(value, catalog, hash).records).toHaveLength(14);
+    const fetcher = vi.fn(async () => new Response(JSON.stringify(value))); vi.stubGlobal('fetch', fetcher);
+    await loadSurfaceImageryCatalog(catalog, hash, new AbortController().signal, '/data/regional_imagery.json');
+    expect(fetcher).toHaveBeenCalledWith('/data/regional_imagery.json', expect.objectContaining({ redirect: 'error' }));
+    await expect(loadSurfaceImageryCatalog(catalog, hash, new AbortController().signal, '//data/regional_imagery.json')).rejects.toThrow('Unsafe');
+  });
   it('accepts exact native grid inputs and optional projected false color', () => {
     const f = fixture(); expect(validateSurfaceImageryCatalog(f.imagery, f.catalog, f.hash)).toBe(f.imagery);
     f.imagery.records[0].layers.push({ ...structuredClone(f.layer), id: 'local-ortho', color_mode: 'published_false_color', registration: 'projected_ortho' });

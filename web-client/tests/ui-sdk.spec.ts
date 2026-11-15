@@ -93,7 +93,7 @@ const TEST_ONLY_POPULATED_DATASET: LocationsDataset = {
         {
           key: 'solar_irradiance_kwh_m2',
           unit: 'kWh/m2/day',
-          quantity: 'mean daily solar irradiance',
+          quantity: 'mean daily solar irradiation',
           weight: 0.4,
           lower: 0,
           upper: 10,
@@ -173,7 +173,7 @@ const TEST_ONLY_POPULATED_DATASET: LocationsDataset = {
       analogs: [
         {
           rank: 1,
-          similarity_score: 78.4,
+          similarity_score: 96.39127114417117,
           coverage: 1.0,
           location: {
             id: 'test_only_earth_site',
@@ -214,13 +214,13 @@ const TEST_ONLY_POPULATED_DATASET: LocationsDataset = {
             camera: null,
           },
           breakdown: {
-            slope_mean_deg: { similarity_pct: 91.2, squared_distance_contribution: 0.0145, reason: null },
+            slope_mean_deg: { similarity_pct: 97.1111111111111, squared_distance_contribution: 0.0005007407407407414, reason: null },
             slope_max_deg: { similarity_pct: null, squared_distance_contribution: null, reason: 'Excluded from profile' },
             roughness_index: { similarity_pct: null, squared_distance_contribution: null, reason: 'Excluded from profile' },
             elevation_delta_m: { similarity_pct: null, squared_distance_contribution: null, reason: 'Excluded from profile' },
             temp_min_c: { similarity_pct: null, squared_distance_contribution: null, reason: 'Excluded from profile' },
             temp_max_c: { similarity_pct: null, squared_distance_contribution: null, reason: 'Excluded from profile' },
-            solar_irradiance_kwh_m2: { similarity_pct: 82.0, squared_distance_contribution: 0.0521, reason: null },
+            solar_irradiance_kwh_m2: { similarity_pct: 93, squared_distance_contribution: 0.001960000000000002, reason: null },
             aridity_index: { similarity_pct: null, squared_distance_contribution: null, reason: 'Excluded from profile' },
             albedo: { similarity_pct: null, squared_distance_contribution: null, reason: 'Excluded from profile' },
           },
@@ -246,7 +246,7 @@ test.describe('UI SDK InfoDisclosure & AnalogPassport - App Integration & Keyboa
       return route.fulfill({ status: 404, body: 'Not Found' });
     });
 
-    await page.goto('/');
+    await page.goto('/?workspace=calibrated');
 
     const passport = page.getByTestId('analog-passport');
     await expect(passport).toBeVisible();
@@ -343,7 +343,7 @@ test.describe('UI SDK InfoDisclosure & AnalogPassport - App Integration & Keyboa
     );
 
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('/?workspace=calibrated');
 
     // Keyboard open Telemetry sidebar via existing toggle button.
     const toggleTelemetryBtn = page.getByTestId('toggle-telemetry-btn');
@@ -395,13 +395,14 @@ test.describe('UI SDK InfoDisclosure & AnalogPassport - App Integration & Keyboa
       });
     });
 
-    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await page.goto('/?workspace=calibrated', { waitUntil: 'domcontentloaded' });
+    await expect.poll(() => requestNumber).toBe(1);
     // Trigger immediate reload while request #1 is pending to verify AbortController cancellation.
     await page.getByTestId('reload-dataset-btn').click();
     await expect(page.getByTestId('target-selector')).toBeEnabled();
 
     // Select the Earth analog in comparison so AnalogPassport shows Why this match & analog evidence.
-    await page.getByTestId('target-selector').selectOption('test_only_earth_site');
+    await page.getByTestId('target-selector').selectOption(JSON.stringify(['test_only_moon_site', 'lunar_south_pole_test_only', 'test_only_earth_site']));
 
     const triggers = page
       .getByTestId('passport-disclosures')

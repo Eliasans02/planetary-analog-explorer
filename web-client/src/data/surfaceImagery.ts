@@ -2,7 +2,7 @@ import Ajv2020Import from 'ajv/dist/2020';
 import schema from '@shared/schemas/surface_imagery.schema.json';
 import type { SurfaceCatalog } from '@shared/types/surface-catalog';
 import type { SurfaceImageryCatalog, SurfaceImageryLayer } from '@shared/types/surface-imagery';
-import { safeSurfacePath } from './surfaceCatalog';
+import { safeDataPath, safeSurfacePath } from './surfaceCatalog';
 import { fetchVerifiedAsset } from '../terrain/heightfield';
 
 type Validator = { (value: unknown): boolean; errors?: unknown };
@@ -52,9 +52,10 @@ export function validateSurfaceImageryCatalog(value: unknown, catalog: SurfaceCa
   return imagery;
 }
 
-export async function loadSurfaceImageryCatalog(catalog: SurfaceCatalog, catalogSha256: string, signal: AbortSignal): Promise<SurfaceImageryCatalog> {
+export async function loadSurfaceImageryCatalog(catalog: SurfaceCatalog, catalogSha256: string, signal: AbortSignal, path = '/data/surface_imagery.json'): Promise<SurfaceImageryCatalog> {
   signal.throwIfAborted();
-  const response = await fetch('/data/surface_imagery.json', { signal, redirect: 'error', cache: 'no-store' });
+  if (!safeDataPath(path)) fail('Unsafe surface imagery catalog path.');
+  const response = await fetch(path, { signal, redirect: 'error', cache: 'no-store' });
   if (!response.ok || response.redirected || !response.body) fail('Surface imagery catalog is unavailable.');
   const length = response.headers.get('content-length');
   if (length !== null && (!/^\d+$/.test(length) || Number(length) > SURFACE_IMAGERY_JSON_LIMIT)) {

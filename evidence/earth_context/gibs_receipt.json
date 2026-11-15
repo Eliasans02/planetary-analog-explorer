@@ -1,0 +1,30 @@
+{
+  "source_url": "https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/BlueMarble_NextGeneration/default/500m/7/20/104.jpeg",
+  "layer": "BlueMarble_NextGeneration",
+  "date": "August 2004 (static composite; NASA Worldview layer label)",
+  "capabilities_url": "https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/1.0.0/WMTSCapabilities.xml",
+  "matrix_set": "500m",
+  "matrix_levels": [
+    0,
+    7
+  ],
+  "tile_dimensions": [
+    512,
+    512
+  ],
+  "tile_bounds_wsen": [
+    54,
+    42.75,
+    56.25,
+    45
+  ],
+  "retrieved_at": "2026-11-15T07:52:13.336179+00:00",
+  "bytes": 32836,
+  "sha256": "4ff62c91f0efc674b9414e523956e4a4a0d89d8ede2e169e82ba8af30e857302",
+  "response_headers": {
+    "Content-Type": "image/jpeg",
+    "Access-Control-Allow-Origin": "*",
+    "Cache-Control": "public, max-age=259200"
+  },
+  "identity_scope": "This SHA256 binds only the saved representative tile; runtime tiles are requested directly from NASA, validated as 512x512 JPEGs, and are not pinned to this hash."
+}

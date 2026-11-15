@@ -27,3 +27,5 @@ coverage/
 *.py[cod]
 .DS_Store
 Thumbs.db
+
+/web-client/outputs/

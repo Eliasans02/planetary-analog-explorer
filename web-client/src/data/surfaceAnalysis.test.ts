@@ -20,6 +20,17 @@ describe('prepared source-bound analysis',()=>{
     const data=JSON.parse(readFileSync(new URL('../../public/data/surface_analysis.json',import.meta.url),'utf8'));
     expect(validateSurfaceAnalysis(data,catalog,createHash('sha256').update(bytes).digest('hex')).surfaces.length).toBe(catalog.surfaces.length);
   });
+  it('accepts shipped regional summaries and loads a requested safe endpoint',async()=>{
+    const bytes=readFileSync(new URL('../../public/data/regional_catalog.json',import.meta.url));
+    const catalog=JSON.parse(bytes.toString('utf8')) as SurfaceCatalog;
+    const data=JSON.parse(readFileSync(new URL('../../public/data/regional_analysis.json',import.meta.url),'utf8'));
+    const sha=createHash('sha256').update(bytes).digest('hex');
+    expect(validateSurfaceAnalysis(data,catalog,sha).surfaces.length).toBe(14);
+    const fetcher=vi.fn(async()=>new Response(JSON.stringify(data)));vi.stubGlobal('fetch',fetcher);
+    await loadSurfaceAnalysis(catalog,sha,new AbortController().signal,'/data/regional_analysis.json');
+    expect(fetcher).toHaveBeenCalledWith('/data/regional_analysis.json',expect.objectContaining({redirect:'error'}));
+    await expect(loadSurfaceAnalysis(catalog,sha,new AbortController().signal,'/data/../analysis.json')).rejects.toThrow('unsafe');
+  });
   it('accepts complete counts, inputs, and distribution',()=>{const f=fixture();expect(validateSurfaceAnalysis(f.analysis,f.catalog,f.sha)).toBe(f.analysis);});
   it.each(['hash','stale-input','spacing','count','fraction','bin','missing','bounds','unknown-field'])('rejects corrupt or stale summaries: %s',kind=>{
     const f=fixture(), r=f.analysis.surfaces[0];

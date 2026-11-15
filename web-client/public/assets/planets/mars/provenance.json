@@ -130,5 +130,82 @@
     },
     "complete_product": true,
     "download_bound_bytes": 1000000
+  },
+  "global_relief": {
+    "raw_source_receipts": [
+      {
+        "canonical_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megr90n000cb.img",
+        "local_path": "data-pipeline/cache/raw/global-relief/megr90n000cb.img",
+        "bytes": 2073600,
+        "sha256": "f03189d62bb882f81d4f1dd08537e56d42f3d0371747ce62c9f01db3f552834a",
+        "complete_product": true,
+        "retrieved_at": "2026-11-15T05:24:10.926635+00:00",
+        "identity_scope": "Locally computed SHA-256 of complete downloaded bytes; no independent publisher checksum was supplied."
+      },
+      {
+        "canonical_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megr90n000cb.lbl",
+        "local_path": "data-pipeline/cache/raw/global-relief/megr90n000cb.lbl",
+        "bytes": 4550,
+        "sha256": "5b5887d828354542e92eb404c1b7c25371b2aedeeedf645a18da22efaf06a8a9",
+        "complete_product": true,
+        "retrieved_at": "2026-11-15T05:24:10.924181+00:00",
+        "identity_scope": "Locally computed SHA-256 of complete downloaded bytes; no independent publisher checksum was supplied."
+      },
+      {
+        "canonical_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megt90n000cb.img",
+        "local_path": "data-pipeline/cache/raw/global-relief/megt90n000cb.img",
+        "bytes": 2073600,
+        "sha256": "25f16fb7aaf857898dcf98bc4f841341a24f8b9f7e98453ca083bc45d897ca2c",
+        "complete_product": true,
+        "retrieved_at": "2026-11-15T05:24:10.926931+00:00",
+        "identity_scope": "Locally computed SHA-256 of complete downloaded bytes; no independent publisher checksum was supplied."
+      },
+      {
+        "canonical_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megt90n000cb.lbl",
+        "local_path": "data-pipeline/cache/raw/global-relief/megt90n000cb.lbl",
+        "bytes": 4796,
+        "sha256": "5a3fe60256afa1c35fea5d551fe0ab0a9198fb2bcd2c2e161d078aa69627ebac",
+        "complete_product": true,
+        "retrieved_at": "2026-11-15T05:24:10.924323+00:00",
+        "identity_scope": "Locally computed SHA-256 of complete downloaded bytes; no independent publisher checksum was supplied."
+      }
+    ],
+    "displacement": {
+      "asset": {
+        "path": "/assets/planets/mars/global-heights-m.f32",
+        "sha256": "38fd884e861bbe7a4eae0dc165899c0680099d345d515b62d4c727cc8cb86a41",
+        "bytes": 4147200
+      },
+      "width": 1440,
+      "height": 720,
+      "radius_m": 3396000,
+      "height_unit": "m",
+      "source_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megr90n000cb.img",
+      "reference": "MOLA MEGR90N000CB signed big-endian Int16 DN is radius minus 3396000 m; conversion to little-endian Float32 preserves each integer DN. Columns rolled by 720 from source 0..360 east to -180..180. Pixel centers: lon=-179.875+0.25*c, lat=89.875-0.25*r. IAU2000 planetocentric."
+    },
+    "source_labels": [
+      {
+        "path": "/assets/planets/mars/megr90n000cb.lbl",
+        "sha256": "5b5887d828354542e92eb404c1b7c25371b2aedeeedf645a18da22efaf06a8a9",
+        "bytes": 4550
+      },
+      {
+        "path": "/assets/planets/mars/megt90n000cb.lbl",
+        "sha256": "5a3fe60256afa1c35fea5d551fe0ab0a9198fb2bcd2c2e161d078aa69627ebac",
+        "bytes": 4796
+      }
+    ],
+    "radial_offset_min_m": -22931.0,
+    "radial_offset_max_m": 21241.0,
+    "topography_min_m": -8068.0,
+    "topography_max_m": 21134.0,
+    "reference": "MOLA MEGR90N000CB signed big-endian Int16 DN is radius minus 3396000 m; conversion to little-endian Float32 preserves each integer DN. Columns rolled by 720 from source 0..360 east to -180..180. Pixel centers: lon=-179.875+0.25*c, lat=89.875-0.25*r. IAU2000 planetocentric.",
+    "topographic_reference": "Goddard Mars potential model GMM3 (mgm1025), degree/order 50 areoid per source label.",
+    "limitations": [
+      "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+      "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+      "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+    ],
+    "primary_documentation": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html"
   }
 }

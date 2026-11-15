@@ -12,6 +12,7 @@ export default defineConfig({
   use: {
     baseURL: 'http://127.0.0.1:4173',
     headless: true,
+    channel: process.env.PLAYWRIGHT_CHANNEL,
     trace: 'retain-on-failure',
     launchOptions: executablePath ? { executablePath } : undefined,
   },

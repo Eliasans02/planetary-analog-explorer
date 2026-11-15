@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "title": "NASA Blue Marble: Next Generation — August 2004",
+  "credit": "NASA Earth Observatory / Blue Marble: Next Generation",
+  "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/august/world.200408.3x5400x2700.jpg",
+  "source_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+  "source_sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+  "source_bytes": 1616254,
+  "source_width": 5400,
+  "source_height": 2700,
+  "texture": {
+    "url": "/assets/earth-context/blue-marble-2048.jpg",
+    "sha256": "f5e6146df4efcbe840f8e798b86be351869c92f5388d19fd4e3736600a36e7f6",
+    "bytes": 250763,
+    "width": 2048,
+    "height": 1024
+  },
+  "detail_texture": {
+    "url": "/assets/earth-context/blue-marble-5400.jpg",
+    "sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+    "bytes": 1616254,
+    "width": 5400,
+    "height": 2700
+  },
+  "disclaimer": "Historical monthly composite from August 2004 for planetary context imagery only; it is not the measured 600 m terrain used by the Earth analog search."
+}

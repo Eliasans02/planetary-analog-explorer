@@ -1,0 +1,171 @@
+{
+  "receipts": [
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N43_00_E054_00_DEM/Copernicus_DSM_10_N43_00_E054_00.xml",
+      "local_path": "data-pipeline/cache/raw/earth-discovery/Copernicus_DSM_10_N43_00_E054_00.xml",
+      "bytes": 44715,
+      "sha256": "90dd88613322dce514c99af91fd895156b6b07790e946fe5276247f08265514f",
+      "retrieved_at": "2026-11-15T00:00:00+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N43_00_E054_00_DEM/Copernicus_DSM_COG_10_N43_00_E054_00_DEM.tif",
+      "local_path": "data-pipeline/cache/raw/earth-discovery/Copernicus_DSM_COG_10_N43_00_E054_00_DEM.tif",
+      "bytes": 42162962,
+      "sha256": "898c01140814903d5d350e534403fe8f6d0e63c54418d21ec390c310acb03153",
+      "retrieved_at": "2026-11-15T00:00:00+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N43_00_E054_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N43_00_E054_00_WBM.tif",
+      "local_path": "data-pipeline/cache/raw/earth-discovery/Copernicus_DSM_COG_10_N43_00_E054_00_WBM.tif",
+      "bytes": 36049,
+      "sha256": "484e7418fe9d95356dfb9414d6a2ab6859b58d71971bede2d69e2be40d4a1b07",
+      "retrieved_at": "2026-11-15T00:00:00+00:00",
+      "http_headers": {},
+      "identity_scope": "SHA256 identifies the complete downloaded object."
+    },
+    {
+      "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/DTEEC_045994_1985_046060_1985_U01.IMG",
+      "local_path": "data-pipeline/cache/raw/earth-discovery/hirise-center-620-rows.bin",
+      "bytes": 16549040,
+      "sha256": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646",
+      "retrieved_at": "2026-11-15T06:42:49.964497+00:00",
+      "http_headers": {},
+      "complete_product": false,
+      "range_start_inclusive": 182146208,
+      "range_end_inclusive": 198695247,
+      "complete_product_bytes": 380814764,
+      "range_requests": [
+        {
+          "start": 182146208,
+          "end": 182946207,
+          "content_range": "bytes 182146208-182946207/380814764"
+        },
+        {
+          "start": 182946208,
+          "end": 183746207,
+          "content_range": "bytes 182946208-183746207/380814764"
+        },
+        {
+          "start": 183746208,
+          "end": 184546207,
+          "content_range": "bytes 183746208-184546207/380814764"
+        },
+        {
+          "start": 184546208,
+          "end": 185346207,
+          "content_range": "bytes 184546208-185346207/380814764"
+        },
+        {
+          "start": 185346208,
+          "end": 186146207,
+          "content_range": "bytes 185346208-186146207/380814764"
+        },
+        {
+          "start": 186146208,
+          "end": 186946207,
+          "content_range": "bytes 186146208-186946207/380814764"
+        },
+        {
+          "start": 186946208,
+          "end": 187746207,
+          "content_range": "bytes 186946208-187746207/380814764"
+        },
+        {
+          "start": 187746208,
+          "end": 188546207,
+          "content_range": "bytes 187746208-188546207/380814764"
+        },
+        {
+          "start": 188546208,
+          "end": 189346207,
+          "content_range": "bytes 188546208-189346207/380814764"
+        },
+        {
+          "start": 189346208,
+          "end": 190146207,
+          "content_range": "bytes 189346208-190146207/380814764"
+        },
+        {
+          "start": 190146208,
+          "end": 190946207,
+          "content_range": "bytes 190146208-190946207/380814764"
+        },
+        {
+          "start": 190946208,
+          "end": 191746207,
+          "content_range": "bytes 190946208-191746207/380814764"
+        },
+        {
+          "start": 191746208,
+          "end": 192546207,
+          "content_range": "bytes 191746208-192546207/380814764"
+        },
+        {
+          "start": 192546208,
+          "end": 193346207,
+          "content_range": "bytes 192546208-193346207/380814764"
+        },
+        {
+          "start": 193346208,
+          "end": 194146207,
+          "content_range": "bytes 193346208-194146207/380814764"
+        },
+        {
+          "start": 194146208,
+          "end": 194946207,
+          "content_range": "bytes 194146208-194946207/380814764"
+        },
+        {
+          "start": 194946208,
+          "end": 195746207,
+          "content_range": "bytes 194946208-195746207/380814764"
+        },
+        {
+          "start": 195746208,
+          "end": 196546207,
+          "content_range": "bytes 195746208-196546207/380814764"
+        },
+        {
+          "start": 196546208,
+          "end": 197346207,
+          "content_range": "bytes 196546208-197346207/380814764"
+        },
+        {
+          "start": 197346208,
+          "end": 198146207,
+          "content_range": "bytes 197346208-198146207/380814764"
+        },
+        {
+          "start": 198146208,
+          "end": 198695247,
+          "content_range": "bytes 198146208-198695247/380814764"
+        }
+      ],
+      "identity_scope": "SHA256 identifies this exact contiguous source byte interval assembled from validated HTTP 206 range responses, not the complete IMG."
+    },
+    {
+      "canonical_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_045900_045999/ESP_045994_1985_ESP_046060_1985/DTEEC_045994_1985_046060_1985_U01.IMG",
+      "local_path": "data-pipeline/cache/raw/earth-discovery/hirise-label-range.bin",
+      "bytes": 26692,
+      "sha256": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+      "retrieved_at": "2026-11-15T00:00:00+00:00",
+      "http_headers": {},
+      "complete_product": false,
+      "range_start_inclusive": 0,
+      "range_end_inclusive": 26691,
+      "complete_product_bytes": 380814764,
+      "range_requests": [
+        {
+          "start": 0,
+          "end": 26691,
+          "content_range": "bytes 0-26691/380814764"
+        }
+      ],
+      "identity_scope": "SHA256 identifies this exact contiguous source byte interval assembled from validated HTTP 206 range responses, not the complete IMG."
+    }
+  ]
+}

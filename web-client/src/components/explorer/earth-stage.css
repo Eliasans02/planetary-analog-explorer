@@ -1,0 +1,281 @@
+/* Scoped styles for ExplorerHeader and unified EarthStage canvas/HUD */
+
+.es-header {
+  gap: 10px;
+}
+
+.es-header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.es-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: #08090c;
+  color: #f3f5f8;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.es-stage * {
+  box-sizing: border-box;
+}
+
+.es-stage button:focus-visible,
+.es-stage select:focus-visible,
+.es-stage input:focus-visible,
+.es-drawer-details button:focus-visible,
+.es-drawer-sheet button:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.es-orbit-canvas,
+.es-survey-canvas,
+.es-compare-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Scoped immersive overrides for EarthSurveyGlobe inside EarthStage */
+.es-orbit-canvas .esg-card {
+  height: 100%;
+  gap: 0;
+}
+
+.es-orbit-canvas .esg-header,
+.es-orbit-canvas .esg-legend {
+  display: none;
+}
+
+.es-orbit-canvas .esg-stage {
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.es-orbit-canvas .esg-toolbar {
+  top: 62px;
+  left: auto;
+  right: 16px;
+  justify-content: flex-end;
+}
+
+.es-orbit-canvas .esg-hud-bottom {
+  bottom: 74px;
+  left: 16px;
+  right: auto;
+  max-width: min(440px, calc(100vw - 32px));
+}
+
+.es-orbit-canvas .esg-key-hint {
+  display: none;
+}
+
+/* Scoped 2D Survey Stage */
+.es-survey-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px 76px;
+  overflow-y: auto;
+  background: radial-gradient(circle at 50% 45%, #0e131b 0%, #08090c 72%);
+}
+
+.es-survey-inner {
+  width: min(760px, 100%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.es-survey-inner .eaf-map-frame {
+  max-height: calc(100svh - 240px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.es-survey-inner .eaf-map-svg {
+  max-height: calc(100svh - 242px);
+  width: auto;
+  max-width: 100%;
+}
+
+.es-compare-canvas {
+  background: #08090c;
+}
+
+.es-compare-fallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  color: #a1aab8;
+}
+
+.es-compare-fallback h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #f3f5f8;
+}
+
+.es-compare-fallback p {
+  margin: 0;
+  font-size: 12px;
+  max-width: 380px;
+}
+
+/* Floating Spatial HUD Chrome */
+.es-hud-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 16px 14px;
+}
+
+.es-hud-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.es-hero-meta {
+  pointer-events: auto;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  background: rgba(10, 12, 16, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  max-width: min(360px, 46vw);
+}
+
+.es-hero-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #f3f5f8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.es-hero-stats {
+  margin-top: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #a1aab8;
+}
+
+.es-top-tools {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(12, 15, 20, 0.84);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  max-width: 100%;
+}
+
+.es-tool-label {
+  font-size: 11px;
+  color: #8b95a5;
+  padding-left: 6px;
+  white-space: nowrap;
+}
+
+.es-target-select {
+  height: 28px;
+  max-width: 210px;
+  min-width: 0;
+  padding: 0 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f3f5f8;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.es-target-select option {
+  background: #0f1218;
+  color: #f3f5f8;
+}
+
+.es-tool-sep {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.es-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: #a1aab8;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.es-tool-btn:hover {
+  color: #f3f5f8;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.es-tool-btn.active {
+  color: #f3f5f8;
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.es-compare-canvas { overflow: auto; padding: 82px 24px 84px; }
+@media (max-width: 768px) {
+  .es-header { padding: 0 8px; gap: 6px; }
+  .es-header-actions .px-nav-btn span, .es-return-btn span { display: none; }
+  .es-header-actions .px-nav-btn, .es-return-btn { padding: 0 8px; }
+  .es-compare-canvas { padding: 118px 10px 76px; }
+}
+@media (max-width: 420px) {
+  .es-header .px-body-index { display: none; }
+  .es-header .px-segmented-item { padding: 0 7px; font-size: 11px; }
+}
+
+@media (max-width: 768px) {
+  .px-nav.es-header[data-terrain="false"] { height: 48px; min-height: 48px; flex-wrap: nowrap; }
+  .es-header[data-terrain="false"] .px-nav-left { flex: 0; }
+  .es-header[data-terrain="false"] .px-nav-actions { width: auto; }
+}

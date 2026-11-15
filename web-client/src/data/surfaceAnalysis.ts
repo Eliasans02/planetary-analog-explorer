@@ -1,5 +1,6 @@
 import type { SurfaceCatalog } from '@shared/types/surface-catalog';
 import type { SurfaceAnalysisCatalog } from '@shared/types/surface-analysis';
+import { safeDataPath } from './surfaceCatalog';
 
 export const ANALYSIS_BYTE_LIMIT = 1024 * 1024;
 const fail = (reason: string): never => { throw new Error(`Prepared analysis unavailable: ${reason}`); };
@@ -55,8 +56,9 @@ export function validateSurfaceAnalysis(value: unknown, catalog: SurfaceCatalog,
   return value as SurfaceAnalysisCatalog;
 }
 
-export async function loadSurfaceAnalysis(catalog: SurfaceCatalog, catalogSha256: string, signal: AbortSignal): Promise<SurfaceAnalysisCatalog> {
-  const response = await fetch('/data/surface_analysis.json', { signal, redirect: 'error', cache: 'no-store' });
+export async function loadSurfaceAnalysis(catalog: SurfaceCatalog, catalogSha256: string, signal: AbortSignal, path = '/data/surface_analysis.json'): Promise<SurfaceAnalysisCatalog> {
+  if (!safeDataPath(path)) fail('unsafe analysis path.');
+  const response = await fetch(path, { signal, redirect: 'error', cache: 'no-store' });
   if (!response.ok || response.redirected || !response.body) fail('local analysis file could not be opened.');
   const length = response.headers.get('content-length');
   if (length !== null && (!/^\d+$/.test(length) || Number(length) > ANALYSIS_BYTE_LIMIT)) { await response.body!.cancel(); fail('analysis exceeds its byte quota.'); }

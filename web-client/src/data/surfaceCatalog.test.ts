@@ -1,7 +1,7 @@
 // TEST_ONLY mathematical fixture. This catalog is never shipped as source terrain.
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { SurfaceCatalog } from '@shared/types/surface-catalog';
-import { CATALOG_BYTE_LIMIT, getSurfaceCatalogSha256, loadSurface, loadSurfaceCatalog, parseSurfaceBuffers, safeSurfacePath, validateSurfaceCatalog } from './surfaceCatalog';
+import { CATALOG_BYTE_LIMIT, getSurfaceCatalogSha256, loadSurface, loadSurfaceCatalog, parseSurfaceBuffers, safeDataPath, safeSurfacePath, validateSurfaceCatalog } from './surfaceCatalog';
 import { sha256Hex } from '../terrain/heightfield';
 
 function fixture(): SurfaceCatalog {
@@ -17,6 +17,11 @@ describe('source terrain contract', () => {
     c.schema_version = '1.0.0'; expect(() => validateSurfaceCatalog(c)).toThrow();
     c.schema_version = '1.1.0'; c.surfaces[0].coordinates.frame = 'MOON_ME_DE421'; expect(() => validateSurfaceCatalog(c)).toThrow('frame');
   });
+  it('accepts coarse global Mars coordinates only in the regional 1.2 contract', () => {
+    const c = fixture(); c.schema_version = '1.2.0'; c.surfaces[0].body = 'mars'; c.surfaces[0].coordinates.frame = 'MARS_IAU2000_PLANETOCENTRIC';
+    expect(validateSurfaceCatalog(c).surfaces[0].coordinates.frame).toBe('MARS_IAU2000_PLANETOCENTRIC');
+    c.schema_version = '1.1.0'; expect(() => validateSurfaceCatalog(c)).toThrow('contract');
+  });
   it('accepts the strict test contract and decodes little-endian offsets', () => { const c = validateSurfaceCatalog(fixture()); expect(Array.from(parseSurfaceBuffers(c.surfaces[0], heights(), new Uint8Array([1, 1, 1, 1]).buffer).heights)).toEqual([0, 1, 2, 3]); });
   it.each(['unknown-field', 'frame', 'source', 'counts', 'spacing', 'roi', 'traversal', 'oversize'])('rejects corrupt metadata: %s', kind => {
     const c = fixture(); const s = c.surfaces[0];
@@ -31,6 +36,10 @@ describe('source terrain contract', () => {
     expect(() => validateSurfaceCatalog(c)).toThrow();
   });
   it('rejects encoded and literal path traversal', () => { for (const path of ['/assets/../x', '/assets/%2e%2e/x', '//assets/x', '/assets/a//x', '/assets/a/./x']) expect(safeSurfacePath(path)).toBe(false); expect(safeSurfacePath('/assets/surfaces/a.bin')).toBe(true); });
+  it('restricts alternate catalogs to local data JSON paths', () => {
+    expect(safeDataPath('/data/regional_catalog.json')).toBe(true);
+    for (const path of ['/data/../x.json', '/assets/x.json', 'https://example.org/x.json', '/data/x.json?next=1', '//data/x.json']) expect(safeDataPath(path)).toBe(false);
+  });
   it('rejects masks, nonfinite samples, truncation, and false statistics', () => {
     const s = fixture().surfaces[0]; expect(() => parseSurfaceBuffers(s, heights(), new Uint8Array([1, 2, 1, 1]).buffer)).toThrow();
     expect(() => parseSurfaceBuffers(s, heights([0, NaN, 2, 3]), new Uint8Array([1, 1, 1, 1]).buffer)).toThrow();
@@ -50,6 +59,12 @@ describe('source terrain contract', () => {
     expect(getSurfaceCatalogSha256(validateSurfaceCatalog(fixture()))).toBeUndefined();
     expect(getSurfaceCatalogSha256({ ...loaded })).toBeUndefined();
     expect(getSurfaceCatalogSha256(loaded)).not.toBe(await sha256Hex(new TextEncoder().encode(JSON.stringify(loaded)).buffer));
+  });
+  it('loads the requested safe catalog endpoint', async () => {
+    const body = JSON.stringify(fixture()); const fetcher = vi.fn(async () => new Response(body)); vi.stubGlobal('fetch', fetcher);
+    await loadSurfaceCatalog(new AbortController().signal, '/data/regional_catalog.json');
+    expect(fetcher).toHaveBeenCalledWith('/data/regional_catalog.json', expect.objectContaining({ redirect: 'error' }));
+    await expect(loadSurfaceCatalog(new AbortController().signal, 'https://example.org/catalog.json')).rejects.toThrow('Unsafe');
   });
   it('rejects nonzero padding at invalid samples', () => {
     const s = fixture().surfaces[0]; s.stats.valid_samples = 3;

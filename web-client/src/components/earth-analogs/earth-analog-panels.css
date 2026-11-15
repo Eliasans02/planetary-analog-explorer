@@ -1,0 +1,306 @@
+.eaf-list-head {
+  padding: 12px;
+  border-bottom: 1px solid var(--eaf-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.eaf-scope-switch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--eaf-border);
+  border-radius: var(--eaf-r-md);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.eaf-scope-btn {
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  border-radius: var(--eaf-r-sm);
+  background: transparent;
+  color: var(--eaf-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.eaf-scope-btn[aria-pressed="true"] {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--eaf-border-strong);
+  color: var(--eaf-text);
+}
+
+.eaf-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.eaf-search-icon {
+  position: absolute;
+  left: 9px;
+  color: var(--eaf-text-muted);
+  pointer-events: none;
+}
+
+.eaf-search-input {
+  width: 100%;
+  height: 32px;
+  padding: 0 28px;
+  border: 1px solid var(--eaf-border);
+  border-radius: var(--eaf-r-sm);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--eaf-text);
+  font-size: 12px;
+}
+
+.eaf-search-clear {
+  position: absolute;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--eaf-text-muted);
+  display: grid;
+  place-items: center;
+}
+
+.eaf-list-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--eaf-text-muted);
+}
+
+.eaf-list-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eaf-candidate-row {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--eaf-r-sm);
+  background: transparent;
+  color: var(--eaf-text);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.eaf-candidate-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--eaf-border);
+}
+
+.eaf-candidate-row.selected {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: var(--eaf-accent-border);
+}
+
+.eaf-row-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.eaf-row-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--eaf-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.eaf-row-dist {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--eaf-accent);
+  white-space: nowrap;
+}
+
+.eaf-row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--eaf-text-secondary);
+}
+
+.eaf-row-shortlist {
+  color: #7dd3fc;
+}
+
+.eaf-pagination {
+  padding: 8px 10px;
+  border-top: 1px solid var(--eaf-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--eaf-text-secondary);
+  flex-shrink: 0;
+}
+
+.eaf-page-btn {
+  height: 28px;
+  padding: 0 9px;
+  border: 1px solid var(--eaf-border);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--eaf-text);
+  font-size: 11px;
+}
+
+/* Interactive Survey Map */
+.eaf-map-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.eaf-map-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--eaf-text);
+}
+
+.eaf-map-sub {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--eaf-text-muted);
+}
+
+.eaf-map-frame {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--eaf-border);
+  border-radius: var(--eaf-r-md);
+  background: #06070a;
+  overflow: hidden;
+}
+
+.eaf-map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.eaf-map-cell {
+  cursor: pointer;
+  transition: opacity 120ms ease;
+}
+
+.eaf-map-cell:hover {
+  stroke: #ffffff;
+  stroke-width: 1.4;
+}
+
+.eaf-map-hover-hud {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  max-width: calc(100% - 16px);
+  padding: 5px 9px;
+  border: 1px solid var(--eaf-border-strong);
+  border-radius: 6px;
+  background: rgba(10, 12, 16, 0.9);
+  font-size: 11px;
+  color: var(--eaf-text);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.eaf-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 14px;
+  font-size: 11px;
+  color: var(--eaf-text-secondary);
+}
+
+.eaf-legend-ramp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eaf-ramp-bar {
+  width: 108px;
+  height: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--eaf-border);
+  background: linear-gradient(90deg, #38bdf8 0%, #0284c7 28%, #1e40af 58%, #1e293b 84%, #121722 100%);
+}
+
+.eaf-legend-keys {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.eaf-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.eaf-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.eaf-swatch-shortlist {
+  border: 1.5px solid #fbbf24;
+  background: rgba(251, 191, 36, 0.16);
+}
+
+.eaf-swatch-selected {
+  border: 1.5px solid #ffffff;
+  background: var(--eaf-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eaf-map-cell,
+  .eaf-candidate-row {
+    transition: none;
+  }
+}
+
+.eaf-survey-navigation { position: absolute; right: 12px; bottom: 12px; z-index: 3; display: flex; gap: 4px; padding: 4px; border: 1px solid #303943; border-radius: 9px; background: #0d1219e8; }
+.eaf-survey-navigation button { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; color: #b6c5d1; border: 0; border-radius: 5px; background: transparent; cursor: pointer; }
+.eaf-survey-navigation button:hover { background: #1b2834; color: white; }
+.eaf-map-svg:focus-visible { outline: 1px solid #38bdf8; outline-offset: -1px; }

@@ -1,34 +1,145 @@
 .planet-viewport {
   position: relative;
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: 8px;
-  box-sizing: border-box;
-  height: 100%;
   width: 100%;
+  height: 100%;
   min-height: 0;
-  padding: 44px 12px 44px;
-  background: #040b13;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 45%, #11161f 0%, #080a0e 65%, #06070a 100%);
+  color: #e5e9f0;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-.globe-canvas-host { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
-.globe-map-status { padding: 6px 10px; color: #d7e8e8; border-radius: 6px; font-size: 12px; }
+
+.globe-canvas-host {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
 .globe-display-controls {
+  position: absolute;
+  top: 44px;
+  left: 16px;
+  z-index: 4;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px 12px;
-  padding: 8px 10px;
-  border: 1px solid #a8bac433;
-  border-radius: 8px;
-  background: #040b13e8;
-  color: #e2e9eb;
+  gap: 6px 12px;
+  max-width: min(370px, calc(100% - 32px));
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  background: rgba(12, 15, 20, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #e5e9f0;
   font-size: 12px;
+  line-height: 1.4;
 }
-.globe-display-controls label { display: flex; align-items: center; gap: 6px; }
-.globe-display-controls select { color: inherit; background: #15212a; border: 1px solid #879ba655; border-radius: 4px; padding: 4px; }
-.globe-display-controls input { width: 92px; accent-color: #dae7e8; }
-.globe-display-controls small { flex-basis: 100%; color: #afbec4; font-size: 11px; }
-@media (max-width: 500px) {
-  .globe-display-controls { gap: 5px 10px; padding: 6px 8px; }
-  .globe-display-controls input { width: 74px; }
+
+.globe-display-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #c2cad6;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.globe-display-controls select {
+  color: #f3f5f8;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.globe-display-controls select option {
+  background: #0e1117;
+  color: #f3f5f8;
+}
+
+.globe-display-controls input[type="range"] {
+  width: 84px;
+  accent-color: #38bdf8;
+  cursor: pointer;
+}
+
+.globe-display-controls small {
+  flex-basis: 100%;
+  color: #8b95a5;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.globe-map-status {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  z-index: 4;
+  max-width: min(460px, calc(100% - 32px));
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(12, 15, 20, 0.74);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #9ba5b4;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.globe-map-status button {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #bae6fd;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.globe-display-controls select:focus-visible,
+.globe-display-controls input:focus-visible,
+.globe-map-status button:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .globe-display-controls {
+    top: 38px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+    padding: 6px 10px;
+    gap: 5px 10px;
+  }
+
+  .globe-display-controls input[type="range"] {
+    width: 72px;
+  }
+
+  .globe-display-controls small {
+    display: none;
+  }
+
+  .globe-map-status {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+    font-size: 10px;
+    padding: 5px 8px;
+  }
 }

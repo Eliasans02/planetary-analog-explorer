@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-14T12:25:11.175411+00:00",
+  "generated_at": "2026-11-15T05:24:10.926931+00:00",
   "planets": [
     {
       "id": "moon",
@@ -88,16 +88,30 @@
       "source_sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
       "provenance": {
         "path": "/assets/planets/mars/provenance.json",
-        "sha256": "6113c730c1260bc2491af31afb640611d720a052b8094f762a7758321ed77481",
-        "bytes": 6557
+        "sha256": "aa54cb06feaab5ec378aae2014dfefec38fc5b5277cf69ae0c43115f11244288",
+        "bytes": 11156
       },
       "limitations": [
         "NASA published Viking/USGS/JPL-Caltech visualization texture; not certified natural/true color or calibrated photometry.",
         "Native source is 1440 by 720 pixels; coarse global display only, no metre-scale surface detail.",
         "Display orientation empirically matched to ASU planetocentric -180..180 north-up mosaic; no independent datum transformation or local tie-point registration.",
-        "Historical mosaic illumination and seams remain; no global Mars displacement supplied."
+        "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+        "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+        "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
       ],
-      "displacement": null
+      "displacement": {
+        "asset": {
+          "path": "/assets/planets/mars/global-heights-m.f32",
+          "sha256": "38fd884e861bbe7a4eae0dc165899c0680099d345d515b62d4c727cc8cb86a41",
+          "bytes": 4147200
+        },
+        "width": 1440,
+        "height": 720,
+        "radius_m": 3396000,
+        "height_unit": "m",
+        "source_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megr90n000cb.img",
+        "reference": "MOLA MEGR90N000CB signed big-endian Int16 DN is radius minus 3396000 m; conversion to little-endian Float32 preserves each integer DN. Columns rolled by 720 from source 0..360 east to -180..180. Pixel centers: lon=-179.875+0.25*c, lat=89.875-0.25*r. IAU2000 planetocentric."
+      }
     }
   ]
 }

@@ -1,0 +1,153 @@
+{
+  "run_id": "earth-discovery-d631d15769c88d70",
+  "profile": {
+    "profile_version": "earth-discovery-1.0.0",
+    "domain_center_wgs84": [
+      54.5,
+      43.5
+    ],
+    "domain_crs": "EPSG:32640",
+    "domain_size_m": 24000,
+    "candidate_window_m": 600,
+    "candidate_step_m": 600,
+    "analysis_spacing_m": 60,
+    "analysis_grid": [
+      10,
+      10
+    ],
+    "slope_bins_deg": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      90
+    ],
+    "distance_weights": [
+      0.7,
+      0.3
+    ],
+    "sensitivity_weights": [
+      0.5,
+      0.5
+    ],
+    "shortlist_count": 12,
+    "shortlist_separation_m": 1800,
+    "earth_mask": "exclude any nonzero WBM, source nodata, nonfinite, or incomplete coverage",
+    "moon_crop": "central 120x120 native cells; 12x12 arithmetic block means",
+    "mars_support": "600x600 local metric metres; exact overlap-weighted area means"
+  },
+  "profile_sha256": "d8fcff6394831ad0a9fd257724feb61a5c06ef5de1e8e415ae2ba1b0e611ea8c",
+  "source_sha256": {
+    "copernicus-dem-n43e054": "898c01140814903d5d350e534403fe8f6d0e63c54418d21ec390c310acb03153",
+    "copernicus-wbm-n43e054": "484e7418fe9d95356dfb9414d6a2ab6859b58d71971bede2d69e2be40d4a1b07",
+    "copernicus-metadata-n43e054": "90dd88613322dce514c99af91fd895156b6b07790e946fe5276247f08265514f",
+    "moon-lola-heights": "4267a04b13f9209255f56da52274eaa90e9fb36a608dc547750d8a630e3068b0",
+    "moon-lola-valid-mask": "cc14b008e2254671740ef4983ab8a3763cff252a9648f6451fd7b3928b7c37d1",
+    "mars-hirise-label-range": "d8a933384ad747a074d20f6535eac2722db898676bd271cefa297bdcb6754565",
+    "mars-hirise-analysis-range": "987c2f15ff74c8ce0a52c74e98a3938a8fa4dacdeae1cbb41b63dffa55adc646"
+  },
+  "domain": {
+    "name": "Kazakhstan Ustyurt N43E054 bounded search",
+    "description": "Frozen 24 km square centered at 54.5°E, 43.5°N. This complete bounded census does not establish global novelty.",
+    "footprint": [
+      [
+        54.3564281,
+        43.3887223
+      ],
+      [
+        54.6524854,
+        43.3951867
+      ],
+      [
+        54.6440993,
+        43.6111074
+      ],
+      [
+        54.3469872,
+        43.6045945
+      ],
+      [
+        54.3564281,
+        43.3887223
+      ]
+    ],
+    "crs": "EPSG:32640",
+    "area_km2": 576,
+    "generated_count": 1600,
+    "eligible_count": 1600,
+    "excluded_count": 0,
+    "exclusion_reasons": {
+      "missing_coverage": 0,
+      "water": 0,
+      "nodata": 0
+    }
+  },
+  "targets": [
+    {
+      "id": "moon-shackleton-lola-600m",
+      "metrics": {
+        "mean_slope_deg": 10.84141,
+        "p95_slope_deg": 23.757703,
+        "relief_m": 99.492367,
+        "roughness_m": 27.849421,
+        "slope_histogram": [
+          0.328125,
+          0.265625,
+          0.15625,
+          0.25,
+          0.0
+        ],
+        "valid_fraction": 1.0
+      }
+    },
+    {
+      "id": "mars-jezero-hirise-600m",
+      "metrics": {
+        "mean_slope_deg": 1.425683,
+        "p95_slope_deg": 3.65896,
+        "relief_m": 17.467247,
+        "roughness_m": 3.93425,
+        "slope_histogram": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "valid_fraction": 1.0
+      }
+    }
+  ],
+  "shortlists": {
+    "moon-shackleton-lola-600m": [
+      "ustyurt-r21-c12",
+      "ustyurt-r22-c27",
+      "ustyurt-r24-c31",
+      "ustyurt-r27-c08",
+      "ustyurt-r27-c30",
+      "ustyurt-r29-c04",
+      "ustyurt-r29-c12",
+      "ustyurt-r30-c20",
+      "ustyurt-r31-c36",
+      "ustyurt-r34-c29",
+      "ustyurt-r36-c36",
+      "ustyurt-r37-c20"
+    ],
+    "mars-jezero-hirise-600m": [
+      "ustyurt-r04-c23",
+      "ustyurt-r12-c01",
+      "ustyurt-r16-c05",
+      "ustyurt-r17-c00",
+      "ustyurt-r20-c25",
+      "ustyurt-r20-c28",
+      "ustyurt-r21-c20",
+      "ustyurt-r23-c32",
+      "ustyurt-r24-c11",
+      "ustyurt-r30-c04",
+      "ustyurt-r35-c02",
+      "ustyurt-r35-c31"
+    ]
+  },
+  "output_sha256": "9216935934ef604c1e7d67c20afeccfb239af469227ba80bad35e99ebfdedf82"
+}

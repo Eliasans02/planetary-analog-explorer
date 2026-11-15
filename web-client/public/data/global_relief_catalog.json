@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-15T05:24:10.926931+00:00",
+  "bodies": [
+    {
+      "body": "moon",
+      "width": 1440,
+      "height": 720,
+      "longitude_origin_deg": -179.875,
+      "latitude_origin_deg": 89.875,
+      "spacing_deg": 0.25,
+      "heights": {
+        "path": "/assets/planets/moon/global-heights-m.f32",
+        "sha256": "2724eb919e9dff40b2bd0ebb7fe0ee88959aee91375478ef84e6f122250b5302",
+        "bytes": 4147200
+      },
+      "reference": "1737.4 km sphere",
+      "frame": "MOON_ME_DE421",
+      "radius_m": 1737400,
+      "provenance": {
+        "path": "/assets/planets/moon/provenance.json",
+        "sha256": "628f86d85cca98d1a85941a7edf55009199547da26621dd05c22becc451f1f4a",
+        "bytes": 16998
+      }
+    },
+    {
+      "body": "mars",
+      "width": 1440,
+      "height": 720,
+      "longitude_origin_deg": -179.875,
+      "latitude_origin_deg": 89.875,
+      "spacing_deg": 0.25,
+      "heights": {
+        "path": "/assets/planets/mars/global-topography-m.f32",
+        "sha256": "22959b41d1e90e884af442416498493682221eede730dba22b10fd32836376e2",
+        "bytes": 4147200
+      },
+      "reference": "GMM3 (mgm1025) degree/order 50 areoid",
+      "frame": "MARS_IAU2000_PLANETOCENTRIC",
+      "radius_m": 3396000,
+      "provenance": {
+        "path": "/assets/planets/mars/provenance.json",
+        "sha256": "aa54cb06feaab5ec378aae2014dfefec38fc5b5277cf69ae0c43115f11244288",
+        "bytes": 11156
+      }
+    }
+  ]
+}

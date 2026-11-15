@@ -6,7 +6,7 @@ export interface SurfaceSource {
 }
 export interface SurfaceRecord {
   id: string; name: string; body: 'moon' | 'earth' | 'mars'; description: string;
-  coordinates: { latitude_deg: number; longitude_deg: number; frame: 'MOON_ME_DE421' | 'NAD83' | 'MARS_HIRISE_PLANETOCENTRIC'; provenance: string };
+  coordinates: { latitude_deg: number; longitude_deg: number; frame: 'MOON_ME_DE421' | 'NAD83' | 'MARS_HIRISE_PLANETOCENTRIC' | 'MARS_IAU2000_PLANETOCENTRIC'; provenance: string };
   source_ids: string[];
   grid: {
     width: number; height: number; spacing_m: [number, number];
@@ -20,4 +20,4 @@ export interface SurfaceRecord {
   roi: { label: string; kind: 'published_source_polygon' | 'project_selected_window'; outline_grid: [number, number][]; source_record: number | null };
   limitations: string[]; provenance: SurfaceAsset;
 }
-export interface SurfaceCatalog { schema_version: '1.0.0' | '1.1.0'; generated_at: string; sources: SurfaceSource[]; surfaces: SurfaceRecord[] }
+export interface SurfaceCatalog { schema_version: '1.0.0' | '1.1.0' | '1.2.0'; generated_at: string; sources: SurfaceSource[]; surfaces: SurfaceRecord[] }

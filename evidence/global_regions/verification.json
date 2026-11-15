@@ -1,0 +1,283 @@
+{
+  "recorded_at": "2026-11-15T05:24:10.926931+00:00",
+  "source_receipts": [
+    {
+      "canonical_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megr90n000cb.img",
+      "local_path": "data-pipeline/cache/raw/global-relief/megr90n000cb.img",
+      "bytes": 2073600,
+      "sha256": "f03189d62bb882f81d4f1dd08537e56d42f3d0371747ce62c9f01db3f552834a",
+      "complete_product": true,
+      "retrieved_at": "2026-11-15T05:24:10.926635+00:00",
+      "identity_scope": "Locally computed SHA-256 of complete downloaded bytes; no independent publisher checksum was supplied."
+    },
+    {
+      "canonical_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megr90n000cb.lbl",
+      "local_path": "data-pipeline/cache/raw/global-relief/megr90n000cb.lbl",
+      "bytes": 4550,
+      "sha256": "5b5887d828354542e92eb404c1b7c25371b2aedeeedf645a18da22efaf06a8a9",
+      "complete_product": true,
+      "retrieved_at": "2026-11-15T05:24:10.924181+00:00",
+      "identity_scope": "Locally computed SHA-256 of complete downloaded bytes; no independent publisher checksum was supplied."
+    },
+    {
+      "canonical_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megt90n000cb.img",
+      "local_path": "data-pipeline/cache/raw/global-relief/megt90n000cb.img",
+      "bytes": 2073600,
+      "sha256": "25f16fb7aaf857898dcf98bc4f841341a24f8b9f7e98453ca083bc45d897ca2c",
+      "complete_product": true,
+      "retrieved_at": "2026-11-15T05:24:10.926931+00:00",
+      "identity_scope": "Locally computed SHA-256 of complete downloaded bytes; no independent publisher checksum was supplied."
+    },
+    {
+      "canonical_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/megt90n000cb.lbl",
+      "local_path": "data-pipeline/cache/raw/global-relief/megt90n000cb.lbl",
+      "bytes": 4796,
+      "sha256": "5a3fe60256afa1c35fea5d551fe0ab0a9198fb2bcd2c2e161d078aa69627ebac",
+      "complete_product": true,
+      "retrieved_at": "2026-11-15T05:24:10.924323+00:00",
+      "identity_scope": "Locally computed SHA-256 of complete downloaded bytes; no independent publisher checksum was supplied."
+    }
+  ],
+  "regional_windows": [
+    {
+      "id": "regional-moon-tycho",
+      "samples": 1089,
+      "all_source_nodes_match": true,
+      "source_window": [
+        659,
+        517,
+        33,
+        33
+      ],
+      "relief_m": 4934.5001220703125,
+      "spacing_m": [
+        5510.316788504725,
+        7580.83760603737
+      ]
+    },
+    {
+      "id": "regional-moon-aristarchus",
+      "samples": 1089,
+      "all_source_nodes_match": true,
+      "source_window": [
+        514,
+        249,
+        33,
+        33
+      ],
+      "relief_m": 4401.0003662109375,
+      "spacing_m": [
+        6945.472119512138,
+        7580.83760603737
+      ]
+    },
+    {
+      "id": "regional-moon-imbrium",
+      "samples": 16641,
+      "all_source_nodes_match": true,
+      "source_window": [
+        596,
+        157,
+        129,
+        129
+      ],
+      "relief_m": 7412.000244140625,
+      "spacing_m": [
+        6238.184250203877,
+        7580.83760603737
+      ]
+    },
+    {
+      "id": "regional-moon-orientale",
+      "samples": 4225,
+      "all_source_nodes_match": true,
+      "source_window": [
+        309,
+        407,
+        65,
+        65
+      ],
+      "relief_m": 9209.00048828125,
+      "spacing_m": [
+        7129.296810524777,
+        7580.83760603737
+      ]
+    },
+    {
+      "id": "regional-moon-tranquillitatis",
+      "samples": 16641,
+      "all_source_nodes_match": true,
+      "source_window": [
+        779,
+        262,
+        129,
+        129
+      ],
+      "relief_m": 6954.500244140625,
+      "spacing_m": [
+        7499.995398664475,
+        7580.83760603737
+      ]
+    },
+    {
+      "id": "regional-moon-moscoviense",
+      "samples": 4225,
+      "all_source_nodes_match": true,
+      "source_window": [
+        1280,
+        218,
+        65,
+        65
+      ],
+      "relief_m": 11057.50048828125,
+      "spacing_m": [
+        6731.905850595468,
+        7580.83760603737
+      ]
+    },
+    {
+      "id": "regional-mars-olympus",
+      "samples": 4225,
+      "all_source_nodes_match": true,
+      "source_window": [
+        152,
+        253,
+        65,
+        65
+      ],
+      "relief_m": 23748.0,
+      "spacing_m": [
+        14041.82215686107,
+        14817.845349431858
+      ]
+    },
+    {
+      "id": "regional-mars-valles",
+      "samples": 16641,
+      "all_source_nodes_match": true,
+      "source_window": [
+        419,
+        350,
+        129,
+        129
+      ],
+      "relief_m": 11306.0,
+      "spacing_m": [
+        14400.846108850768,
+        14817.845349431858
+      ]
+    },
+    {
+      "id": "regional-mars-hellas",
+      "samples": 16641,
+      "all_source_nodes_match": true,
+      "source_window": [
+        936,
+        466,
+        129,
+        129
+      ],
+      "relief_m": 9825.0,
+      "spacing_m": [
+        10902.99541615448,
+        14817.845349431858
+      ]
+    },
+    {
+      "id": "regional-mars-korolev",
+      "samples": 1089,
+      "all_source_nodes_match": true,
+      "source_window": [
+        1362,
+        52,
+        33,
+        33
+      ],
+      "relief_m": 2593.0,
+      "spacing_m": [
+        4363.223335095829,
+        14817.845349431858
+      ]
+    },
+    {
+      "id": "regional-mars-arsia",
+      "samples": 4225,
+      "all_source_nodes_match": true,
+      "source_window": [
+        207,
+        361,
+        65,
+        65
+      ],
+      "relief_m": 14864.0,
+      "spacing_m": [
+        14659.827543377782,
+        14817.845349431858
+      ]
+    },
+    {
+      "id": "regional-mars-elysium",
+      "samples": 4225,
+      "all_source_nodes_match": true,
+      "source_window": [
+        1276,
+        227,
+        65,
+        65
+      ],
+      "relief_m": 17701.0,
+      "spacing_m": [
+        13415.834476374543,
+        14817.845349431858
+      ]
+    },
+    {
+      "id": "regional-mars-utopia",
+      "samples": 16641,
+      "all_source_nodes_match": true,
+      "source_window": [
+        1126,
+        109,
+        129,
+        129
+      ],
+      "relief_m": 2233.0,
+      "spacing_m": [
+        10176.457835625379,
+        14817.845349431858
+      ]
+    },
+    {
+      "id": "regional-mars-mawrth",
+      "samples": 4225,
+      "all_source_nodes_match": true,
+      "source_window": [
+        620,
+        238,
+        65,
+        65
+      ],
+      "relief_m": 4378.0,
+      "spacing_m": [
+        13702.242652619976,
+        14817.845349431858
+      ]
+    }
+  ],
+  "total_samples_verified": 111822,
+  "global_mars_radial_nodes_verified": 1036800,
+  "existing_native_catalog_changed": false,
+  "global_radial_range_m": [
+    -22931.0,
+    21241.0
+  ],
+  "global_topographic_range_m": [
+    -8068.0,
+    21134.0
+  ],
+  "limitations": [
+    "Global 0.25-degree binned MOLA product; about 14.8 km north-south spacing, with finer east-west spacing toward the poles.",
+    "Provider interpolation fills cells without direct altimetry returns. Valid grid coverage is not direct measurement coverage.",
+    "MOLA IAU2000 elevation and Viking display imagery are approximately co-located; independent tie-point registration is unverified."
+  ]
+}

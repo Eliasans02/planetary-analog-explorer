@@ -18,6 +18,9 @@ const fail = (message: string): never => { throw new Error(message); };
 export function safeSurfacePath(path: string): boolean {
   return /^\/assets\/[a-zA-Z0-9_./-]+$/.test(path) && path.slice(1).split('/').every(part => part !== '.' && part !== '..' && part !== '');
 }
+export function safeDataPath(path: string): boolean {
+  return /^\/data\/[a-zA-Z0-9_-]+\.json$/.test(path);
+}
 // The leading slash is the only permitted empty path component.
 function assetPath(path: string): boolean { return safeSurfacePath(path); }
 export function validateSurfaceCatalog(value: unknown): SurfaceCatalog {
@@ -33,7 +36,12 @@ export function validateSurfaceCatalog(value: unknown): SurfaceCatalog {
   }
   for (const s of catalog.surfaces) {
     const g = s.grid; const n = g.width * g.height;
-    if (s.coordinates.frame !== (s.body === 'moon' ? 'MOON_ME_DE421' : s.body === 'mars' ? 'MARS_HIRISE_PLANETOCENTRIC' : 'NAD83')) fail('Body and coordinate frame disagree.');
+    const frames = s.body === 'moon' ? ['MOON_ME_DE421']
+      : s.body === 'earth' ? ['NAD83']
+        : catalog.schema_version === '1.2.0'
+          ? ['MARS_HIRISE_PLANETOCENTRIC', 'MARS_IAU2000_PLANETOCENTRIC']
+          : ['MARS_HIRISE_PLANETOCENTRIC'];
+    if (!frames.includes(s.coordinates.frame)) fail('Body, catalog version and coordinate frame disagree.');
     if (s.source_ids.some(id => !sources.has(id))) fail('Unknown source ID.');
     if (g.heights.bytes !== n * 4 || g.valid_mask.bytes !== n || s.stats.total_samples !== n || s.stats.valid_samples < 3 || s.stats.valid_samples > n || (s.stats.direct_return_samples !== null && s.stats.direct_return_samples > n)) fail('Inconsistent grid sample counts.');
     if (g.native_spacing.some(x => x === 0) || ![...g.spacing_m, ...g.native_origin, ...g.native_spacing, g.vertical_zero_m, s.stats.min_source_height_m, s.stats.max_source_height_m, s.stats.relief_m].every(Number.isFinite)) fail('Invalid finite grid metadata.');
@@ -44,8 +52,9 @@ export function validateSurfaceCatalog(value: unknown): SurfaceCatalog {
   return catalog;
 }
 
-export async function loadSurfaceCatalog(signal: AbortSignal): Promise<SurfaceCatalog> {
-  const response = await fetch('/data/surface_catalog.json', { signal, redirect: 'error', cache: 'no-store' });
+export async function loadSurfaceCatalog(signal: AbortSignal, path = '/data/surface_catalog.json'): Promise<SurfaceCatalog> {
+  if (!safeDataPath(path)) fail('Unsafe catalog path.');
+  const response = await fetch(path, { signal, redirect: 'error', cache: 'no-store' });
   if (!response.ok || response.redirected || !response.body) fail('Source terrain catalog is unavailable.');
   const length = response.headers.get('content-length');
   if (length !== null && (!/^\d+$/.test(length) || Number(length) > CATALOG_BYTE_LIMIT)) { await response.body!.cancel(); fail('Catalog exceeds its byte quota.'); }
